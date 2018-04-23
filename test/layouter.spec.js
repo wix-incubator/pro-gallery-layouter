@@ -331,8 +331,7 @@ describe('Pro Gallery Viewer', () => {
       expect(minItemSize).not.to.be.below(size);
     }
 
-  }
-  );
+  });
 
 });
 
