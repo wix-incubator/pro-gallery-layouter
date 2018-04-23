@@ -64,10 +64,10 @@ describe('Layouter', () => {
         items = getItems(size);
         gallery = new Layouter({items, container, styleParams});
 
-        const galleryItemIds = gallery.columns.reduce((urls, column) => [
-          ...urls,
-          ...column.items.map(item => item.id),
-        ], []);
+        const galleryItemIds = _.flatMapDeep(
+          gallery.columns,
+          column => column.map(group => group.items.map(item => item.id))
+        );
         const itemIds = items.map(item => item.photoId);
 
         expect(galleryItemIds).to.deep.equal(itemIds);
