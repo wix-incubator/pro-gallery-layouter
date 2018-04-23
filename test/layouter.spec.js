@@ -428,10 +428,78 @@ describe('Layouter', () => {
 
     });
 
-    // layoutsVersion
-    // galleryMargin
-    // imageMargin
-    // floatingImages
+    // imageMargin (between groups)
+    it('should have spaces between groups equal to imageMargin', () => {
+
+      items = getItems(100);
+      styleParams.galleryWidth = 4000;
+      styleParams.gallerySize = 500;
+      styleParams.groupSize = 1;
+
+      for (const margin of [10, 50, 100, 200]) {
+
+        styleParams.imageMargin = margin;
+        gallery = new Layouter({items, container, styleParams});
+
+        let lastItem = false;
+        let marginDiff = 0;
+        const totalMarginDiff = gallery.layoutItems.reduce((i, item) => {
+          if (lastItem) {
+            let realMargin;
+            if (lastItem.offset.top === item.offset.top) {
+              realMargin = Math.round(item.offset.left - lastItem.offset.right);
+            } else {
+              realMargin = Math.round(item.offset.top - lastItem.offset.bottom);
+            }
+            marginDiff = Math.abs(realMargin - margin * 2);
+            expect(marginDiff).to.be.below(1);
+          }
+          lastItem = item;
+          return i + Math.floor(marginDiff);
+        }, 0);
+
+        expect(totalMarginDiff).to.be.below(1);
+      }
+
+    });
+
+    // imageMargin (within groups)
+    it('should have spaces between items in a group equal to imageMargin', () => {
+
+      items = getItems(100);
+      styleParams.galleryWidth = 4000;
+      styleParams.gallerySize = 500;
+      styleParams.groupSize = 3;
+
+      for (const margin of [10, 20, 40, 100]) {
+
+        styleParams.imageMargin = margin;
+        gallery = new Layouter({items, container, styleParams});
+
+        let marginDiff = 0;
+        const totalMarginDiff = gallery.columns[0].reduce((g, group) => {
+          let lastItem = false;
+          const groupMarginDiff = group.items.reduce((i, item) => {
+            if (lastItem) {
+              let realMargin;
+              if (lastItem.offset.top === item.offset.top) {
+                realMargin = Math.round(item.offset.left - lastItem.offset.right);
+              } else {
+                realMargin = Math.round(item.offset.top - lastItem.offset.bottom);
+              }
+              marginDiff = Math.abs(realMargin - margin * 2);
+              expect(marginDiff).to.be.below(1);
+            }
+            lastItem = item;
+            return i + Math.floor(marginDiff);
+          }, 0);
+          return g + groupMarginDiff;
+        }, 0);
+
+        expect(totalMarginDiff).to.be.below(1);
+      }
+
+    });
 
   });
 });
