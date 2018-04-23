@@ -41,7 +41,7 @@ describe('Pro Gallery Viewer', () => {
     };
   });
 
-  it('must contain all items in the gallery', () => {
+  it('should contain all items in the gallery', () => {
     const gallerySizes = [10, 50, 100, 250];
 
     for (let size, i = 0; size = gallerySizes[i]; i++) {
@@ -60,7 +60,7 @@ describe('Pro Gallery Viewer', () => {
 
   });
 
-  it('must be contain each item in the gallery', () => {
+  it('should contain each item in the gallery', () => {
 
     const gallerySizes = [10, 50, 100, 250];
 
@@ -95,7 +95,7 @@ describe('Pro Gallery Viewer', () => {
 
   });
 
-  it('must not contain duplicate items', () => {
+  it('should not contain duplicate items', () => {
 
     const gallerySizes = [10, 50, 100, 250];
 
