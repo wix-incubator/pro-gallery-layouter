@@ -5,7 +5,7 @@ import {testImages} from './images-mock.js';
 import * as _ from 'lodash';
 import {expect} from 'chai';
 
-describe('Pro Gallery Viewer', () => {
+describe('Layouter', () => {
 
   let gallery;
   let items;
@@ -17,17 +17,25 @@ describe('Pro Gallery Viewer', () => {
     items = _.cloneDeep(testImages);
 
     styleParams = {
+      oneRow: false,
       isVertical: false,
       gallerySize: 200,
       groupSize: 3,
       groupTypes: '1,2h,2v,3t,3b,3l,3r,3v,3h',
+      rotatingGroupTypes: '',
       cubeImages: false,
+      cubeType: 'fill',
+      cubeRatio: 1,
+      smartCrop: false,
+      chooseBestGroup: true,
       collageAmount: 0.3,
       collageDensity: 0.3,
       minItemSize: 20,
       layoutsVersion: 2,
       galleryMargin: 0,
-      imageMargin: 0
+      imageMargin: 0,
+      floatingImages: 0,
+      fixedColumns: 0
     };
 
     container = {
@@ -41,304 +49,338 @@ describe('Pro Gallery Viewer', () => {
     };
   });
 
-  it('should contain all items in the gallery', () => {
-    const gallerySizes = [10, 50, 100, 250];
+  describe('items', () => {
+    it('should contain each item in the gallery', () => {
 
-    for (let size, i = 0; size = gallerySizes[i]; i++) {
-      items = _.cloneDeep(testImages);
-      size = Math.min(items.length, size);
-      items = items.slice(0, size);
+      const gallerySizes = [10, 50, 100, 250];
 
-      gallery = new Layouter({items, container, styleParams});
+      styleParams.galleryWidth = 500;
+      styleParams.minItemSize = 160;
 
-      const totalItems = gallery.columns[0].reduce((g, group) => {
-        return (g + group.items.length);
-      }, 0);
-
-      expect(totalItems).to.equal(size);
-    }
-
-  });
-
-  it('should contain each item in the gallery', () => {
-
-    const gallerySizes = [10, 50, 100, 250];
-
-    styleParams.galleryWidth = 500;
-    styleParams.minItemSize = 160;
-
-    for (let size, i = 0; size = gallerySizes[i]; i++) {
-      items = _.cloneDeep(testImages);
-      size = Math.min(items.length, size);
-      items = items.slice(0, size);
+      for (let size, i = 0; size = gallerySizes[i]; i++) {
+        items = _.cloneDeep(testImages);
+        size = Math.min(items.length, size);
+        items = items.slice(0, size);
 
 
-      const urls = {};
-      items.forEach(item => {
-        urls[item.photoId] = 1;
-      });
+        const urls = {};
+        items.forEach(item => {
+          urls[item.photoId] = 1;
+        });
 
-      gallery = new Layouter({items, container, styleParams});
-
-      const galleryUrls = {};
-      gallery.columns.forEach(column => {
-        column.forEach(group => {
-          group.items.forEach(item => {
-            galleryUrls[item.id] = 1;
+        gallery = new Layouter({items, container, styleParams});
+        const galleryUrls = {};
+        gallery.columns.forEach(column => {
+          column.forEach(group => {
+            group.items.forEach(item => {
+              galleryUrls[item.id] = 1;
+            });
           });
         });
-      });
 
-      expect(_.size(urls)).to.equal(_.size(galleryUrls));
+        expect(_.size(urls)).to.equal(_.size(galleryUrls));
 
-    }
+      }
 
-  });
+    });
 
-  it('should not contain duplicate items', () => {
+    it('should not contain duplicate items', () => {
 
-    const gallerySizes = [10, 50, 100, 250];
+      const gallerySizes = [10, 50, 100, 250];
 
-    styleParams.galleryWidth = 500;
-    styleParams.minItemSize = 160;
+      styleParams.galleryWidth = 500;
+      styleParams.minItemSize = 160;
 
-    for (let size, i = 0; size = gallerySizes[i]; i++) {
-      items = _.cloneDeep(testImages);
-      size = Math.min(items.length, size);
-      items = items.slice(0, size);
+      for (let size, i = 0; size = gallerySizes[i]; i++) {
+        items = _.cloneDeep(testImages);
+        size = Math.min(items.length, size);
+        items = items.slice(0, size);
 
-      const urls = {};
-      let dups = 0;
+        const urls = {};
+        let dups = 0;
 
-      gallery = new Layouter({items, container, styleParams});
+        gallery = new Layouter({items, container, styleParams});
 
-      gallery.columns.forEach(column => {
-        column.forEach(group => {
-          group.items.forEach(item => {
-            if (urls[item.id]) {
-              urls[item.id]++;
-              dups++;
-            } else {
-              urls[item.id] = 1;
-            }
+        gallery.columns.forEach(column => {
+          column.forEach(group => {
+            group.items.forEach(item => {
+              if (urls[item.id]) {
+                urls[item.id]++;
+                dups++;
+              } else {
+                urls[item.id] = 1;
+              }
 
+            });
           });
         });
-      });
 
-      _.each(urls, (count, key) => {
-        if (count > 1) {
-          console.log(count, key);
-        }
-      });
+        _.each(urls, (count, key) => {
+          if (count > 1) {
+            console.log(count, key);
+          }
+        });
 
-      expect(dups).to.equal(0);
+        expect(dups).to.equal(0);
 
-    }
+      }
+    });
+
+    //retain items order
   });
 
-  it('should have taller Strips as gallerySize increases', () => {
-    items = items.slice(0, 100);
-    styleParams.isVertical = false;
+  describe('Style Params', () => {
 
-    const gallerySizes = [100, 200, 300, 400];
+    //gallerySize
+    it('should have taller Strips as gallerySize increases', () => {
+      items = items.slice(0, 100);
+      styleParams.isVertical = false;
 
-    let lastGroupHeight = 0;
-    for (let size, i = 0; size = gallerySizes[i]; i++) {
-      styleParams.gallerySize = size;
-      gallery = new Layouter({items, container, styleParams});
+      const gallerySizes = [100, 200, 300, 400];
 
-      const maxGroupHeight = gallery.columns[0].reduce((g, group) => {
-        const isLastStrip = (group.stripIdx === gallery.strips);
-        return (Math.max(g, (isLastStrip ? 0 : group.height)));
-      }, 0);
+      let lastGroupHeight = 0;
+      for (let size, i = 0; size = gallerySizes[i]; i++) {
+        styleParams.gallerySize = size;
+        gallery = new Layouter({items, container, styleParams});
 
-      expect(maxGroupHeight).to.be.above(lastGroupHeight);
+        const maxGroupHeight = gallery.columns[0].reduce((g, group) => {
+          const isLastStrip = (group.stripIdx === gallery.strips);
+          return (Math.max(g, (isLastStrip ? 0 : group.height)));
+        }, 0);
 
-      lastGroupHeight = maxGroupHeight;
-    }
+        expect(maxGroupHeight).to.be.above(lastGroupHeight);
 
-  });
+        lastGroupHeight = maxGroupHeight;
+      }
 
-  it('should have all groups in a Columns gallery narrower than gallerySize', () => {
-    items = items.slice(0, 100);
-    styleParams.isVertical = true;
-    styleParams.galleryWidth = 1200;
+    });
 
-    const gallerySizes = [10, 50, 100, 200, 300, 400]; //must divide exactly in galleyWidth for testing (otherwise might be larger than gallerySize
+    //gallerySize
+    it('should have all groups in a Columns gallery narrower than gallerySize', () => {
+      items = items.slice(0, 100);
+      styleParams.isVertical = true;
+      styleParams.galleryWidth = 1200;
 
-    let lastGroupWidth = 0;
-    for (let size, i = 0; size = gallerySizes[i]; i++) {
-      styleParams.gallerySize = size;
-      gallery = new Layouter({items, container, styleParams});
+      const gallerySizes = [10, 50, 100, 200, 300, 400]; //must divide exactly in galleyWidth for testing (otherwise might be larger than gallerySize
 
-      const maxGroupWidth = gallery.columns.reduce((c, column) => {
-        return (c && column.reduce((g, group) => {
-          return Math.max(g, group.width);
-        }, true));
-      }, true);
+      let lastGroupWidth = 0;
+      for (let size, i = 0; size = gallerySizes[i]; i++) {
+        styleParams.gallerySize = size;
+        gallery = new Layouter({items, container, styleParams});
 
-      expect(maxGroupWidth).to.be.above(lastGroupWidth);
+        const maxGroupWidth = gallery.columns.reduce((c, column) => {
+          return (c && column.reduce((g, group) => {
+            return Math.max(g, group.width);
+          }, true));
+        }, true);
 
-      lastGroupWidth = maxGroupWidth;
-    }
+        expect(maxGroupWidth).to.be.above(lastGroupWidth);
 
-  });
+        lastGroupWidth = maxGroupWidth;
+      }
 
-  it('should have all images in a grid gallery in the required ratio', () => {
+    });
 
-    const allowedRounding = 2; //the number of pixels that can change due to rounding
+    //cubeRatio
+    it('should have all images in a grid gallery in the required ratio', () => {
 
-    items = items.slice(0, 100);
-    styleParams.cubeImages = true;
+      const allowedRounding = 2; //the number of pixels that can change due to rounding
 
-    const cubeRatios = [0.25, 0.5, 1, 2, 4];
+      items = items.slice(0, 100);
+      styleParams.cubeImages = true;
 
-    for (let ratio, i = 0; ratio = cubeRatios[i]; i++) {
-      styleParams.cubeRatio = ratio;
-      gallery = new Layouter({items, container, styleParams});
-      const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
-        return (g && group.items.reduce((i, image) => {
-          const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cubeRatio);
+      const cubeRatios = [0.25, 0.5, 1, 2, 4];
+
+      for (let ratio, i = 0; ratio = cubeRatios[i]; i++) {
+        styleParams.cubeRatio = ratio;
+        gallery = new Layouter({items, container, styleParams});
+        const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
+          return (g && group.items.reduce((i, image) => {
+            const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cubeRatio);
           // expect(image.width / image.height).to.equal(image.cubeRatio);
-          return i && isItemCroppedCorrectly; //ignore fractions
-        }, true));
-      }, true);
+            return i && isItemCroppedCorrectly; //ignore fractions
+          }, true));
+        }, true);
 
-      expect(isCroppedCorrectly).to.be.true;
-    }
-  });
+        expect(isCroppedCorrectly).to.be.true;
+      }
+    });
 
-  it('should have fixed number of columns if specified', () => {
-    items = items.slice(0, 100);
-    styleParams.isVertical = true;
+    //fixedColumns
+    it('should have fixed number of columns if specified', () => {
+      items = items.slice(0, 100);
+      styleParams.isVertical = true;
 
-    const fixedColumnsNumber = [1, 5, 10, 20];
+      const fixedColumnsNumber = [1, 5, 10, 20];
 
-    for (let num, i = 0; num = fixedColumnsNumber[i]; i++) {
-      styleParams.fixedColumns = num;
-      gallery = new Layouter({items, container, styleParams});
+      for (let num, i = 0; num = fixedColumnsNumber[i]; i++) {
+        styleParams.fixedColumns = num;
+        gallery = new Layouter({items, container, styleParams});
 
-      expect(gallery.columns.length).to.equal(num);
-    }
+        expect(gallery.columns.length).to.equal(num);
+      }
 
-  });
+    });
 
-  it('should have more items in groups when the collageAmount increases', () => {
-    items = items.slice(0, 100);
+    //collageAmount
+    it('should have more items in groups when the collageAmount increases', () => {
+      items = items.slice(0, 100);
 
-    const collageAmount = Array(12).join('0').split('').map((a, b) => b / 10); //create an array of 0,0.1,0.2...0.9,1 (had to find a way to one line it)
+      const collageAmount = Array(12).join('0').split('').map((a, b) => b / 10); //create an array of 0,0.1,0.2...0.9,1 (had to find a way to one line it)
 
-    let lastAvgGroupSize = 0;
+      let lastAvgGroupSize = 0;
 
-    for (let size, i = 0; size = collageAmount[i]; i++) {
-      styleParams.collageAmount = size;
-      gallery = new Layouter({items, container, styleParams});
+      for (let size, i = 0; size = collageAmount[i]; i++) {
+        styleParams.collageAmount = size;
+        gallery = new Layouter({items, container, styleParams});
 
-      const avgGroupSize = items.length / gallery.columns[0].length;
+        const avgGroupSize = items.length / gallery.columns[0].length;
 
-      expect(avgGroupSize).not.to.be.below(lastAvgGroupSize);
+        expect(avgGroupSize).not.to.be.below(lastAvgGroupSize);
 
-      lastAvgGroupSize = avgGroupSize;
-    }
-  });
+        lastAvgGroupSize = avgGroupSize;
+      }
+    });
 
-  it('should have all groups at maximum groupSize items', () => {
-    items = items.slice(0, 100);
+    //groupSize
+    it('should have all groups at maximum groupSize items', () => {
+      items = items.slice(0, 100);
 
-    const groupSizes = [1, 2, 3];
+      const groupSizes = [1, 2, 3];
 
-    for (let size, i = 0; size = groupSizes[i]; i++) {
-      styleParams.groupSize = size;
-      gallery = new Layouter({items, container, styleParams});
+      for (let size, i = 0; size = groupSizes[i]; i++) {
+        styleParams.groupSize = size;
+        gallery = new Layouter({items, container, styleParams});
 
-      const isWithinSize = gallery.columns[0].reduce((g, group) => {
-        const inSize = (group.items.length <= styleParams.groupSize);
-        return (g && inSize);
-      }, true);
+        const isWithinSize = gallery.columns[0].reduce((g, group) => {
+          const inSize = (group.items.length <= styleParams.groupSize);
+          return (g && inSize);
+        }, true);
 
-      expect(isWithinSize).to.be.true;
-    }
+        expect(isWithinSize).to.be.true;
+      }
 
-  });
+    });
 
-  it('should have groups only from the optional groups types ', () => {
-    items = items.slice(0, 100);
+    //groupTypes
+    it('should have groups only from the optional groups types ', () => {
+      items = items.slice(0, 100);
 
-    const groupTypes = ['1', '1,2h,2v', '1,3b,3l,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,3b,3v,3h', '1,2h,2v,3v,3h,3l,3b']; //groupType '1' must always be an option
+      const groupTypes = ['1', '1,2h,2v', '1,3b,3l,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,3b,3v,3h', '1,2h,2v,3v,3h,3l,3b']; //groupType '1' must always be an option
 
-    for (let type, i = 0; type = groupTypes[i]; i++) {
-      styleParams.groupTypes = type;
-      gallery = new Layouter({items, container, styleParams});
+      for (let type, i = 0; type = groupTypes[i]; i++) {
+        styleParams.groupTypes = type;
+        gallery = new Layouter({items, container, styleParams});
 
-      const isWithinTypes = gallery.columns[0].reduce((g, group) => {
-        const inTypes = (styleParams.groupTypes.indexOf(group.type) >= 0);
-        return (g && inTypes);
-      }, true);
+        const isWithinTypes = gallery.columns[0].reduce((g, group) => {
+          const inTypes = (styleParams.groupTypes.indexOf(group.type) >= 0);
+          return (g && inTypes);
+        }, true);
 
-      expect(isWithinTypes).to.be.true;
-    }
+        expect(isWithinTypes).to.be.true;
+      }
 
-  });
+    });
 
-  it('should have all Strips GalleryLayout images larger than minItemSize', () => {
+    //minItemSize
+    it('should have all Strips GalleryLayout images larger than minItemSize', () => {
 
-    items = items.slice(0, 100);
-    styleParams.isVertical = false;
+      items = items.slice(0, 100);
+      styleParams.isVertical = false;
 
-    const minItemSizes = [10, 50, 100, 200, 300, 400];
+      const minItemSizes = [10, 50, 100, 200, 300, 400];
 
-    for (let size, i = 0; size = minItemSizes[i]; i++) {
-      styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
-      styleParams.minItemSize = size;
-      gallery = new Layouter({items, container, styleParams});
+      for (let size, i = 0; size = minItemSizes[i]; i++) {
+        styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
+        styleParams.minItemSize = size;
+        gallery = new Layouter({items, container, styleParams});
 
-      const minItemSize = gallery.columns[0].reduce((g, group) => {
-        const isLastStrip = (group.stripIdx === gallery.strips);
-        return (isLastStrip ? g : Math.min(g, group.items.reduce((i, item) => {
-          const maxDimension = Math.max(item.width, item.height);
-          return Math.min(i, maxDimension);
-        }, styleParams.minItemSize)));
-      }, styleParams.minItemSize);
-
-      expect(minItemSize).not.to.be.below(size / 2);
-    }
-
-  });
-
-  it('should have all Columns GalleryLayout images larger than minItemSize', () => {
-
-    items = items.slice(0, 100);
-    styleParams.isVertical = true;
-    styleParams.galleryWidth = 4000;
-
-    const minItemSizes = [10, 50, 100, 200, 300, 400];
-
-    for (let size, i = 0; size = minItemSizes[i]; i++) {
-      styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
-      styleParams.minItemSize = size;
-      gallery = new Layouter({items, container, styleParams});
-
-      const minItemSize = gallery.columns.reduce((c, column) => {
-        return (c && column.reduce((g, group) => {
-          return (Math.min(g, group.items.reduce((i, item) => {
+        const minItemSize = gallery.columns[0].reduce((g, group) => {
+          const isLastStrip = (group.stripIdx === gallery.strips);
+          return (isLastStrip ? g : Math.min(g, group.items.reduce((i, item) => {
             const maxDimension = Math.max(item.width, item.height);
             return Math.min(i, maxDimension);
           }, styleParams.minItemSize)));
-        }, styleParams.minItemSize));
-      }, styleParams.minItemSize);
+        }, styleParams.minItemSize);
 
-      expect(minItemSize).not.to.be.below(size);
-    }
+        expect(minItemSize).not.to.be.below(size / 2);
+      }
+
+    });
+
+    //minItemSize
+    it('should have all Columns GalleryLayout images larger than minItemSize', () => {
+
+      items = items.slice(0, 100);
+      styleParams.isVertical = true;
+      styleParams.galleryWidth = 4000;
+
+      const minItemSizes = [10, 50, 100, 200, 300, 400];
+
+      for (let size, i = 0; size = minItemSizes[i]; i++) {
+        styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
+        styleParams.minItemSize = size;
+        gallery = new Layouter({items, container, styleParams});
+
+        const minItemSize = gallery.columns.reduce((c, column) => {
+          return (c && column.reduce((g, group) => {
+            return (Math.min(g, group.items.reduce((i, item) => {
+              const maxDimension = Math.max(item.width, item.height);
+              return Math.min(i, maxDimension);
+            }, styleParams.minItemSize)));
+          }, styleParams.minItemSize));
+        }, styleParams.minItemSize);
+
+        expect(minItemSize).not.to.be.below(size);
+      }
+
+    });
+
+    // isVertical
+    it('should create vertical layouts if isVertical is true', () => {
+
+      items = items.slice(0, 100);
+      styleParams.gallerySize = 200;
+      styleParams.fixedColumns = 0;
+      container.galleryWidth = 1000;
+
+      styleParams.isVertical = true;
+      gallery = new Layouter({items, container, styleParams});
+      expect(gallery.columns.length).to.equal(5);
+
+      styleParams.isVertical = false;
+      gallery = new Layouter({items, container, styleParams});
+      expect(gallery.columns.length).to.equal(1);
+
+    });
+
+    // oneRow
+    it('should create one long row of items if oneRow is true', () => {
+
+      items = items.slice(0, 100);
+      container.galleryHeight = 500;
+
+      styleParams.oneRow = false;
+      gallery = new Layouter({items, container, styleParams});
+      expect(gallery.height).to.be.above(container.galleryHeight);
+
+      styleParams.oneRow = true;
+      gallery = new Layouter({items, container, styleParams});
+      expect(gallery.height).to.equal(container.galleryHeight);
+
+    });
+
+    // rotatingGroupTypes
+    // cubeImages
+    // cubeType
+    // smartCrop
+    // chooseBestGroup
+    // collageDensity
+    // layoutsVersion
+    // galleryMargin
+    // imageMargin
+    // floatingImages
+    // fixedColumns
 
   });
-
 });
-
-function multiplyArray(arr) {
-  return [].concat.apply([], arr.map(x => {
-    return [].concat.apply([], arr.map(y => {
-      return [[x, y]];
-    }));
-  }));
-}
