@@ -2,8 +2,11 @@
 
 import Layouter from '../src/layouter.js';
 import {testImages} from './images-mock.js';
-import * as _ from 'lodash';
+import _ from 'lodash';
 import {expect} from 'chai';
+import deepFreeze from 'deep-freeze';
+
+const getItems = count => deepFreeze(testImages.slice(0, count));
 
 describe('Layouter', () => {
 
@@ -14,7 +17,7 @@ describe('Layouter', () => {
 
   beforeEach(() => {
 
-    items = _.cloneDeep(testImages);
+    items = getItems();
 
     styleParams = {
       oneRow: false,
@@ -58,10 +61,8 @@ describe('Layouter', () => {
       styleParams.minItemSize = 160;
 
       for (let size, i = 0; size = gallerySizes[i]; i++) {
-        items = _.cloneDeep(testImages);
         size = Math.min(items.length, size);
-        items = items.slice(0, size);
-
+        items = getItems(size);
 
         const urls = {};
         items.forEach(item => {
@@ -92,9 +93,8 @@ describe('Layouter', () => {
       styleParams.minItemSize = 160;
 
       for (let size, i = 0; size = gallerySizes[i]; i++) {
-        items = _.cloneDeep(testImages);
         size = Math.min(items.length, size);
-        items = items.slice(0, size);
+        items = getItems(size);
 
         const urls = {};
         let dups = 0;
@@ -133,7 +133,7 @@ describe('Layouter', () => {
 
     //gallerySize
     it('should have taller Strips as gallerySize increases', () => {
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.isVertical = false;
 
       const gallerySizes = [100, 200, 300, 400];
@@ -157,7 +157,7 @@ describe('Layouter', () => {
 
     //gallerySize
     it('should have all groups in a Columns gallery narrower than gallerySize', () => {
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.isVertical = true;
       styleParams.galleryWidth = 1200;
 
@@ -186,7 +186,7 @@ describe('Layouter', () => {
 
       const allowedRounding = 2; //the number of pixels that can change due to rounding
 
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.cubeImages = true;
 
       const cubeRatios = [0.25, 0.5, 1, 2, 4];
@@ -208,7 +208,7 @@ describe('Layouter', () => {
 
     //fixedColumns
     it('should have fixed number of columns if specified', () => {
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.isVertical = true;
 
       const fixedColumnsNumber = [1, 5, 10, 20];
@@ -224,7 +224,7 @@ describe('Layouter', () => {
 
     //collageAmount
     it('should have more items in groups when the collageAmount increases', () => {
-      items = items.slice(0, 100);
+      items = getItems(100);
 
       const collageAmount = Array(12).join('0').split('').map((a, b) => b / 10); //create an array of 0,0.1,0.2...0.9,1 (had to find a way to one line it)
 
@@ -244,7 +244,7 @@ describe('Layouter', () => {
 
     //groupSize
     it('should have all groups at maximum groupSize items', () => {
-      items = items.slice(0, 100);
+      items = getItems(100);
 
       const groupSizes = [1, 2, 3];
 
@@ -264,7 +264,7 @@ describe('Layouter', () => {
 
     //groupTypes
     it('should have groups only from the optional groups types ', () => {
-      items = items.slice(0, 100);
+      items = getItems(100);
 
       const groupTypes = ['1', '1,2h,2v', '1,3b,3l,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,3b,3v,3h', '1,2h,2v,3v,3h,3l,3b']; //groupType '1' must always be an option
 
@@ -285,7 +285,7 @@ describe('Layouter', () => {
     //minItemSize
     it('should have all Strips GalleryLayout images larger than minItemSize', () => {
 
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.isVertical = false;
 
       const minItemSizes = [10, 50, 100, 200, 300, 400];
@@ -311,7 +311,7 @@ describe('Layouter', () => {
     //minItemSize
     it('should have all Columns GalleryLayout images larger than minItemSize', () => {
 
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.isVertical = true;
       styleParams.galleryWidth = 4000;
 
@@ -339,7 +339,7 @@ describe('Layouter', () => {
     // isVertical
     it('should create vertical layouts if isVertical is true', () => {
 
-      items = items.slice(0, 100);
+      items = getItems(100);
       styleParams.gallerySize = 200;
       styleParams.fixedColumns = 0;
       container.galleryWidth = 1000;
@@ -357,7 +357,7 @@ describe('Layouter', () => {
     // oneRow
     it('should create one long row of items if oneRow is true', () => {
 
-      items = items.slice(0, 100);
+      items = getItems(100);
       container.galleryHeight = 500;
 
       styleParams.oneRow = false;
