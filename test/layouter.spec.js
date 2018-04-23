@@ -143,7 +143,6 @@ describe('Layouter', () => {
         const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
           return (g && group.items.reduce((i, image) => {
             const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cubeRatio);
-          // expect(image.width / image.height).to.equal(image.cubeRatio);
             return i && isItemCroppedCorrectly; //ignore fractions
           }, true));
         }, true);
@@ -317,9 +316,84 @@ describe('Layouter', () => {
     });
 
     // rotatingGroupTypes
+    it('should have groups from the rotating groups types by their order ', () => {
+      items = items.slice(0, 100);
+      styleParams.isVertical = false;
+
+      const groupTypes = ['1', '1,2h,2v', '1,3b,1,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,2h,3v,3h', '2h,2v,3v,3h,3l,3b'];
+
+      for (let type, i = 0; type = groupTypes[i]; i++) {
+        styleParams.rotatingGroupTypes = type;
+        gallery = new Layouter({items, container, styleParams});
+
+        const isWithinTypes = gallery.columns[0].reduce((g, group, idx) => {
+          const rotatingGroupTypes = styleParams.rotatingGroupTypes.split(',');
+          const expectedType = rotatingGroupTypes[idx % rotatingGroupTypes.length];
+          const groupType = group.type;
+          expect(expectedType).to.equal(groupType);
+          const isType = (expectedType === groupType);
+          return (g && isType);
+        }, true);
+
+        expect(isWithinTypes).to.be.true;
+      }
+
+    });
+
     // cubeImages
-    // cubeType
+    it('should have all images in their original ratio if cubeImages is false', () => {
+
+      const allowedRounding = 2; //the number of pixels that can change due to rounding
+
+      items = items.slice(0, 100);
+      styleParams.cubeRatio = 2;
+      styleParams.cubeImages = false;
+
+      gallery = new Layouter({items, container, styleParams});
+      const isOriginalDimensions = gallery.columns[0].reduce((g, group) => {
+        return (g && group.items.reduce((i, image) => {
+          const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.maxWidth / image.maxHeight) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.maxWidth / image.maxHeight);
+          return i && isItemCroppedCorrectly; //ignore fractions
+        }, true));
+      }, true);
+
+      expect(isOriginalDimensions).to.be.true;
+
+      styleParams.cubeImages = true;
+
+      gallery = new Layouter({items, container, styleParams});
+      const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
+        return (g && group.items.reduce((i, image) => {
+          const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= styleParams.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= styleParams.cubeRatio);
+          return i && isItemCroppedCorrectly;
+        }, true));
+      }, true);
+
+      expect(isCroppedCorrectly).to.be.true;
+    });
+
     // smartCrop
+    it('should crop images according to their original proportions if smartCrop is true', () => {
+
+      const allowedRounding = 2; //the number of pixels that can change due to rounding
+
+      items = items.slice(0, 100);
+      styleParams.cubeRatio = 2;
+      styleParams.cubeImages = true;
+      styleParams.smartCrop = true;
+
+      gallery = new Layouter({items, container, styleParams});
+      const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
+        return (g && group.items.reduce((i, image) => {
+          const cropRatio = image.isLandscape ? styleParams.cubeRatio : 1 / styleParams.cubeRatio;
+          const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= cropRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= cropRatio);
+          return i && isItemCroppedCorrectly;
+        }, true));
+      }, true);
+
+      expect(isCroppedCorrectly).to.be.true;
+    });
+
     // chooseBestGroup
     // collageDensity
     // layoutsVersion
