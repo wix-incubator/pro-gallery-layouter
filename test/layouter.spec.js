@@ -53,80 +53,26 @@ describe('Layouter', () => {
   });
 
   describe('items', () => {
-    it('should contain each item in the gallery', () => {
+    it('should include all items in original order', () => {
 
       const gallerySizes = [10, 50, 100, 250];
-
       styleParams.galleryWidth = 500;
       styleParams.minItemSize = 160;
 
       for (let size, i = 0; size = gallerySizes[i]; i++) {
         size = Math.min(items.length, size);
         items = getItems(size);
-
-        const urls = {};
-        items.forEach(item => {
-          urls[item.photoId] = 1;
-        });
-
-        gallery = new Layouter({items, container, styleParams});
-        const galleryUrls = {};
-        gallery.columns.forEach(column => {
-          column.forEach(group => {
-            group.items.forEach(item => {
-              galleryUrls[item.id] = 1;
-            });
-          });
-        });
-
-        expect(_.size(urls)).to.equal(_.size(galleryUrls));
-
-      }
-
-    });
-
-    it('should not contain duplicate items', () => {
-
-      const gallerySizes = [10, 50, 100, 250];
-
-      styleParams.galleryWidth = 500;
-      styleParams.minItemSize = 160;
-
-      for (let size, i = 0; size = gallerySizes[i]; i++) {
-        size = Math.min(items.length, size);
-        items = getItems(size);
-
-        const urls = {};
-        let dups = 0;
-
         gallery = new Layouter({items, container, styleParams});
 
-        gallery.columns.forEach(column => {
-          column.forEach(group => {
-            group.items.forEach(item => {
-              if (urls[item.id]) {
-                urls[item.id]++;
-                dups++;
-              } else {
-                urls[item.id] = 1;
-              }
+        const galleryItemIds = gallery.columns.reduce((urls, column) => [
+          ...urls,
+          ...column.items.map(item => item.id),
+        ], []);
+        const itemIds = items.map(item => item.photoId);
 
-            });
-          });
-        });
-
-        _.each(urls, (count, key) => {
-          if (count > 1) {
-            console.log(count, key);
-          }
-        });
-
-        expect(dups).to.equal(0);
-
+        expect(galleryItemIds).to.deep.equal(itemIds);
       }
     });
-
-    //retain items order
   });
 
   describe('Style Params', () => {
