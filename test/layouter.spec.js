@@ -55,11 +55,10 @@ describe('Layouter', () => {
   describe('items', () => {
     it('should include all items in original order', () => {
 
-      const gallerySizes = [10, 50, 100, 250];
       styleParams.galleryWidth = 500;
       styleParams.minItemSize = 160;
 
-      for (let size, i = 0; size = gallerySizes[i]; i++) {
+      for (let size of [10, 50, 100, 250]) {
         size = Math.min(items.length, size);
         items = getItems(size);
         gallery = new Layouter({items, container, styleParams});
@@ -82,10 +81,8 @@ describe('Layouter', () => {
       items = getItems(100);
       styleParams.isVertical = false;
 
-      const gallerySizes = [100, 200, 300, 400];
-
       let lastGroupHeight = 0;
-      for (let size, i = 0; size = gallerySizes[i]; i++) {
+      for (const size of [100, 200, 300, 400]) {
         styleParams.gallerySize = size;
         gallery = new Layouter({items, container, styleParams});
 
@@ -107,10 +104,8 @@ describe('Layouter', () => {
       styleParams.isVertical = true;
       styleParams.galleryWidth = 1200;
 
-      const gallerySizes = [10, 50, 100, 200, 300, 400]; //must divide exactly in galleyWidth for testing (otherwise might be larger than gallerySize
-
       let lastGroupWidth = 0;
-      for (let size, i = 0; size = gallerySizes[i]; i++) {
+      for (const size of [10, 50, 100, 200, 300, 400]) {
         styleParams.gallerySize = size;
         gallery = new Layouter({items, container, styleParams});
 
@@ -135,9 +130,7 @@ describe('Layouter', () => {
       items = getItems(100);
       styleParams.cubeImages = true;
 
-      const cubeRatios = [0.25, 0.5, 1, 2, 4];
-
-      for (let ratio, i = 0; ratio = cubeRatios[i]; i++) {
+      for (const ratio of [0.25, 0.5, 1, 2, 4]) {
         styleParams.cubeRatio = ratio;
         gallery = new Layouter({items, container, styleParams});
         const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
@@ -156,9 +149,7 @@ describe('Layouter', () => {
       items = getItems(100);
       styleParams.isVertical = true;
 
-      const fixedColumnsNumber = [1, 5, 10, 20];
-
-      for (let num, i = 0; num = fixedColumnsNumber[i]; i++) {
+      for (const num of [1, 5, 10, 20]) {
         styleParams.fixedColumns = num;
         gallery = new Layouter({items, container, styleParams});
 
@@ -175,7 +166,7 @@ describe('Layouter', () => {
 
       let lastAvgGroupSize = 0;
 
-      for (let size, i = 0; size = collageAmount[i]; i++) {
+      for (const size of collageAmount) {
         styleParams.collageAmount = size;
         gallery = new Layouter({items, container, styleParams});
 
@@ -191,9 +182,7 @@ describe('Layouter', () => {
     it('should have all groups at maximum groupSize items', () => {
       items = getItems(100);
 
-      const groupSizes = [1, 2, 3];
-
-      for (let size, i = 0; size = groupSizes[i]; i++) {
+      for (const size of [1, 2, 3]) {
         styleParams.groupSize = size;
         gallery = new Layouter({items, container, styleParams});
 
@@ -213,7 +202,7 @@ describe('Layouter', () => {
 
       const groupTypes = ['1', '1,2h,2v', '1,3b,3l,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,3b,3v,3h', '1,2h,2v,3v,3h,3l,3b']; //groupType '1' must always be an option
 
-      for (let type, i = 0; type = groupTypes[i]; i++) {
+      for (const type of groupTypes) {
         styleParams.groupTypes = type;
         gallery = new Layouter({items, container, styleParams});
 
@@ -235,7 +224,7 @@ describe('Layouter', () => {
 
       const minItemSizes = [10, 50, 100, 200, 300, 400];
 
-      for (let size, i = 0; size = minItemSizes[i]; i++) {
+      for (const size of minItemSizes) {
         styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
         styleParams.minItemSize = size;
         gallery = new Layouter({items, container, styleParams});
@@ -262,7 +251,7 @@ describe('Layouter', () => {
 
       const minItemSizes = [10, 50, 100, 200, 300, 400];
 
-      for (let size, i = 0; size = minItemSizes[i]; i++) {
+      for (const size of minItemSizes) {
         styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
         styleParams.minItemSize = size;
         gallery = new Layouter({items, container, styleParams});
@@ -322,7 +311,7 @@ describe('Layouter', () => {
 
       const groupTypes = ['1', '1,2h,2v', '1,3b,1,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,2h,3v,3h', '2h,2v,3v,3h,3l,3b'];
 
-      for (let type, i = 0; type = groupTypes[i]; i++) {
+      for (const type of groupTypes) {
         styleParams.rotatingGroupTypes = type;
         gallery = new Layouter({items, container, styleParams});
 
