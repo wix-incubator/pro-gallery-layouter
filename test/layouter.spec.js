@@ -7,6 +7,10 @@ import {expect} from 'chai';
 import deepFreeze from 'deep-freeze';
 
 const getItems = count => deepFreeze(testImages.slice(0, count));
+const getGroupCount = layout => layout.columns.reduce(
+  (count, column) => count + column.length,
+  0
+);
 
 describe('Layouter', () => {
 
@@ -155,26 +159,43 @@ describe('Layouter', () => {
 
         expect(gallery.columns.length).to.equal(num);
       }
-
     });
 
     //collageAmount
     it('should have more items in groups when the collageAmount increases', () => {
-      items = getItems(100);
+      const itemCount = 100;
+      items = getItems(itemCount);
+      const collageAmounts = _.range(0, 11).map(i => i / 10);
+      let lastGroupCount = itemCount;
+      styleParams.layoutsVersion = 1;
 
-      const collageAmount = Array(12).join('0').split('').map((a, b) => b / 10); //create an array of 0,0.1,0.2...0.9,1 (had to find a way to one line it)
-
-      let lastAvgGroupSize = 0;
-
-      for (const size of collageAmount) {
-        styleParams.collageAmount = size;
+      for (const collageAmount of collageAmounts) {
+        styleParams.collageAmount = collageAmount;
         gallery = new Layouter({items, container, styleParams});
+        const groupCount = getGroupCount(gallery);
 
-        const avgGroupSize = items.length / gallery.columns[0].length;
+        expect(groupCount).not.to.be.above(lastGroupCount);
 
-        expect(avgGroupSize).not.to.be.below(lastAvgGroupSize);
+        lastGroupCount = groupCount;
+      }
+    });
 
-        lastAvgGroupSize = avgGroupSize;
+    //collageDensity
+    it('should have more items in groups when the collageDensity increases', () => {
+      const itemCount = 100;
+      items = getItems(itemCount);
+
+      const collageDensities = _.range(0, 11).map(i => i / 10);
+      let lastGroupCount = itemCount;
+
+      for (const collageDensity of collageDensities) {
+        styleParams.collageDensity = collageDensity;
+        gallery = new Layouter({items, container, styleParams});
+        const groupCount = getGroupCount(gallery);
+
+        expect(groupCount).not.to.be.above(lastGroupCount);
+
+        lastGroupCount = groupCount;
       }
     });
 

@@ -258,7 +258,7 @@ export class Group {
 
 
       //---------| Calc collage density
-      if (this.layoutsVersion > 1 && this.collageDensity) {
+      if (this.layoutsVersion > 1 && this.collageDensity >= 0) {
         //th new calculation of the collage amount
 
         const collageDensity = this.collageDensity;
@@ -296,7 +296,7 @@ export class Group {
         seed = (this.inStripIdx + this.stripIdx) % numOfOptions;
       }
 
-      if (this.layoutsVersion === 1 && this.collageAmount) {
+      if (this.layoutsVersion === 1 && this.collageAmount >= 0) {
         //backwards compatibility
         seed += ((this.collageAmount) - 0.5) * numOfOptions;
       }
