@@ -384,12 +384,33 @@ describe('Layouter', () => {
     });
 
     // chooseBestGroup
-    // collageDensity
+    it('should not allow ugly groups if chooseBestGroup is true ', () => {
+      const items = getItems(99);
+      styleParams.groupTypes = '3t,3r,3l,3b'; //without 1
+      styleParams.groupSize = 3;
+      styleParams.collageDensity = 1;
+      styleParams.minItemSize = 10;
+      styleParams.gallerySize = 1000;
+
+      for (const chooseBestGroup of [true, false]) {
+        styleParams.chooseBestGroup = chooseBestGroup;
+
+        gallery = new Layouter({items, container, styleParams});
+        const isWithinTypes = gallery.columns[0].reduce((g, group) => {
+          const groupType = group.type;
+          const isType = (groupType !== '1'); //if ChoooseBestGroup is true, some group will have to be single
+          return (g && isType);
+        }, true);
+
+        expect(isWithinTypes).to.not.equal(chooseBestGroup);
+      }
+
+    });
+
     // layoutsVersion
     // galleryMargin
     // imageMargin
     // floatingImages
-    // fixedColumns
 
   });
 });
