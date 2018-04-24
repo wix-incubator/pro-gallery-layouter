@@ -12,20 +12,21 @@ export class Group {
     this.stripIdx = config.stripIdx;
     this.inStripIdx = config.inStripIdx;
     this.items = config.items;
-    this.cubeImages = config.cubeImages;
-    this.cubeType = config.cubeType;
     this.top = config.top;
-    this.isVertical = config.isVertical;
-    this.minItemSize = config.minItemSize;
-    this.gallerySize = config.gallerySize;
-    this.collageAmount = config.collageAmount;
-    this.collageDensity = config.collageDensity;
-    this.groupTypes = config.groupTypes;
-    this.rotatingGroupTypes = config.rotatingGroupTypes;
-    this.chooseBestGroup = config.chooseBestGroup;
-    this.layoutsVersion = config.layoutsVersion;
-    this.bottomInfoHeight = config.bottomInfoHeight;
-    this.imageMargin = config.imageMargin;
+
+    this.cubeType = config.styleParams.cubeType;
+    this.cubeImages = config.styleParams.cubeImages;
+    this.isVertical = config.styleParams.isVertical;
+    this.minItemSize = config.styleParams.minItemSize;
+    this.gallerySize = config.styleParams.gallerySize;
+    this.collageAmount = config.styleParams.collageAmount;
+    this.collageDensity = config.styleParams.collageDensity;
+    this.groupTypes = config.styleParams.groupTypes;
+    this.rotatingGroupTypes = config.styleParams.rotatingGroupTypes;
+    this.chooseBestGroup = config.styleParams.chooseBestGroup;
+    this.layoutsVersion = config.styleParams.layoutsVersion;
+    this.bottomInfoHeight = config.styleParams.bottomInfoHeight;
+    this.imageMargin = config.styleParams.imageMargin;
 
     this.visible = true;
     this.rendered = true;

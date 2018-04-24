@@ -188,16 +188,8 @@ export default class Layouter {
         idx: this.pointer,
         scrollTop: galleryHeight,
         dto: this.srcItems[this.pointer],
-        cubeImages: this.styleParams.cubeImages,
-        cubeType: this.styleParams.cubeType,
-        cubeRatio: this.styleParams.cubeRatio,
-        smartCrop: this.styleParams.smartCrop,
-        cropOnlyFill: this.styleParams.cropOnlyFill,
-        imageMargin: this.styleParams.imageMargin,
-        galleryMargin: this.styleParams.galleryMargin,
-        floatingImages: this.styleParams.floatingImages,
         container: this.container,
-        createdBy: 'galleryStructure'
+        styleParams: this.styleParams
       });
 
       this.layoutItems[this.pointer] = item;
@@ -220,20 +212,9 @@ export default class Layouter {
         inStripIdx,
         top: galleryHeight,
         items: groupItems,
-        chooseBestGroup: this.styleParams.chooseBestGroup,
-        groupTypes: this.styleParams.groupTypes,
-        rotatingGroupTypes: this.styleParams.rotatingGroupTypes,
-        cubeImages: this.styleParams.cubeImages,
-        cubeType: this.styleParams.cubeType,
-        isVertical: this.styleParams.isVertical,
-        minItemSize: this.styleParams.minItemSize,
         gallerySize,
-        collageAmount: this.styleParams.collageAmount,
-        collageDensity: this.styleParams.collageDensity,
-        layoutsVersion: this.styleParams.layoutsVersion,
-        bottomInfoHeight: this.styleParams.bottomInfoHeight,
         container: this.container,
-        imageMargin: this.styleParams.imageMargin
+        styleParams: this.styleParams
       });
 
       groupIdx++;

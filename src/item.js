@@ -34,19 +34,19 @@ export class Item {
 
     this._dto = merge({}, config.dto, metadata);
     this.dto = config.dto;
-
-    this.cubeType = config.cubeType || 'fill';
-    this.cubeImages = config.cubeImages;
-    this._cubeRatio = config.cubeRatio;
-    this.smartCrop = config.smartCrop;
-    this.cropOnlyFill = config.cropOnlyFill;
-    this.imageMargin = config.imageMargin;
-    this.galleryMargin = config.galleryMargin;
-    this.floatingImages = config.floatingImages;
     this.idx = config.idx;
-    this.smartCrop = config.smartCrop;
-    this.createdBy = config.createdBy;
     this.container = config.container;
+
+    this.cubeType = config.styleParams.cubeType || 'fill';
+    this.cubeImages = config.styleParams.cubeImages;
+    this._cubeRatio = config.styleParams.cubeRatio;
+    this.smartCrop = config.styleParams.smartCrop;
+    this.cropOnlyFill = config.styleParams.cropOnlyFill;
+    this.imageMargin = config.styleParams.imageMargin;
+    this.galleryMargin = config.styleParams.galleryMargin;
+    this.floatingImages = config.styleParams.floatingImages;
+    this.smartCrop = config.styleParams.smartCrop;
+
     this._groupOffset = {
       top: 0,
       left: 0,
