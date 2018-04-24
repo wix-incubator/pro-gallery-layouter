@@ -8,16 +8,7 @@ import each from 'lodash/each';
 import {utils} from './utils';
 import {Item} from './item.js';
 import {Group} from './group.js';
-
-class Strip {
-
-  constructor(lastIdx) {
-    this.ratio = 0;
-    this.groups = [];
-    this.height = 0;
-    this.idx = (lastIdx || 0) + 1;
-  }
-}
+import {Strip} from './strip.js';
 
 export default class Layouter {
 
@@ -33,77 +24,10 @@ export default class Layouter {
     this.createLayout();
   }
 
-  insertIfDefined(obj, field, value) {
-    if (!isUndefined(value)) {
-      obj[field] = value;
-    }
-  }
-
-  convertStyleParams(styleParams) {
-
-    //default styleParams
-    const convertedStyleParams = Object.assign({
-      cubeImages: false,
-      cubeType: 'fill',
-      cubeRatio: 1,
-      smartCrop: false,
-      imageMargin: 10,
-      galleryMargin: 0,
-      floatingImages: 0,
-      chooseBestGroup: true,
-      groupSize: 3,
-      groupTypes: '1,2h,2v,3h,3v,3t,3b,3l,3r',
-      rotatingGroupTypes: '',
-      isVertical: true,
-      minItemSize: 120,
-      oneRow: false,
-      gallerySize: 500,
-      collageDensity: 50,
-    }, styleParams);
-
-    this.insertIfDefined(convertedStyleParams, 'cubeImages', convertedStyleParams.cropItems);
-    this.insertIfDefined(convertedStyleParams, 'cubeType', convertedStyleParams.cropType);
-    this.insertIfDefined(convertedStyleParams, 'cubeRatio', convertedStyleParams.cropRatio);
-    this.insertIfDefined(convertedStyleParams, 'smartCrop', convertedStyleParams.smartCrop);
-    this.insertIfDefined(convertedStyleParams, 'imageMargin', convertedStyleParams.itemSpacing);
-    this.insertIfDefined(convertedStyleParams, 'galleryMargin', convertedStyleParams.layoutSpacing);
-    this.insertIfDefined(convertedStyleParams, 'floatingImages', convertedStyleParams.randomSpacings);
-    this.insertIfDefined(convertedStyleParams, 'chooseBestGroup', convertedStyleParams.smartGrouping);
-    this.insertIfDefined(convertedStyleParams, 'groupSize', convertedStyleParams.itemsPerGroup);
-    this.insertIfDefined(convertedStyleParams, 'groupTypes', isArray(convertedStyleParams.allowedGroupTypes) ? convertedStyleParams.allowedGroupTypes.join(',') : undefined);
-    this.insertIfDefined(convertedStyleParams, 'rotatingGroupTypes', isArray(convertedStyleParams.rotatingGroupTypes) ? convertedStyleParams.rotatingGroupTypes.join(',') : undefined);
-    this.insertIfDefined(convertedStyleParams, 'isVertical', convertedStyleParams.isColumnsLayout);
-    this.insertIfDefined(convertedStyleParams, 'minItemSize', convertedStyleParams.minItemSize);
-    this.insertIfDefined(convertedStyleParams, 'oneRow', convertedStyleParams.isVerticalScroll);
-    this.insertIfDefined(convertedStyleParams, 'gallerySize', convertedStyleParams.rowSize || convertedStyleParams.columnSize);
-    this.insertIfDefined(convertedStyleParams, 'collageDensity', convertedStyleParams.collageDensity);
-
-    return convertedStyleParams;
-  }
-
-  convertContainer(container, styleParams) {
-
-    const convertedContainer = Object.assign({
-      galleryWidth: 1000,
-      galleryHeight: 1000,
-      bounds: {}
-    }, container);
-
-    if (container.width >= 0) {
-      convertedContainer.galleryWidth = container.width + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0)) * 2;
-    }
-    if (container.height >= 0) {
-      convertedContainer.galleryHeight = container.height + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0));
-    }
-
-    return convertedContainer;
-  }
-
   updateParams(layoutParams) {
-
     this.srcItems = layoutParams.items;
-    this.styleParams = this.convertStyleParams(layoutParams.styleParams);
-    this.container = this.convertContainer(layoutParams.container, this.styleParams);
+    this.styleParams = utils.convertStyleParams(layoutParams.styleParams);
+    this.container = utils.convertContainer(layoutParams.container, this.styleParams);
     this.showAllItems = layoutParams.showAllItems;
   }
 
@@ -263,12 +187,12 @@ export default class Layouter {
             isStripSmallEnough = false;
           }
 
-/*
+
           if (isStripSmallEnough && this.isLastImage) {
             //if it is the last image - prefer adding it to the last strip rather putting it on a new strip
-            isStripSmallEnough = ((Math.abs(withoutNewGroup) * 1) < Math.abs(withNewGroup));
+            isStripSmallEnough = ((Number(Math.abs(withoutNewGroup))) < Math.abs(withNewGroup));
           }
-*/
+
         }
 
         const shouldStartNewStrip = (
@@ -286,7 +210,7 @@ export default class Layouter {
           if (strip.groups) {
             strip.groups[strip.groups.length - 1].isLastGroup = true;
             strip.groups[strip.groups.length - 1].stripWidth = galleryWidth;
-            this.resizeStrip(strip.groups, (galleryWidth / strip.ratio));
+            strip.resizeToHeight((galleryWidth / strip.ratio));
             galleryHeight += (galleryWidth / strip.ratio);
             columns[0] = (columns[0] || []).concat(strip.groups);
           }
@@ -320,8 +244,7 @@ export default class Layouter {
 
           strip.groups[strip.groups.length - 1].isLastGroup = true;
           strip.groups[strip.groups.length - 1].stripWidth = strip.height * strip.ratio;
-
-          this.resizeStrip(strip.groups, strip.height);
+          strip.resizeToHeight(strip.height);
           galleryHeight += (strip.height);
           columns[0] = (columns[0] || []).concat(strip.groups);
         }
@@ -488,19 +411,14 @@ export default class Layouter {
   }
 
   calcVisibilities(bounds) {
-    if (utils.shouldLog('visibilities')) {
-      console.log('Calculating Visibilities for groups', bounds, this.columns);
-    }
     for (let column, c = 0; column = this.columns[c]; c++) {
       for (let group, g = 0; group = column[g]; g++) {
         column[g] = this.calcVisibilitiesForGroup(group, bounds);
-        if (utils.shouldLog('visibilities')) {
-          console.log('Calculating Visibilities - group #' + column[g].idx + ' is ' + (column[g].visible ? 'VISIBLE' : (column[g].rendered ? 'RENDERED' : 'HIDDEN')), column[g], bounds);
-        }
       }
     }
   }
 
+  //todo - move to the group class
   calcVisibilitiesForGroup(group, bounds) {
     if (this.showAllItems === true) {
       group.onscreen = group.visible = group.rendered = group.required = true;
