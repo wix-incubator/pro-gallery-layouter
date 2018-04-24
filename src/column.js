@@ -1,5 +1,6 @@
 export class Column {
-  constructor(width, cubeRatio) {
+  constructor(idx, width, cubeRatio) {
+    this.idx = idx;
     this.groups = [];
     this.height = 0;
     this.width = width;

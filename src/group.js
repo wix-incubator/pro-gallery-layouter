@@ -122,13 +122,7 @@ export class Group {
       };
     }
 
-    // return;
-
     const m = this.imageMargin * 2;
-
-    if (utils.shouldLog('spacing')) {
-      console.log('SPACING - before rounding group #' + this.idx, this.realItems.map(i => `[${i.width}/${i.height}]`).join(', '));
-    }
 
     switch (this.type) {
       default:

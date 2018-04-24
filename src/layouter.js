@@ -69,11 +69,11 @@ export default class Layouter {
       minCol = this.pointer % columns.length;
     } else {
       let minColH = -1;
-      for (let i = 0; i < columns.length; i++) {
-        const colH = columns[i].height;
+      for (const column of columns) {
+        const colH = column.height;
         if (colH < minColH || minColH < 0) {
           minColH = colH;
-          minCol = i;
+          minCol = column;
         }
       }
     }
@@ -117,7 +117,8 @@ export default class Layouter {
     const numOfCols = this.calcNumberOfColumns(galleryWidth, gallerySize);
     gallerySize = Math.floor(galleryWidth / numOfCols);
 
-    const columns = fill(Array(numOfCols), new Column(gallerySize, this.styleParams.cubeRatio));
+    let c = 0;
+    const columns = fill(Array(numOfCols), new Column(c++, gallerySize, this.styleParams.cubeRatio));
     columns[numOfCols - 1].width += (galleryWidth - (gallerySize * numOfCols)); //the last group compensates for half pixels in other groups
     columns[numOfCols - 1].cubeRatio = this.styleParams.cubeRatio * (columns[numOfCols - 1].width / gallerySize); //fix the last group's cube ratio
 
@@ -214,22 +215,22 @@ export default class Layouter {
         const minCol = this.findShortestColumn(columns);
 
         //resize the group and images
-        group.fixItemsRatio(columns[minCol].cubeRatio); //fix last column's items ratio (caused by stretching it to fill the screen)
-        group.resizeToWidth(columns[minCol].width);
+        group.fixItemsRatio(minCol.cubeRatio); //fix last column's items ratio (caused by stretching it to fill the screen)
+        group.resizeToWidth(minCol.width);
         group.round();
 
         //update the group's position
-        group.setTop(columns[minCol].height);
-        group.setLeft(minCol * gallerySize);
+        group.setTop(minCol.height);
+        group.setLeft(minCol.idx * gallerySize);
 
         //add the image to the column
-        columns[minCol].addGroup(group);
+        minCol.addGroup(group);
 
         //add the image height to the column
-        columns[minCol].height += group.totalHeight;
+        minCol.height += group.totalHeight;
 
-        if (galleryHeight < columns[minCol].height) {
-          galleryHeight = columns[minCol].height;
+        if (galleryHeight < minCol.height) {
+          galleryHeight = minCol.height;
         }
 
       }
@@ -358,8 +359,8 @@ export default class Layouter {
   }
 
   calcVisibilities(bounds) {
-    for (let column, c = 0; column = this.columns[c]; c++) {
-      for (let group, g = 0; group = column[g]; g++) {
+    for (const column of this.columns) {
+      for (const group of column) {
         group.calcVisibilities(bounds);
       }
     }
