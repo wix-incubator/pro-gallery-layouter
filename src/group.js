@@ -317,228 +317,182 @@ export class Group {
       case '1' :
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         break;
 
       case '2v':
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.pinToCorner('bottom-left');
-          item.resize(w / item.width);
-          h += item.height;
-          items.push(item);
-        }
+        item.pinToCorner('bottom-left');
+        item.resize(w / item.width);
+        h += item.height;
+        items.push(item);
 
         break;
 
       case '2h':
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          item.innerOffset = [0, 0];
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        item.innerOffset = [0, 0];
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.pinToCorner('top-right');
-          item.innerOffset = [0, 0];
-          item.resize(h / item.height);
-          w += item.width;
-          items.push(item);
-        }
+        item.pinToCorner('top-right');
+        item.innerOffset = [0, 0];
+        item.resize(h / item.height);
+        w += item.width;
+        items.push(item);
 
         break;
 
       case '3b':
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.pinToCorner('top-right');
-          item.resize(h / item.height);
-          w += item.width;
-          items.push(item);
-        }
+        item.pinToCorner('top-right');
+        item.resize(h / item.height);
+        w += item.width;
+        items.push(item);
 
         item = this.safeGetItem(2);
-        if (item) {
-          item.pinToCorner('bottom-left');
-          item.resize(w / item.width);
-          h += item.height;
-          items.push(item);
-        }
+        item.pinToCorner('bottom-left');
+        item.resize(w / item.width);
+        h += item.height;
+        items.push(item);
 
         break;
 
       case '3t':
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.pinToCorner('bottom-left');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('bottom-left');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(2);
-        if (item) {
-          item.pinToCorner('bottom-right');
-          item.resize(h / item.height);
-          w += item.width;
-          items.push(item);
-        }
+        item.pinToCorner('bottom-right');
+        item.resize(h / item.height);
+        w += item.width;
+        items.push(item);
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          item.resize(w / item.width);
-          h += item.height;
-          items = [item].concat(items);
-        }
+        item.pinToCorner('top-left');
+        item.resize(w / item.width);
+        h += item.height;
+        items = [item].concat(items);
 
         break;
 
       case '3r':
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.pinToCorner('bottom-left');
-          item.resize(w / item.width);
-          h += item.height;
-          items.push(item);
-        }
+        item.pinToCorner('bottom-left');
+        item.resize(w / item.width);
+        h += item.height;
+        items.push(item);
 
         item = this.safeGetItem(2);
-        if (item) {
-          item.pinToCorner('top-right');
-          item.resize(h / item.height);
-          w += item.width;
-          items.push(item);
-        }
+        item.pinToCorner('top-right');
+        item.resize(h / item.height);
+        w += item.width;
+        items.push(item);
 
         break;
 
       case '3l':
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.pinToCorner('top-right');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-right');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(2);
-        if (item) {
-          item.pinToCorner('bottom-right');
-          item.resize(w / item.width);
-          h += item.height;
-          items.push(item);
-        }
+        item.pinToCorner('bottom-right');
+        item.resize(w / item.width);
+        h += item.height;
+        items.push(item);
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          item.resize(h / item.height);
-          w += item.width;
-          items = [item].concat(items);
-        }
+        item.pinToCorner('top-left');
+        item.resize(h / item.height);
+        w += item.width;
+        items = [item].concat(items);
 
         break;
 
       case '3v':
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          item.setPosition('relative');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        item.setPosition('relative');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.setPosition('relative');
-          item.resize(w / item.width);
-          h += item.height;
-          item.pinToCorner('top', (items[0].height / h));
-          items.push(item);
-        }
+        item.setPosition('relative');
+        item.resize(w / item.width);
+        h += item.height;
+        item.pinToCorner('top', (items[0].height / h));
+        items.push(item);
 
         item = this.safeGetItem(2);
-        if (item) {
-          item.pinToCorner('bottom-left');
-          item.setPosition('relative');
-          item.resize(w / item.width);
-          h += item.height;
-          items.push(item);
-        }
+        item.pinToCorner('bottom-left');
+        item.setPosition('relative');
+        item.resize(w / item.width);
+        h += item.height;
+        items.push(item);
 
         break;
 
       case '3h':
 
         item = this.safeGetItem(0);
-        if (item) {
-          item.pinToCorner('top-left');
-          item.setPosition('relative');
-          items.push(item);
-          w = item.width;
-          h = item.height;
-        }
+        item.pinToCorner('top-left');
+        item.setPosition('relative');
+        items.push(item);
+        w = item.width;
+        h = item.height;
 
         item = this.safeGetItem(1);
-        if (item) {
-          item.setPosition('relative');
-          item.resize(h / item.height);
-          w += item.width;
-          item.pinToCorner('left', (items[0].width / w));
-          items.push(item);
-        }
+        item.setPosition('relative');
+        item.resize(h / item.height);
+        w += item.width;
+        item.pinToCorner('left', (items[0].width / w));
+        items.push(item);
 
         item = this.safeGetItem(2);
-        if (item) {
-          item.pinToCorner('top-right');
-          item.setPosition('relative');
-          item.resize(h / item.height);
-          w += item.width;
-          items.push(item);
-        }
+        item.pinToCorner('top-right');
+        item.setPosition('relative');
+        item.resize(h / item.height);
+        w += item.width;
+        items.push(item);
 
         break;
     }
