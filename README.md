@@ -8,7 +8,7 @@ This module creates a layout from a list of items, each containing an id, width 
 Notice: this module is currently available only in the wix-private repository.
 
 ## Usage
-```
+```javascript
 import {Layouter} from 'pro-gallery-layouter';
 const items = [{
   id: '2d3b675ea857dc41158bad3b28300824',
