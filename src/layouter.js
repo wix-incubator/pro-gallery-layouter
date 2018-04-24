@@ -198,8 +198,10 @@ export default class Layouter {
           } else if (gallerySize * 2 < (galleryWidth / strip.ratio)) {
               //stretching the strip to the full width will make it too high - so make it as high as the gallerySize and not stretch
             strip.height = gallerySize;
+            strip.markAsIncomplete();
           } else {
             strip.height = (galleryWidth / strip.ratio);
+            strip.setWidth(galleryWidth);
           }
 
           strip.resizeToHeight(strip.height);
