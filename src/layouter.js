@@ -136,6 +136,7 @@ export default class Layouter {
         top: galleryHeight,
         items: groupItems,
         gallerySize,
+        showAllItems: this.showAllItems,
         container: this.container,
         styleParams: this.styleParams
       });
@@ -221,10 +222,7 @@ export default class Layouter {
         } else {
           let minColH = -1;
           for (let i = 0; i < numOfCols; i++) {
-            let colH = columns[i].height;
-            if (typeof (colH) === 'undefined') {
-              colH = 0;
-            }
+            const colH = columns[i].height;
             if (colH < minColH || minColH < 0) {
               minColH = colH;
               minCol = i;
@@ -232,11 +230,10 @@ export default class Layouter {
           }
         }
 
-        columns[minCol] = columns[minCol] || (new Column());
-
         //resize the group and images
         group.fixItemsRatio(columns[minCol].cubeRatio); //fix last column's items ratio (caused by stretching it to fill the screen)
-        this.resizeGroup(group, columns[minCol].width);
+        group.resizeToWidth(columns[minCol].width);
+        group.round();
 
         //update the group's position
         group.setTop(columns[minCol].height);
@@ -258,9 +255,9 @@ export default class Layouter {
 
       if (!this.gotScrollEvent && this.pointer < 10) {
         //until the first scroll event, make sure the first 10 groups are displayed
-        group.visible = group.rendered = group.required = true;
+        group.calcVisibilities(true);
       } else {
-        group = this.calcVisibilitiesForGroup(group, bounds);
+        group.calcVisibilities(bounds);
       }
 
       if (!this.firstGroup) {
@@ -372,55 +369,9 @@ export default class Layouter {
   calcVisibilities(bounds) {
     for (let column, c = 0; column = this.columns[c]; c++) {
       for (let group, g = 0; group = column[g]; g++) {
-        column[g] = this.calcVisibilitiesForGroup(group, bounds);
+        group.calcVisibilities(bounds);
       }
     }
-  }
-
-  //todo - move to the group class
-  calcVisibilitiesForGroup(group, bounds) {
-    if (this.showAllItems === true) {
-      group.onscreen = group.visible = group.rendered = group.required = true;
-    } else if (this.styleParams.oneRow) {
-      group.onscreen = group.right >= bounds.onscreenTop && group.left <= bounds.onscreenBottom;
-      group.visible = group.right >= bounds.visibleTop && group.left <= bounds.visibleBottom;
-      group.rendered = group.right >= bounds.renderedTop && group.left <= bounds.renderedBottom;
-      group.required = group.right >= bounds.requiredTop && group.left <= bounds.requiredBottom;
-    } else {
-      group.onscreen = group.bottom >= bounds.onscreenTop && group.top <= bounds.onscreenBottom;
-      group.visible = group.bottom >= bounds.visibleTop && group.top <= bounds.visibleBottom;
-      group.rendered = group.bottom >= bounds.renderedTop && group.top <= bounds.renderedBottom;
-      group.required = group.bottom >= bounds.requiredTop && group.top <= bounds.requiredBottom;
-    }
-    for (let i = 0; i < group.items.length; i++) {
-      group.items[i].visibility = {
-        onscreen: group.onscreen,
-        visible: group.visible,
-        rendered: group.rendered,
-        required: group.required
-      };
-    }
-    return group;
-  }
-
-  resizeStrip(groups, height) {
-    let left = 0;
-    let remainder = 0;
-    for (let group, g = 0; group = groups[g]; g++) {
-      group.setLeft(left);
-      // group.left = (left);
-      group.width += remainder; //add the remainder from the last group round
-      group.resizeToHeight(height);
-      remainder = group.width;
-      group.round();
-      remainder -= group.width;
-      left += group.width;
-    }
-  }
-
-  resizeGroup(group, width) {
-    group.resizeToWidth(width);
-    group.round();
   }
 
   get isLastImage() {

@@ -41,7 +41,9 @@ export class Group {
     this.inStripIdx = config.inStripIdx;
     this.items = config.items;
     this.top = config.top;
+    this.showAllItems = config.showAllItems;
 
+    this.oneRow = config.styleParams.oneRow;
     this.cubeType = config.styleParams.cubeType;
     this.cubeImages = config.styleParams.cubeImages;
     this.isVertical = config.styleParams.isVertical;
@@ -731,6 +733,31 @@ export class Group {
       item.offset = {
         left,
         right: left + this.width
+      };
+    }
+  }
+
+  //todo - move to the group class
+  calcVisibilities(bounds) {
+    if (bounds === true || this.showAllItems === true) {
+      this.onscreen = this.visible = this.rendered = this.required = true;
+    } else if (this.oneRow) {
+      this.onscreen = this.right >= bounds.onscreenTop && this.left <= bounds.onscreenBottom;
+      this.visible = this.right >= bounds.visibleTop && this.left <= bounds.visibleBottom;
+      this.rendered = this.right >= bounds.renderedTop && this.left <= bounds.renderedBottom;
+      this.required = this.right >= bounds.requiredTop && this.left <= bounds.requiredBottom;
+    } else {
+      this.onscreen = this.bottom >= bounds.onscreenTop && this.top <= bounds.onscreenBottom;
+      this.visible = this.bottom >= bounds.visibleTop && this.top <= bounds.visibleBottom;
+      this.rendered = this.bottom >= bounds.renderedTop && this.top <= bounds.renderedBottom;
+      this.required = this.bottom >= bounds.requiredTop && this.top <= bounds.requiredBottom;
+    }
+    for (let i = 0; i < this.items.length; i++) {
+      this.items[i].visibility = {
+        onscreen: this.onscreen,
+        visible: this.visible,
+        rendered: this.rendered,
+        required: this.required
       };
     }
   }
