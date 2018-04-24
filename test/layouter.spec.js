@@ -57,6 +57,17 @@ describe('Layouter', () => {
   });
 
   describe('items', () => {
+    it('should not change default layout', () => {
+
+      items = getItems(20);
+      gallery = new Layouter({items, container, styleParams});
+
+      const offsets = gallery.layoutItems.reduce((str, item) => str + JSON.stringify(item.offset), '');
+      const expectedOffsets = '{"top":0,"left":0,"right":414.73117253928996,"bottom":216.0058190308802}{"top":0,"left":415,"right":514.7326005783461,"bottom":149.0058190308802}{"top":149,"left":415,"right":514.7326005783461,"bottom":370.3895004807621}{"top":0,"left":515,"right":838.6908179215759,"bottom":216.0058190308802}{"top":0,"left":839,"right":1000.845408960788,"bottom":108.00581903088019}{"top":108,"left":839,"right":1000.845408960788,"bottom":332.0116380617604}{"top":216.0058190308802,"left":0,"right":142.85714285714283,"bottom":311.66908433700263}{"top":312.00581903088016,"left":0,"right":142.85714285714283,"bottom":497.3323496431251}{"top":216.0058190308802,"left":143,"right":428.71428571428567,"bottom":406.66908433700263}{"top":216.0058190308802,"left":429,"right":571.8571428571429,"bottom":311.66908433700263}{"top":312.00581903088016,"left":429,"right":571.8571428571429,"bottom":497.3323496431251}{"top":216.0058190308802,"left":572,"right":857.7142857142857,"bottom":406.66908433700263}{"top":216.0058190308802,"left":858,"right":1000.8571428571429,"bottom":311.66908433700263}{"top":312.00581903088016,"left":858,"right":1000.8571428571429,"bottom":497.3323496431251}{"top":406.66908433700263,"left":0,"right":265.315417531732,"bottom":583.7197477863031}{"top":406.66908433700263,"left":265,"right":350.9040457422977,"bottom":454.71974778630306}{"top":454.66908433700263,"left":265,"right":350.9040457422977,"bottom":615.3548163868212}{"top":406.66908433700263,"left":351,"right":469.1497016625064,"bottom":583.7197477863031}{"top":406.66908433700263,"left":469,"right":734.315417531732,"bottom":583.7197477863031}{"top":406.66908433700263,"left":734,"right":999.315417531732,"bottom":583.7197477863031}';
+
+      expect(expectedOffsets).to.equal(offsets);
+    });
+
     it('should include all items in original order', () => {
 
       styleParams.galleryWidth = 500;
@@ -138,7 +149,6 @@ describe('Layouter', () => {
         styleParams.cubeRatio = ratio;
         gallery = new Layouter({items, container, styleParams});
 
-        console.log(gallery.columns);
         const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
           return (g && group.items.reduce((i, image) => {
             const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cubeRatio);
@@ -490,9 +500,6 @@ describe('Layouter', () => {
                 realMargin = Math.round(item.offset.top - lastItem.offset.bottom);
               }
               marginDiff = Math.abs(realMargin - margin * 2);
-              if (marginDiff > 1) {
-                console.log(item.idx, item.offset, lastItem.offset);
-              }
               expect(marginDiff).to.be.below(1);
             }
             lastItem = item;
