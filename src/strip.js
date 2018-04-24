@@ -11,6 +11,16 @@ export class Strip {
     this.container = config.container;
   }
 
+  addGroup(group) {
+    if (this.hasGroups) {
+      this.lastGroup.isLastGroup = false;
+    }
+    this.groups.push(group);
+    this.lastGroup.isLastGroup = true;
+    this.lastGroup.stripWidth = this.height * this.ratio;
+
+  }
+
   resizeToHeight(height) {
     this.height = height;
     let left = 0;

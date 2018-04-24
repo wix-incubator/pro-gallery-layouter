@@ -167,8 +167,6 @@ export default class Layouter {
 
         if (strip.isFull(group, this.isLastImage)) {
           //close the current strip
-          strip.lastGroup.isLastGroup = true;
-          strip.lastGroup.stripWidth = galleryWidth;
           strip.resizeToHeight((galleryWidth / strip.ratio));
           galleryHeight += strip.height;
           columns[0].addGroups(strip.groups);
@@ -191,7 +189,7 @@ export default class Layouter {
         group.stripIdx = strip.idx;
         strip.ratio += group.ratio;
         strip.height = Math.min(gallerySize, (galleryWidth / strip.ratio));
-        strip.groups.push(group);
+        strip.addGroup(group);
 
         if (this.isLastImage && strip.hasGroups) {
           if (this.styleParams.oneRow) {
@@ -203,8 +201,6 @@ export default class Layouter {
             strip.height = (galleryWidth / strip.ratio);
           }
 
-          strip.lastGroup.isLastGroup = true;
-          strip.lastGroup.stripWidth = strip.height * strip.ratio;
           strip.resizeToHeight(strip.height);
           galleryHeight += (strip.height);
           columns[0].addGroups(strip.groups);
