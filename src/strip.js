@@ -1,14 +1,18 @@
 
 export class Strip {
 
-  constructor(lastIdx) {
+  constructor(config) {
     this.ratio = 0;
     this.groups = [];
     this.height = 0;
-    this.idx = (lastIdx || 0) + 1;
+
+    this.idx = config.idx;
+    this.styleParams = config.styleParams;
+    this.container = config.container;
   }
 
   resizeToHeight(height) {
+    this.height = height;
     let left = 0;
     let remainder = 0;
     for (const group of this.groups) {
@@ -23,5 +27,54 @@ export class Strip {
     }
   }
 
+  isFull(newGroup, isLastImage) {
+
+    if (!this.hasGroups) {
+      return false;
+    }
+
+    const {galleryWidth} = this.container;
+    const {oneRow, gallerySize} = this.styleParams;
+
+    let isStripSmallEnough;
+    if (oneRow) {
+      isStripSmallEnough = false; //onerow layout is one long strip
+    } else {
+      const withNewGroup = ((galleryWidth / (this.ratio + newGroup.ratio)) - gallerySize); //start a new strip BEFORE adding the current group
+      const withoutNewGroup = ((galleryWidth / (this.ratio)) - gallerySize); //start a new strip AFTER adding the current group
+      if (isNaN(withNewGroup) || isNaN(withoutNewGroup)) {
+        isStripSmallEnough = false;
+      } else if (withoutNewGroup < 0) {
+        //the strip is already too small
+        isStripSmallEnough = true;
+      } else if (withNewGroup < 0) {
+        //adding the new group makes is small enough
+        // check if adding the new group makes the strip TOO small
+        //so - without the new group, the strip is larger than the required size - but adding the new group might make it too small
+        isStripSmallEnough = (Math.abs(withoutNewGroup) < Math.abs(withNewGroup));
+
+      } else {
+        isStripSmallEnough = false;
+      }
+
+
+      if (isStripSmallEnough && isLastImage) {
+        //if it is the last image - prefer adding it to the last strip rather putting it on a new strip
+        isStripSmallEnough = ((Number(Math.abs(withoutNewGroup))) < Math.abs(withNewGroup));
+      }
+
+    }
+
+    return isStripSmallEnough;
+
+  }
+
+  get hasGroups() {
+    return this.groups.length > 0;
+  }
+
+  get lastGroup() {
+    return this.groups[this.groups.length - 1];
+  }
 
 }

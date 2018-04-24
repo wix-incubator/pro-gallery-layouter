@@ -137,6 +137,8 @@ describe('Layouter', () => {
       for (const ratio of [0.25, 0.5, 1, 2, 4]) {
         styleParams.cubeRatio = ratio;
         gallery = new Layouter({items, container, styleParams});
+
+        console.log(gallery.columns);
         const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
           return (g && group.items.reduce((i, image) => {
             const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cubeRatio);
@@ -468,7 +470,7 @@ describe('Layouter', () => {
 
       items = getItems(100);
       styleParams.galleryWidth = 4000;
-      styleParams.gallerySize = 500;
+      styleParams.gallerySize = 1000;
       styleParams.groupSize = 3;
 
       for (const margin of [10, 20, 40, 100]) {
@@ -488,6 +490,9 @@ describe('Layouter', () => {
                 realMargin = Math.round(item.offset.top - lastItem.offset.bottom);
               }
               marginDiff = Math.abs(realMargin - margin * 2);
+              if (marginDiff > 1) {
+                console.log(item.idx, item.offset, lastItem.offset);
+              }
               expect(marginDiff).to.be.below(1);
             }
             lastItem = item;

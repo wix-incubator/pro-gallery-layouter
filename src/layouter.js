@@ -9,6 +9,7 @@ import {utils} from './utils';
 import {Item} from './item.js';
 import {Group} from './group.js';
 import {Strip} from './strip.js';
+import {Column} from './column.js';
 
 export default class Layouter {
 
@@ -73,18 +74,17 @@ export default class Layouter {
     let group;
     const bounds = this.container.bounds || {};
 
-    let strip = new Strip();
-
-    let numOfCols = 1;
-    const columns = [];
-    const columnsH = [];
-    let columnsW = [];
-    let cubeRatios = [];
+    let strip = new Strip({
+      idx: 1,
+      container: this.container,
+      styleParams: this.styleParams
+    });
 
     let galleryHeight = 0;
 
     let safetyCounter = 1000000;
 
+    let numOfCols = 1;
     if (this.styleParams.isVertical) {
       if (this.styleParams.fixedColumns > 0) {
         numOfCols = utils.isMobile() ? 1 : this.styleParams.fixedColumns;
@@ -92,14 +92,13 @@ export default class Layouter {
         numOfCols = Math.ceil(galleryWidth / gallerySize) || 1;
       }
       gallerySize = Math.floor(galleryWidth / numOfCols);
-      columnsW = fill(Array(numOfCols), gallerySize);
-      columnsW[columnsW.length - 1] += (galleryWidth - sum(columnsW)); //the last group compensates for half pixels in other groups
-      cubeRatios = fill(Array(numOfCols), this.styleParams.cubeRatio);
-      cubeRatios[columnsW.length - 1] = this.styleParams.cubeRatio * (columnsW[columnsW.length - 1] / gallerySize); //fix the last group's cube ratio
     } else {
       numOfCols = 1;
       // gallerySize = Math.min(this.styleParams.gallerySize, galleryWidth);
     }
+    const columns = fill(Array(numOfCols), new Column(gallerySize, this.styleParams.cubeRatio));
+    columns[numOfCols - 1].width += (galleryWidth - (gallerySize * numOfCols)); //the last group compensates for half pixels in other groups
+    columns[numOfCols - 1].cubeRatio = this.styleParams.cubeRatio * (columns[numOfCols - 1].width / gallerySize); //fix the last group's cube ratio
 
     while (this.srcItems[this.pointer]) {
 
@@ -164,59 +163,20 @@ export default class Layouter {
 
         //---------------------| STRIPS GALLERY |----------------------//
 
-        //open a new strip if needed
-        let isStripSmallEnough;
-        if (this.styleParams.oneRow) {
-          isStripSmallEnough = false; //onerow layout is one long strip
-
-        } else {
-          const withNewGroup = ((galleryWidth / (strip.ratio + group.ratio)) - gallerySize); //start a new strip BEFORE adding the current group
-          const withoutNewGroup = ((galleryWidth / (strip.ratio)) - gallerySize); //start a new strip AFTER adding the current group
-          if (isNaN(withNewGroup) || isNaN(withoutNewGroup)) {
-            isStripSmallEnough = false;
-          } else if (withoutNewGroup < 0) {
-            //the strip is already too small
-            isStripSmallEnough = true;
-          } else if (withNewGroup < 0) {
-            //adding the new group makes is small enough
-            // check if adding the new group makes the strip TOO small
-            //so - without the new group, the strip is larger than the required size - but adding the new group might make it too small
-            isStripSmallEnough = (Math.abs(withoutNewGroup) < Math.abs(withNewGroup));
-
-          } else {
-            isStripSmallEnough = false;
-          }
-
-
-          if (isStripSmallEnough && this.isLastImage) {
-            //if it is the last image - prefer adding it to the last strip rather putting it on a new strip
-            isStripSmallEnough = ((Number(Math.abs(withoutNewGroup))) < Math.abs(withNewGroup));
-          }
-
-        }
-
-        const shouldStartNewStrip = (
-          (!strip.groups) //first image - restart a new strip
-          ||
-          (
-            (strip.groups.length > 0) //strip must have at least one group
-            &&
-            isStripSmallEnough
-          )
-        );
-
-        if (shouldStartNewStrip) {
+        if (strip.isFull(group, this.isLastImage)) {
           //close the current strip
-          if (strip.groups) {
-            strip.groups[strip.groups.length - 1].isLastGroup = true;
-            strip.groups[strip.groups.length - 1].stripWidth = galleryWidth;
-            strip.resizeToHeight((galleryWidth / strip.ratio));
-            galleryHeight += (galleryWidth / strip.ratio);
-            columns[0] = (columns[0] || []).concat(strip.groups);
-          }
+          strip.lastGroup.isLastGroup = true;
+          strip.lastGroup.stripWidth = galleryWidth;
+          strip.resizeToHeight((galleryWidth / strip.ratio));
+          galleryHeight += strip.height;
+          columns[0].addGroups(strip.groups);
 
           //open a new strip
-          strip = new Strip(strip.idx);
+          strip = new Strip({
+            idx: strip.idx + 1,
+            container: this.container,
+            styleParams: this.styleParams
+          });
 
           //reset the group (this group will be rebuilt)
           inStripIdx = 1;
@@ -232,7 +192,7 @@ export default class Layouter {
         strip.height = Math.min(gallerySize, (galleryWidth / strip.ratio));
         strip.groups.push(group);
 
-        if (this.isLastImage && strip.groups) {
+        if (this.isLastImage && strip.hasGroups) {
           if (this.styleParams.oneRow) {
             strip.height = this.container.galleryHeight + (this.styleParams.imageMargin - this.styleParams.galleryMargin);
           } else if (gallerySize * 2 < (galleryWidth / strip.ratio)) {
@@ -242,11 +202,11 @@ export default class Layouter {
             strip.height = (galleryWidth / strip.ratio);
           }
 
-          strip.groups[strip.groups.length - 1].isLastGroup = true;
-          strip.groups[strip.groups.length - 1].stripWidth = strip.height * strip.ratio;
+          strip.lastGroup.isLastGroup = true;
+          strip.lastGroup.stripWidth = strip.height * strip.ratio;
           strip.resizeToHeight(strip.height);
           galleryHeight += (strip.height);
-          columns[0] = (columns[0] || []).concat(strip.groups);
+          columns[0].addGroups(strip.groups);
         }
 
       } else {
@@ -261,7 +221,7 @@ export default class Layouter {
         } else {
           let minColH = -1;
           for (let i = 0; i < numOfCols; i++) {
-            let colH = columnsH[i];
+            let colH = columns[i].height;
             if (typeof (colH) === 'undefined') {
               colH = 0;
             }
@@ -272,25 +232,24 @@ export default class Layouter {
           }
         }
 
-        columns[minCol] = columns[minCol] || [];
-        columnsH[minCol] = columnsH[minCol] || 0;
+        columns[minCol] = columns[minCol] || (new Column());
 
         //resize the group and images
-        group.fixItemsRatio(cubeRatios[minCol]); //fix last column's items ratio (caused by stretching it to fill the screen)
-        this.resizeGroup(group, columnsW[minCol]);
+        group.fixItemsRatio(columns[minCol].cubeRatio); //fix last column's items ratio (caused by stretching it to fill the screen)
+        this.resizeGroup(group, columns[minCol].width);
 
         //update the group's position
-        group.setTop(columnsH[minCol]);
+        group.setTop(columns[minCol].height);
         group.setLeft(minCol * gallerySize);
 
         //add the image to the column
-        columns[minCol].push(group);
+        columns[minCol].addGroup(group);
 
         //add the image height to the column
-        columnsH[minCol] += group.totalHeight;
+        columns[minCol].height += group.totalHeight;
 
-        if (galleryHeight < columnsH[minCol]) {
-          galleryHeight = columnsH[minCol];
+        if (galleryHeight < columns[minCol].height) {
+          galleryHeight = columns[minCol].height;
         }
 
       }
@@ -315,7 +274,7 @@ export default class Layouter {
     //results
     this.lastGroup = group;
     this.strips = strip.idx || 0;
-    this.columns = columns;
+    this.columns = columns.map(col => col.groups);
     this.colWidth = Math.floor(galleryWidth / numOfCols);
     this.height = galleryHeight - (this.styleParams.oneRow ? 0 : (this.styleParams.imageMargin - this.styleParams.galleryMargin) * 2);
 
