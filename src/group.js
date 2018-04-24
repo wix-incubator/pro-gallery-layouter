@@ -5,6 +5,28 @@ import includes from 'lodash/includes';
 import filter from 'lodash/filter';
 import {utils} from './utils';
 
+const GROUP_TYPES_BY_RATIOS_V = {
+  lll: '1,2h',
+  llp: '1,3r',
+  lpl: '1,2h',
+  pll: '1,2h,3l',
+  lpp: '1,2h,3r,3h',
+  plp: '1,2h,3l,3r,3h',
+  ppl: '1,2h,3l,3h',
+  ppp: '1,2h,3l,3r,3h',
+};
+
+const GROUP_TYPES_BY_RATIOS_H = {
+  lll: '1,2v,3t,3b,3v',
+  llp: '1,2v,3t,3v',
+  lpl: '1,2v,3t,3b,3v',
+  pll: '1,2v,3b,3v',
+  lpp: '1,2v,3t',
+  plp: '1,2v',
+  ppl: '1,3b',
+  ppp: '1,2h',
+};
+
 export class Group {
 
   constructor(config) {
@@ -168,12 +190,6 @@ export class Group {
     } else {
       //isVertical - is the gallery vertical (pinterest style) or horizontal (flickr style)
 
-      //map the group to l=landscape and p=portrait
-      //create a string to state the images group's type
-      this.ratios = this.items.map(item => {
-        return item.orientation.slice(0, 1);
-      }).join('');
-
       //---------| Find the best groupType for each ratios case
       //optional types:
       //  1   => single photo
@@ -197,35 +213,11 @@ export class Group {
       let optionalTypes; //optional groupTypes (separated by ,). 1 is always optional
 
       if (this.chooseBestGroup) {
-        switch (this.ratios) {
-          case 'lll':
-            optionalTypes = (isV ? '1,2h' : '1,2v,3t,3b,3v');
-            break;
-          case 'llp':
-            optionalTypes = (isV ? '1,3r' : '1,2v,3t,3v');
-            break;
-          case 'lpl':
-            optionalTypes = (isV ? '1,2h' : '1,2v,3t,3b,3v');
-            break;
-          case 'pll':
-            optionalTypes = (isV ? '1,2h,3l' : '1,2v,3b,3v');
-            break;
 
-          case 'lpp':
-            optionalTypes = (isV ? '1,2h,3r,3h' : '1,2v,3t');
-            break;
-          case 'plp':
-            optionalTypes = (isV ? '1,2h,3l,3r,3h' : '1,2v');
-            break;
-          case 'ppl':
-            optionalTypes = (isV ? '1,2h,3l,3h' : '1,3b');
-            break;
-          default:
-          case 'ppp':
-            optionalTypes = (isV ? '1,2h,3l,3r,3h' : '1,2h');
-            break;
-        }
-
+        //map the group to l=landscape and p=portrait
+        //create a string to state the images group's type
+        const ratios = this.items.map(item => item.orientation.slice(0, 1)).join('');
+        optionalTypes = (isV ? GROUP_TYPES_BY_RATIOS_V : GROUP_TYPES_BY_RATIOS_H)[ratios];
       } else if (this.items.length === 3 || forcedGroupSize === 3) {
         optionalTypes = (isV ? '1,2h,3l,3r,3h' : '1,2v,3t,3b,3v');
       }
