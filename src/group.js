@@ -27,6 +27,12 @@ const GROUP_TYPES_BY_RATIOS_H = {
   ppp: '1,2h',
 };
 
+const GROUP_SIZES_BY_MAX_SIZE = {
+  1: [[1]],
+  2: [[1], [1, 2], [2]],
+  3: [[1], [1, 2], [1, 2, 3], [2, 3], [3]],
+};
+
 export class Group {
 
   constructor(config) {
@@ -249,7 +255,6 @@ export class Group {
 
       }
 
-
       //---------| Calc collage density
       if (this.layoutsVersion > 1 && this.collageDensity >= 0) {
         //th new calculation of the collage amount
@@ -258,43 +263,18 @@ export class Group {
 
         //use the collage amount to determine the optional groupsize
         const maxGroupType = parseInt(last(groupTypes));
-        let optionalGroupSizes;
-        if (maxGroupType === 3) {
-          optionalGroupSizes = [[1], [1, 2], [1, 2, 3], [2, 3], [3]];
-        } else if (maxGroupType === 2) {
-          optionalGroupSizes = [[1], [1, 2], [2]];
-        } else {
-          optionalGroupSizes = [[1]];
-        }
-        const targetGroupsizes = optionalGroupSizes[Math.floor(collageDensity * (optionalGroupSizes.length - 1))];
+        const optionalGroupSizes = GROUP_SIZES_BY_MAX_SIZE[maxGroupType];
+        const targetGroupSizes = optionalGroupSizes[Math.floor(collageDensity * (optionalGroupSizes.length - 1))];
         // seed += ((collageDensity * 1.5) - 0.75) * numOfOptions;
 
-        remove(groupTypes, groupType => {
-          return targetGroupsizes.indexOf(parseInt(groupType)) < 0;
-        });
+        remove(groupTypes, groupType => targetGroupSizes.indexOf(parseInt(groupType)) < 0);
 
         if (groupTypes.length === 0) {
           groupTypes = ['1'];
         }
       }
 
-      //---------| Calculate a random seed for the collage group type
-      const numOfOptions = groupTypes.length;
-      let seed;
-      if (this.isVertical) {
-        //vertical galleries random is not relevant (previous group is in another column)
-        seed = utils.hashToInt(this.items[0].hash) % (numOfOptions);
-        //console.log('Seed is: ' + seed + '. Found using hash: ' + this.items[0].hash);
-      } else {
-        seed = (this.inStripIdx + this.stripIdx) % numOfOptions;
-      }
-
-      if (this.layoutsVersion === 1 && this.collageAmount >= 0) {
-        //backwards compatibility
-        seed += ((this.collageAmount) - 0.5) * numOfOptions;
-      }
-      seed = Math.min(Math.max(0, seed), (numOfOptions - 1));
-      seed = Math.round(seed);
+      const seed = this.calculateRandomSeed(groupTypes.length);
 
       //---------| Final group type to render according to:
       // - the number of options
@@ -302,7 +282,24 @@ export class Group {
       // - random seed (determined by the hash)
       return groupTypes[seed] || '1';
     }
+  }
 
+  calculateRandomSeed(numOfOptions) {
+    let seed;
+    if (this.isVertical) {
+      //vertical galleries random is not relevant (previous group is in another column)
+      seed = utils.hashToInt(this.items[0].hash) % (numOfOptions);
+      //console.log('Seed is: ' + seed + '. Found using hash: ' + this.items[0].hash);
+    } else {
+      seed = (this.inStripIdx + this.stripIdx) % numOfOptions;
+    }
+
+    if (this.layoutsVersion === 1 && this.collageAmount >= 0) {
+      //backwards compatibility
+      seed += ((this.collageAmount) - 0.5) * numOfOptions;
+    }
+
+    return Math.round(Math.min(Math.max(0, seed), (numOfOptions - 1)));
   }
 
   placeItems(forcedGroupSize) {
