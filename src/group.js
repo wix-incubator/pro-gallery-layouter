@@ -94,7 +94,7 @@ export class Group {
 
   fixItemsRatio(ratio) {
 
-    for (let item, i = 0; item = this.items[i]; i++) {
+    for (const item of this.items) {
       item.cubeRatio = ratio;
       item.resize(1);
     }
@@ -111,7 +111,7 @@ export class Group {
     }
     this.height = Math.round(this.height);
 
-    for (let item, i = 0; item = this.items[i]; i++) {
+    for (const item of this.items) {
       item.width = Math.round(item.width);
       item.height = Math.round(item.height);
       item.group = {
@@ -505,17 +505,27 @@ export class Group {
   }
 
   resizeToHeight(height) {
-
     this.height = height;
     this.width = this.getWidthByHeight(height);
 
+    this.resizeItems();
+  }
+
+  resizeToWidth(width) {
+    this.width = width;
+    this.height = this.getHeightByWidth(width);
+
+    this.resizeItems();
+  }
+
+  resizeItems() {
     if (utils.shouldLog('spacing')) {
-      console.log(`SPACING - Group #${this.idx} resizeToHeight H: ${height}`);
+      console.log(`SPACING - Group #${this.idx} resizeToHeight H: ${this.height}`);
       console.log(`SPACING - Group #${this.idx} resizeToHeight W: ${this.width}`);
     }
 
     const items = includes(['3b', '3r'], this.type) ? this.items.slice().reverse() : this.items;
-    for (let item, i = 0; item = items[i]; i++) {
+    items.forEach((item, i) => {
       item.group = {
         top: this.top,
         left: this.left,
@@ -527,34 +537,7 @@ export class Group {
         right: item.offset.left + this.width
       };
       item.resize(this.getItemDimensions(items, i));
-    }
-  }
-
-  resizeToWidth(width) {
-
-    this.width = width;
-    this.height = this.getHeightByWidth(width);
-
-    if (utils.shouldLog('spacing')) {
-      console.log(`SPACING - Group #${this.idx} resizeToWidth W: ${width}`);
-      console.log(`SPACING - Group #${this.idx} resizeToWidth H: ${this.height}`);
-    }
-
-    const items = includes(['3b', '3r'], this.type) ? this.items.slice().reverse() : this.items;
-    for (let item, i = 0; item = items[i]; i++) {
-      item.group = {
-        top: this.top,
-        left: this.left,
-        width: this.width,
-        height: this.height
-      };
-      item.offset = {
-        bottom: item.offset.top + this.height,
-        right: item.offset.left + this.width
-      };
-
-      item.resize(this.getItemDimensions(items, i));
-    }
+    });
   }
 
   getItemDimensions(items, idx) {
@@ -733,7 +716,7 @@ export class Group {
 
   setTop(top) {
     this.top = top || 0;
-    for (let item, i = 0; item = this.items[i]; i++) {
+    for (const item of this.items) {
       item.offset = {
         top,
         bottom: top + this.height
@@ -744,7 +727,7 @@ export class Group {
   setLeft(left) {
     this.left = left || 0;
     this.right = left + this.width;
-    for (let item, i = 0; item = this.items[i]; i++) {
+    for (const item of this.items) {
       item.offset = {
         left,
         right: left + this.width
