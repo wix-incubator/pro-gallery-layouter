@@ -798,9 +798,3 @@ export class Group {
     };
   }
 }
-
-/*
- <img onLoad={() => this.setItemLoaded()} className={'image' + (this.state.loaded ? '' : '-preload')}
- src={this.props.resized_url}/>
- */
-
