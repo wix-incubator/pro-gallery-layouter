@@ -27,7 +27,7 @@ describe('Layouter', () => {
 
   beforeEach(() => {
 
-    items = getItems();
+    const items = getItems();
     styleParams = {
       oneRow: false,
       isVertical: false,
@@ -83,7 +83,7 @@ describe('Layouter', () => {
   describe('items', () => {
     it('should not change default layout', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
 
       const res = {};
 
@@ -124,14 +124,11 @@ describe('Layouter', () => {
 
       for (let size of [10, 50, 100, 250]) {
         size = Math.min(items.length, size);
-        items = getItems(size);
+        const items = getItems(size);
         gallery = getLayout({items, container, styleParams});
 
-        const galleryItemIds = _.flatMapDeep(
-          gallery.columns,
-          column => column.groups.map(group => group.items.map(item => item.id))
-        );
-        const itemIds = items.map(item => item.photoId);
+        const galleryItemIds = gallery.items.map(item => item.id);
+        const itemIds = items.map(item => item.id || item.photoId);
 
         expect(galleryItemIds).to.deep.equal(itemIds);
       }
@@ -142,7 +139,7 @@ describe('Layouter', () => {
 
     //gallerySize
     it('should have taller Strips as gallerySize increases', () => {
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.isVertical = false;
 
       let lastGroupHeight = 0;
@@ -163,7 +160,7 @@ describe('Layouter', () => {
 
     //gallerySize
     it('should have all groups in a Columns gallery narrower than gallerySize', () => {
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.isVertical = true;
       styleParams.galleryWidth = 1200;
 
@@ -190,7 +187,7 @@ describe('Layouter', () => {
 
       const allowedRounding = 2; //the number of pixels that can change due to rounding
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.cubeImages = true;
       styleParams.imageMargin = 0;
 
@@ -211,7 +208,7 @@ describe('Layouter', () => {
 
     //fixedColumns
     it('should have fixed number of columns if specified', () => {
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.isVertical = true;
 
       for (const num of [1, 5, 10, 20]) {
@@ -225,7 +222,7 @@ describe('Layouter', () => {
     //collageAmount
     it('should have more items in groups when the collageAmount increases', () => {
       const itemCount = 100;
-      items = getItems(itemCount);
+      const items = getItems(itemCount);
       const collageAmounts = _.range(0, 11).map(i => i / 10);
       let lastGroupCount = itemCount;
       styleParams.layoutsVersion = 1;
@@ -244,7 +241,7 @@ describe('Layouter', () => {
     //collageDensity
     it('should have more items in groups when the collageDensity increases', () => {
       const itemCount = 100;
-      items = getItems(itemCount);
+      const items = getItems(itemCount);
 
       const collageDensities = _.range(0, 11).map(i => i / 10);
       let lastGroupCount = itemCount;
@@ -262,7 +259,7 @@ describe('Layouter', () => {
 
     //groupSize
     it('should have all groups at maximum groupSize items', () => {
-      items = getItems(100);
+      const items = getItems(100);
 
       for (const size of [1, 2, 3]) {
         styleParams.groupSize = size;
@@ -280,7 +277,7 @@ describe('Layouter', () => {
 
     //groupTypes
     it('should have groups only from the optional groups types ', () => {
-      items = getItems(100);
+      const items = getItems(100);
 
       const groupTypes = ['1', '1,2h,2v', '1,3b,3l,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,3b,3v,3h', '1,2h,2v,3v,3h,3l,3b']; //groupType '1' must always be an option
 
@@ -301,7 +298,7 @@ describe('Layouter', () => {
     //minItemSize
     it('should have all Strips GalleryLayout images larger than minItemSize', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.isVertical = false;
 
       const minItemSizes = [10, 50, 100, 200, 300, 400];
@@ -326,7 +323,7 @@ describe('Layouter', () => {
     //minItemSize
     it('should have all Columns GalleryLayout images larger than minItemSize', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.isVertical = true;
       styleParams.galleryWidth = 4000;
       styleParams.imageMargin = 0;
@@ -356,7 +353,7 @@ describe('Layouter', () => {
     // isVertical
     it('should create vertical layouts if isVertical is true', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.gallerySize = 200;
       styleParams.fixedColumns = 0;
       container.galleryWidth = 1000;
@@ -374,7 +371,7 @@ describe('Layouter', () => {
     // oneRow
     it('should create one long row of items if oneRow is true', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
       container.galleryHeight = 500;
 
       styleParams.oneRow = false;
@@ -419,7 +416,7 @@ describe('Layouter', () => {
 
       const allowedRounding = 2; //the number of pixels that can change due to rounding
 
-      items = getItems(100); //todo - something breaks when using exactly 100 images
+      const items = getItems(100); //todo - something breaks when using exactly 100 images
       styleParams.cubeImages = false;
       styleParams.imageMargin = 0;
       styleParams.collageDensity = 0.8;
@@ -452,7 +449,7 @@ describe('Layouter', () => {
 
       const allowedRounding = 2; //the number of pixels that can change due to rounding
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.cubeRatio = 2;
       styleParams.cubeImages = true;
       styleParams.smartCrop = true;
@@ -497,7 +494,7 @@ describe('Layouter', () => {
     // imageMargin (between groups)
     it('should have spaces between groups equal to imageMargin', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.galleryWidth = 4000;
       styleParams.gallerySize = 500;
       styleParams.groupSize = 1;
@@ -533,7 +530,7 @@ describe('Layouter', () => {
     //TODO fix this test once the playground is complete
 /*     it('should have spaces between items in a group equal to imageMargin', () => {
 
-      items = getItems(100);
+      const items = getItems(100);
       styleParams.galleryWidth = 4000;
       styleParams.gallerySize = 500;
       styleParams.groupSize = 3;

@@ -14,13 +14,10 @@ export class Item {
     config = config || {};
 
     if (!config.dto) {
+      console.error('Item has no DTO', config);
       config.dto = {};
     }
 
-    const metadata = utils.parseStringObject(config.dto.metadata || config.dto.metaData || '');
-    this.fixMetadataVerticalVideoRatio(metadata);
-
-    this._dto = merge({}, config.dto, metadata);
     this.dto = config.dto;
     this.idx = config.idx;
     this.container = config.container;
@@ -185,22 +182,22 @@ export class Item {
   }
 
   get id() {
-    return this._dto.id || this._dto.photoId || this._dto.itemId;
+    return this.dto.id || this.dto.photoId || this.dto.itemId;
   }
 
   set id(id) {
-    this._dto.itemId = id;
+    this.dto.itemId = this.dto.photoId = this.dto.id = id;
   }
 
   get hash() {
-    return this._dto.hash || this._dto.mediaUrl || this._dto.id;
+    return this.dto.hash || this.dto.mediaUrl || this.dto.id;
   }
 
   get maxWidth() {
-    return this._dto.width || this._dto.w;
+    return this.dto.width || this.dto.w;
   }
   set maxWidth(w) {
-    this._dto.width = w;
+    this.dto.width = w;
   }
 
   get outerWidth() {
@@ -208,7 +205,7 @@ export class Item {
   }
 
   get orgWidth() {
-    return this.style.width || this._dto.width || this._dto.w || 1; //make sure the width / height is not undefined (crashes the gallery)
+    return this.style.width || this.dto.width || this.dto.w || 1; //make sure the width / height is not undefined (crashes the gallery)
   }
 
   get width() {
@@ -228,7 +225,7 @@ export class Item {
   }
 
   get orgHeight() {
-    return this.style.height || this._dto.height || this._dto.h || 1; //make sure the width / height is not undefined (creashes the gallery)
+    return this.style.height || this.dto.height || this.dto.h || 1; //make sure the width / height is not undefined (creashes the gallery)
   }
 
   get height() {
@@ -244,10 +241,10 @@ export class Item {
   }
 
   get maxHeight() {
-    return this._dto.height || this._dto.h;
+    return this.dto.height || this.dto.h;
   }
   set maxHeight(h) {
-    h = this._dto.height;
+    h = this.dto.height;
   }
 
   get margins() {
