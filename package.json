@@ -8,7 +8,7 @@
     "email": "guyso@wix.com"
   },
   "scripts": {
-    "start": "yoshi start",
+    "start": "yoshi start --no-test",
     "precommit": "yoshi lint",
     "build": "yoshi build",
     "test": "yoshi test",
@@ -28,20 +28,14 @@
     "yoshi": "^1.2.0"
   },
   "dependencies": {
-    "axios": "~0.16.0",
     "gh-pages-auto-release": "^1.1.6",
-    "i18next": "~8.4.0",
-    "i18next-xhr-backend": "~1.4.0",
     "jquery": "^3.2.1",
     "pro-gallery-renderer": "^1.0.30",
     "prop-types": "~15.6.0",
     "rc-slider": "^8.5.0",
     "react": "15.6.1",
     "react-dom": "15.6.1",
-    "react-i18next": "~4.8.0",
-    "react-slider": "^0.9.0",
-    "regenerator-runtime": "^0.11.0",
-    "wix-axios-config": "latest"
+    "react-slider": "^0.9.0"
   },
   "yoshi": {
     "externals": {
