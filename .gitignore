@@ -1,9 +1,0 @@
-node_modules
-dist
-target
-package-lock.json
-*npm-debug.log
-.history
-.idea
-*.iml
-.yo-rc.json
