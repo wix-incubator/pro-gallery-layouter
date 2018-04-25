@@ -1,9 +1,6 @@
 import isUndefined from 'lodash/isUndefined';
-import isArray from 'lodash/isArray';
 import isString from 'lodash/isString';
 import fill from 'lodash/fill';
-import sum from 'lodash/sum';
-import each from 'lodash/each';
 
 import {utils} from './utils';
 import {Item} from './item.js';
@@ -63,9 +60,9 @@ export default class Layouter {
   }
 
   findShortestColumn(columns) {
-    let minCol = 0;
+    let minCol = columns[0];
     if (this.styleParams.cubeImages) {
-      minCol = this.pointer % columns.length;
+      minCol = columns[this.pointer % columns.length];
     } else {
       let minColH = -1;
       for (const column of columns) {
@@ -117,14 +114,12 @@ export default class Layouter {
     const numOfCols = this.calcNumberOfColumns(galleryWidth, gallerySize);
     gallerySize = Math.floor(galleryWidth / numOfCols);
 
-    let c = 0;
-    const columns = fill(Array(numOfCols), new Column(c++, gallerySize, this.styleParams.cubeRatio));
+    const columns = fill(Array(numOfCols), 0).map((column, idx) => new Column(idx, gallerySize, this.styleParams.cubeRatio));
     columns[numOfCols - 1].width += (galleryWidth - (gallerySize * numOfCols)); //the last group compensates for half pixels in other groups
     columns[numOfCols - 1].cubeRatio = this.styleParams.cubeRatio * (columns[numOfCols - 1].width / gallerySize); //fix the last group's cube ratio
 
     while (this.srcItems[this.pointer]) {
 
-      //console.log('Creating item #' + this.pointer + ' / ' + this.srcItems.length, this.srcItems[this.pointer]);
       item = new Item({
         idx: this.pointer,
         scrollTop: galleryHeight,
@@ -280,13 +275,13 @@ export default class Layouter {
   }
 
   lastVisibleItemIdx() {
-    for (let item, i = this.layoutItems.length - 1; item = this.layoutItems[i]; i--) {
+    for (let item, i = this.items.length - 1; item = this.items[i]; i--) {
       const isVisible = item.offset.top < (this.container.galleryHeight - 100); //the item must be visible and about the show more button
       if (isVisible) {
         return i;
       }
     }
-    return this.layoutItems.length - 1;
+    return this.items.length - 1;
   }
 
   findNeighborItem(itemIdx, dir) {
@@ -305,7 +300,7 @@ export default class Layouter {
       let distance;
 
       // each(slice(this.layoutItems, itemIdx - 50, itemIdx + 50), (item) => {
-      each(this.layoutItems, item => {
+      this.layoutItems.forEach(item => {
         itemY = item.offset.top + (item.height / 2);
         itemX = item.offset.left + (item.width / 2);
         distance = Math.sqrt(Math.pow(itemY - currentItemY, 2) + Math.pow(itemX - currentItemX, 2));
@@ -354,9 +349,6 @@ export default class Layouter {
     }
 
     if (neighborItem.idx >= 0) {
-      if (utils.isDev()) {
-        console.log('found neighborItem #' + neighborItem.idx, neighborItem);
-      }
       return neighborItem.idx;
     } else {
       console.warn('Could not find offset for itemIdx', itemIdx, dir);

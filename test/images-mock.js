@@ -1,5 +1,4 @@
 'use strict';
-// todo yoshi copied from test/mock/images-mock. Needs to check what to leave. there 3 images mock files
 export const testImages = [{
   height: 1000,
   width: 1920,

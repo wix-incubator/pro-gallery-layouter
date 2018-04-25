@@ -281,7 +281,6 @@ export class Group {
     if (this.isVertical) {
       //vertical galleries random is not relevant (previous group is in another column)
       seed = utils.hashToInt(this.items[0].hash) % (numOfOptions);
-      //console.log('Seed is: ' + seed + '. Found using hash: ' + this.items[0].hash);
     } else {
       seed = (this.inStripIdx + this.stripIdx) % numOfOptions;
     }

@@ -573,4 +573,145 @@ describe('Layouter', () => {
  */
 
   });
+
+  describe('Infinite Scroll', () => {
+    it('scroll should increase visible items range', () => {
+      const items = getItems(100);
+
+      styleParams.isVertical = true;
+      styleParams.fixedColumns = 2;
+      styleParams.groupSize = 1;
+
+      container.galleryWidth = 1000;
+      container.galleryHeight = 1000;
+
+      const isVisible = itemIdx => {
+        const item = gallery.items[itemIdx];
+        return !!item && item.visibility.visible;
+      };
+
+      const visibleItemsRange = items => {
+        let from = false;
+        let to = false;
+        for (const item of items) {
+          if (isVisible(item.idx)) {
+            if (from === false) {
+              from = item.idx;
+            }
+          } else if (to === false && from !== false) {
+            to = item.idx - 1;
+          }
+        }
+        return [from, to];
+      };
+
+      const scroll = base => {
+        return {
+          renderedTop: base - 3000,
+          visibleTop: base,
+          visibleBottom: base + 1000,
+          renderedBottom: base + 4000
+        };
+      };
+
+      let lastFrom = -1;
+      let lastTo = -1;
+
+      const boundsOptions = [0, 1000, 2500, 6000].map(base => scroll(base));
+      gallery = layouter.createLayout({items, container, styleParams});
+
+      for (const bounds of boundsOptions) {
+
+        gallery = layouter.calcVisibilities(bounds);
+
+        const [from, to] = visibleItemsRange(gallery.items);
+
+        expect(isVisible(from - 1)).to.be.false;
+        expect(isVisible(from)).to.be.true;
+        expect(isVisible(to)).to.be.true;
+        expect(isVisible(to + 1)).to.be.false;
+
+        expect(lastFrom).to.be.below(from);
+        expect(lastTo).to.be.below(to);
+
+        lastFrom = from;
+        lastTo = to;
+      }
+
+    });
+  });
+
+  describe('public methods', () => {
+    it('findLastVisibleItemIdx should work', () => {
+      const items = getItems(100);
+
+      styleParams.isVertical = true;
+      styleParams.fixedColumns = 1;
+      styleParams.groupSize = 1;
+
+      container.galleryWidth = 1000;
+
+      const galleryHeights = [500, 1000, 2500, 6000];
+
+      for (const galleryHeight of galleryHeights) {
+
+        container.galleryHeight = galleryHeight;
+        gallery = layouter.createLayout({items, container, styleParams});
+
+        const lastVisibleItemIdx = layouter.lastVisibleItemIdx();
+        const lastVisibleItem = gallery.items[lastVisibleItemIdx];
+        const firstHiddenItem = gallery.items[lastVisibleItemIdx + 1];
+
+        expect(lastVisibleItem.offset.top).to.be.below(galleryHeight);
+        expect(firstHiddenItem.offset.top).to.be.above(galleryHeight);
+
+      }
+
+    });
+
+    it('finfNeighborItem should work', () => {
+
+      let neighbor;
+
+      const items = getItems(100);
+
+      styleParams.isVertical = true;
+      styleParams.cubeImages = true;
+      styleParams.cubeRatio = 1;
+      styleParams.groupSize = 1;
+
+      container.galleryWidth = 1000;
+
+      for (const fixedColumns of [2, 3, 5, 7]) {
+
+        styleParams.fixedColumns = fixedColumns;
+        gallery = layouter.createLayout({items, container, styleParams});
+
+        for (const item of gallery.items) {
+
+          if (item.idx > fixedColumns) {
+            neighbor = layouter.findNeighborItem(item.idx, 'up');
+            expect(item.idx - neighbor).to.equal(fixedColumns);
+          }
+
+          if (item.idx < gallery.items.length - fixedColumns - 1) {
+            neighbor = layouter.findNeighborItem(item.idx, 'down');
+            expect(neighbor - item.idx).to.equal(fixedColumns);
+          }
+
+          if (item.idx % fixedColumns > 0) {
+            neighbor = layouter.findNeighborItem(item.idx, 'left');
+            expect(item.idx - neighbor).to.equal(1);
+          }
+
+          if ((item.idx % fixedColumns < (fixedColumns - 1)) && item.idx < gallery.items.length - 1) {
+            neighbor = layouter.findNeighborItem(item.idx, 'right');
+            expect(neighbor - item.idx).to.equal(1);
+          }
+
+        }
+      }
+
+    });
+  });
 });
