@@ -2,7 +2,7 @@
 
 import Layouter from '../src/layouter.js';
 import {testImages} from './images-mock.js';
-import _ from 'lodash';
+import range from 'lodash/range';
 import {expect} from 'chai';
 import deepFreeze from 'deep-freeze';
 import expectedOffsets from './expectedOffsets';
@@ -222,7 +222,7 @@ describe('Layouter', () => {
     it('should have more items in groups when the collageAmount increases', () => {
       const itemCount = 100;
       const items = getItems(itemCount);
-      const collageAmounts = _.range(0, 11).map(i => i / 10);
+      const collageAmounts = range(0, 11).map(i => i / 10);
       let lastGroupCount = itemCount;
       styleParams.layoutsVersion = 1;
 
@@ -242,7 +242,7 @@ describe('Layouter', () => {
       const itemCount = 100;
       const items = getItems(itemCount);
 
-      const collageDensities = _.range(0, 11).map(i => i / 10);
+      const collageDensities = range(0, 11).map(i => i / 10);
       let lastGroupCount = itemCount;
 
       for (const collageDensity of collageDensities) {
@@ -387,7 +387,7 @@ describe('Layouter', () => {
 
     // rotatingGroupTypes
     it('should have groups from the rotating groups types by their order ', () => {
-      items = items.slice(0, 100);
+      const items = getItems(100);
       styleParams.isVertical = false;
 
       const groupTypes = ['1', '1,2h,2v', '1,3b,1,3r', '1,2h,2v,3v,3h', '1,3t,3b', '1,3v,3h', '1,3r,2h,3v,3h', '2h,2v,3v,3h,3l,3b'];
