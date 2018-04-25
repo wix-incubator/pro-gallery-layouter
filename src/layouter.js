@@ -58,7 +58,6 @@ export default class Layouter {
       }
     } else {
       numOfCols = 1;
-      // gallerySize = Math.min(this.styleParams.gallerySize, galleryWidth);
     }
     return numOfCols;
   }
@@ -93,6 +92,8 @@ export default class Layouter {
     this.pointer = 0;
     this.firstGroup = false;
     this.layoutItems = [];
+    this.groups = [];
+    this.strips = [];
 
     let gallerySize = Math.floor(this.styleParams.gallerySize) + Math.ceil(2 * (this.styleParams.imageMargin - this.styleParams.galleryMargin));
     const galleryWidth = Math.floor(this.container.galleryWidth);
@@ -103,7 +104,6 @@ export default class Layouter {
 
     let groupItems = [];
     let group;
-    const groups = [];
     const bounds = this.container.bounds || {};
 
     let strip = new Strip({
@@ -153,7 +153,7 @@ export default class Layouter {
         container: this.container,
         styleParams: this.styleParams
       });
-      groups[groupIdx] = group;
+      this.groups[groupIdx] = group;
 
       //take back the pointer in case the group was created with less items
       this.pointer += (group.realItems.length - groupItems.length);
@@ -171,6 +171,7 @@ export default class Layouter {
           strip.resizeToHeight((galleryWidth / strip.ratio));
           galleryHeight += strip.height;
           columns[0].addGroups(strip.groups);
+          this.strips.push(strip);
 
           //open a new strip
           strip = new Strip({
@@ -207,6 +208,7 @@ export default class Layouter {
           strip.resizeToHeight(strip.height);
           galleryHeight += (strip.height);
           columns[0].addGroups(strip.groups);
+          this.strips.push(strip);
         }
 
       } else {
@@ -256,8 +258,7 @@ export default class Layouter {
 
     //results
     this.lastGroup = group;
-    this.strips = strip.idx || 0;
-    this.columns = columns.map(col => col.groups);
+    this.columns = columns;
     this.colWidth = Math.floor(galleryWidth / numOfCols);
     this.height = galleryHeight - (this.styleParams.oneRow ? 0 : (this.styleParams.imageMargin - this.styleParams.galleryMargin) * 2);
 
@@ -265,13 +266,17 @@ export default class Layouter {
 
     this.ready = true;
 
-    return {
-      items: this.layoutItems,
-      groups,
-      columns: this.columns,
-      height: this.height,
-      ready: true
-    };
+    return this.scheme;
+
+  }
+
+  calcVisibilities(bounds) {
+    for (const column of this.columns) {
+      for (const group of column.groups) {
+        group.calcVisibilities(bounds);
+      }
+    }
+    return this.scheme;
   }
 
   lastVisibleItemIdx() {
@@ -360,14 +365,6 @@ export default class Layouter {
 
   }
 
-  calcVisibilities(bounds) {
-    for (const column of this.columns) {
-      for (const group of column) {
-        group.calcVisibilities(bounds);
-      }
-    }
-  }
-
   get isLastImage() {
     return !this.srcItems[this.pointer + 1];
   }
@@ -403,5 +400,15 @@ export default class Layouter {
 
   get items() {
     return this.layoutItems;
+  }
+
+  get scheme() {
+    return {
+      items: this.items.map(item => item.scheme),
+      groups: this.groups.map(group => group.scheme),
+      columns: this.columns.map(column => column.scheme),
+      strips: this.strips.map(strip => strip.scheme),
+      height: this.height,
+    };
   }
 }

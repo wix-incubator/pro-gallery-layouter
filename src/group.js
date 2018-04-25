@@ -176,10 +176,6 @@ export class Group {
         break;
     }
 
-    if (utils.shouldLog('spacing')) {
-      console.log('SPACING - after rounding group #' + this.idx, this.realItems.map(i => `[${i.width}/${i.height}]`).join(', '));
-    }
-
   }
 
   getGroupType(forcedGroupSize) {
@@ -515,11 +511,6 @@ export class Group {
   }
 
   resizeItems() {
-    if (utils.shouldLog('spacing')) {
-      console.log(`SPACING - Group #${this.idx} resizeToHeight H: ${this.height}`);
-      console.log(`SPACING - Group #${this.idx} resizeToHeight W: ${this.width}`);
-    }
-
     const items = includes(['3b', '3r'], this.type) ? this.items.slice().reverse() : this.items;
     items.forEach((item, i) => {
       item.group = {
@@ -641,10 +632,6 @@ export class Group {
     }
     const H = W * Rg + M * Rm;
 
-    if (utils.shouldLog('spacing')) {
-      console.log('SPACING - getHeightByWidth, W: ' + W + ', H:' + H, this.type, Rg, Rm);
-    }
-
     return H;
   }
 
@@ -702,10 +689,6 @@ export class Group {
         break;
     }
     const W = H * Rg + M * Rm;
-
-    if (utils.shouldLog('spacing')) {
-      console.log('SPACING - getWidthByHeight, H: ' + H + ', W:' + W, this.type, Rg, Rm);
-    }
 
     return W;
   }
@@ -804,6 +787,10 @@ export class Group {
     return {
       id: this.id,
       idx: this.idx,
+      stripIdx: this.stripIdx,
+      inStripIdx: this.inStripIdx,
+      isLastGroup: this.isLastGroup,
+      items: this.items.map(item => item.scheme),
       type: this.type,
       width: this.width,
       height: this.height,

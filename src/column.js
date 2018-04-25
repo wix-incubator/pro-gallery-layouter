@@ -14,4 +14,13 @@ export class Column {
   addGroups(groups) {
     this.groups = this.groups.concat(groups);
   }
+
+  get scheme() {
+    return {
+      idx: this.idx,
+      groups: this.groups.map(group => group.scheme),
+      width: this.width,
+      height: this.height
+    };
+  }
 }

@@ -4,6 +4,7 @@ export class Strip {
   constructor(config) {
     this.ratio = 0;
     this.groups = [];
+    this.width = 0;
     this.height = 0;
     this.isFullWidth = false;
 
@@ -96,4 +97,14 @@ export class Strip {
     return this.groups[this.groups.length - 1];
   }
 
+  get scheme() {
+    return {
+      idx: this.idx,
+      groups: this.groups.map(group => group.scheme),
+      width: this.width,
+      height: this.height,
+      ratio: this.ratio,
+      isFullWidth: this.isFullWidth
+    };
+  }
 }

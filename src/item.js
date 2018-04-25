@@ -11,24 +11,12 @@ export class Item {
     this.style = {};
     this.visibility = {};
 
-    //Item core can be initialized with:
-    // {dto: ItemDto(..)}
-    // or {wixVideo: ... }
-    // or {wixImage: ...}
-
-    //in addition - support of {sharpParam: {quality}}
-
     config = config || {};
 
-    if (config.dto && config.dto.dto) {
-      config.dto = config.dto.dto; //defence patch due to mis-use of item-core
-      if (utils.isDev()) {
-        console.warn('Item core is created with already existing item core');
-      }
-    }
     if (!config.dto) {
       config.dto = {};
     }
+
     const metadata = utils.parseStringObject(config.dto.metadata || config.dto.metaData || '');
     this.fixMetadataVerticalVideoRatio(metadata);
 
@@ -71,10 +59,6 @@ export class Item {
 
   resize(scaleOrDimensions) {
 
-    if (utils.shouldLog('spacing')) {
-      console.log(`SPACING - Item  resize `, scaleOrDimensions);
-    }
-
     let scale = 1;
     if (scaleOrDimensions === false) {
       return;
@@ -90,11 +74,6 @@ export class Item {
 
     this.width *= scale;
     this.height *= scale;
-
-    if (utils.shouldLog('spacing')) {
-      console.log(`SPACING - Item  W: ${this.width}`);
-      console.log(`SPACING - Item  H: ${this.height}`);
-    }
 
     this.resized = true;
 
@@ -348,6 +327,8 @@ export class Item {
       offset: this.offset,
       transform: this.transform,
       orientation: this.orientation,
+      isPortrait: this.isPortrait,
+      isLandscape: this.isLandscape,
       visibility: this.visibility
     };
   }

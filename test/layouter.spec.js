@@ -13,18 +13,21 @@ const getGroupCount = layout => layout.columns.reduce(
   0
 );
 
+
 describe('Layouter', () => {
 
   let gallery;
+  let layouter;
   let items;
   let container = {};
   let styleParams = {};
   let styleParamsOptions = {};
 
+  const getLayout = layoutParams => layouter.createLayout(layoutParams);
+
   beforeEach(() => {
 
     items = getItems();
-
     styleParams = {
       oneRow: false,
       isVertical: false,
@@ -58,7 +61,7 @@ describe('Layouter', () => {
       cubeRatio: [1, 2, 0.5],
       smartCrop: [true, false],
       chooseBestGroup: [true, false],
-      collageDensity: [0, 0.3, 1],
+      collageDensity: [0, 0.6, 1],
       minItemSize: [20, 50, 100],
       imageMargin: [0, 10, 50],
       fixedColumns: [0, 1, 5]
@@ -73,6 +76,8 @@ describe('Layouter', () => {
         renderedBottom: 10000
       }
     };
+
+    layouter = new Layouter({items, container, styleParams});
   });
 
   describe('items', () => {
@@ -86,9 +91,9 @@ describe('Layouter', () => {
         const [styleParam, values] = option;
         for (const value of values) {
           styleParams[styleParam] = value;
-          gallery = new Layouter({items, container, styleParams});
+          gallery = getLayout({items, container, styleParams});
 
-          const offsets = gallery.layoutItems.reduce((str, item) => {
+          const offsets = gallery.items.reduce((str, item) => {
             const os = item.offset;
             const itemStr = `{t:${Math.round(os.top)},l:${Math.round(os.left)},r:${Math.round(os.right)},b:${Math.round(os.bottom)}}`;
             return str + itemStr;
@@ -120,11 +125,11 @@ describe('Layouter', () => {
       for (let size of [10, 50, 100, 250]) {
         size = Math.min(items.length, size);
         items = getItems(size);
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
         const galleryItemIds = _.flatMapDeep(
           gallery.columns,
-          column => column.map(group => group.items.map(item => item.id))
+          column => column.groups.map(group => group.items.map(item => item.id))
         );
         const itemIds = items.map(item => item.photoId);
 
@@ -143,10 +148,9 @@ describe('Layouter', () => {
       let lastGroupHeight = 0;
       for (const size of [100, 200, 300, 400]) {
         styleParams.gallerySize = size;
-        gallery = new Layouter({items, container, styleParams});
-
-        const maxGroupHeight = gallery.columns[0].reduce((g, group) => {
-          const isLastStrip = (group.stripIdx === gallery.strips);
+        gallery = getLayout({items, container, styleParams});
+        const maxGroupHeight = gallery.columns[0].groups.reduce((g, group) => {
+          const isLastStrip = (group.stripIdx === gallery.strips.length);
           return (Math.max(g, (isLastStrip ? 0 : group.height)));
         }, 0);
 
@@ -166,10 +170,10 @@ describe('Layouter', () => {
       let lastGroupWidth = 0;
       for (const size of [10, 50, 100, 200, 300, 400]) {
         styleParams.gallerySize = size;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
         const maxGroupWidth = gallery.columns.reduce((c, column) => {
-          return (c && column.reduce((g, group) => {
+          return (c && column.groups.reduce((g, group) => {
             return Math.max(g, group.width);
           }, true));
         }, true);
@@ -192,11 +196,11 @@ describe('Layouter', () => {
 
       for (const ratio of [0.25, 0.5, 1, 2, 4]) {
         styleParams.cubeRatio = ratio;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
-        const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
+        const isCroppedCorrectly = gallery.columns[0].groups.reduce((g, group) => {
           return (g && group.isLastGroup || group.items.reduce((i, image) => {  //ignore the last group (it is stretched to fill the galleryWidth)
-            const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cubeRatio);
+            const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.cropRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.cropRatio);
             return i && isItemCroppedCorrectly;
           }, true));
         }, true);
@@ -212,7 +216,7 @@ describe('Layouter', () => {
 
       for (const num of [1, 5, 10, 20]) {
         styleParams.fixedColumns = num;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
         expect(gallery.columns.length).to.equal(num);
       }
@@ -228,7 +232,7 @@ describe('Layouter', () => {
 
       for (const collageAmount of collageAmounts) {
         styleParams.collageAmount = collageAmount;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
         const groupCount = getGroupCount(gallery);
 
         expect(groupCount).not.to.be.above(lastGroupCount);
@@ -247,7 +251,7 @@ describe('Layouter', () => {
 
       for (const collageDensity of collageDensities) {
         styleParams.collageDensity = collageDensity;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
         const groupCount = getGroupCount(gallery);
 
         expect(groupCount).not.to.be.above(lastGroupCount);
@@ -262,9 +266,9 @@ describe('Layouter', () => {
 
       for (const size of [1, 2, 3]) {
         styleParams.groupSize = size;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
-        const isWithinSize = gallery.columns[0].reduce((g, group) => {
+        const isWithinSize = gallery.columns[0].groups.reduce((g, group) => {
           const inSize = (group.items.length <= styleParams.groupSize);
           return (g && inSize);
         }, true);
@@ -282,9 +286,9 @@ describe('Layouter', () => {
 
       for (const type of groupTypes) {
         styleParams.groupTypes = type;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
-        const isWithinTypes = gallery.columns[0].reduce((g, group) => {
+        const isWithinTypes = gallery.columns[0].groups.reduce((g, group) => {
           const inTypes = (styleParams.groupTypes.indexOf(group.type) >= 0);
           return (g && inTypes);
         }, true);
@@ -305,9 +309,9 @@ describe('Layouter', () => {
       for (const size of minItemSizes) {
         styleParams.gallerySize = size * 4; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
         styleParams.minItemSize = size;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
-        const minItemSize = gallery.columns[0].reduce((g, group) => {
+        const minItemSize = gallery.columns[0].groups.reduce((g, group) => {
           return group.items.reduce((i, item) => {
             const minDimension = Math.min(item.width, item.height);
             return Math.min(i, minDimension);
@@ -333,10 +337,10 @@ describe('Layouter', () => {
       for (const size of minItemSizes) {
         styleParams.gallerySize = size * 8; //gallerySize must be greater than minItemSize (otherwise the images' proportions will affect the minDimension)
         styleParams.minItemSize = size;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
         const minItemSize = gallery.columns.reduce((c, column) => {
-          return (c && column.reduce((g, group) => {
+          return (c && column.groups.reduce((g, group) => {
             return (Math.min(g, group.items.reduce((i, item) => {
               const maxDimension = Math.max(item.width, item.height);
               return Math.min(i, maxDimension);
@@ -358,11 +362,11 @@ describe('Layouter', () => {
       container.galleryWidth = 1000;
 
       styleParams.isVertical = true;
-      gallery = new Layouter({items, container, styleParams});
+      gallery = getLayout({items, container, styleParams});
       expect(gallery.columns.length).to.equal(5);
 
       styleParams.isVertical = false;
-      gallery = new Layouter({items, container, styleParams});
+      gallery = getLayout({items, container, styleParams});
       expect(gallery.columns.length).to.equal(1);
 
     });
@@ -376,11 +380,11 @@ describe('Layouter', () => {
       styleParams.oneRow = false;
       styleParams.imageMargin = 0;
 
-      gallery = new Layouter({items, container, styleParams});
+      gallery = getLayout({items, container, styleParams});
       expect(gallery.height).to.be.above(container.galleryHeight);
 
       styleParams.oneRow = true;
-      gallery = new Layouter({items, container, styleParams});
+      gallery = getLayout({items, container, styleParams});
       expect(gallery.height).to.equal(container.galleryHeight);
 
     });
@@ -394,9 +398,9 @@ describe('Layouter', () => {
 
       for (const type of groupTypes) {
         styleParams.rotatingGroupTypes = type;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
-        const isWithinTypes = gallery.columns[0].reduce((g, group, idx) => {
+        const isWithinTypes = gallery.columns[0].groups.reduce((g, group, idx) => {
           const rotatingGroupTypes = styleParams.rotatingGroupTypes.split(',');
           const expectedType = rotatingGroupTypes[idx % rotatingGroupTypes.length];
           const groupType = group.type;
@@ -420,8 +424,8 @@ describe('Layouter', () => {
       styleParams.imageMargin = 0;
       styleParams.collageDensity = 0.8;
 
-      gallery = new Layouter({items, container, styleParams});
-      const isOriginalDimensions = gallery.columns[0].reduce((g, group) => {
+      gallery = getLayout({items, container, styleParams});
+      const isOriginalDimensions = gallery.columns[0].groups.reduce((g, group) => {
         return (g && group.isLastGroup || group.items.reduce((i, image) => {  //ignore the last group (it is stretched to fill the galleryWidth)
           const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= image.maxWidth / image.maxHeight) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= image.maxWidth / image.maxHeight);
           return i && isItemCroppedCorrectly; //ignore fractions
@@ -432,8 +436,8 @@ describe('Layouter', () => {
 
       styleParams.cubeImages = true;
 
-      gallery = new Layouter({items, container, styleParams});
-      const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
+      gallery = getLayout({items, container, styleParams});
+      const isCroppedCorrectly = gallery.columns[0].groups.reduce((g, group) => {
         return (g && group.items.reduce((i, image) => {
           const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= styleParams.cubeRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= styleParams.cubeRatio);
           return i && isItemCroppedCorrectly;
@@ -454,8 +458,8 @@ describe('Layouter', () => {
       styleParams.smartCrop = true;
       styleParams.imageMargin = 0;
 
-      gallery = new Layouter({items, container, styleParams});
-      const isCroppedCorrectly = gallery.columns[0].reduce((g, group) => {
+      gallery = getLayout({items, container, styleParams});
+      const isCroppedCorrectly = gallery.columns[0].groups.reduce((g, group) => {
         return (g && group.items.reduce((i, image) => {
           const cropRatio = image.isLandscape ? styleParams.cubeRatio : 1 / styleParams.cubeRatio;
           const isItemCroppedCorrectly = (((image.width - allowedRounding) / (image.height + allowedRounding)) <= cropRatio) && (((image.width + allowedRounding) / (image.height - allowedRounding)) >= cropRatio);
@@ -478,8 +482,8 @@ describe('Layouter', () => {
       for (const chooseBestGroup of [true, false]) {
         styleParams.chooseBestGroup = chooseBestGroup;
 
-        gallery = new Layouter({items, container, styleParams});
-        const isWithinTypes = gallery.columns[0].reduce((g, group) => {
+        gallery = getLayout({items, container, styleParams});
+        const isWithinTypes = gallery.columns[0].groups.reduce((g, group) => {
           const groupType = group.type;
           const isType = (groupType !== '1'); //if ChoooseBestGroup is true, some group will have to be single
           return (g && isType);
@@ -501,11 +505,11 @@ describe('Layouter', () => {
       for (const margin of [10, 50, 100, 200]) {
 
         styleParams.imageMargin = margin;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
         let lastItem = false;
         let marginDiff = 0;
-        const totalMarginDiff = gallery.layoutItems.reduce((i, item) => {
+        const totalMarginDiff = gallery.items.reduce((i, item) => {
           if (lastItem) {
             let realMargin;
             if (lastItem.offset.top === item.offset.top) {
@@ -538,7 +542,7 @@ describe('Layouter', () => {
       for (const margin of [10]) {
 
         styleParams.imageMargin = margin;
-        gallery = new Layouter({items, container, styleParams});
+        gallery = getLayout({items, container, styleParams});
 
         let marginDiff = 0;
         const totalMarginDiff = gallery.columns[0].reduce((g, group) => {
