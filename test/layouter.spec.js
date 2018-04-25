@@ -122,8 +122,7 @@ describe('Layouter', () => {
       styleParams.galleryWidth = 500;
       styleParams.minItemSize = 160;
 
-      for (let size of [10, 50, 100, 250]) {
-        size = Math.min(items.length, size);
+      for (const size of [10, 50, 100]) {
         const items = getItems(size);
         gallery = getLayout({items, container, styleParams});
 
