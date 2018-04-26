@@ -325,7 +325,7 @@ export default class Layouter {
         neighborItem = findClosestItem(
           (currentItem.offset.left),
           (currentItem.offset.top + (currentItem.height / 2)),
-          (curX, curY, itmX, itmY) => itmX < curX
+          (curX, curY, itmX) => itmX < curX
         );
         break;
 
@@ -342,7 +342,7 @@ export default class Layouter {
         neighborItem = findClosestItem(
           (currentItem.offset.right),
           (currentItem.offset.top + (currentItem.height / 2)),
-          (curX, curY, itmX, itmY) => itmX > curX
+          (curX, curY, itmX) => itmX > curX
         );
         break;
 

@@ -18,7 +18,6 @@ describe('Layouter', () => {
 
   let gallery;
   let layouter;
-  let items;
   let container = {};
   let styleParams = {};
   let styleParamsOptions = {};
