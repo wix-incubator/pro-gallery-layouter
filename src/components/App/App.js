@@ -127,7 +127,6 @@ class App extends React.Component {
 
   render() {
     const {styles, container, sidebarWidth, sampleSize} = this.state;
-    console.log(container.width, container.width - sidebarWidth);
     const layout = new Layouter({
       items: images.slice(0, sampleSize),
       container: {
