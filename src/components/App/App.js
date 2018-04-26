@@ -51,7 +51,7 @@ class App extends React.Component {
       items: images,
       container: {
         height: this.state.container.height,
-        width: this.state.container.width - sidebarWidth,
+        width: this.state.container.width - this.state.sidebarWidth,
       },
       styleParams: this.state.styles,
     });
@@ -90,7 +90,7 @@ class App extends React.Component {
 
   render() {
     const {styles, container, sidebarWidth, sampleSize} = this.state;
-    const LayoutParams = {
+    const layoutParams = {
       items: images.slice(0, sampleSize),
       container: {
         ...container,

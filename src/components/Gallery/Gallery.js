@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.scss';
+import images from '../../constants/images';
 
 const CDN_URL = 'https://static.wixstatic.com/media/';
 const getImgSize = (item, dimension) => {
   const scale = window.devicePixelRatio;
   return Math.min(
     scale * item.style.height,
-    item.dto.metadata[dimension]
+    item[`max${dimension[0].toUpperCase() + dimension.substring(1)}`]
   );
 };
+
 const getSrc = item => {
   const w = getImgSize(item, 'height');
   const h = getImgSize(item, 'width');
