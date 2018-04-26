@@ -370,13 +370,13 @@ class SideBar extends React.Component {
               <br/>
               <div className="radio-inline">
                 <label>
-                  <input type="radio" name="chooseBestGroup" value="0"/>
+                  <input type="radio" name="chooseBestGroup" value={false} checked={!styles.chooseBestGroup}/>
                   Use all group types
                 </label>
               </div>
               <div className="radio-inline">
                 <label>
-                  <input type="radio" name="chooseBestGroup" value={styles.chooseBestGroup} checked={styles.chooseBestGroup}/>
+                  <input type="radio" name="chooseBestGroup" value={true} checked={styles.chooseBestGroup}/>
                   Choose best group types for items
                 </label>
               </div>
