@@ -471,21 +471,9 @@ class SideBar extends React.Component {
               {this.createSlider('imageMargin', styles.imageMargin, 500)}
             </div>
             <div className="form-group">
-              <label data-toggle="tooltip" data-placement="right" title="The space around the gallery between images">Gallery Margin</label>
-              {this.createSlider('galleryMargin', styles.galleryMargin, 500)}
-            </div>
-            <div className="form-group">
               <label data-toggle="tooltip" data-placement="right" title="Add random change to image position">Floating
                 Images</label>
                 {this.createSlider('floatingImages', styles.floatingImages * 100)}
-            </div>
-            <div className="form-group">
-              <label data-toggle="tooltip" data-placement="right" title="The radius of the items' corners">Corner Radius</label>
-              {this.createSlider('borderRadius')}
-            </div>
-            <div className="form-group">
-              <label data-toggle="tooltip" data-placement="right" title="add shadows to items">Item Shadow</label>
-              {this.createSlider('boxShadow')}
             </div>
 
             <div className="submit-box">
