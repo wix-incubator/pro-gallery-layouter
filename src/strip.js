@@ -6,7 +6,7 @@ export class Strip {
     this.groups = [];
     this.width = 0;
     this.height = 0;
-    this.isFullWidth = false;
+    this.isFullWidth = true;
 
     this.idx = config.idx;
     this.styleParams = config.styleParams;
@@ -24,13 +24,17 @@ export class Strip {
 
   markAsIncomplete() {
     //prevent from the last group to be streched
+    this.isFullWidth = false;
     this.lastGroup.isLastGroup = false;
   }
 
   setWidth(width) {
     this.width = width;
-    this.lastGroup.stripWidth = width;
+    if (this.hasGroups) {
+      this.lastGroup.stripWidth = width;
+    }
   }
+
   resizeToHeight(height) {
     this.height = height;
     let left = 0;

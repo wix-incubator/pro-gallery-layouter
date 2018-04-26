@@ -92,7 +92,7 @@ export class Item {
     this.isPinnedLeft = isLeft;
     this.pinOffset = pinOffset;
     this.calcPinOffset = groupSize => {
-      if (pinOffset <= 0) {
+      if (this.pinOffset <= 0) {
         return 0;
       } else {
         //this is used only for 3h/3v group types - to calc the offset of the middle item
@@ -327,6 +327,7 @@ export class Item {
       cropType: this.cubeType,
       group: this.group,
       offset: this.offset,
+      groupOffset: this._groupOffset,
       transform: this.transform,
       orientation: this.orientation,
       isPortrait: this.isPortrait,

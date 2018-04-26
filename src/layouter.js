@@ -112,7 +112,7 @@ export default class Layouter {
     let galleryHeight = 0;
 
     const numOfCols = this.calcNumberOfColumns(galleryWidth, gallerySize);
-    gallerySize = Math.floor(galleryWidth / numOfCols);
+    gallerySize = this.styleParams.isVertical ? Math.floor(galleryWidth / numOfCols) : gallerySize;
 
     const columns = fill(Array(numOfCols), 0).map((column, idx) => new Column(idx, gallerySize, this.styleParams.cubeRatio));
     columns[numOfCols - 1].width += (galleryWidth - (gallerySize * numOfCols)); //the last group compensates for half pixels in other groups
@@ -173,6 +173,7 @@ export default class Layouter {
         if (strip.isFull(group, this.isLastImage)) {
           //close the current strip
           strip.resizeToHeight((galleryWidth / strip.ratio));
+          strip.setWidth(galleryWidth);
           galleryHeight += strip.height;
           columns[0].addGroups(strip.groups);
           this.strips.push(strip);
@@ -185,7 +186,7 @@ export default class Layouter {
           });
 
           //reset the group (this group will be rebuilt)
-          this.pointer -= (group.items.length - 1);
+          this.pointer -= (group.realItems.length - 1);
           groupIdx--;
           continue;
         }
@@ -194,19 +195,18 @@ export default class Layouter {
         group.setTop(galleryHeight);
         group.stripIdx = strip.idx;
         strip.ratio += group.ratio;
-        strip.height = Math.min(gallerySize, (galleryWidth / strip.ratio));
+        // strip.height = Math.min(gallerySize, (galleryWidth / strip.ratio));
+        strip.height = galleryWidth / strip.ratio;
+        strip.setWidth(galleryWidth);
         strip.addGroup(group);
 
         if (this.isLastImage && strip.hasGroups) {
           if (this.styleParams.oneRow) {
             strip.height = this.container.galleryHeight + (this.styleParams.imageMargin - this.styleParams.galleryMargin);
-          } else if (gallerySize * 2 < (galleryWidth / strip.ratio)) {
+          } else if (gallerySize * 1.5 < strip.height) {
               //stretching the strip to the full width will make it too high - so make it as high as the gallerySize and not stretch
             strip.height = gallerySize;
             strip.markAsIncomplete();
-          } else {
-            strip.height = (galleryWidth / strip.ratio);
-            strip.setWidth(galleryWidth);
           }
 
           strip.resizeToHeight(strip.height);
