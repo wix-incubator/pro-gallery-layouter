@@ -133,6 +133,20 @@ describe('Layouter', () => {
     });
   });
 
+  describe('container', () => {
+    it('should support legacy container props', () => {
+      const items = getItems();
+
+      const containerA = {galleryWidth: 100, galleryHeight: 200};
+      const layouterA = new Layouter({items, container: containerA, styleParams});
+
+      const containerB = {width: 100, height: 200};
+      const layouterB = new Layouter({items, container: containerB, styleParams});
+
+      expect(layouterA.container).to.deep.equal(layouterB.container);
+    });
+  });
+
   describe('Style Params', () => {
 
     //gallerySize
@@ -373,7 +387,7 @@ describe('Layouter', () => {
       container.galleryHeight = 500;
 
       styleParams.oneRow = false;
-      styleParams.imageMargin = 0;
+      styleParams.imageMargin = 10;
 
       gallery = getLayout({items, container, styleParams});
       expect(gallery.height).to.be.above(container.galleryHeight);
@@ -381,7 +395,6 @@ describe('Layouter', () => {
       styleParams.oneRow = true;
       gallery = getLayout({items, container, styleParams});
       expect(gallery.height).to.equal(container.galleryHeight);
-
     });
 
     // rotatingGroupTypes

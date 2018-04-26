@@ -263,7 +263,7 @@ export default class Layouter {
     this.lastGroup = group;
     this.columns = columns;
     this.colWidth = Math.floor(galleryWidth / numOfCols);
-    this.height = galleryHeight - (this.styleParams.oneRow ? 0 : (this.styleParams.imageMargin - this.styleParams.galleryMargin) * 2);
+    this.height = galleryHeight - (this.styleParams.imageMargin - this.styleParams.galleryMargin) * 2;
 
     this.calcVisibilities(bounds);
 

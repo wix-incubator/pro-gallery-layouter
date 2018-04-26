@@ -152,18 +152,20 @@ class Utils {
   }
 
   convertContainer(container, styleParams) {
+    const convertedContainer = {
+      bounds: {},
+      ...container,
+    };
+    const width = container.width || container.galleryWidth;
+    const height = container.height || container.galleryHeight;
 
-    const convertedContainer = Object.assign({
-      galleryWidth: 1000,
-      galleryHeight: 1000,
-      bounds: {}
-    }, container);
-
-    if (container.width >= 0) {
-      convertedContainer.galleryWidth = container.width + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0)) * 2;
+    if (width >= 0) {
+      convertedContainer.galleryWidth = width + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0)) * 2;
+      delete convertedContainer.width;
     }
-    if (container.height >= 0) {
-      convertedContainer.galleryHeight = container.height + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0));
+    if (height >= 0) {
+      convertedContainer.galleryHeight = height + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0));
+      delete convertedContainer.height;
     }
 
     return convertedContainer;
