@@ -240,7 +240,6 @@ export default class Layouter {
         if (galleryHeight < minCol.height) {
           galleryHeight = minCol.height;
         }
-
       }
 
       //set the group visibility
