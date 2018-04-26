@@ -118,7 +118,16 @@ export default class Layouter {
     columns[numOfCols - 1].width += (galleryWidth - (gallerySize * numOfCols)); //the last group compensates for half pixels in other groups
     columns[numOfCols - 1].cubeRatio = this.styleParams.cubeRatio * (columns[numOfCols - 1].width / gallerySize); //fix the last group's cube ratio
 
+    let maxLoops = this.srcItems.length * 10;
+
     while (this.srcItems[this.pointer]) {
+
+      maxLoops--;
+      if (maxLoops <= 0) {
+        console.error('Cannot create layout, maxLoops reached!!!');
+        // debugger;
+        return false;
+      }
 
       item = new Item({
         idx: this.pointer,
@@ -132,8 +141,8 @@ export default class Layouter {
 
       //push the image to a group - until its full
       groupItems.push(item);
+      this.pointer++;
       if (!this.isLastImages && (groupItems.length < maxGroupSize)) {
-        this.pointer++;
         continue;
       }
 
