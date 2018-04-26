@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "start": "yoshi start",
-    "build": ":",
+    "build": "yoshi build",
     "precommit": "yoshi lint",
     "pretest": "yoshi build",
     "test": "yoshi test",

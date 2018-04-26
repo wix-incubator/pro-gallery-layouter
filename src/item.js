@@ -209,11 +209,13 @@ export class Item {
   }
 
   get width() {
+    let width;
     if (this.cubeImages && (this.ratio >= this.cubeRatio)) {
-      return this.style.cubedWidth || (this.orgHeight * this.cubeRatio);
+      width = this.style.cubedWidth || (this.orgHeight * this.cubeRatio);
     } else {
-      return this.orgWidth;
+      width = this.orgWidth;
     }
+    return Math.max(width, 1);
   }
 
   set width(w) {
@@ -229,11 +231,13 @@ export class Item {
   }
 
   get height() {
+    let height;
     if (this.cubeImages && (this.ratio < this.cubeRatio)) {
-      return this.style.cubedHeight || (this.orgWidth / this.cubeRatio);
+      height = this.style.cubedHeight || (this.orgWidth / this.cubeRatio);
     } else {
-      return this.orgHeight;
+      height = this.orgHeight;
     }
+    return Math.max(height, 1);
   }
 
   set height(h) {
@@ -307,6 +311,7 @@ export class Item {
     return {
       id: this.id,
       idx: this.idx,
+      dto: this.dto,
       type: this.type,
       style: this.style,
       width: this.width,
