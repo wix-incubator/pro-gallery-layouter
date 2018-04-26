@@ -19,71 +19,42 @@ class App extends React.Component {
     this.resize = this.resize.bind(this);
     this.handleStylesChange = this.handleStylesChange.bind(this);
 
-    this.defaultStateStyles = {
+    this.defaultStyles = {
       sampleSize: 100,
-      gotStyleParams: false,
-      galleryType: -1,
-      selectedLayout: 0,
       isVertical: false,
       gallerySize: 320,
       minItemSize: 120,
       groupSize: 3,
       chooseBestGroup: true,
       groupTypes: '1,2h,2v,3t,3b,3l,3r',
+      rotatingGroupTypes: '1,2h,2v,3t,3b,3l,3r',
       cubeImages: false,
       cubeType: 'fill',
       smartCrop: false,
-      fullscreen: true,
-      allowSocial: true,
-      allowDownload: false,
-      allowTitle: true,
-      allowDescription: false,
-      allowMultishare: false,
-      loveButton: true,
-      loveCounter: true,
-      videoLoop: true,
-      videoSpeed: 1,
-      videoPlay: 'hover',
-      gallerySliderImageRatio: 0,
-      galleryImageRatio: 2,
-      sharpParams: {
-        quality: 90,
-        usm: {} // do not apply usm - {usm_r: 0.66, usm_a: 1.00, usm_t: 0.01},
-      },
-      collageAmount: 0.8,
       collageDensity: 0.8,
-      borderRadius: 0,
-      boxShadow: 0,
       imageMargin: 5,
       galleryMargin: 0,
       floatingImages: 0,
-      viewMode: 'preview',
-      galleryHorizontalAlign: 'center',
-      galleryTextAlign: 'center',
-      galleryVerticalAlign: 'center',
-      enableInfiniteScroll: 1,
-      itemClick: 'expand',
-      cubeRatio: 1, //determine the ratio of the images when using grid (use 1 for squares grid)
-      fixedColumns: 0, //determine the number of columns regardless of the screen size (use 0 to ignore)
-      oneRow: false, //render the gallery as a single row with horizontal scroll
-      showArrows: false,
-      isSlideshow: false,
-      hasThumbnails: false,
-      galleryThumbnailsAlignment: 'bottom',
-      thumbnailSpacings: 0,
-      gridStyle: 0,
-      useCustomButton: false,
-      titlePlacement: 'SHOW_ON_HOVER'
+      cubeRatio: 1,
+      fixedColumns: 0,
+      oneRow: false,
     };
 
     this.state = {
       sampleSize: 100,
-      styles: Object.assign({}, this.defaultStateStyles, this.getUrlStyles),
+      styles: Object.assign({}, this.defaultStyles, this.getUrlStyles),
       sidebarWidth: 500,
       container: getContainerSize(),
     };
 
-    console.log('Initial State is', this.state);
+    this.layouter = new Layouter({
+      items: images,
+      container: {
+        height: this.state.container.height,
+        width: this.state.container.width - sidebarWidth,
+      },
+      styleParams: this.state.styles,
+    });
 
     window.addEventListener('resize', this.resize);
   }
@@ -94,13 +65,13 @@ class App extends React.Component {
   }
 
   setUrlStyles(styles) {
-    var str = "?";
-    for (var key in styles) {
-        if (str != "") {
-            str += "&";
-        }
-        str += key + "=" + encodeURIComponent(styles[key]);
-    }
+    // var str = "?";
+    // for (var key in styles) {
+    //     if (str != "") {
+    //         str += "&";
+    //     }
+    //     str += key + "=" + encodeURIComponent(styles[key]);
+    // }
 
     history.pushState(styles, "Pro Gallery Playground");
   }
@@ -127,14 +98,16 @@ class App extends React.Component {
 
   render() {
     const {styles, container, sidebarWidth, sampleSize} = this.state;
-    const layout = new Layouter({
+    const LayoutParams = {
       items: images.slice(0, sampleSize),
       container: {
         ...container,
         width: container.width - sidebarWidth,
       },
       styleParams: this.state.styles,
-    });
+    };
+    const layout = this.layouter.createLayout(layoutParams);
+    console.log("Created a layout!", layout, layoutParams);
     return (
       <div ref={ref => { this.root = ref; }}>
         { sidebarWidth ? <SideBar
