@@ -1,7 +1,8 @@
 import React from 'react';
+import {Layouter} from 'pro-gallery-layouter';
 import SideBar from '../SideBar';
-import {ProGallery} from 'pro-gallery-renderer';
-import {testImages} from '../../assets/items/test-images';
+import Gallery from '../Gallery';
+import images from '../../constants/images';
 import './App.scss';
 
 class App extends React.Component {
@@ -127,9 +128,17 @@ class App extends React.Component {
   }
 
   render() {
-    const {sampleSize, styles, container, sidebarWidth} = this.state;
+    const {styles, container, sidebarWidth, sampleSize} = this.state;
+    const layout = new Layouter({
+      items: images.slice(0, sampleSize),
+      container: {
+        ...container,
+        width: container.width - sidebarWidth,
+      },
+      styleParams: this.state.styles,
+    });
     return (
-      <div>
+      <div ref={ref => { this.root = ref; }}>
         { sidebarWidth ? <SideBar
           container={{
             width: sidebarWidth,
@@ -143,17 +152,8 @@ class App extends React.Component {
           className="playground-gallery" style={{
             width: (container.width - sidebarWidth) + 'px'
           }}
-                                         >
-          <ProGallery
-            at={Date.now()}
-            items={testImages.slice(0, sampleSize)}
-            container={{
-              width: (container.width - sidebarWidth),
-              height: container.height
-            }}
-            totalItemsCount={sampleSize}
-            styles={this.state.styles}
-            />
+        >
+          <Gallery layout={layout}/>
         </div>
       </div>
     );

@@ -78,9 +78,7 @@ class SideBar extends React.Component {
         <div className="playground-settings">
 
           <a className="page-header" href="playground.html?">
-            <h1>Pro Gallery Playground
-              <small>BETA</small>
-            </h1>
+            <h1>Layouter Playground</h1>
           </a>
 
           <form onChange={this.handleStyleChange}>
