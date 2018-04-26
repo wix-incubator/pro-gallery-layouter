@@ -2,6 +2,13 @@ import React from 'react';
 import './SideBar.scss';
 import Slider, { Range } from 'rc-slider';
 
+const getValue = event => {
+  try {
+    return JSON.parse(event.target.value);
+  } catch (error) {
+    return event.target.value;
+  }
+};
 
 class SideBar extends React.Component {
 
@@ -54,9 +61,9 @@ class SideBar extends React.Component {
 
   handleStyleChange(e) {
     const field = e.target.name;
-    const value = e.target.value;
+    const value = getValue(e);
 
-    console.log('Styles changed!!!', field, value)
+    console.log('Styles changed!!!', field, value);
 
     const styles = this.props.styles;
     styles[field] = this.mapStyles(field, value);
