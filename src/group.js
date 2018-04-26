@@ -80,6 +80,8 @@ export class Group {
     } else {
       this.resizeToHeight(this.gallerySize);
     }
+    this.setLeft(this.left);
+    this.setTop(this.top);
   }
 
   safeGetItem(idx) {
@@ -446,19 +448,20 @@ export class Group {
         w = item.width;
         h = item.height;
 
-        item = this.safeGetItem(1);
-        item.setPosition('relative');
-        item.resize(w / item.width);
-        h += item.height;
-        item.pinToCorner('top', (items[0].height / h));
-        items.push(item);
-
         item = this.safeGetItem(2);
         item.pinToCorner('bottom-left');
         item.setPosition('relative');
         item.resize(w / item.width);
         h += item.height;
         items.push(item);
+
+        //the middle item must be last to position it in the middle (h must be full height)
+        item = this.safeGetItem(1);
+        item.setPosition('relative');
+        item.resize(w / item.width);
+        h += item.height;
+        item.pinToCorner('top', items[0]);
+        items = [items[0], item, items[1]];
 
         break;
 
@@ -471,19 +474,20 @@ export class Group {
         w = item.width;
         h = item.height;
 
-        item = this.safeGetItem(1);
-        item.setPosition('relative');
-        item.resize(h / item.height);
-        w += item.width;
-        item.pinToCorner('left', (items[0].width / w));
-        items.push(item);
-
         item = this.safeGetItem(2);
         item.pinToCorner('top-right');
         item.setPosition('relative');
         item.resize(h / item.height);
         w += item.width;
         items.push(item);
+
+        //the middle item must be last to position it in the middle (w must be full width)
+        item = this.safeGetItem(1);
+        item.setPosition('relative');
+        item.resize(h / item.height);
+        w += item.width;
+        item.pinToCorner('left', items[0]);
+        items = [items[0], item, items[1]];
 
         break;
     }
@@ -512,17 +516,17 @@ export class Group {
   resizeItems() {
     const items = includes(['3b', '3r'], this.type) ? this.items.slice().reverse() : this.items;
     items.forEach((item, i) => {
+      item.resize(this.getItemDimensions(items, i));
       item.group = {
         top: this.top,
         left: this.left,
         width: this.width,
         height: this.height
       };
-      item.offset = {
-        bottom: item.offset.top + this.height,
-        right: item.offset.left + this.width
+      item.groupOffset = {
+        bottom: this.top + this.height,
+        right: this.left + this.width
       };
-      item.resize(this.getItemDimensions(items, i));
     });
   }
 
@@ -695,7 +699,7 @@ export class Group {
   setTop(top) {
     this.top = top || 0;
     for (const item of this.items) {
-      item.offset = {
+      item.groupOffset = {
         top,
         bottom: top + this.height
       };
@@ -704,9 +708,8 @@ export class Group {
 
   setLeft(left) {
     this.left = left || 0;
-    this.right = left + this.width;
     for (const item of this.items) {
-      item.offset = {
+      item.groupOffset = {
         left,
         right: left + this.width
       };
@@ -754,6 +757,10 @@ export class Group {
 
   get bottom() {
     return this.top + this.height;
+  }
+
+  get right() {
+    return this.left + this.width;
   }
 
   set items(items) {

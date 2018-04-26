@@ -131,6 +131,7 @@ export default class Layouter {
 
       item = new Item({
         idx: this.pointer,
+        inGroupIdx: groupItems.length + 1,
         scrollTop: galleryHeight,
         dto: this.srcItems[this.pointer],
         container: this.container,

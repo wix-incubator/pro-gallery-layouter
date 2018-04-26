@@ -539,21 +539,21 @@ describe('Layouter', () => {
 
     // imageMargin (within groups)
     //TODO fix this test once the playground is complete
-/*     it('should have spaces between items in a group equal to imageMargin', () => {
+    it('should have spaces between items in a group equal to imageMargin', () => {
 
       const items = getItems(100);
       styleParams.galleryWidth = 4000;
-      styleParams.gallerySize = 500;
+      styleParams.gallerySize = 1000;
       styleParams.groupSize = 3;
-      styleParams.groupTypes = '3b';
+      styleParams.groupTypes = '1,2h,2v,3r,3t,3l,3b,3v,3h';
 
-      for (const margin of [10]) {
+      for (const margin of [0, 30, 40, 80]) {
 
         styleParams.imageMargin = margin;
         gallery = getLayout({items, container, styleParams});
 
         let marginDiff = 0;
-        const totalMarginDiff = gallery.columns[0].reduce((g, group) => {
+        const totalMarginDiff = gallery.columns[0].groups.reduce((g, group) => {
           let lastItem = false;
           const groupMarginDiff = group.items.reduce((i, item) => {
             if (lastItem) {
@@ -564,13 +564,7 @@ describe('Layouter', () => {
                 realMargin = Math.round(item.offset.left - lastItem.offset.right);
               }
               marginDiff = Math.abs(realMargin - margin * 2);
-              if (marginDiff > 1) {
-                console.log(margin);
-                console.log(lastItem.offset, item.offset);
-                console.log(group.type, group.width, group.height);
-                console.log(group.items.map(item => Object.assign({}, item.offset, {width: item.width, height: item.height})));
-              }
-              expect(marginDiff).to.be.below(3);
+              expect(marginDiff).to.be.below(2);
             }
             lastItem = item;
             return i + Math.floor(marginDiff);
@@ -578,12 +572,30 @@ describe('Layouter', () => {
           return g + groupMarginDiff;
         }, 0);
 
-        expect(totalMarginDiff).to.be.below(1);
       }
 
     });
- */
 
+    it('should have items offsets and dimensions calculated correctly', () => {
+
+      const items = getItems(100);
+      styleParams.galleryWidth = 4000;
+      styleParams.gallerySize = 500;
+      styleParams.rotatingGroupTypes = '1,2h,2v,3r,3t,3l,3b,3v,3h';
+      styleParams.imageMargin = 0;
+
+      gallery = getLayout({items, container, styleParams});
+
+      gallery.groups.forEach(group => {
+        group.items.forEach(item => {
+          const widthDiff = Math.abs(item.offset.right - item.offset.left - item.width);
+          const heightDiff = Math.abs(item.offset.bottom - item.offset.top - item.height);
+          expect(widthDiff).to.be.below(1);
+          expect(heightDiff).to.be.below(1);
+        });
+      });
+
+    });
   });
 
   describe('Infinite Scroll', () => {
