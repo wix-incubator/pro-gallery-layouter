@@ -475,15 +475,6 @@ class SideBar extends React.Component {
                 Images</label>
                 {this.createSlider('floatingImages', styles.floatingImages * 100)}
             </div>
-
-            <div className="submit-box">
-              <button type="submit" className="btn btn-success btn-block">Render Gallery</button>
-
-              <br/>
-              <span
-                className="help-block"
-                >Notice: you can share any specific layout of the gallery by copying and sending the url</span>
-            </div>
           </form>
         </div>
       </div>
