@@ -2,7 +2,7 @@ import React from 'react';
 import './SideBar.scss';
 import Slider from 'rc-slider';
 
-const getValue = event => {
+const getValueFromChangeEvent = event => {
   const { value } = event.target;
   try {
     return JSON.parse(value);
@@ -20,24 +20,19 @@ class SideBar extends React.Component {
 
   }
 
-  createSlider(name, value, max) {
-    if (typeof value === 'undefined') {
-      value = this.props.styles[name]
-    }
-    if (typeof max === 'undefined') {
-      max = 100
-    }
+  createSlider(name, value = this.props.styles[name], max = 100) {
+    const handleChange = value => this.handleStyleChange({
+      target: { name, value },
+    });
 
-    return <div>
-      <div className='slider-container'>
-        <Slider value={value} onChange={val => this.handleStyleChange({target: {
-          name: name,
-          value: val
-        }})}
-        max={max}/>
+    return (
+      <div>
+        <div className='slider-container'>
+          <Slider value={value} onChange={handleChange} max={max}/>
+        </div>
+        <input type="number" name={name} value={value} className="form-control slider-helper"/>
       </div>
-      <input type="number" name={name} value={value} className="form-control slider-helper"/>
-    </div>
+    );
   }
 
   mapStyles(field, value) {
@@ -62,7 +57,7 @@ class SideBar extends React.Component {
 
   handleStyleChange(e) {
     const field = e.target.name;
-    const value = getValue(e);
+    const value = getValueFromChangeEvent(e);
 
     console.log('Styles changed!!!', field, value);
 
