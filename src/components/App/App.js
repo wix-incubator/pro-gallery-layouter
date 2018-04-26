@@ -5,6 +5,11 @@ import Gallery from '../Gallery';
 import images from '../../constants/images';
 import './App.scss';
 
+const getContainerSize = () => ({
+  width: document.documentElement.clientWidth,
+  height: window.innerHeight,
+});
+
 class App extends React.Component {
 
   constructor() {
@@ -75,10 +80,7 @@ class App extends React.Component {
       sampleSize: 100,
       styles: Object.assign({}, this.defaultStateStyles, this.getUrlStyles),
       sidebarWidth: 500,
-      container: {
-        width: window.innerWidth,
-        height: window.innerHeight
-      }
+      container: getContainerSize(),
     };
 
     console.log('Initial State is', this.state);
@@ -92,7 +94,6 @@ class App extends React.Component {
   }
 
   setUrlStyles(styles) {
-
     var str = "?";
     for (var key in styles) {
         if (str != "") {
@@ -114,21 +115,19 @@ class App extends React.Component {
 
   resize() {
     this.setState({
-      container: {
-        width: window.innerWidth,
-        height: window.innerHeight
-      }
+      container: getContainerSize()
     });
   }
 
   handleStylesChange(newStyles) {
-    const styles = Object.assign({}, newStyles, {at: Date.now()})
+    const styles = Object.assign({}, newStyles, {at: Date.now()});
     this.setState({styles});
     this.setUrlStyles(styles);
   }
 
   render() {
     const {styles, container, sidebarWidth, sampleSize} = this.state;
+    console.log(container.width, container.width - sidebarWidth);
     const layout = new Layouter({
       items: images.slice(0, sampleSize),
       container: {
@@ -148,10 +147,10 @@ class App extends React.Component {
           handleStylesChange={this.handleStylesChange}
           /> : null }
         <i className={'toggle-settings glyphicon glyphicon-menu-right ' + (sidebarWidth ? '' : ' closed ')} onClick={this.toggleSidebar}/>
+
         <div
-          className="playground-gallery" style={{
-            width: (container.width - sidebarWidth) + 'px'
-          }}
+          className="playground-gallery"
+          style={{ width: `${container.width - sidebarWidth}px` }}
         >
           <Gallery layout={layout}/>
         </div>

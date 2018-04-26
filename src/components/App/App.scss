@@ -1,7 +1,7 @@
 :global body {
   padding: 0;
   margin: 0;
-
+  overflow-y: scroll;
 
   .playground-gallery {
     float: right;
@@ -21,7 +21,7 @@
     z-index: 999;
     cursor: pointer;
     top: 15px;
-    left: 470px;
+    left: 455px;
     transition: all 0.4s ease;
     transform: rotate(180deg);
 
@@ -38,7 +38,6 @@
       }
     }
   }
-
 
   .close-settings {
     left: 470px;
