@@ -488,18 +488,6 @@ class SideBar extends React.Component {
               {this.createSlider('boxShadow')}
             </div>
 
-            <h3>
-              <small>Debug Settings</small>
-            </h3>
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
-                title="The number of images that will be rendered - the more items rendered the slower the gallery will move"
-                >Number
-                of Items</label>
-              <input name="sampleSize" type="number" className="form-control" value={styles.sampleSize}/>
-            </div>
-
             <div className="submit-box">
               <button type="submit" className="btn btn-success btn-block">Render Gallery</button>
 
