@@ -3,10 +3,11 @@ import {Layouter} from 'pro-gallery-layouter';
 import SideBar from '../SideBar';
 import Gallery from '../Gallery';
 import images from '../../constants/images';
+import getScrollbarSize from './get-scrollbar-size';
 import './App.scss';
 
 const getContainerSize = () => ({
-  width: document.documentElement.clientWidth,
+  width: window.innerWidth,
   height: window.innerHeight,
 });
 
@@ -44,17 +45,13 @@ class App extends React.Component {
       sampleSize: 100,
       styles: Object.assign({}, this.defaultStyles, this.getUrlStyles),
       sidebarWidth: 500,
+
+      // Needed for browsers with static scrollbars
+      scrollbarSize: getScrollbarSize(),
       container: getContainerSize(),
     };
 
-    this.layouter = new Layouter({
-      items: images,
-      container: {
-        height: this.state.container.height,
-        width: this.state.container.width - this.state.sidebarWidth,
-      },
-      styleParams: this.state.styles,
-    });
+    this.layouter = new Layouter(this.getLayoutParams());
 
     window.addEventListener('resize', this.resize);
   }
@@ -88,35 +85,45 @@ class App extends React.Component {
     this.setUrlStyles(styles);
   }
 
-  render() {
-    const {styles, container, sidebarWidth, sampleSize} = this.state;
-    const layoutParams = {
-      items: images.slice(0, sampleSize),
+  getLayoutParams() {
+    const {styles, container, sidebarWidth, scrollbarSize} = this.state;
+
+    return {
+      items: images,
       container: {
-        ...container,
-        width: container.width - sidebarWidth,
+        height: container.height - scrollbarSize,
+        width: container.width - sidebarWidth - scrollbarSize,
       },
-      styleParams: this.state.styles,
+      styleParams: styles,
     };
+  }
+
+  render() {
+    const {styles, container, sidebarWidth} = this.state;
+    const layoutParams = this.getLayoutParams();
     const layout = this.layouter.createLayout(layoutParams);
+
     console.log("Created a layout!", layout, layoutParams);
+
     return (
-      <div ref={ref => { this.root = ref; }}>
-        { sidebarWidth ? <SideBar
-          container={{
-            width: sidebarWidth,
-            height: container.height
-          }}
-          styles={styles}
-          handleStylesChange={this.handleStylesChange}
-          /> : null }
+      <div className="playground-container">
+        {sidebarWidth ? (
+          <SideBar
+            container={{
+              width: sidebarWidth,
+              height: container.height
+            }}
+            styles={styles}
+            handleStylesChange={this.handleStylesChange}
+          />
+        ) : null}
         <i className={'toggle-settings glyphicon glyphicon-menu-right ' + (sidebarWidth ? '' : ' closed ')} onClick={this.toggleSidebar}/>
 
         <div
           className="playground-gallery"
           style={{ width: `${container.width - sidebarWidth}px` }}
         >
-          <Gallery layout={layout}/>
+          <Gallery layout={layout} styleParams={styles}/>
         </div>
       </div>
     );
