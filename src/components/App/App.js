@@ -65,14 +65,6 @@ class App extends React.Component {
   }
 
   setUrlStyles(styles) {
-    // var str = "?";
-    // for (var key in styles) {
-    //     if (str != "") {
-    //         str += "&";
-    //     }
-    //     str += key + "=" + encodeURIComponent(styles[key]);
-    // }
-
     history.pushState(styles, "Pro Gallery Playground");
   }
 
