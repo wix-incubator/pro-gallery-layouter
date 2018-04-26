@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.scss';
-import images from '../../constants/images';
 
 const CDN_URL = 'https://static.wixstatic.com/media/';
+
 const getImgSize = (item, dimension) => {
   const scale = window.devicePixelRatio;
   return Math.min(
@@ -12,22 +12,22 @@ const getImgSize = (item, dimension) => {
   );
 };
 
-const getSrc = item => {
+const getImageSrc = item => {
   const w = getImgSize(item, 'height');
   const h = getImgSize(item, 'width');
   return `${CDN_URL}${item.dto.url}/v1/fit/w_${w},h_${h},al_c,q_80/file.jpg`;
 };
 
-const getStyle = item => ({
+const getImageStyle = item => ({
   ...item.offset,
   width: item.style.width,
   height: item.style.height,
 });
 
 const Gallery = ({ layout }) => (
-  <div className={styles.root}>
+  <div className={styles.root} style={{ height: layout.height }}>
     {layout.items.map(item => (
-      <img className={styles.item} src={getSrc(item)} style={getStyle(item)} alt={item.idx}/>
+      <img className={styles.item} src={getImageSrc(item)} style={getImageStyle(item)} alt={item.idx}/>
     ))}
   </div>
 );

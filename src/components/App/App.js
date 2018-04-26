@@ -123,7 +123,7 @@ class App extends React.Component {
           className="playground-gallery"
           style={{ width: `${container.width - sidebarWidth}px` }}
         >
-          <Gallery layout={layout} styleParams={styles}/>
+          <Gallery layout={layout}/>
         </div>
       </div>
     );
