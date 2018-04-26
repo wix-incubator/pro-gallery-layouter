@@ -23,12 +23,12 @@ class App extends React.Component {
     this.defaultStyles = {
       sampleSize: 100,
       isVertical: false,
-      gallerySize: 320,
+      gallerySize: 89,//320,
       minItemSize: 120,
       groupSize: 3,
       chooseBestGroup: true,
       groupTypes: '1,2h,2v,3t,3b,3l,3r',
-      rotatingGroupTypes: '1,2h,2v,3t,3b,3l,3r',
+      rotatingGroupTypes: '',
       cubeImages: false,
       cubeType: 'fill',
       smartCrop: false,
@@ -81,8 +81,10 @@ class App extends React.Component {
 
   handleStylesChange(newStyles) {
     const styles = Object.assign({}, newStyles, {at: Date.now()});
-    this.setState({styles});
+    console.log('Setting URL styles', styles);
     this.setUrlStyles(styles);
+    console.log('Setting state styles', styles);
+    this.setState({styles});
   }
 
   getLayoutParams() {
@@ -103,20 +105,20 @@ class App extends React.Component {
     const layoutParams = this.getLayoutParams();
     const layout = this.layouter.createLayout(layoutParams);
 
+    console.time('Creating a layout...');
     console.log("Created a layout!", layout, layoutParams);
+    console.timeEnd('Creating a layout...');
 
-    return (
-      <div className="playground-container">
-        {sidebarWidth ? (
-          <SideBar
-            container={{
-              width: sidebarWidth,
-              height: container.height
-            }}
-            styles={styles}
-            handleStylesChange={this.handleStylesChange}
-          />
-        ) : null}
+    return layout ? (
+      <div ref={ref => { this.root = ref; }} className="playground-container">
+        { sidebarWidth ? <SideBar
+          container={{
+            width: sidebarWidth,
+            height: container.height
+          }}
+          styles={styles}
+          handleStylesChange={this.handleStylesChange}
+          /> : null }
         <i className={'toggle-settings glyphicon glyphicon-menu-right ' + (sidebarWidth ? '' : ' closed ')} onClick={this.toggleSidebar}/>
 
         <div
@@ -125,6 +127,17 @@ class App extends React.Component {
         >
           <Gallery layout={layout}/>
         </div>
+      </div>
+    ) : (
+      <div>
+        <h3>Layout creation failed!!</h3>
+        <ul>
+          {Object.keys(layoutParams.styleParams).map(param => {
+            return (
+              <li>{params}: {layoutParams.styleParams[param]}</li>
+            )
+          })}
+        </ul>
       </div>
     );
   }

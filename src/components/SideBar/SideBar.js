@@ -156,40 +156,6 @@ class SideBar extends React.Component {
                 </label>
               </div>
             </div>
-            <div className="form-group">
-              <label data-toggle="tooltip" data-placement="right" title="Thumbnails location">Thumbnails Location</label>
-              <br/>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="galleryThumbnailsAlignment" value="none" checked={styles.galleryThumbnailsAlignment == 'none'}/>
-                  None
-                </label>
-              </div>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="galleryThumbnailsAlignment" value="bottom" checked={styles.galleryThumbnailsAlignment == 'bottom'} />
-                  Bottom
-                </label>
-              </div>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="galleryThumbnailsAlignment" value="left" checked={styles.galleryThumbnailsAlignment == 'left'} />
-                  Left
-                </label>
-              </div>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="galleryThumbnailsAlignment" value="top" checked={styles.galleryThumbnailsAlignment == 'top'}/>
-                  Top
-                </label>
-              </div>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="galleryThumbnailsAlignment" value="right" checked={styles.galleryThumbnailsAlignment == 'none'}/>
-                  Right
-                </label>
-              </div>
-            </div>
 
             <h3>
               <small>Collage Settings</small>

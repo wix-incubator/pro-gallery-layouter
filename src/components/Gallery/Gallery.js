@@ -6,10 +6,10 @@ const CDN_URL = 'https://static.wixstatic.com/media/';
 
 const getImgSize = (item, dimension) => {
   const scale = window.devicePixelRatio;
-  return Math.min(
-    scale * item.style.height,
+  return Math.ceil(Math.min(
+    scale * item[dimension],
     item[`max${dimension[0].toUpperCase() + dimension.substring(1)}`]
-  );
+  ));
 };
 
 const getImageSrc = item => {
@@ -20,8 +20,8 @@ const getImageSrc = item => {
 
 const getImageStyle = item => ({
   ...item.offset,
-  width: item.style.width,
-  height: item.style.height,
+  width: item.width,
+  height: item.height,
 });
 
 const Gallery = ({ layout }) => (
