@@ -1,6 +1,6 @@
 import React from 'react';
 import './SideBar.scss';
-import Slider, { Range } from 'rc-slider';
+import Slider from 'rc-slider';
 
 const getValue = event => {
   try {
