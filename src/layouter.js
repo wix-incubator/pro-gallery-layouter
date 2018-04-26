@@ -141,8 +141,8 @@ export default class Layouter {
 
       //push the image to a group - until its full
       groupItems.push(item);
-      this.pointer++;
       if (!this.isLastImages && (groupItems.length < maxGroupSize)) {
+        this.pointer++;
         continue;
       }
 
