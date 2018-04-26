@@ -3,10 +3,11 @@ import './SideBar.scss';
 import Slider from 'rc-slider';
 
 const getValue = event => {
+  const { value } = event.target;
   try {
-    return JSON.parse(event.target.value);
+    return JSON.parse(value);
   } catch (error) {
-    return event.target.value;
+    return value;
   }
 };
 
