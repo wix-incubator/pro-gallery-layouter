@@ -20,7 +20,7 @@ const layoutParams = {
 // Use layout object to render layout
 const layout = createLayout(layoutParams);
 ```
-Using the layout object to render html can be done in several ways. See [demos](/demos).
+Rendering HTML from `layout` can be done in several ways. See [demos](/demos).
 
 # Layout params
 
