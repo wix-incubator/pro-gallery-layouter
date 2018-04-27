@@ -33,7 +33,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
   - [calcVisibilities](#calcvisibilities)
   - [findNeighborItem](#findneighboritem)
   - [lastVisibleItemIdx](#lastvisibleitemidx)
-  - [createLayout](#--createlayout)
+  - [createLayout](#createlayout-1)
 - [layoutParams](#layoutparams)
   - [styleParams](#styleparams)
   - [container](#container)
@@ -177,7 +177,7 @@ Original height of the item
 
 ## layout
 
-Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout). 
+Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#createlayout-1). 
 The object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
 
 ### height
