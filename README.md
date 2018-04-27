@@ -195,32 +195,34 @@ _(arrayof [item](#item))_
 
 ### `item`
 
-```
-    id
-    idx
-    inGroupIdx
-    dto
-    type
-    style
-    width: this.width,
-    maxWidth: this.maxWidth,
-    outerWidth: this.outerWidth,
-    height: this.height,
-    maxHeight: this.maxHeight,
-    outerHeight: this.outerHeight,
-    margins: this.margins,
-    ratio: this.ratio,
-    cropRatio: this.cubeRatio,
-    isCropped: this.cubeImages,
-    cropType: this.cubeType,
-    group: this.group,
-    offset: this.offset,
-    groupOffset: this._groupOffset,
-    transform: this.transform,
-    orientation: this.orientation,
-    isPortrait: this.isPortrait,
-    isLandscape: this.isLandscape,
-    visibility: this.visibility
+```javascript
+{
+  id,
+  idx,
+  inGroupIdx,
+  dto,
+  type,
+  style,
+  width,
+  maxWidth,
+  outerWidth,
+  height,
+  maxHeight,
+  outerHeight,
+  margins,
+  ratio,
+  cropRatio,
+  isCropped,
+  cropType,
+  group,
+  offset,
+  groupOffset,
+  transform,
+  orientation,
+  isPortrait,
+  isLandscape,
+  visibility
+}
 ```
 
 ### `groups`
@@ -228,6 +230,29 @@ _(arrayof [item](#item))_
 _(arrayof [group](#group))_
 
 ### `group`
+
+```javascript
+{
+  id,
+  idx,
+  stripIdx,
+  inStripIdx,
+  isLastGroup,
+  items,
+  type,
+  width,
+  height,
+  totalHeight,
+  ratio,
+  top,
+  left,
+  right,
+  bottom,
+  visible,
+  rendered,
+  required
+}
+```
 
 ### `strips`
 
