@@ -181,20 +181,16 @@ Original height of the item
 
 ## layout
 
-Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout)
-The scheme object contains:
-```javascript
-{
-  height: (the total height of the gallery)
-  items: (an array of item schemes)
-  groups: (an array of group schemes)
-  strips: (an array of strip schemes)
-  columns: (an array of column schemes)
-}
-```
-### `
+Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout). The scheme object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
 
-### `items`
+<h3>
+  <code>items</code>
+</h3>
+
+_(arrayof [item](#--item))_
+
+### `item`
+
 ```
     id
     idx
