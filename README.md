@@ -46,11 +46,11 @@ Simplest way to create a layout. Suitable for most uses.
 
 **Arguments:**
 
-1. [`layoutParams`](#layoutparams)
+1. [`layoutParams`](#layoutparams) _(object)_
 
 **Returns**
 
-[`layout`](#layout)
+[`layout`](#layout)_(object) _
 
 ## `Layouter`
 
@@ -61,7 +61,7 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 **Arguments:**
 
-1. [`layoutParams`](#layoutparams)
+1. [`layoutParams`](#layoutparams) _(object)_
 
 ### `calcVisibilities`
 
@@ -77,11 +77,11 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 **Arguments:**
 
-1. [`layoutParams`](#layoutparams)
+1. [`layoutParams`](#layoutparams) _(object)_
 
 **Returns**
 
-[`layout`](#layout)
+[`layout`](#layout)_(object) _
 
 ## `layoutParams`
 
