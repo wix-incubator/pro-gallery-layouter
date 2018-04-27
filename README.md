@@ -231,13 +231,19 @@ _(arrayof [group](#group))_
 
 ### `strips`
 
+_(arrayof [strips](#strips))_
+
+### `strip`
+
+_(arrayof [group](#group))_
+
 ### `columns`
 
 _(arrayof [column](#column))_
 
 ### `column`
 
-_(arrayof [item](#item))_
+_(arrayof [group](#group))_
 
 
 # Usage with React
