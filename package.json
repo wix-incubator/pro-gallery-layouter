@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "pro-gallery-layouter",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": {
     "name": "Guy Sopher",
     "email": "guyso@wix.com",
@@ -79,6 +79,6 @@
     }
   },
   "publishConfig": {
-    "registry": "http://repo.dev.wix/artifactory/api/npm/npm-local/"
+    "registry": "https://registry.npmjs.org/"
   }
 }
