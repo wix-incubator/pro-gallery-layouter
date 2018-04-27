@@ -67,8 +67,6 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 ### `findNeighborItem`
 
-### `lastVisibleItemIdx`
-
 ### `calcVisibilities`
 
 <h3>
@@ -181,7 +179,10 @@ Original width of the item
 
 Original height of the item
 
-## Layout
+## layout
+
+
+
 
 # Usage with React
 
