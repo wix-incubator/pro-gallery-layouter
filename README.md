@@ -30,7 +30,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
   - [findNeighborItem](#findneighboritem)
   - [lastVisibleItemIdx](#lastvisibleitemidx)
   - [createLayout](#layoutercreatelayout)
-- [layoutParams](#layoutParams)
+- [layoutParams](#layoutparams)
 - [layout](#layout)
 
 ## `createLayout`
@@ -39,11 +39,13 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 ### `calcVisibilities`
 
+### `findNeighborItem`
+
 ### `lastVisibleItemIdx`
 
 ### `calcVisibilities`
 
-### `createLayout` [layouterCreateLayout] ###
+### `createLayout` ###  {#layouter-create-layout}
 
 ## `layoutParams`
 
