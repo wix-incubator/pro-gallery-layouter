@@ -3,6 +3,7 @@ This module creates a layout from a list of items, each containing an id, width 
 
 - [Getting started](#getting-started)
 - [API](#api)
+- [Usage with React](#usage-with-react)
 - [Examples](#examples)
 - [Learn more](#learn-more)
 
