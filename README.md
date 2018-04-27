@@ -183,11 +183,15 @@ Original height of the item
 
 Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout). The scheme object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
 
+### `height`
+
+_(integer)_
+
 <h3>
   <code>items</code>
 </h3>
 
-_(arrayof [item](#--item))_
+_(arrayof [item](#item))_
 
 ### `item`
 
@@ -218,6 +222,22 @@ _(arrayof [item](#--item))_
     isLandscape: this.isLandscape,
     visibility: this.visibility
 ```
+
+### `groups`
+
+_(arrayof [group](#group))_
+
+### `group`
+
+### `strips`
+
+### `columns`
+
+_(arrayof [column](#column))_
+
+### `column`
+
+_(arrayof [item](#item))_
 
 
 # Usage with React
