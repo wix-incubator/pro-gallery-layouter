@@ -65,9 +65,13 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 ### `calcVisibilities`
 
+**Returns**
+
+[`layout`](#layout) _(object)_
+
 ### `findNeighborItem`
 
-### `calcVisibilities`
+### `lastVisibleItemIdx`
 
 <h3>
   <code>createLayout</code>
@@ -83,13 +87,7 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 ## `layoutParams`
 
-```javascript
-{
-  styleParams: {/* ... */},
-  container: {/* ... */},
-  items: [/* ... */]
-}
-```
+The object contains: [styleParams](#styleparams), [container](#container), [items](#items).
 
 ### `styleParams`
 
@@ -181,7 +179,8 @@ Original height of the item
 
 ## layout
 
-Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout). The scheme object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
+Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout). 
+The object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
 
 ### `height`
 
