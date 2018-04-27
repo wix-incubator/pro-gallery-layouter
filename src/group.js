@@ -538,14 +538,14 @@ export class Group {
       case '2v':
       case '3v': {
         const w = this.width - m;
-        return (w > 0) && {
+        return {
           width: w,
         };
       }
       case '2h':
       case '3h': {
         const h = this.height - m;
-        return (h > 0) && {
+        return {
           height: h,
         };
       }
@@ -553,12 +553,12 @@ export class Group {
       case '3b':
         if (idx === 0) {
           const w = this.width - m;
-          return (w > 0) && {
+          return {
             width: w,
           };
         } else {
           const h = this.height - items[0].height - 2 * m;
-          return (h > 0) && {
+          return {
             height: h,
           };
         }
@@ -566,12 +566,12 @@ export class Group {
       case '3l':
         if (idx === 0) {
           const h = this.height - m;
-          return (h > 0) && {
+          return {
             height: h,
           };
         } else {
           const w = this.width - items[0].width - 2 * m;
-          return (w > 0) && {
+          return {
             width: w,
           };
         }

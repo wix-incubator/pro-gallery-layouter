@@ -64,9 +64,11 @@ export class Item {
       scale = scaleOrDimensions;
     } else if (isObject(scaleOrDimensions)) {
       if (scaleOrDimensions.width) {
-        scale = scaleOrDimensions.width / this.width;
+        const w = Math.max(1, scaleOrDimensions.width);
+        scale = w / this.width;
       } else if (scaleOrDimensions.height) {
-        scale = scaleOrDimensions.height / this.height;
+        const h = Math.max(1, scaleOrDimensions.height);
+        scale = h / this.height;
       }
     }
 
