@@ -24,7 +24,7 @@ Rendering HTML from `layout` can be done in several ways. See [demos](/demos).
 
 # Layout params
 
-###`styleParams`
+### `styleParams`
 
 `isVerticalScroll` _(true / false)_:
 
@@ -86,7 +86,7 @@ The allowed group types for collage layouts [learn more](https://docs.google.com
 
 The percentage of "collaging" the layouter will create. The higher the percentage, the more items will be grouped.
 
-###`container`
+### `container`
 
 `width` _(integer)_:
 
@@ -96,7 +96,7 @@ Width of the container
 
 Width of the container
 
-###`items`
+### `items`
 
 Array of objects with this schema:
 
