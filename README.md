@@ -178,7 +178,7 @@ Original height of the item
 ## layout
 
 Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#createlayout-1). 
-The object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
+The object contains: [height](#height), [items](#items-1), [groups](#groups), [strips](#strips), [columns](#columns).
 
 ### height
 
