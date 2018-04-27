@@ -29,7 +29,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
   - [calcVisibilities](#calcvisibilities)
   - [findNeighborItem](#findneighboritem)
   - [lastVisibleItemIdx](#lastvisibleitemidx)
-  - [createLayout](#layoutercreatelayout)
+  - [createLayout](#--createlayout)
 - [layoutParams](#layoutparams)
 - [layout](#layout)
 
@@ -45,7 +45,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 ### `calcVisibilities`
 
-<h3 id="layoutercreatelayout">
+<h3>
   <code>createLayout</code>
 </h3>
 
