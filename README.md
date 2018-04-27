@@ -40,7 +40,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
   - [items](#items)
 - [layout](#layout)
 
-## `createLayout`
+## createLayout
 
 Simplest way to create a layout. Suitable for most uses.
 
@@ -52,30 +52,28 @@ Simplest way to create a layout. Suitable for most uses.
 
 [`layout`](#layout) _(object)_
 
-## `Layouter`
+## Layouter
 
 Use it to create responsive layouts and/or for rendering only visible items.  
 Check out [responsive example](/examples/responsive.js) for more info.
 
-### `constructor`
+### constructor
 
 **Arguments:**
 
 1. [`layoutParams`](#layoutparams) _(object)_
 
-### `calcVisibilities`
+### calcVisibilities
 
 **Returns**
 
 [`layout`](#layout) _(object)_
 
-### `findNeighborItem`
+### findNeighborItem
 
-### `lastVisibleItemIdx`
+### lastVisibleItemIdx
 
-<h3>
-  <code>createLayout</code>
-</h3>
+<h3>createLayout</h3>
 
 **Arguments:**
 
@@ -85,11 +83,11 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 [`layout`](#layout) _(object)_
 
-## `layoutParams`
+## layoutParams
 
 The object contains: [styleParams](#styleparams), [container](#container), [items](#items).
 
-### `styleParams`
+### styleParams
 
 `isVerticalScroll` _(true / false)_:
 
@@ -151,7 +149,7 @@ The allowed group types for collage layouts [learn more](https://docs.google.com
 
 The percentage of "collaging" the layouter will create. The higher the percentage, the more items will be grouped.
 
-### `container`
+### container
 
 `width` _(integer)_:
 
@@ -161,7 +159,7 @@ Width of the container
 
 Width of the container
 
-### `items`
+### items
 
 Array of objects with this schema:
 
@@ -182,7 +180,7 @@ Original height of the item
 Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout). 
 The object contains: [height](#height), [items](#--items), [groups](#groups), [strips](#strips), [columns](#columns).
 
-### `height`
+### height
 
 _(integer)_
 
@@ -192,7 +190,7 @@ _(integer)_
 
 _(arrayof [item](#item))_
 
-### `item`
+### item
 
 ```javascript
 {
@@ -224,11 +222,11 @@ _(arrayof [item](#item))_
 }
 ```
 
-### `groups`
+### groups
 
 _(arrayof [group](#group))_
 
-### `group`
+### group
 
 ```javascript
 {
@@ -253,19 +251,19 @@ _(arrayof [group](#group))_
 }
 ```
 
-### `strips`
+### strips
 
 _(arrayof [strips](#strips))_
 
-### `strip`
+### strip
 
 _(arrayof [group](#group))_
 
-### `columns`
+### columns
 
 _(arrayof [column](#column))_
 
-### `column`
+### column
 
 _(arrayof [group](#group))_
 
