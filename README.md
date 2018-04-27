@@ -59,9 +59,9 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 ### `constructor`
 
-Arguments:
+**Arguments:**
 
-layoutParams
+1. [`layoutParams`](#layoutparams)
 
 ### `calcVisibilities`
 
