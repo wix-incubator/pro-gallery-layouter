@@ -26,10 +26,10 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 - [createLayout](#createlayout)
 - [Layouter](#layouter)
-  - [calcVisibilities](#calcVisibilities)
-  - [findNeighborItem](#calcVisibilities)
-  - [lastVisibleItemIdx](#calcVisibilities)
-  - [createLayout](#createLayout)
+  - [calcVisibilities](#calcvisibilities)
+  - [findNeighborItem](#findneighboritem)
+  - [lastVisibleItemIdx](#lastvisibleitemidx)
+  - [createLayout](#layoutercreatelayout)
 - [layoutParams](#layoutParams)
 - [layout](#layout)
 
@@ -43,7 +43,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 ### `calcVisibilities`
 
-### `createLayout`
+### `createLayout` [layouterCreateLayout] ###
 
 ## `layoutParams`
 
@@ -176,6 +176,7 @@ ReactDOM.render(<Gallery layoutParams={layoutParams}/>, document.getElementById(
 - [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentation that displays the different group types in the collage layout
 
 # Examples
+
 To see how to use the layouter, check out the [Examples](/examples).
 (all demos are in vanilla js, but you need to import the library)
 
