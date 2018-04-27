@@ -165,5 +165,5 @@ To see how to use the layouter, check out the [Examples](/examples).
 (all demos are in vanilla js, but you need to import the library)
 
 - [Absolute positioning example](/examples/absolute.js) uses absolute positioning to display the layout
-- [Relative positioning example](/examples/relative.js) shows how to achieve a better performance using relative positioning 
+- [Relative positioning example](/examples/relative.js) uses relative positioning to display the layout 
 - [Responsive example](/examples/relative.js) takes advantage of the [Layouter](#layouter) to implement responsive layout where only visible items are rendered
