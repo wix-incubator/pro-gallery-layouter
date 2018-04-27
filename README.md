@@ -184,9 +184,7 @@ The object contains: [height](#height), [items](#--items), [groups](#groups), [s
 
 _(integer)_
 
-<h3>
-  <code>items</code>
-</h3>
+### items
 
 _(arrayof [item](#item))_
 
