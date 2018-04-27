@@ -24,14 +24,28 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 # API
 
-- `createLayout`
-- `Layouter`
+- [createLayout](#createlayout)
+- [Layouter](#layouter)
+  - [calcVisibilities](#calcVisibilities)
+  - [findNeighborItem](#calcVisibilities)
+  - [lastVisibleItemIdx](#calcVisibilities)
+  - [createLayout](#createLayout)
+- [layoutParams](#layoutParams)
+- [layout](#layout)
 
 ## `createLayout`
 
 ## `Layouter`
 
-# Layout params
+### `calcVisibilities`
+
+### `lastVisibleItemIdx`
+
+### `calcVisibilities`
+
+### `createLayout`
+
+## `layoutParams`
 
 ### `styleParams`
 
@@ -120,6 +134,8 @@ Original width of the item
 `height` _(integer)_:
 
 Original height of the item
+
+## Layout
 
 # Usage with React
 
