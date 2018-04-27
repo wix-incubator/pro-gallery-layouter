@@ -50,7 +50,7 @@ Simplest way to create a layout. Suitable for most uses.
 
 **Returns**
 
-[`layout`](#layout)_(object) _
+[`layout`](#layout) _(object)_
 
 ## `Layouter`
 
@@ -81,7 +81,7 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 **Returns**
 
-[`layout`](#layout)_(object) _
+[`layout`](#layout) _(object)_
 
 ## `layoutParams`
 
