@@ -9,32 +9,22 @@ Notice: this module is currently available only in the wix-private repository.
 
 ## Usage
 ```javascript
-import {Layouter} from 'pro-gallery-layouter';
-const items = [{
-  id: '2d3b675ea857dc41158bad3b28300824',
-  width: 5600,
-  height: 3730
-},{id, width, height},...];
-const styleParams = {
-  rowSize: 500,
-  isColumnsLayout: false,
-  ...
-};
-const container = {
-  width: window.innerWidth,
-  height: window.innerHeight
-};
+import {createLayout} from 'pro-gallery-layouter';
+
 const layoutParams = {
-  items,
-  styleParams,
-  container
+  styleParams: {/* ... */},
+  items: [/* ... */],
+  container: {/* ... */}
 };
 
-const layout = new Layouter(layoutParams);
+// Use layout object to render layout
+const layout = createLayout(layoutParams);
 ```
 Using the layout object to render html can be done in several ways. See [demos](/demos).
 
-# Layout Params:
+# Layout params
+
+###`styleParams`
 
 `isVerticalScroll` _(true / false)_:
 
@@ -96,16 +86,42 @@ The allowed group types for collage layouts [learn more](https://docs.google.com
 
 The percentage of "collaging" the layouter will create. The higher the percentage, the more items will be grouped.
 
-# Use with React
+###`container`
+
+`width` _(integer)_:
+
+Width of the container
+
+`height` _(integer)_:
+
+Width of the container
+
+###`item`
+
+`id` _(string)_:
+
+Unique id
+
+`width` _(integer)_:
+
+Original width of the item
+
+`height` _(integer)_:
+
+Original height of the item
+
+# Usage with React
 
 ```javascript
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {createLayout} from 'pro-gallery-layouter';
 
-const styleParams = {/* ... */};
-const items = [/* ... */];
-const container = {/* ... */};
+const layoutParams = {
+  styleParams: {/* ... */},
+  items: [/* ... */],
+  container: {/* ... */}
+};
 
 const getImageStyle = item => ({
   ...item.offset,
@@ -114,7 +130,7 @@ const getImageStyle = item => ({
 });
 
 const Gallery = () => {
-  const layout = createLayout({ styleParams, items, container });
+  const layout = createLayout(layoutParams);
   return (
     <div style={{ height: layout.height }}>
       {layout.items.map(item => (
