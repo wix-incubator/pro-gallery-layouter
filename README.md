@@ -1,9 +1,12 @@
-# Pro Gallery Layouter
+# Pro Gallery Layouter ([DEMO](https://wix-incubator.github.io/pro-gallery-layouter/))
 This module creates a layout from a list of items, each containing an id, width and height. The layout is fitted to a specified container and is adjusted by a set of style params. It also handles viewport visibility to render only the items in the viewport.
 
-[Live demo](https://wix-incubator.github.io/pro-gallery-layouter/)
+- [Getting started](#getting-started)
+- [API](#api)
+- [Example](#example)
+- [Learn more](#learn-more)
 
-# Get Started
+# Getting started
 ## Installation
 `npm i pro-gallery-layouter`
 
@@ -174,11 +177,6 @@ const layoutParams = {
 ReactDOM.render(<Gallery layoutParams={layoutParams}/>, document.getElementById('root'));
 ```
 
-# Learn More
-
-- [Behind the Pro Gallery Layouter](https://docs.google.com/presentation/d/1rtLFsgeQTUGt4lTU-cLaBKhKsalQasDA6FPeBiKuJZo/present) a presentation that explains the collage algorithm
-- [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentation that displays the different group types in the collage layout
-
 # Examples
 
 To see how to use the layouter, check out the [Examples](/examples).
@@ -187,3 +185,8 @@ To see how to use the layouter, check out the [Examples](/examples).
 - [Absolute positioning example](/examples/absolute.js) uses absolute positioning to display the layout
 - [Relative positioning example](/examples/relative.js) uses relative positioning to display the layout 
 - [Responsive example](/examples/relative.js) takes advantage of the [Layouter](#layouter) to implement responsive layout where only visible items are rendered
+
+# Learn More
+
+- [Behind the Pro Gallery Layouter](https://docs.google.com/presentation/d/1rtLFsgeQTUGt4lTU-cLaBKhKsalQasDA6FPeBiKuJZo/present) a presentation that explains the collage algorithm
+- [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentation that displays the different group types in the collage layout
