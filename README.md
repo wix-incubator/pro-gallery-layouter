@@ -119,19 +119,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {createLayout} from 'pro-gallery-layouter';
 
-const layoutParams = {
-  styleParams: {/* ... */},
-  items: [/* ... */],
-  container: {/* ... */}
-};
-
 const getImageStyle = item => ({
   ...item.offset,
   width: item.width,
   height: item.height,
 });
 
-const Gallery = () => {
+const Gallery = ({ layoutParams }) => {
   const layout = createLayout(layoutParams);
   return (
     <div style={{ height: layout.height }}>
@@ -142,7 +136,13 @@ const Gallery = () => {
   );
 };
 
-ReactDOM.render(<Gallery />, document.getElementById('root'));
+const layoutParams = {
+  styleParams: {/* ... */},
+  items: [/* ... */],
+  container: {/* ... */}
+};
+
+ReactDOM.render(<Gallery layoutParams={layoutParams}/>, document.getElementById('root'));
 ```
 
 # Learn More
