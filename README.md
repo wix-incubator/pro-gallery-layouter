@@ -96,6 +96,37 @@ The allowed group types for collage layouts [learn more](https://docs.google.com
 
 The percentage of "collaging" the layouter will create. The higher the percentage, the more items will be grouped.
 
+# Use with React
+
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {createLayout} from 'pro-gallery-layouter';
+
+const styleParams = {/* ... */};
+const items = [/* ... */];
+const container = {/* ... */};
+
+const getImageStyle = item => ({
+  ...item.offset,
+  width: item.width,
+  height: item.height,
+});
+
+const Gallery = () => {
+  const layout = createLayout({ styleParams, items, container });
+  return (
+    <div style={{ height: layout.height }}>
+      {layout.items.map(item => (
+        <img key={item.id} src={item.dto.url} style={getImageStyle(item)} />
+      ))}
+    </div>
+  );
+};
+
+ReactDOM.render(<Gallery />, document.getElementById('root'));
+```
+
 # Learn More
 
 * [Behind the Pro Gallery Layouter](https://docs.google.com/presentation/d/1rtLFsgeQTUGt4lTU-cLaBKhKsalQasDA6FPeBiKuJZo/present) a presentaion that explains the collage algorithm
