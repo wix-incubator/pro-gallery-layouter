@@ -55,7 +55,7 @@ Simplest way to create a layout. Suitable for most uses.
 ## `Layouter`
 
 Use it to create responsive layouts and/or for rendering only visible items.  
-Check out [responsive example](/examples/responsive.js)
+Check out [responsive example](/examples/responsive.js) for more info.
 
 ### `constructor`
 
