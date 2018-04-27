@@ -1,11 +1,11 @@
 # Pro Gallery Layouter
 This module creates a layout from a list of items, each containing an id, width and height. The layout is fitted to a specified container and is adjusted by a set of style params. It also handles viewport visibility to render only the items in the viewport.
 
+[Live demo](https://wix-incubator.github.io/pro-gallery-layouter/)
+
 # Get Started
 ## Installation
 `npm i pro-gallery-layouter`
-
-Notice: this module is currently available only in the wix-private repository.
 
 ## Usage
 ```javascript
@@ -148,10 +148,6 @@ ReactDOM.render(<Gallery />, document.getElementById('root'));
 * [Behind the Pro Gallery Layouter](https://docs.google.com/presentation/d/1rtLFsgeQTUGt4lTU-cLaBKhKsalQasDA6FPeBiKuJZo/present) a presentaion that explains the collage algorithm
 
 * [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentaion that displays the different group types in the collage layout
-
-* [Layouter & Viewport Visibility Demo](http://wix-private.github.io/pro-gallery-layouter/) see the layouter hides and show items according to their location in the viewport
-
-* [Layouter Playground](https://wix-incubator.github.io/pro-gallery-layouter/) the place where you can play with the different styleParams to create new and stunning© layouts
 
 # Demos
 To see how to use the layouter, check out the [Demos](/demos) page.
