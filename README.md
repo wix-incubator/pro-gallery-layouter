@@ -38,6 +38,12 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 ## `createLayout`
 
+**Arguments:**
+1. [`layoutParams`](#layoutparams)
+
+**Returns**
+[`layout`](#layout)
+
 ## `Layouter`
 
 ### `calcVisibilities`
