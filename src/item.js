@@ -148,12 +148,6 @@ export class Item {
   }
 
   set groupOffset(offset) {
-    if (offset.left < 0) {
-      console.log(offset);
-    }
-    if (this._groupOffset.left < 0) {
-      console.log(offset);
-    }
     merge(this._groupOffset, offset);
   }
 
@@ -337,6 +331,7 @@ export class Item {
       cropType: this.cubeType,
       group: this.group,
       offset: this.offset,
+      position: Object.assign({width: this.width, height: this.height}, this.offset),
       groupOffset: this._groupOffset,
       transform: this.transform,
       orientation: this.orientation,

@@ -283,14 +283,20 @@ export default class Layouter {
     return this.scheme;
   }
 
-  lastVisibleItemIdx() {
-    for (let item, i = this.items.length - 1; item = this.items[i]; i--) {
-      const isVisible = item.offset.top < (this.container.galleryHeight - 100); //the item must be visible and about the show more button
+  lastVisibleItemIdxInHeight(height) {
+    for (let i = this.items.length - 1; i >= 0; i--) {
+      const item = this.items[i];
+      const isVisible = item.offset.top < height;
       if (isVisible) {
         return i;
       }
     }
     return this.items.length - 1;
+  }
+
+  lastVisibleItemIdx() {
+    //the item must be visible and about the show more button
+    return this.lastVisibleItemIdxInHeight(this.container.galleryHeight - 100);
   }
 
   findNeighborItem(itemIdx, dir) {

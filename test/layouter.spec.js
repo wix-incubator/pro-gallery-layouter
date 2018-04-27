@@ -5,7 +5,7 @@ import {testImages} from './images-mock.js';
 import range from 'lodash/range';
 import {expect} from 'chai';
 import deepFreeze from 'deep-freeze';
-import expectedOffsets from './expectedOffsets';
+// import expectedOffsets from './expectedOffsets';
 
 const getItems = count => deepFreeze(testImages.slice(0, count));
 const getGroupCount = layout => layout.columns.reduce(
@@ -98,7 +98,7 @@ describe('Layouter', () => {
             return str + itemStr;
           }, '');
 
-          const spStr = `${styleParam}_${value}`.replace(/[,\.]/g, '');
+          const spStr = `${styleParam}_${value}`.replace(/[,.]/g, '');
 
           res[spStr] = spStr + offsets;
           // console.log(Object.keys(expectedOffsets));
@@ -553,7 +553,7 @@ describe('Layouter', () => {
         gallery = getLayout({items, container, styleParams});
 
         let marginDiff = 0;
-        const totalMarginDiff = gallery.columns[0].groups.reduce((g, group) => {
+        gallery.columns[0].groups.reduce((g, group) => {
           let lastItem = false;
           const groupMarginDiff = group.items.reduce((i, item) => {
             if (lastItem) {
