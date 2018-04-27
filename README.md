@@ -135,7 +135,7 @@ ReactDOM.render(<Gallery />, document.getElementById('root'));
 
 * [Layouter & Viewport Visibility Demo](http://wix-private.github.io/pro-gallery-layouter/) see the layouter hides and show items according to their location in the viewport
 
-* [Pro Gallery Playground](https://wix-private.github.io/pro-gallery-playground/) the place where you can play with the different styleParams to create new and stunning© layouts
+* [Layouter Playground](https://wix-incubator.github.io/pro-gallery-layouter/) the place where you can play with the different styleParams to create new and stunning© layouts
 
 # Demos
 To see how to use the layouter, check out the [Demos](/demos) page.
