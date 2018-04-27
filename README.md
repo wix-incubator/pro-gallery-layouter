@@ -181,7 +181,46 @@ Original height of the item
 
 ## layout
 
+The layouter createLayout and calcVisibilities return the scheme object.
+The scheme object contains:
+```javascript
+{
+  height: (the total height of the gallery)
+  items: (an array of item schemes)
+  groups: (an array of group schemes)
+  strips: (an array of strip schemes)
+  columns: (an array of column schemes)
+}
+```
 
+Item:
+```
+    id
+    idx
+    inGroupIdx
+    dto
+    type
+    style
+    width: this.width,
+    maxWidth: this.maxWidth,
+    outerWidth: this.outerWidth,
+    height: this.height,
+    maxHeight: this.maxHeight,
+    outerHeight: this.outerHeight,
+    margins: this.margins,
+    ratio: this.ratio,
+    cropRatio: this.cubeRatio,
+    isCropped: this.cubeImages,
+    cropType: this.cubeType,
+    group: this.group,
+    offset: this.offset,
+    groupOffset: this._groupOffset,
+    transform: this.transform,
+    orientation: this.orientation,
+    isPortrait: this.isPortrait,
+    isLandscape: this.isLandscape,
+    visibility: this.visibility
+```
 
 
 # Usage with React
