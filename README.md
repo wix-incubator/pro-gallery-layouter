@@ -3,7 +3,7 @@ This module creates a layout from a list of items, each containing an id, width 
 
 - [Getting started](#getting-started)
 - [API](#api)
-- [Example](#example)
+- [Examples](#examples)
 - [Learn more](#learn-more)
 
 # Getting started
