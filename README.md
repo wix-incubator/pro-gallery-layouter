@@ -20,7 +20,16 @@ const layoutParams = {
 // Use layout object to render layout
 const layout = createLayout(layoutParams);
 ```
-Rendering HTML from `layout` can be done in several ways. See [demos](/demos).
+Rendering HTML from `layout` can be done in several ways. See [demos](/examples).
+
+# API
+
+- `createLayout`
+- `Layouter`
+
+## `createLayout`
+
+## `Layouter`
 
 # Layout params
 
@@ -151,7 +160,10 @@ ReactDOM.render(<Gallery layoutParams={layoutParams}/>, document.getElementById(
 
 * [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentaion that displays the different group types in the collage layout
 
-# Demos
-To see how to use the layouter, check out the [Demos](/demos) page.
-(all demos are plain js, but you need to import the library)
-You can also clone the repo and move to the *demos* branch, run `npm install` and `npm start` to see it in action
+# Examples
+To see how to use the layouter, check out the [Examples](/examples).
+(all demos are in vanilla js, but you need to import the library)
+
+- [Absolute positioning example](/examples/absolute.js) uses absolute positioning to display the layout
+- [Relative positioning example](/examples/relative.js) shows how to achieve a better performance using relative positioning 
+- [Responsive example](/examples/relative.js) takes advantage of the [Layouter](#layouter) to implement responsive layout where only visible items are rendered
