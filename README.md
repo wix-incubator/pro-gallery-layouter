@@ -29,22 +29,35 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 - [createLayout](#createlayout)
 - [Layouter](#layouter)
+  - [constructor](#constructor)
   - [calcVisibilities](#calcvisibilities)
   - [findNeighborItem](#findneighboritem)
   - [lastVisibleItemIdx](#lastvisibleitemidx)
   - [createLayout](#--createlayout)
 - [layoutParams](#layoutparams)
+  - [styleParams](#styleparams)
+  - [container](#container)
+  - [items](#items)
 - [layout](#layout)
 
 ## `createLayout`
 
+Simplest way to create a layout. Suitable for most uses.
+
 **Arguments:**
+
 1. [`layoutParams`](#layoutparams)
 
 **Returns**
+
 [`layout`](#layout)
 
 ## `Layouter`
+
+Use it for creating responsive layouts or for rendering only visible items.  
+Check out [responsive example](/examples/responsive.js)
+
+### `constructor`
 
 ### `calcVisibilities`
 
@@ -58,7 +71,23 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
   <code>createLayout</code>
 </h3>
 
+**Arguments:**
+
+1. [`layoutParams`](#layoutparams)
+
+**Returns**
+
+[`layout`](#layout)
+
 ## `layoutParams`
+
+```javascript
+{
+  styleParams: {/* ... */},
+  container: {/* ... */},
+  items: [/* ... */]
+}
+```
 
 ### `styleParams`
 
