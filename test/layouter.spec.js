@@ -5,7 +5,7 @@ import {testImages} from './images-mock.js';
 import range from 'lodash/range';
 import {expect} from 'chai';
 import deepFreeze from 'deep-freeze';
-// import expectedOffsets from './expectedOffsets';
+import expectedOffsets from './expectedOffsets';
 
 const getItems = count => deepFreeze(testImages.slice(0, count));
 const getGroupCount = layout => layout.columns.reduce(
@@ -101,8 +101,7 @@ describe('Layouter', () => {
           const spStr = `${styleParam}_${value}`.replace(/[,.]/g, '');
 
           res[spStr] = spStr + offsets;
-          // console.log(Object.keys(expectedOffsets));
-          // expect(expectedOffsets[spStr]).to.equal(spStr + offsets);
+          expect(expectedOffsets[spStr]).to.equal(spStr + offsets);
 
         }
       }
@@ -312,6 +311,7 @@ describe('Layouter', () => {
 
       const items = getItems(100);
       styleParams.isVertical = false;
+      styleParams.imageMargin = 0;
 
       const minItemSizes = [10, 50, 100, 200, 300, 400];
 
