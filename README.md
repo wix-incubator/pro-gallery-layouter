@@ -194,7 +194,7 @@ The scheme object contains:
 ```
 ### `
 
-### `itemss`
+### `items`
 ```
     id
     idx
