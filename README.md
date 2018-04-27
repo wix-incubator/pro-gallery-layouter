@@ -156,9 +156,9 @@ ReactDOM.render(<Gallery layoutParams={layoutParams}/>, document.getElementById(
 
 # Learn More
 
-* [Behind the Pro Gallery Layouter](https://docs.google.com/presentation/d/1rtLFsgeQTUGt4lTU-cLaBKhKsalQasDA6FPeBiKuJZo/present) a presentaion that explains the collage algorithm
+* [Behind the Pro Gallery Layouter](https://docs.google.com/presentation/d/1rtLFsgeQTUGt4lTU-cLaBKhKsalQasDA6FPeBiKuJZo/present) a presentation that explains the collage algorithm
 
-* [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentaion that displays the different group types in the collage layout
+* [Group Types](https://docs.google.com/presentation/d/1RGRkSmXV94dKXL-7umXcJXsgOGwcBRu0l9AcfShV21I/edit#slide=id.g2704b1b40a_0_370) a presentation that displays the different group types in the collage layout
 
 # Examples
 To see how to use the layouter, check out the [Examples](/examples).
