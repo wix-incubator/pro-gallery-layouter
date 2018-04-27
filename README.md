@@ -45,7 +45,7 @@ Rendering HTML from `layout` can be done in several ways. See [examples](#exampl
 
 ### `calcVisibilities`
 
-<h3 id="layouter-create-layout">
+<h3 id="layoutercreatelayout">
   <code>createLayout</code>
 </h3>
 
