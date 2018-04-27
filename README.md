@@ -181,7 +181,7 @@ Original height of the item
 
 ## layout
 
-The layouter createLayout and calcVisibilities return the scheme object.
+Object returned by [createLayout](#createlayout), [calcVisibilities](#calcvisibilities), [Layouter.createLayout](#--createlayout)
 The scheme object contains:
 ```javascript
 {
@@ -192,8 +192,9 @@ The scheme object contains:
   columns: (an array of column schemes)
 }
 ```
+### `
 
-Item:
+### `itemss`
 ```
     id
     idx
