@@ -1,5 +1,5 @@
 import React from 'react';
-import {Layouter} from 'pro-gallery-layouter';
+import {createLayout} from 'pro-gallery-layouter';
 import SideBar from '../SideBar';
 import Gallery from '../Gallery';
 import images from '../../constants/images';
@@ -51,8 +51,6 @@ class App extends React.Component {
       container: getContainerSize(),
     };
 
-    this.layouter = new Layouter(this.getLayoutParams());
-
     window.addEventListener('resize', this.resize);
   }
 
@@ -103,7 +101,7 @@ class App extends React.Component {
   render() {
     const {styles, container, sidebarWidth} = this.state;
     const layoutParams = this.getLayoutParams();
-    const layout = this.layouter.createLayout(layoutParams);
+    const layout = createLayout(layoutParams);
 
     console.time('Creating a layout...');
     console.log("Created a layout!", layout, layoutParams);
