@@ -59,6 +59,10 @@ Check out [responsive example](/examples/responsive.js) for more info.
 
 ### `constructor`
 
+Arguments:
+
+layoutParams
+
 ### `calcVisibilities`
 
 ### `findNeighborItem`
