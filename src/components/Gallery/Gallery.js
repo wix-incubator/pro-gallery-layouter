@@ -19,7 +19,8 @@ const getImageSrc = item => {
 };
 
 const getImageStyle = item => ({
-  ...item.offset,
+  top: item.offset.top,
+  left: item.offset.left,
   width: item.width,
   height: item.height,
 });
