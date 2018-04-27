@@ -324,7 +324,14 @@ class SideBar extends React.Component {
                   </tr>
                 </tbody>
               </table>
+            </div>
 
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="Maximal allowed group size"
+                >Max Group Size</label>
+                {this.createSlider('groupSize', styles.groupSize, 3)}
             </div>
 
             <div className="form-group">
@@ -435,6 +442,10 @@ class SideBar extends React.Component {
               <label data-toggle="tooltip" data-placement="right" title="The margins between images">Image
                 Spacing</label>
               {this.createSlider('imageMargin', styles.imageMargin, 500)}
+            </div>
+            <div className="form-group">
+              <label data-toggle="tooltip" data-placement="right" title="Add spacing below each group (vertical layouts only)">Space below Groups</label>
+                {this.createSlider('bottomInfoHeight', styles.bottomInfoHeight, 500)}
             </div>
             <div className="form-group">
               <label data-toggle="tooltip" data-placement="right" title="Add random change to image position">Floating
