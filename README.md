@@ -96,7 +96,9 @@ Width of the container
 
 Width of the container
 
-###`item`
+###`items`
+
+Array of objects with this schema:
 
 `id` _(string)_:
 
