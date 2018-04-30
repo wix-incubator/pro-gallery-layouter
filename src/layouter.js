@@ -413,8 +413,8 @@ export default class Layouter {
     return {
       items: this.items.map(item => item.scheme),
       groups: this.groups.map(group => group.scheme),
-      columns: this.columns.map(column => column.scheme),
       strips: this.strips.map(strip => strip.scheme),
+      columns: this.columns.map(column => column.scheme),
       height: this.height,
     };
   }

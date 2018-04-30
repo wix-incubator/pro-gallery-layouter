@@ -26,6 +26,7 @@ export class Item {
     this.cubeType = config.styleParams.cubeType || 'fill';
     this.cubeImages = config.styleParams.cubeImages;
     this._cubeRatio = config.styleParams.cubeRatio;
+    this.rotatingCropRatios = config.styleParams.rotatingCropRatios;
     this.smartCrop = config.styleParams.smartCrop;
     this.cropOnlyFill = config.styleParams.cropOnlyFill;
     this.imageMargin = config.styleParams.imageMargin;
@@ -265,7 +266,10 @@ export class Item {
 
   get cubeRatio() {
     let ratio;
-    if (isFunction(this._cubeRatio)) {
+    if (this.rotatingCropRatios && this.rotatingCropRatios.length > 0) {
+      const cropRatiosArr = this.rotatingCropRatios.split(',');
+      ratio = cropRatiosArr[(this.idx) % cropRatiosArr.length];
+    } else if (isFunction(this._cubeRatio)) {
       ratio = this._cubeRatio();
     } else if (this.cropOnlyFill && this.cubeType === 'fit') {
       ratio = this.ratio;
@@ -333,7 +337,6 @@ export class Item {
       cropType: this.cubeType,
       group: this.group,
       offset: this.offset,
-      position: Object.assign({width: this.width, height: this.height}, this.offset),
       groupOffset: this._groupOffset,
       transform: this.transform,
       orientation: this.orientation,

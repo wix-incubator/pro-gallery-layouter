@@ -121,6 +121,7 @@ class Utils {
       cubeImages: false,
       cubeType: 'fill',
       cubeRatio: 1,
+      rotatingCropRatios: '',
       smartCrop: false,
       imageMargin: 10,
       galleryMargin: 0,
@@ -139,6 +140,7 @@ class Utils {
     this.insertIfDefined(convertedStyleParams, 'cubeImages', convertedStyleParams.cropItems);
     this.insertIfDefined(convertedStyleParams, 'cubeType', convertedStyleParams.cropType);
     this.insertIfDefined(convertedStyleParams, 'cubeRatio', convertedStyleParams.cropRatio);
+    this.insertIfDefined(convertedStyleParams, 'rotatingCropRatios', isArray(convertedStyleParams.rotatingCropRatios) ? convertedStyleParams.rotatingCropRatios.join(',') : undefined);
     this.insertIfDefined(convertedStyleParams, 'smartCrop', convertedStyleParams.smartCrop);
     this.insertIfDefined(convertedStyleParams, 'imageMargin', convertedStyleParams.itemSpacing);
     this.insertIfDefined(convertedStyleParams, 'galleryMargin', convertedStyleParams.layoutSpacing);

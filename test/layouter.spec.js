@@ -130,6 +130,28 @@ describe('Layouter', () => {
         expect(galleryItemIds).to.deep.equal(itemIds);
       }
     });
+
+    it('should have items offsets and dimensions calculated correctly', () => {
+
+      const items = getItems(100);
+      styleParams.galleryWidth = 4000;
+      styleParams.gallerySize = 500;
+      styleParams.rotatingGroupTypes = '1,2h,2v,3r,3t,3l,3b,3v,3h';
+      styleParams.imageMargin = 0;
+
+      gallery = getLayout({items, container, styleParams});
+
+      gallery.groups.forEach(group => {
+        group.items.forEach(item => {
+          const widthDiff = Math.abs(item.offset.right - item.offset.left - item.width);
+          const heightDiff = Math.abs(item.offset.bottom - item.offset.top - item.height);
+          expect(widthDiff).to.be.below(1);
+          expect(heightDiff).to.be.below(1);
+        });
+      });
+
+    });
+
   });
 
   describe('container', () => {
@@ -576,26 +598,37 @@ describe('Layouter', () => {
 
     });
 
-    it('should have items offsets and dimensions calculated correctly', () => {
+    // rotatingGroupTypes
+    it('should type groups according to rotatingGroupTypes if defined', () => {
 
-      const items = getItems(100);
-      styleParams.galleryWidth = 4000;
-      styleParams.gallerySize = 500;
-      styleParams.rotatingGroupTypes = '1,2h,2v,3r,3t,3l,3b,3v,3h';
-      styleParams.imageMargin = 0;
+      const items = getItems(100); //todo - something breaks when using exactly 100 images
+      styleParams.rotatingGroupTypes = '2h,3v,3b,3t,1,2h,2v';
+      const rotatingGroupTypesArr = styleParams.rotatingGroupTypes.split(',');
 
       gallery = getLayout({items, container, styleParams});
-
-      gallery.groups.forEach(group => {
-        group.items.forEach(item => {
-          const widthDiff = Math.abs(item.offset.right - item.offset.left - item.width);
-          const heightDiff = Math.abs(item.offset.bottom - item.offset.top - item.height);
-          expect(widthDiff).to.be.below(1);
-          expect(heightDiff).to.be.below(1);
-        });
-      });
-
+      gallery.groups.forEach((group, g) => {
+        expect(group.type).to.equal(rotatingGroupTypesArr[(g - 1) % rotatingGroupTypesArr.length]); //first group idx is 1
+      }, true);
     });
+
+    // rotatingCropRatios
+    it('should crop items according to rotatingCropRatios if defined', () => {
+
+      const items = getItems(100); //todo - something breaks when using exactly 100 images
+      styleParams.rotatingCropRatios = '0.2,0.6,8,4.5';
+      styleParams.cropRatio = '1';
+      styleParams.cropItems = true;
+      styleParams.smartCrop = false;
+
+      const rotatingCropRatiosArr = styleParams.rotatingCropRatios.split(',');
+
+      gallery = getLayout({items, container, styleParams});
+      gallery.items.forEach((item, i) => {
+        console.log(item);
+        expect(item.cropRatio).to.equal(rotatingCropRatiosArr[i % rotatingCropRatiosArr.length]);
+      }, true);
+    });
+
   });
 
   describe('Infinite Scroll', () => {
