@@ -14138,7 +14138,19 @@ var SideBar = function (_React$Component) {
                 'Collage Settings'
               )
             ),
-            _react2.default.createElement('input', { name: 'groupSize', type: 'hidden', className: 'form-control', value: styles.groupSize }),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'Maximal allowed group size'
+                },
+                'Max Group Size'
+              ),
+              this.createSlider('groupSize', styles.groupSize, 3)
+            ),
             _react2.default.createElement(
               'div',
               { className: 'form-group' },
@@ -14437,19 +14449,6 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'Maximal allowed group size'
-                },
-                'Max Group Size'
-              ),
-              this.createSlider('groupSize', styles.groupSize, 3)
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
                   title: 'Choose the best group layouts according to the images proportions'
                 },
                 'Collage Grouping'
@@ -14483,11 +14482,11 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'The amount of collaged images that will be created in the gallery'
+                  title: 'A fixed order of forced group types (repeats circularly)'
                 },
-                'Collage Density'
+                'Rotating Group Types (advanced)'
               ),
-              this.createSlider('collageDensity', styles.collageDensity * 100)
+              _react2.default.createElement('input', { name: 'rotatingGroupTypes', type: 'text', className: 'form-control', value: styles.rotatingGroupTypes })
             ),
             _react2.default.createElement(
               'div',
@@ -14496,11 +14495,11 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'A fixed order of forced group types (repeats circularly)'
+                  title: 'The amount of collaged images that will be created in the gallery'
                 },
-                'Rotating Group Types (advanced)'
+                'Collage Density'
               ),
-              _react2.default.createElement('input', { name: 'rotatingGroupTypes', type: 'text', className: 'form-control', value: styles.rotatingGroupTypes })
+              this.createSlider('collageDensity', styles.collageDensity * 100)
             ),
             _react2.default.createElement(
               'h3',
@@ -14540,19 +14539,6 @@ var SideBar = function (_React$Component) {
                   'Crop'
                 )
               )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'The width/height ratio of the crop (e.g. 1, 0.25, 16/9)'
-                },
-                'Cropped Ratio'
-              ),
-              _react2.default.createElement('input', { name: 'cubeRatio', type: 'text', className: 'form-control', value: styles.cubeRatio })
             ),
             _react2.default.createElement(
               'div',
