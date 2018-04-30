@@ -390,8 +390,7 @@ class SideBar extends React.Component {
               <label
                 data-toggle="tooltip" data-placement="right"
                 title="The width/height ratio of the crop (e.g. 1, 0.25, 16/9)"
-                >Cropped
-                Ratio (beta)</label>
+                >Cropped Ratio</label>
               <input name="cubeRatio" type="text" className="form-control" value={styles.cubeRatio}/>
             </div>
             <div className="form-group">
@@ -451,6 +450,24 @@ class SideBar extends React.Component {
               <label data-toggle="tooltip" data-placement="right" title="Add random change to image position">Floating
                 Images</label>
                 {this.createSlider('floatingImages', styles.floatingImages * 100)}
+            </div>
+
+            <h3>
+              <small>Advanced Settings</small>
+            </h3>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="A fixed order of forced group types (repeats circularly)"
+                >Rotating Group Types</label>
+              <input name="rotatingGroupTypes" type="text" className="form-control" value={styles.rotatingGroupTypes}/>
+            </div>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="A fixed order of crop ratios (repeats circularly)"
+                >Rotating Crop Ratios</label>
+              <input name="rotatingCropRatios" type="text" className="form-control" value={styles.rotatingCropRatios}/>
             </div>
           </form>
         </div>
