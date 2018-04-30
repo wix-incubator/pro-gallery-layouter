@@ -23,12 +23,13 @@ const getImageStyle = item => ({
   left: item.offset.left,
   width: item.width,
   height: item.height,
+  backgroundImage: `url(${getImageSrc(item)})`
 });
 
 const Gallery = ({ layout }) => (
   <div className={styles.root} style={{ height: layout.height }}>
     {layout.items.map(item => (
-      <img className={styles.item} src={getImageSrc(item)} style={getImageStyle(item)} alt={item.idx}/>
+      <div className={styles.item} style={getImageStyle(item)} alt={item.idx}/>
     ))}
   </div>
 );

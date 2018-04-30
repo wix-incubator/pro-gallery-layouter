@@ -363,6 +363,13 @@ class SideBar extends React.Component {
                 Density</label>
                 {this.createSlider('collageDensity', styles.collageDensity * 100)}
             </div>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="A fixed order of forced group types (repeats circularly)"
+                >Rotating Group Types (advanced)</label>
+              <input name="rotatingGroupTypes" type="text" className="form-control" value={styles.rotatingGroupTypes}/>
+            </div>
 
             <h3>
               <small>Crop Settings</small>
@@ -380,8 +387,7 @@ class SideBar extends React.Component {
               </div>
               <div className="radio-inline">
                 <label>
-                  <input type="radio" name="cubeImages" value={true}
-                  checked={!styles.cubeImages}/>
+                  <input type="radio" name="cubeImages" value={true} checked={styles.cubeImages}/>
                   Crop
                 </label>
               </div>
@@ -433,6 +439,13 @@ class SideBar extends React.Component {
                 </label>
               </div>
             </div>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="A fixed order of crop ratios (repeats circularly)"
+                >Rotating Crop Ratios (advanced)</label>
+              <input name="rotatingCropRatios" type="text" className="form-control" value={styles.rotatingCropRatios}/>
+            </div>
 
             <h3>
               <small>Design Settings</small>
@@ -452,23 +465,6 @@ class SideBar extends React.Component {
                 {this.createSlider('floatingImages', styles.floatingImages * 100)}
             </div>
 
-            <h3>
-              <small>Advanced Settings</small>
-            </h3>
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
-                title="A fixed order of forced group types (repeats circularly)"
-                >Rotating Group Types</label>
-              <input name="rotatingGroupTypes" type="text" className="form-control" value={styles.rotatingGroupTypes}/>
-            </div>
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
-                title="A fixed order of crop ratios (repeats circularly)"
-                >Rotating Crop Ratios</label>
-              <input name="rotatingCropRatios" type="text" className="form-control" value={styles.rotatingCropRatios}/>
-            </div>
           </form>
         </div>
       </div>
