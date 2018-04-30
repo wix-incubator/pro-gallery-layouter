@@ -7449,13 +7449,14 @@ var App = function (_React$Component) {
 
     _this.state = {
       sampleSize: 100,
-      styles: Object.assign({}, _this.defaultStyles, _this.getUrlStyles),
+      styles: Object.assign({}, _this.defaultStyles, _this.getUrlStyles()),
       sidebarWidth: 500,
 
       // Needed for browsers with static scrollbars
       scrollbarSize: (0, _getScrollbarSize2.default)(),
       container: getContainerSize()
     };
+    _this.setUrlStyles(_this.state.styles);
 
     window.addEventListener('resize', _this.resize);
     return _this;
@@ -7464,13 +7465,37 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'getUrlStyles',
     value: function getUrlStyles() {
+      var strToVal = function strToVal(str) {
+        if (parseInt(str) === Number(str)) {
+          return Number(str);
+        } else if (str === 'true') {
+          return true;
+        } else if (str === 'false') {
+          return false;
+        } else {
+          return decodeURIComponent(str);
+        }
+      };
       var search = location.search.substring(1);
-      return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+      var stylesArr = search.split('&').map(function (s) {
+        return s.split('=');
+      });
+      var styles = {};
+      stylesArr.forEach(function (style) {
+        return styles[style[0]] = strToVal(style[1]);
+      });
+      return styles;
+      // const styles = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
     }
   }, {
     key: 'setUrlStyles',
     value: function setUrlStyles(styles) {
-      history.pushState(styles, "Pro Gallery Playground");
+      var str = Object.entries(styles).map(function (style) {
+        return style.map(function (i) {
+          return encodeURIComponent(i);
+        }).join('=');
+      }).join('&');
+      history.pushState(styles, "", location.pathname + '?' + str);
     }
   }, {
     key: 'toggleSidebar',
@@ -13958,7 +13983,7 @@ var SideBar = function (_React$Component) {
       switch (field) {
         case 'groupTypes':
           var typesArr = styles[field].split(',');
-          var typePos = typesArr.indexOf(value);
+          var typePos = typesArr.indexOf(String(value));
           if (typePos >= 0) {
             typesArr.splice(typePos, 1);
           } else {
@@ -14004,7 +14029,7 @@ var SideBar = function (_React$Component) {
           { className: 'playground-settings' },
           _react2.default.createElement(
             'a',
-            { className: 'page-header', href: 'playground.html?' },
+            { className: 'page-header', href: '/' },
             _react2.default.createElement(
               'h1',
               null,
@@ -14606,6 +14631,19 @@ var SideBar = function (_React$Component) {
                   'Fit'
                 )
               )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'The width/height ratio of the crop (e.g. 1, 0.25, 16/9)'
+                },
+                'Single Crop Ratio'
+              ),
+              _react2.default.createElement('input', { name: 'cubeRatio', type: 'text', className: 'form-control', value: styles.cubeRatio })
             ),
             _react2.default.createElement(
               'div',
