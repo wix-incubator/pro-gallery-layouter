@@ -43,24 +43,42 @@ class App extends React.Component {
 
     this.state = {
       sampleSize: 100,
-      styles: Object.assign({}, this.defaultStyles, this.getUrlStyles),
+      styles: Object.assign({}, this.defaultStyles, this.getUrlStyles()),
       sidebarWidth: 500,
 
       // Needed for browsers with static scrollbars
       scrollbarSize: getScrollbarSize(),
       container: getContainerSize(),
     };
+    this.setUrlStyles(this.state.styles);
 
     window.addEventListener('resize', this.resize);
   }
 
   getUrlStyles() {
-    var search = location.search.substring(1);
-    return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}')
+    const strToVal = str => {
+      if (parseInt(str) === Number(str)) {
+        return Number(str);
+      } else if (str === 'true') {
+        return true;
+      } else if (str === 'false') {
+        return false;
+      } else {
+        return decodeURIComponent(str);
+      }
+    }
+    const search = location.search.substring(1);
+    const stylesArr = search.split('&').map(s => s.split('='));
+    let styles = {};
+    stylesArr.forEach(style => (styles[style[0]] = strToVal(style[1])));
+    return styles;
+    // const styles = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+
   }
 
   setUrlStyles(styles) {
-    history.pushState(styles, "Pro Gallery Playground");
+    const str = Object.entries(styles).map(style => style.map(i => encodeURIComponent(i)).join('=')).join('&');
+    history.pushState(styles, "", location.pathname + '?' + str);
   }
 
   toggleSidebar() {

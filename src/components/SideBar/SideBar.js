@@ -40,7 +40,7 @@ class SideBar extends React.Component {
     switch (field) {
       case 'groupTypes':
         const typesArr = styles[field].split(',');
-        const typePos = typesArr.indexOf(value);
+        const typePos = typesArr.indexOf(String(value));
         if (typePos >= 0) {
           typesArr.splice(typePos, 1);
         } else {
@@ -80,7 +80,7 @@ class SideBar extends React.Component {
       >
         <div className="playground-settings">
 
-          <a className="page-header" href="playground.html?">
+          <a className="page-header" href="/">
             <h1>Layouter Playground</h1>
           </a>
 
@@ -431,6 +431,13 @@ class SideBar extends React.Component {
                   Fit
                 </label>
               </div>
+            </div>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="The width/height ratio of the crop (e.g. 1, 0.25, 16/9)"
+                >Single Crop Ratio</label>
+              <input name="cubeRatio" type="text" className="form-control" value={styles.cubeRatio}/>
             </div>
             <div className="form-group">
               <label
