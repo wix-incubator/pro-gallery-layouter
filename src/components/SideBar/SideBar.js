@@ -160,7 +160,14 @@ class SideBar extends React.Component {
             <h3>
               <small>Collage Settings</small>
             </h3>
-            <input name="groupSize" type="hidden" className="form-control" value={styles.groupSize}/>
+
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
+                title="Maximal allowed group size"
+                >Max Group Size</label>
+                {this.createSlider('groupSize', styles.groupSize, 3)}
+            </div>
             <div className="form-group">
               <label
                 data-toggle="tooltip" data-placement="right"
@@ -329,14 +336,6 @@ class SideBar extends React.Component {
             <div className="form-group">
               <label
                 data-toggle="tooltip" data-placement="right"
-                title="Maximal allowed group size"
-                >Max Group Size</label>
-                {this.createSlider('groupSize', styles.groupSize, 3)}
-            </div>
-
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
                 title="Choose the best group layouts according to the images proportions"
                 >Collage
                 Grouping</label>
@@ -358,17 +357,18 @@ class SideBar extends React.Component {
             <div className="form-group">
               <label
                 data-toggle="tooltip" data-placement="right"
+                title="A fixed order of forced group types (repeats circularly)"
+                >Rotating Group Types (advanced)</label>
+              <input name="rotatingGroupTypes" type="text" className="form-control" value={styles.rotatingGroupTypes}/>
+            </div>
+
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
                 title="The amount of collaged images that will be created in the gallery"
                 >Collage
                 Density</label>
                 {this.createSlider('collageDensity', styles.collageDensity * 100)}
-            </div>
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
-                title="A fixed order of forced group types (repeats circularly)"
-                >Rotating Group Types (advanced)</label>
-              <input name="rotatingGroupTypes" type="text" className="form-control" value={styles.rotatingGroupTypes}/>
             </div>
 
             <h3>
@@ -391,13 +391,6 @@ class SideBar extends React.Component {
                   Crop
                 </label>
               </div>
-            </div>
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
-                title="The width/height ratio of the crop (e.g. 1, 0.25, 16/9)"
-                >Cropped Ratio</label>
-              <input name="cubeRatio" type="text" className="form-control" value={styles.cubeRatio}/>
             </div>
             <div className="form-group">
               <label
