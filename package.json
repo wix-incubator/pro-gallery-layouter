@@ -13,7 +13,7 @@
     "build": "yoshi build",
     "test": "yoshi test",
     "posttest": "yoshi lint",
-    "release": "gh-pages -d dist/statics"
+    "release": "yoshi build && gh-pages -d dist/statics"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0",
