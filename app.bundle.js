@@ -3398,10 +3398,10 @@ var Layouter = function () {
     }
   }, {
     key: 'findShortestColumn',
-    value: function findShortestColumn(columns) {
+    value: function findShortestColumn(columns, groupIdx) {
       var minCol = columns[0];
       if (this.styleParams.cubeImages) {
-        minCol = columns[this.pointer % columns.length];
+        minCol = columns[groupIdx % columns.length];
       } else {
         var minColH = -1;
         var _iteratorNormalCompletion = true;
@@ -3458,7 +3458,7 @@ var Layouter = function () {
       var galleryWidth = Math.floor(this.container.galleryWidth);
       var maxGroupSize = this.maxGroupSize;
 
-      var groupIdx = 1;
+      var groupIdx = 0;
       var item = {};
 
       var groupItems = [];
@@ -3584,7 +3584,7 @@ var Layouter = function () {
           //---------------------| COLUMNS GALLERY |----------------------//
 
           //find the shortest column
-          var minCol = this.findShortestColumn(columns);
+          var minCol = this.findShortestColumn(columns, this.groups.length - 1);
 
           //resize the group and images
           group.fixItemsRatio(minCol.cubeRatio); //fix last column's items ratio (caused by stretching it to fill the screen)
@@ -5389,7 +5389,7 @@ var Group = exports.Group = function () {
       //---------| Override with specifically defined rotating group types (ignores everything else)
       if (this.rotatingGroupTypes) {
         var groupTypesArr = String(this.rotatingGroupTypes).split(',');
-        return groupTypesArr[(this.idx - 1) % groupTypesArr.length];
+        return groupTypesArr[this.idx % groupTypesArr.length];
       } else {
         //isVertical - is the gallery vertical (pinterest style) or horizontal (flickr style)
 
