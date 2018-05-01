@@ -415,26 +415,6 @@ class SideBar extends React.Component {
             <div className="form-group">
               <label
                 data-toggle="tooltip" data-placement="right"
-                title="In crop galleries the image can fill the entire space or fit into it"
-                >Crop Fill Method</label>
-              <br/>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="cubeType" value='fill' checked={styles.cubeType == 'fill'}/>
-                  Fill
-                </label>
-              </div>
-              <div className="radio-inline">
-                <label>
-                  <input type="radio" name="cubeType" value='fit'
-                  checked={styles.cubeType == 'fit'}/>
-                  Fit
-                </label>
-              </div>
-            </div>
-            <div className="form-group">
-              <label
-                data-toggle="tooltip" data-placement="right"
                 title="The width/height ratio of the crop (e.g. 1, 0.25, 16/9)"
                 >Single Crop Ratio</label>
               <input name="cubeRatio" type="text" className="form-control" value={styles.cubeRatio}/>
