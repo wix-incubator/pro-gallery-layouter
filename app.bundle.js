@@ -14605,40 +14605,6 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'In crop galleries the image can fill the entire space or fit into it'
-                },
-                'Crop Fill Method'
-              ),
-              _react2.default.createElement('br', null),
-              _react2.default.createElement(
-                'div',
-                { className: 'radio-inline' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  _react2.default.createElement('input', { type: 'radio', name: 'cubeType', value: 'fill', checked: styles.cubeType == 'fill' }),
-                  'Fill'
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'radio-inline' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  _react2.default.createElement('input', { type: 'radio', name: 'cubeType', value: 'fit',
-                    checked: styles.cubeType == 'fit' }),
-                  'Fit'
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
                   title: 'The width/height ratio of the crop (e.g. 1, 0.25, 16/9)'
                 },
                 'Single Crop Ratio'
