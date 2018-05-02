@@ -38,6 +38,7 @@ class App extends React.Component {
       floatingImages: 0,
       cubeRatio: 1,
       fixedColumns: 0,
+      groupsPerStrip: 0,
       oneRow: false,
     };
 
@@ -150,7 +151,7 @@ class App extends React.Component {
         <ul>
           {Object.keys(layoutParams.styleParams).map(param => {
             return (
-              <li>{params}: {layoutParams.styleParams[param]}</li>
+              <li>{param}: {layoutParams.styleParams[param]}</li>
             )
           })}
         </ul>

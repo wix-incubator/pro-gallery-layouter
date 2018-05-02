@@ -139,6 +139,13 @@ class SideBar extends React.Component {
             <div className="form-group">
               <label
                 data-toggle="tooltip" data-placement="right"
+                title="The fixed number of groups per row in a Rows gallery"
+                >Groups per Row</label>
+                {this.createSlider('groupsPerStrip', styles.groupsPerStrip, 10)}
+            </div>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
                 title="Scroll gallery vertically or horizontally"
                 >Scroll Direction</label>
               <br/>
