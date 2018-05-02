@@ -7447,6 +7447,7 @@ var App = function (_React$Component) {
       floatingImages: 0,
       cubeRatio: 1,
       fixedColumns: 0,
+      groupsPerStrip: 0,
       oneRow: false
     };
 
@@ -13707,6 +13708,10 @@ var Strip = exports.Strip = function () {
         return false;
       }
 
+      if (this.styleParams.groupsPerStrip > 0) {
+        return this.groups.length >= this.styleParams.groupsPerStrip;
+      }
+
       var galleryWidth = this.container.galleryWidth;
       var _styleParams = this.styleParams,
           oneRow = _styleParams.oneRow,
@@ -14123,6 +14128,19 @@ var SideBar = function (_React$Component) {
                 'Number of Columns'
               ),
               this.createSlider('fixedColumns', styles.fixedColumns, 10)
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'The fixed number of groups per row in a Rows gallery'
+                },
+                'Groups per Row'
+              ),
+              this.createSlider('groupsPerStrip', styles.groupsPerStrip, 10)
             ),
             _react2.default.createElement(
               'div',
