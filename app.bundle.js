@@ -61,7 +61,7 @@
 /******/
 /******/ 	__webpack_require__.p = typeof window !== 'undefined' && window.__STATICS_BASE_URL__ || __webpack_require__.p;
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 139);
+/******/ 	return __webpack_require__(__webpack_require__.s = 166);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,27 +78,6 @@ module.exports = React;
 
 /***/ }),
 /* 1 */
-/*!***************************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-exports.default = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-/***/ }),
-/* 2 */
 /*!*******************************************!*\
   !*** ../node_modules/prop-types/index.js ***!
   \*******************************************/
@@ -129,13 +108,34 @@ if (true) {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ 314)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ 372)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
   module.exports = require('./factoryWithThrowingShims')();
 }
 
+
+/***/ }),
+/* 2 */
+/*!***************************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/classCallCheck.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! exports used: default */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+exports.default = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
 
 /***/ }),
 /* 3 */
@@ -152,7 +152,7 @@ if (true) {
 
 exports.__esModule = true;
 
-var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 49);
+var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 58);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -181,15 +181,15 @@ exports.default = function (self, call) {
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(/*! ../core-js/object/set-prototype-of */ 307);
+var _setPrototypeOf = __webpack_require__(/*! ../core-js/object/set-prototype-of */ 365);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(/*! ../core-js/object/create */ 311);
+var _create = __webpack_require__(/*! ../core-js/object/create */ 369);
 
 var _create2 = _interopRequireDefault(_create);
 
-var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 49);
+var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 58);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -213,44 +213,9 @@ exports.default = function (subClass, superClass) {
 
 /***/ }),
 /* 5 */
-/*!********************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/extends.js ***!
-  \********************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _assign = __webpack_require__(/*! ../core-js/object/assign */ 101);
-
-var _assign2 = _interopRequireDefault(_assign);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _assign2.default || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }
-
-  return target;
-};
-
-/***/ }),
-/* 6 */
-/*!*****************************************!*\
-  !*** ../node_modules/lodash/isArray.js ***!
-  \*****************************************/
+/*!***************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isArray.js ***!
+  \***************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -285,10 +250,45 @@ module.exports = isArray;
 
 
 /***/ }),
+/* 6 */
+/*!********************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/extends.js ***!
+  \********************************************************/
+/*! dynamic exports provided */
+/*! exports used: default */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _assign = __webpack_require__(/*! ../core-js/object/assign */ 335);
+
+var _assign2 = _interopRequireDefault(_assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+/***/ }),
 /* 7 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/isObjectLike.js ***!
-  \**********************************************/
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isObjectLike.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -327,9 +327,9 @@ module.exports = isObjectLike;
 
 /***/ }),
 /* 8 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/isObject.js ***!
-  \******************************************/
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isObject.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -370,54 +370,15 @@ module.exports = isObject;
 
 /***/ }),
 /* 9 */
-/*!************************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/createClass.js ***!
-  \************************************************************/
+/*!*************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_root.js ***!
+  \*************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-exports.__esModule = true;
-
-var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 96);
-
-var _defineProperty2 = _interopRequireDefault(_defineProperty);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
-    }
-  }
-
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
-
-/***/ }),
-/* 10 */
-/*!***************************************!*\
-  !*** ../node_modules/lodash/_root.js ***!
-  \***************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 99);
+var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 116);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -429,7 +390,7 @@ module.exports = root;
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /*!***************************!*\
   !*** external "ReactDOM" ***!
   \***************************/
@@ -441,73 +402,18 @@ module.exports = root;
 module.exports = ReactDOM;
 
 /***/ }),
-/* 12 */
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_core.js ***!
-  \********************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-var core = module.exports = { version: '2.5.5' };
-if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-
-
-/***/ }),
-/* 13 */
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_global.js ***!
-  \**********************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
-var global = module.exports = typeof window != 'undefined' && window.Math == Math
-  ? window : typeof self != 'undefined' && self.Math == Math ? self
-  // eslint-disable-next-line no-new-func
-  : Function('return this')();
-if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
-
-
-/***/ }),
-/* 14 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_wks.js ***!
-  \*******************************************************/
+/* 11 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseGetTag.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store = __webpack_require__(/*! ./_shared */ 60)('wks');
-var uid = __webpack_require__(/*! ./_uid */ 36);
-var Symbol = __webpack_require__(/*! ./_global */ 13).Symbol;
-var USE_SYMBOL = typeof Symbol == 'function';
-
-var $exports = module.exports = function (name) {
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-};
-
-$exports.store = store;
-
-
-/***/ }),
-/* 15 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseGetTag.js ***!
-  \*********************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Symbol = __webpack_require__(/*! ./_Symbol */ 28),
-    getRawTag = __webpack_require__(/*! ./_getRawTag */ 162),
-    objectToString = __webpack_require__(/*! ./_objectToString */ 163);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 32),
+    getRawTag = __webpack_require__(/*! ./_getRawTag */ 199),
+    objectToString = __webpack_require__(/*! ./_objectToString */ 200);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -536,77 +442,35 @@ module.exports = baseGetTag;
 
 
 /***/ }),
-/* 16 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-dp.js ***!
-  \*************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var anObject = __webpack_require__(/*! ./_an-object */ 23);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 90);
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 56);
-var dP = Object.defineProperty;
-
-exports.f = __webpack_require__(/*! ./_descriptors */ 17) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
-  anObject(O);
-  P = toPrimitive(P, true);
-  anObject(Attributes);
-  if (IE8_DOM_DEFINE) try {
-    return dP(O, P, Attributes);
-  } catch (e) { /* empty */ }
-  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
-  if ('value' in Attributes) O[P] = Attributes.value;
-  return O;
-};
-
-
-/***/ }),
-/* 17 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_descriptors.js ***!
-  \***************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(/*! ./_fails */ 27)(function () {
-  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
-});
-
-
-/***/ }),
-/* 18 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_has.js ***!
-  \*******************************************************/
+/* 12 */
+/*!**********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_global.js ***!
+  \**********************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-var hasOwnProperty = {}.hasOwnProperty;
-module.exports = function (it, key) {
-  return hasOwnProperty.call(it, key);
-};
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 19 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_getNative.js ***!
-  \********************************************/
+/* 13 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getNative.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(/*! ./_baseIsNative */ 186),
-    getValue = __webpack_require__(/*! ./_getValue */ 189);
+var baseIsNative = __webpack_require__(/*! ./_baseIsNative */ 226),
+    getValue = __webpack_require__(/*! ./_getValue */ 229);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -625,25 +489,276 @@ module.exports = getNative;
 
 
 /***/ }),
-/* 20 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-iobject.js ***!
-  \**************************************************************/
+/* 14 */
+/*!********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_core.js ***!
+  \********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.5.5' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 15 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-dp.js ***!
+  \*************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-// to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(/*! ./_iobject */ 87);
-var defined = __webpack_require__(/*! ./_defined */ 54);
-module.exports = function (it) {
-  return IObject(defined(it));
+var anObject = __webpack_require__(/*! ./_an-object */ 36);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 148);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 89);
+var dP = Object.defineProperty;
+
+exports.f = __webpack_require__(/*! ./_descriptors */ 16) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
 };
 
 
 /***/ }),
+/* 16 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_descriptors.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__(/*! ./_fails */ 37)(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 17 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_has.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+/* 18 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_global.js ***!
+  \********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 19 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_wks.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(/*! ./_shared */ 109)('wks');
+var uid = __webpack_require__(/*! ./_uid */ 110);
+var Symbol = __webpack_require__(/*! ./_global */ 18).Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+/* 20 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/classCallCheck.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+exports.default = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+/***/ }),
 /* 21 */
+/*!**********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/createClass.js ***!
+  \**********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 195);
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+/***/ }),
+/* 22 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isArrayLike.js ***!
+  \*******************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isFunction = __webpack_require__(/*! ./isFunction */ 44),
+    isLength = __webpack_require__(/*! ./isLength */ 71);
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+module.exports = isArrayLike;
+
+
+/***/ }),
+/* 23 */
+/*!************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/keys.js ***!
+  \************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 132),
+    baseKeys = __webpack_require__(/*! ./_baseKeys */ 266),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 22);
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+module.exports = keys;
+
+
+/***/ }),
+/* 24 */
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_export.js ***!
   \**********************************************************/
@@ -652,11 +767,11 @@ module.exports = function (it) {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(/*! ./_global */ 13);
-var core = __webpack_require__(/*! ./_core */ 12);
-var ctx = __webpack_require__(/*! ./_ctx */ 89);
-var hide = __webpack_require__(/*! ./_hide */ 22);
-var has = __webpack_require__(/*! ./_has */ 18);
+var global = __webpack_require__(/*! ./_global */ 12);
+var core = __webpack_require__(/*! ./_core */ 14);
+var ctx = __webpack_require__(/*! ./_ctx */ 147);
+var hide = __webpack_require__(/*! ./_hide */ 25);
+var has = __webpack_require__(/*! ./_has */ 17);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -717,7 +832,7 @@ module.exports = $export;
 
 
 /***/ }),
-/* 22 */
+/* 25 */
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_hide.js ***!
   \********************************************************/
@@ -726,9 +841,9 @@ module.exports = $export;
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(/*! ./_object-dp */ 16);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 34);
-module.exports = __webpack_require__(/*! ./_descriptors */ 17) ? function (object, key, value) {
+var dP = __webpack_require__(/*! ./_object-dp */ 15);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 54);
+module.exports = __webpack_require__(/*! ./_descriptors */ 16) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
   object[key] = value;
@@ -737,24 +852,7 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 17) ? function (objec
 
 
 /***/ }),
-/* 23 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_an-object.js ***!
-  \*************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(/*! ./_is-object */ 24);
-module.exports = function (it) {
-  if (!isObject(it)) throw TypeError(it + ' is not an object!');
-  return it;
-};
-
-
-/***/ }),
-/* 24 */
+/* 26 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_is-object.js ***!
   \*************************************************************/
@@ -769,129 +867,107 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 25 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/isArrayLike.js ***!
-  \*********************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isFunction = __webpack_require__(/*! ./isFunction */ 38),
-    isLength = __webpack_require__(/*! ./isLength */ 64);
-
-/**
- * Checks if `value` is array-like. A value is considered array-like if it's
- * not a function and has a `value.length` that's an integer greater than or
- * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
- * @example
- *
- * _.isArrayLike([1, 2, 3]);
- * // => true
- *
- * _.isArrayLike(document.body.children);
- * // => true
- *
- * _.isArrayLike('abc');
- * // => true
- *
- * _.isArrayLike(_.noop);
- * // => false
- */
-function isArrayLike(value) {
-  return value != null && isLength(value.length) && !isFunction(value);
-}
-
-module.exports = isArrayLike;
-
-
-/***/ }),
-/* 26 */
-/*!**************************************!*\
-  !*** ../node_modules/lodash/keys.js ***!
-  \**************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 115),
-    baseKeys = __webpack_require__(/*! ./_baseKeys */ 226),
-    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 25);
-
-/**
- * Creates an array of the own enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects. See the
- * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
- * for more details.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keys(new Foo);
- * // => ['a', 'b'] (iteration order is not guaranteed)
- *
- * _.keys('hi');
- * // => ['0', '1']
- */
-function keys(object) {
-  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
-}
-
-module.exports = keys;
-
-
-/***/ }),
 /* 27 */
-/*!*********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_fails.js ***!
-  \*********************************************************/
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-iobject.js ***!
+  \**************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = function (exec) {
-  try {
-    return !!exec();
-  } catch (e) {
-    return true;
-  }
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__(/*! ./_iobject */ 151);
+var defined = __webpack_require__(/*! ./_defined */ 90);
+module.exports = function (it) {
+  return IObject(defined(it));
 };
 
 
 /***/ }),
 /* 28 */
-/*!*****************************************!*\
-  !*** ../node_modules/lodash/_Symbol.js ***!
-  \*****************************************/
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_wks.js ***!
+  \*******************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(/*! ./_root */ 10);
+var store = __webpack_require__(/*! ./_shared */ 93)('wks');
+var uid = __webpack_require__(/*! ./_uid */ 56);
+var Symbol = __webpack_require__(/*! ./_global */ 12).Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+/* 29 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_core.js ***!
+  \******************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.5.5' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 30 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_hide.js ***!
+  \******************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ 40);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 107);
+module.exports = __webpack_require__(/*! ./_descriptors */ 31) ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+/* 31 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_descriptors.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__(/*! ./_fails */ 67)(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 32 */
+/*!***************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Symbol.js ***!
+  \***************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var root = __webpack_require__(/*! ./_root */ 9);
 
 /** Built-in value references. */
 var Symbol = root.Symbol;
@@ -900,10 +976,10 @@ module.exports = Symbol;
 
 
 /***/ }),
-/* 29 */
-/*!************************************!*\
-  !*** ../node_modules/lodash/eq.js ***!
-  \************************************/
+/* 33 */
+/*!**********************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/eq.js ***!
+  \**********************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -949,17 +1025,17 @@ module.exports = eq;
 
 
 /***/ }),
-/* 30 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_copyObject.js ***!
-  \*********************************************/
+/* 34 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_copyObject.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignValue = __webpack_require__(/*! ./_assignValue */ 114),
-    baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 69);
+var assignValue = __webpack_require__(/*! ./_assignValue */ 131),
+    baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 75);
 
 /**
  * Copies properties of `source` to `object`.
@@ -1001,16 +1077,16 @@ module.exports = copyObject;
 
 
 /***/ }),
-/* 31 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/_toKey.js ***!
-  \****************************************/
+/* 35 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_toKey.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isSymbol = __webpack_require__(/*! ./isSymbol */ 37);
+var isSymbol = __webpack_require__(/*! ./isSymbol */ 43);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -1034,7 +1110,43 @@ module.exports = toKey;
 
 
 /***/ }),
-/* 32 */
+/* 36 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_an-object.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ 26);
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+/* 37 */
+/*!*********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_fails.js ***!
+  \*********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+/* 38 */
 /*!************************************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/objectWithoutProperties.js ***!
   \************************************************************************/
@@ -1061,10 +1173,10 @@ exports.default = function (obj, keys) {
 };
 
 /***/ }),
-/* 33 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iterators.js ***!
-  \*************************************************************/
+/* 39 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iterators.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -1074,72 +1186,77 @@ module.exports = {};
 
 
 /***/ }),
-/* 34 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_property-desc.js ***!
-  \*****************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-module.exports = function (bitmap, value) {
-  return {
-    enumerable: !(bitmap & 1),
-    configurable: !(bitmap & 2),
-    writable: !(bitmap & 4),
-    value: value
-  };
-};
-
-
-/***/ }),
-/* 35 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-keys.js ***!
-  \***************************************************************/
+/* 40 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-dp.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 93);
-var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 61);
+var anObject = __webpack_require__(/*! ./_an-object */ 41);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 178);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 179);
+var dP = Object.defineProperty;
 
-module.exports = Object.keys || function keys(O) {
-  return $keys(O, enumBugKeys);
+exports.f = __webpack_require__(/*! ./_descriptors */ 31) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
 };
 
 
 /***/ }),
-/* 36 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_uid.js ***!
-  \*******************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-var id = 0;
-var px = Math.random();
-module.exports = function (key) {
-  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
-};
-
-
-/***/ }),
-/* 37 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/isSymbol.js ***!
-  \******************************************/
+/* 41 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_an-object.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
+var isObject = __webpack_require__(/*! ./_is-object */ 66);
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+/* 42 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_has.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+/* 43 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isSymbol.js ***!
+  \****************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -1171,16 +1288,16 @@ module.exports = isSymbol;
 
 
 /***/ }),
-/* 38 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/isFunction.js ***!
-  \********************************************/
+/* 44 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isFunction.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
     isObject = __webpack_require__(/*! ./isObject */ 8);
 
 /** `Object#toString` result references. */
@@ -1220,10 +1337,10 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 39 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_isIndex.js ***!
-  \******************************************/
+/* 45 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isIndex.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -1257,34 +1374,21 @@ module.exports = isIndex;
 
 
 /***/ }),
-/* 40 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-pie.js ***!
-  \**************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-exports.f = {}.propertyIsEnumerable;
-
-
-/***/ }),
-/* 41 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/_Stack.js ***!
-  \****************************************/
+/* 46 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Stack.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(/*! ./_ListCache */ 42),
-    stackClear = __webpack_require__(/*! ./_stackClear */ 181),
-    stackDelete = __webpack_require__(/*! ./_stackDelete */ 182),
-    stackGet = __webpack_require__(/*! ./_stackGet */ 183),
-    stackHas = __webpack_require__(/*! ./_stackHas */ 184),
-    stackSet = __webpack_require__(/*! ./_stackSet */ 185);
+var ListCache = __webpack_require__(/*! ./_ListCache */ 47),
+    stackClear = __webpack_require__(/*! ./_stackClear */ 221),
+    stackDelete = __webpack_require__(/*! ./_stackDelete */ 222),
+    stackGet = __webpack_require__(/*! ./_stackGet */ 223),
+    stackHas = __webpack_require__(/*! ./_stackHas */ 224),
+    stackSet = __webpack_require__(/*! ./_stackSet */ 225);
 
 /**
  * Creates a stack cache object to store key-value pairs.
@@ -1309,20 +1413,20 @@ module.exports = Stack;
 
 
 /***/ }),
-/* 42 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_ListCache.js ***!
-  \********************************************/
+/* 47 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_ListCache.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(/*! ./_listCacheClear */ 176),
-    listCacheDelete = __webpack_require__(/*! ./_listCacheDelete */ 177),
-    listCacheGet = __webpack_require__(/*! ./_listCacheGet */ 178),
-    listCacheHas = __webpack_require__(/*! ./_listCacheHas */ 179),
-    listCacheSet = __webpack_require__(/*! ./_listCacheSet */ 180);
+var listCacheClear = __webpack_require__(/*! ./_listCacheClear */ 216),
+    listCacheDelete = __webpack_require__(/*! ./_listCacheDelete */ 217),
+    listCacheGet = __webpack_require__(/*! ./_listCacheGet */ 218),
+    listCacheHas = __webpack_require__(/*! ./_listCacheHas */ 219),
+    listCacheSet = __webpack_require__(/*! ./_listCacheSet */ 220);
 
 /**
  * Creates an list cache object.
@@ -1353,16 +1457,16 @@ module.exports = ListCache;
 
 
 /***/ }),
-/* 43 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_assocIndexOf.js ***!
-  \***********************************************/
+/* 48 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_assocIndexOf.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(/*! ./eq */ 29);
+var eq = __webpack_require__(/*! ./eq */ 33);
 
 /**
  * Gets the index at which the `key` is found in `array` of key-value pairs.
@@ -1386,16 +1490,16 @@ module.exports = assocIndexOf;
 
 
 /***/ }),
-/* 44 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_nativeCreate.js ***!
-  \***********************************************/
+/* 49 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_nativeCreate.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19);
+var getNative = __webpack_require__(/*! ./_getNative */ 13);
 
 /* Built-in method references that are verified to be native. */
 var nativeCreate = getNative(Object, 'create');
@@ -1404,16 +1508,16 @@ module.exports = nativeCreate;
 
 
 /***/ }),
-/* 45 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_getMapData.js ***!
-  \*********************************************/
+/* 50 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getMapData.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(/*! ./_isKeyable */ 198);
+var isKeyable = __webpack_require__(/*! ./_isKeyable */ 238);
 
 /**
  * Gets the data for `map`.
@@ -1434,17 +1538,17 @@ module.exports = getMapData;
 
 
 /***/ }),
-/* 46 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/isBuffer.js ***!
-  \******************************************/
+/* 51 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isBuffer.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 10),
-    stubFalse = __webpack_require__(/*! ./stubFalse */ 207);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 9),
+    stubFalse = __webpack_require__(/*! ./stubFalse */ 247);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -1482,21 +1586,21 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../webpack/buildin/module.js */ 70)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ 76)(module)))
 
 /***/ }),
-/* 47 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/keysIn.js ***!
-  \****************************************/
+/* 52 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/keysIn.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 115),
-    baseKeysIn = __webpack_require__(/*! ./_baseKeysIn */ 212),
-    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 25);
+var arrayLikeKeys = __webpack_require__(/*! ./_arrayLikeKeys */ 132),
+    baseKeysIn = __webpack_require__(/*! ./_baseKeysIn */ 252),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 22);
 
 /**
  * Creates an array of the own and inherited enumerable property names of `object`.
@@ -1529,22 +1633,22 @@ module.exports = keysIn;
 
 
 /***/ }),
-/* 48 */
-/*!*****************************************!*\
-  !*** ../node_modules/lodash/_getTag.js ***!
-  \*****************************************/
+/* 53 */
+/*!***************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getTag.js ***!
+  \***************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(/*! ./_DataView */ 232),
-    Map = __webpack_require__(/*! ./_Map */ 67),
-    Promise = __webpack_require__(/*! ./_Promise */ 233),
-    Set = __webpack_require__(/*! ./_Set */ 234),
-    WeakMap = __webpack_require__(/*! ./_WeakMap */ 235),
-    baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
-    toSource = __webpack_require__(/*! ./_toSource */ 103);
+var DataView = __webpack_require__(/*! ./_DataView */ 272),
+    Map = __webpack_require__(/*! ./_Map */ 73),
+    Promise = __webpack_require__(/*! ./_Promise */ 273),
+    Set = __webpack_require__(/*! ./_Set */ 274),
+    WeakMap = __webpack_require__(/*! ./_WeakMap */ 275),
+    baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
+    toSource = __webpack_require__(/*! ./_toSource */ 120);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -1599,7 +1703,76 @@ module.exports = getTag;
 
 
 /***/ }),
-/* 49 */
+/* 54 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_property-desc.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+/* 55 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-keys.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 150);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 94);
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+/* 56 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_uid.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+/* 57 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-pie.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+/* 58 */
 /*!*******************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/typeof.js ***!
   \*******************************************************/
@@ -1613,11 +1786,11 @@ module.exports = getTag;
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ 295);
+var _iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ 343);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(/*! ../core-js/symbol */ 297);
+var _symbol = __webpack_require__(/*! ../core-js/symbol */ 355);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -1632,7 +1805,7 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 };
 
 /***/ }),
-/* 50 */
+/* 59 */
 /*!******************************************!*\
   !*** ../node_modules/warning/browser.js ***!
   \******************************************/
@@ -1705,7 +1878,7 @@ module.exports = warning;
 
 
 /***/ }),
-/* 51 */
+/* 60 */
 /*!*******************************************!*\
   !*** ../node_modules/classnames/index.js ***!
   \*******************************************/
@@ -1766,39 +1939,79 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 52 */
-/*!*************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/get-iterator.js ***!
-  \*************************************************************/
+/* 61 */
+/*!************************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/createClass.js ***!
+  \************************************************************/
+/*! dynamic exports provided */
+/*! exports used: default */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 164);
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+/***/ }),
+/* 62 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/get-iterator.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/get-iterator */ 143), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/get-iterator */ 170), __esModule: true };
 
 /***/ }),
-/* 53 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_cof.js ***!
-  \*******************************************************/
+/* 63 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-iobject.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-var toString = {}.toString;
-
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__(/*! ./_iobject */ 103);
+var defined = __webpack_require__(/*! ./_defined */ 64);
 module.exports = function (it) {
-  return toString.call(it).slice(8, -1);
+  return IObject(defined(it));
 };
 
 
 /***/ }),
-/* 54 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_defined.js ***!
-  \***********************************************************/
+/* 64 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_defined.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -1812,100 +2025,118 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 55 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_library.js ***!
-  \***********************************************************/
+/* 65 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_export.js ***!
+  \********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ 18);
+var core = __webpack_require__(/*! ./_core */ 29);
+var ctx = __webpack_require__(/*! ./_ctx */ 176);
+var hide = __webpack_require__(/*! ./_hide */ 30);
+var has = __webpack_require__(/*! ./_has */ 42);
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var IS_WRAP = type & $export.W;
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE];
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
+  var key, own, out;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    if (own && has(exports, key)) continue;
+    // export native or passed
+    out = own ? target[key] : source[key];
+    // prevent global pollution for namespaces
+    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+    // bind timers to global for call from export context
+    : IS_BIND && own ? ctx(out, global)
+    // wrap global constructors for prevent change them in library
+    : IS_WRAP && target[key] == out ? (function (C) {
+      var F = function (a, b, c) {
+        if (this instanceof C) {
+          switch (arguments.length) {
+            case 0: return new C();
+            case 1: return new C(a);
+            case 2: return new C(a, b);
+          } return new C(a, b, c);
+        } return C.apply(this, arguments);
+      };
+      F[PROTOTYPE] = C[PROTOTYPE];
+      return F;
+    // make static versions for prototype methods
+    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+    if (IS_PROTO) {
+      (exports.virtual || (exports.virtual = {}))[key] = out;
+      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+      if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
+    }
+  }
+};
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+/* 66 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_is-object.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-module.exports = true;
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
 
 
 /***/ }),
-/* 56 */
-/*!****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-primitive.js ***!
-  \****************************************************************/
+/* 67 */
+/*!*******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_fails.js ***!
+  \*******************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-// 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(/*! ./_is-object */ 24);
-// instead of the ES6 spec version, we didn't implement @@toPrimitive case
-// and the second argument - flag - preferred type is a string
-module.exports = function (it, S) {
-  if (!isObject(it)) return it;
-  var fn, val;
-  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
-  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
-  throw TypeError("Can't convert object to primitive value");
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
 };
 
 
 /***/ }),
-/* 57 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-create.js ***!
-  \*****************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject = __webpack_require__(/*! ./_an-object */ 23);
-var dPs = __webpack_require__(/*! ./_object-dps */ 149);
-var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 61);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 59)('IE_PROTO');
-var Empty = function () { /* empty */ };
-var PROTOTYPE = 'prototype';
-
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
-var createDict = function () {
-  // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(/*! ./_dom-create */ 91)('iframe');
-  var i = enumBugKeys.length;
-  var lt = '<';
-  var gt = '>';
-  var iframeDocument;
-  iframe.style.display = 'none';
-  __webpack_require__(/*! ./_html */ 153).appendChild(iframe);
-  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-  // createDict = iframe.contentWindow.Object;
-  // html.removeChild(iframe);
-  iframeDocument = iframe.contentWindow.document;
-  iframeDocument.open();
-  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-  iframeDocument.close();
-  createDict = iframeDocument.F;
-  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
-  return createDict();
-};
-
-module.exports = Object.create || function create(O, Properties) {
-  var result;
-  if (O !== null) {
-    Empty[PROTOTYPE] = anObject(O);
-    result = new Empty();
-    Empty[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
-    result[IE_PROTO] = O;
-  } else result = createDict();
-  return Properties === undefined ? result : dPs(result, Properties);
-};
-
-
-/***/ }),
-/* 58 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-integer.js ***!
-  \**************************************************************/
+/* 68 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-integer.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -1920,86 +2151,33 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 59 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_shared-key.js ***!
-  \**************************************************************/
+/* 69 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_shared-key.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(/*! ./_shared */ 60)('keys');
-var uid = __webpack_require__(/*! ./_uid */ 36);
+var shared = __webpack_require__(/*! ./_shared */ 109)('keys');
+var uid = __webpack_require__(/*! ./_uid */ 110);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 
 /***/ }),
-/* 60 */
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_shared.js ***!
-  \**********************************************************/
+/* 70 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/toInteger.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(/*! ./_global */ 13);
-var SHARED = '__core-js_shared__';
-var store = global[SHARED] || (global[SHARED] = {});
-module.exports = function (key) {
-  return store[key] || (store[key] = {});
-};
-
-
-/***/ }),
-/* 61 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_enum-bug-keys.js ***!
-  \*****************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-// IE 8- don't enum bug keys
-module.exports = (
-  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
-).split(',');
-
-
-/***/ }),
-/* 62 */
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_set-to-string-tag.js ***!
-  \*********************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var def = __webpack_require__(/*! ./_object-dp */ 16).f;
-var has = __webpack_require__(/*! ./_has */ 18);
-var TAG = __webpack_require__(/*! ./_wks */ 14)('toStringTag');
-
-module.exports = function (it, tag, stat) {
-  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
-};
-
-
-/***/ }),
-/* 63 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/toInteger.js ***!
-  \*******************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toFinite = __webpack_require__(/*! ./toFinite */ 166);
+var toFinite = __webpack_require__(/*! ./toFinite */ 203);
 
 /**
  * Converts `value` to an integer.
@@ -2038,10 +2216,10 @@ module.exports = toInteger;
 
 
 /***/ }),
-/* 64 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/isLength.js ***!
-  \******************************************/
+/* 71 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isLength.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -2085,7 +2263,7 @@ module.exports = isLength;
 
 
 /***/ }),
-/* 65 */
+/* 72 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/utils.js ***!
   \**************************************************************/
@@ -2102,27 +2280,27 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.utils = undefined;
 
-var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 5);
+var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 207);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 101);
+var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 118);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 20);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 9);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 21);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _isUndefined = __webpack_require__(/*! lodash/isUndefined */ 97);
+var _isUndefined = __webpack_require__(/*! lodash/isUndefined */ 114);
 
 var _isUndefined2 = _interopRequireDefault(_isUndefined);
 
-var _isArray = __webpack_require__(/*! lodash/isArray */ 6);
+var _isArray = __webpack_require__(/*! lodash/isArray */ 5);
 
 var _isArray2 = _interopRequireDefault(_isArray);
 
@@ -2295,11 +2473,11 @@ var Utils = function () {
       var width = container.width || container.galleryWidth;
       var height = container.height || container.galleryHeight;
 
-      if (width >= 0) {
+      if (container.width >= 0) {
         convertedContainer.galleryWidth = width + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0)) * 2;
         delete convertedContainer.width;
       }
-      if (height >= 0) {
+      if (container.height >= 0) {
         convertedContainer.galleryHeight = height + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0));
         delete convertedContainer.height;
       }
@@ -2313,30 +2491,17 @@ var Utils = function () {
 var utils = exports.utils = new Utils();
 
 /***/ }),
-/* 66 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gops.js ***!
-  \***************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-exports.f = Object.getOwnPropertySymbols;
-
-
-/***/ }),
-/* 67 */
-/*!**************************************!*\
-  !*** ../node_modules/lodash/_Map.js ***!
-  \**************************************/
+/* 73 */
+/*!************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Map.js ***!
+  \************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19),
-    root = __webpack_require__(/*! ./_root */ 10);
+var getNative = __webpack_require__(/*! ./_getNative */ 13),
+    root = __webpack_require__(/*! ./_root */ 9);
 
 /* Built-in method references that are verified to be native. */
 var Map = getNative(root, 'Map');
@@ -2345,20 +2510,20 @@ module.exports = Map;
 
 
 /***/ }),
-/* 68 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_MapCache.js ***!
-  \*******************************************/
+/* 74 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_MapCache.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(/*! ./_mapCacheClear */ 190),
-    mapCacheDelete = __webpack_require__(/*! ./_mapCacheDelete */ 197),
-    mapCacheGet = __webpack_require__(/*! ./_mapCacheGet */ 199),
-    mapCacheHas = __webpack_require__(/*! ./_mapCacheHas */ 200),
-    mapCacheSet = __webpack_require__(/*! ./_mapCacheSet */ 201);
+var mapCacheClear = __webpack_require__(/*! ./_mapCacheClear */ 230),
+    mapCacheDelete = __webpack_require__(/*! ./_mapCacheDelete */ 237),
+    mapCacheGet = __webpack_require__(/*! ./_mapCacheGet */ 239),
+    mapCacheHas = __webpack_require__(/*! ./_mapCacheHas */ 240),
+    mapCacheSet = __webpack_require__(/*! ./_mapCacheSet */ 241);
 
 /**
  * Creates a map cache object to store key-value pairs.
@@ -2389,16 +2554,16 @@ module.exports = MapCache;
 
 
 /***/ }),
-/* 69 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_baseAssignValue.js ***!
-  \**************************************************/
+/* 75 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseAssignValue.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(/*! ./_defineProperty */ 105);
+var defineProperty = __webpack_require__(/*! ./_defineProperty */ 122);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -2426,7 +2591,7 @@ module.exports = baseAssignValue;
 
 
 /***/ }),
-/* 70 */
+/* 76 */
 /*!*************************************************!*\
   !*** ../node_modules/webpack/buildin/module.js ***!
   \*************************************************/
@@ -2460,16 +2625,16 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 71 */
-/*!***************************************************!*\
-  !*** ../node_modules/lodash/_cloneArrayBuffer.js ***!
-  \***************************************************/
+/* 77 */
+/*!*************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cloneArrayBuffer.js ***!
+  \*************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Uint8Array = __webpack_require__(/*! ./_Uint8Array */ 109);
+var Uint8Array = __webpack_require__(/*! ./_Uint8Array */ 126);
 
 /**
  * Creates a clone of `arrayBuffer`.
@@ -2488,16 +2653,16 @@ module.exports = cloneArrayBuffer;
 
 
 /***/ }),
-/* 72 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_getPrototype.js ***!
-  \***********************************************/
+/* 78 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getPrototype.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(/*! ./_overArg */ 112);
+var overArg = __webpack_require__(/*! ./_overArg */ 129);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -2506,10 +2671,10 @@ module.exports = getPrototype;
 
 
 /***/ }),
-/* 73 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_isPrototype.js ***!
-  \**********************************************/
+/* 79 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isPrototype.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -2536,16 +2701,16 @@ module.exports = isPrototype;
 
 
 /***/ }),
-/* 74 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/isArguments.js ***!
-  \*********************************************/
+/* 80 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isArguments.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(/*! ./_baseIsArguments */ 205),
+var baseIsArguments = __webpack_require__(/*! ./_baseIsArguments */ 245),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** Used for built-in method references. */
@@ -2584,18 +2749,18 @@ module.exports = isArguments;
 
 
 /***/ }),
-/* 75 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/isTypedArray.js ***!
-  \**********************************************/
+/* 81 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isTypedArray.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(/*! ./_baseIsTypedArray */ 209),
-    baseUnary = __webpack_require__(/*! ./_baseUnary */ 76),
-    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 77);
+var baseIsTypedArray = __webpack_require__(/*! ./_baseIsTypedArray */ 249),
+    baseUnary = __webpack_require__(/*! ./_baseUnary */ 82),
+    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 83);
 
 /* Node.js helper references. */
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -2623,10 +2788,10 @@ module.exports = isTypedArray;
 
 
 /***/ }),
-/* 76 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseUnary.js ***!
-  \********************************************/
+/* 82 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseUnary.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -2649,16 +2814,16 @@ module.exports = baseUnary;
 
 
 /***/ }),
-/* 77 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_nodeUtil.js ***!
-  \*******************************************/
+/* 83 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_nodeUtil.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 99);
+/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(/*! ./_freeGlobal */ 116);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -2681,13 +2846,13 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../webpack/buildin/module.js */ 70)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ 76)(module)))
 
 /***/ }),
-/* 78 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/identity.js ***!
-  \******************************************/
+/* 84 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/identity.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -2717,17 +2882,17 @@ module.exports = identity;
 
 
 /***/ }),
-/* 79 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_getSymbols.js ***!
-  \*********************************************/
+/* 85 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getSymbols.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ 117),
-    stubArray = __webpack_require__(/*! ./stubArray */ 118);
+var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ 134),
+    stubArray = __webpack_require__(/*! ./stubArray */ 135);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -2759,17 +2924,17 @@ module.exports = getSymbols;
 
 
 /***/ }),
-/* 80 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_baseGet.js ***!
-  \******************************************/
+/* 86 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseGet.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(/*! ./_castPath */ 81),
-    toKey = __webpack_require__(/*! ./_toKey */ 31);
+var castPath = __webpack_require__(/*! ./_castPath */ 87),
+    toKey = __webpack_require__(/*! ./_toKey */ 35);
 
 /**
  * The base implementation of `_.get` without support for default values.
@@ -2795,19 +2960,19 @@ module.exports = baseGet;
 
 
 /***/ }),
-/* 81 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_castPath.js ***!
-  \*******************************************/
+/* 87 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_castPath.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(/*! ./isArray */ 6),
-    isKey = __webpack_require__(/*! ./_isKey */ 82),
-    stringToPath = __webpack_require__(/*! ./_stringToPath */ 261),
-    toString = __webpack_require__(/*! ./toString */ 264);
+var isArray = __webpack_require__(/*! ./isArray */ 5),
+    isKey = __webpack_require__(/*! ./_isKey */ 88),
+    stringToPath = __webpack_require__(/*! ./_stringToPath */ 301),
+    toString = __webpack_require__(/*! ./toString */ 304);
 
 /**
  * Casts `value` to a path array if it's not one.
@@ -2828,17 +2993,17 @@ module.exports = castPath;
 
 
 /***/ }),
-/* 82 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/_isKey.js ***!
-  \****************************************/
+/* 88 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isKey.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArray = __webpack_require__(/*! ./isArray */ 6),
-    isSymbol = __webpack_require__(/*! ./isSymbol */ 37);
+var isArray = __webpack_require__(/*! ./isArray */ 5),
+    isSymbol = __webpack_require__(/*! ./isSymbol */ 43);
 
 /** Used to match property names within property paths. */
 var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
@@ -2869,7 +3034,228 @@ module.exports = isKey;
 
 
 /***/ }),
-/* 83 */
+/* 89 */
+/*!****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-primitive.js ***!
+  \****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__(/*! ./_is-object */ 26);
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+/* 90 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_defined.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+/* 91 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-integer.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+/* 92 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_shared-key.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var shared = __webpack_require__(/*! ./_shared */ 93)('keys');
+var uid = __webpack_require__(/*! ./_uid */ 56);
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+/* 93 */
+/*!**********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_shared.js ***!
+  \**********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ 12);
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+module.exports = function (key) {
+  return store[key] || (store[key] = {});
+};
+
+
+/***/ }),
+/* 94 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_enum-bug-keys.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+/* 95 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gops.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+/* 96 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_library.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = true;
+
+
+/***/ }),
+/* 97 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iterators.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = {};
+
+
+/***/ }),
+/* 98 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-create.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__(/*! ./_an-object */ 36);
+var dPs = __webpack_require__(/*! ./_object-dps */ 348);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 94);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 92)('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__(/*! ./_dom-create */ 149)('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__(/*! ./_html */ 349).appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+/* 99 */
+/*!*********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_set-to-string-tag.js ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var def = __webpack_require__(/*! ./_object-dp */ 15).f;
+var has = __webpack_require__(/*! ./_has */ 17);
+var TAG = __webpack_require__(/*! ./_wks */ 28)('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+/* 100 */
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_wks-ext.js ***!
   \***********************************************************/
@@ -2878,11 +3264,11 @@ module.exports = isKey;
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.f = __webpack_require__(/*! ./_wks */ 14);
+exports.f = __webpack_require__(/*! ./_wks */ 28);
 
 
 /***/ }),
-/* 84 */
+/* 101 */
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_wks-define.js ***!
   \**************************************************************/
@@ -2891,11 +3277,11 @@ exports.f = __webpack_require__(/*! ./_wks */ 14);
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(/*! ./_global */ 13);
-var core = __webpack_require__(/*! ./_core */ 12);
-var LIBRARY = __webpack_require__(/*! ./_library */ 55);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 83);
-var defineProperty = __webpack_require__(/*! ./_object-dp */ 16).f;
+var global = __webpack_require__(/*! ./_global */ 12);
+var core = __webpack_require__(/*! ./_core */ 14);
+var LIBRARY = __webpack_require__(/*! ./_library */ 96);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 100);
+var defineProperty = __webpack_require__(/*! ./_object-dp */ 15).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
   if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
@@ -2903,7 +3289,7 @@ module.exports = function (name) {
 
 
 /***/ }),
-/* 85 */
+/* 102 */
 /*!*****************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/layouter.js ***!
   \*****************************************************************/
@@ -2919,39 +3305,39 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 52);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 62);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 20);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 9);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 21);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _isUndefined = __webpack_require__(/*! lodash/isUndefined */ 97);
+var _isUndefined = __webpack_require__(/*! lodash/isUndefined */ 114);
 
 var _isUndefined2 = _interopRequireDefault(_isUndefined);
 
-var _isString = __webpack_require__(/*! lodash/isString */ 98);
+var _isString = __webpack_require__(/*! lodash/isString */ 115);
 
 var _isString2 = _interopRequireDefault(_isString);
 
-var _fill = __webpack_require__(/*! lodash/fill */ 164);
+var _fill = __webpack_require__(/*! lodash/fill */ 201);
 
 var _fill2 = _interopRequireDefault(_fill);
 
-var _utils = __webpack_require__(/*! ./utils */ 65);
+var _utils = __webpack_require__(/*! ./utils */ 72);
 
-var _item = __webpack_require__(/*! ./item.js */ 102);
+var _item = __webpack_require__(/*! ./item.js */ 119);
 
-var _group = __webpack_require__(/*! ./group.js */ 116);
+var _group = __webpack_require__(/*! ./group.js */ 133);
 
-var _strip = __webpack_require__(/*! ./strip.js */ 288);
+var _strip = __webpack_require__(/*! ./strip.js */ 328);
 
-var _column = __webpack_require__(/*! ./column.js */ 289);
+var _column = __webpack_require__(/*! ./column.js */ 329);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3453,48 +3839,17 @@ var Layouter = function () {
 exports.default = Layouter;
 
 /***/ }),
-/* 86 */
-/*!*******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/web.dom.iterable.js ***!
-  \*******************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./es6.array.iterator */ 144);
-var global = __webpack_require__(/*! ./_global */ 13);
-var hide = __webpack_require__(/*! ./_hide */ 22);
-var Iterators = __webpack_require__(/*! ./_iterators */ 33);
-var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ 14)('toStringTag');
-
-var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
-  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
-  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
-  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
-  'TextTrackList,TouchList').split(',');
-
-for (var i = 0; i < DOMIterables.length; i++) {
-  var NAME = DOMIterables[i];
-  var Collection = global[NAME];
-  var proto = Collection && Collection.prototype;
-  if (proto && !proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
-  Iterators[NAME] = Iterators.Array;
-}
-
-
-/***/ }),
-/* 87 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iobject.js ***!
-  \***********************************************************/
+/* 103 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iobject.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(/*! ./_cof */ 53);
+var cof = __webpack_require__(/*! ./_cof */ 104);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -3502,10 +3857,27 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 88 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iter-define.js ***!
-  \***************************************************************/
+/* 104 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_cof.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+/* 105 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iter-define.js ***!
+  \*************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -3513,15 +3885,15 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(/*! ./_library */ 55);
-var $export = __webpack_require__(/*! ./_export */ 21);
-var redefine = __webpack_require__(/*! ./_redefine */ 92);
-var hide = __webpack_require__(/*! ./_hide */ 22);
-var Iterators = __webpack_require__(/*! ./_iterators */ 33);
-var $iterCreate = __webpack_require__(/*! ./_iter-create */ 148);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 62);
-var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 154);
-var ITERATOR = __webpack_require__(/*! ./_wks */ 14)('iterator');
+var LIBRARY = __webpack_require__(/*! ./_library */ 175);
+var $export = __webpack_require__(/*! ./_export */ 65);
+var redefine = __webpack_require__(/*! ./_redefine */ 180);
+var hide = __webpack_require__(/*! ./_hide */ 30);
+var Iterators = __webpack_require__(/*! ./_iterators */ 39);
+var $iterCreate = __webpack_require__(/*! ./_iter-create */ 181);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 112);
+var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 189);
+var ITERATOR = __webpack_require__(/*! ./_wks */ 19)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
 var KEYS = 'keys';
@@ -3584,64 +3956,17 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 89 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_ctx.js ***!
-  \*******************************************************/
+/* 106 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_dom-create.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-// optional / simple context binding
-var aFunction = __webpack_require__(/*! ./_a-function */ 147);
-module.exports = function (fn, that, length) {
-  aFunction(fn);
-  if (that === undefined) return fn;
-  switch (length) {
-    case 1: return function (a) {
-      return fn.call(that, a);
-    };
-    case 2: return function (a, b) {
-      return fn.call(that, a, b);
-    };
-    case 3: return function (a, b, c) {
-      return fn.call(that, a, b, c);
-    };
-  }
-  return function (/* ...args */) {
-    return fn.apply(that, arguments);
-  };
-};
-
-
-/***/ }),
-/* 90 */
-/*!******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_ie8-dom-define.js ***!
-  \******************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = !__webpack_require__(/*! ./_descriptors */ 17) && !__webpack_require__(/*! ./_fails */ 27)(function () {
-  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ 91)('div'), 'a', { get: function () { return 7; } }).a != 7;
-});
-
-
-/***/ }),
-/* 91 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_dom-create.js ***!
-  \**************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(/*! ./_is-object */ 24);
-var document = __webpack_require__(/*! ./_global */ 13).document;
+var isObject = __webpack_require__(/*! ./_is-object */ 66);
+var document = __webpack_require__(/*! ./_global */ 18).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
@@ -3650,111 +3975,136 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 92 */
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_redefine.js ***!
-  \************************************************************/
+/* 107 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_property-desc.js ***!
+  \***************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(/*! ./_hide */ 22);
-
-
-/***/ }),
-/* 93 */
-/*!************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-keys-internal.js ***!
-  \************************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var has = __webpack_require__(/*! ./_has */ 18);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 20);
-var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ 150)(false);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 59)('IE_PROTO');
-
-module.exports = function (object, names) {
-  var O = toIObject(object);
-  var i = 0;
-  var result = [];
-  var key;
-  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
-  // Don't enum bug & hidden keys
-  while (names.length > i) if (has(O, key = names[i++])) {
-    ~arrayIndexOf(result, key) || result.push(key);
-  }
-  return result;
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
 };
 
 
 /***/ }),
-/* 94 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-object.js ***!
-  \*************************************************************/
+/* 108 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-keys.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 184);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 111);
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+/* 109 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_shared.js ***!
+  \********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ 18);
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+module.exports = function (key) {
+  return store[key] || (store[key] = {});
+};
+
+
+/***/ }),
+/* 110 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_uid.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+/* 111 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_enum-bug-keys.js ***!
+  \***************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+/* 112 */
+/*!*******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_set-to-string-tag.js ***!
+  \*******************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var def = __webpack_require__(/*! ./_object-dp */ 40).f;
+var has = __webpack_require__(/*! ./_has */ 42);
+var TAG = __webpack_require__(/*! ./_wks */ 19)('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+/* 113 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-object.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(/*! ./_defined */ 54);
+var defined = __webpack_require__(/*! ./_defined */ 64);
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 /***/ }),
-/* 95 */
-/*!**********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.string.iterator.js ***!
-  \**********************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var $at = __webpack_require__(/*! ./_string-at */ 155)(true);
-
-// 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(/*! ./_iter-define */ 88)(String, 'String', function (iterated) {
-  this._t = String(iterated); // target
-  this._i = 0;                // next index
-// 21.1.5.2.1 %StringIteratorPrototype%.next()
-}, function () {
-  var O = this._t;
-  var index = this._i;
-  var point;
-  if (index >= O.length) return { value: undefined, done: true };
-  point = $at(O, index);
-  this._i += point.length;
-  return { value: point, done: false };
-});
-
-
-/***/ }),
-/* 96 */
-/*!***********************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/object/define-property.js ***!
-  \***********************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/define-property */ 159), __esModule: true };
-
-/***/ }),
-/* 97 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/isUndefined.js ***!
-  \*********************************************/
+/* 114 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isUndefined.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -3785,17 +4135,17 @@ module.exports = isUndefined;
 
 
 /***/ }),
-/* 98 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/isString.js ***!
-  \******************************************/
+/* 115 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isString.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -3827,10 +4177,10 @@ module.exports = isString;
 
 
 /***/ }),
-/* 99 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_freeGlobal.js ***!
-  \*********************************************/
+/* 116 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_freeGlobal.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -3841,21 +4191,21 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 module.exports = freeGlobal;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../webpack/buildin/global.js */ 161)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ 198)))
 
 /***/ }),
-/* 100 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_isIterateeCall.js ***!
-  \*************************************************/
+/* 117 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isIterateeCall.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var eq = __webpack_require__(/*! ./eq */ 29),
-    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 25),
-    isIndex = __webpack_require__(/*! ./_isIndex */ 39),
+var eq = __webpack_require__(/*! ./eq */ 33),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 22),
+    isIndex = __webpack_require__(/*! ./_isIndex */ 45),
     isObject = __webpack_require__(/*! ./isObject */ 8);
 
 /**
@@ -3886,19 +4236,19 @@ module.exports = isIterateeCall;
 
 
 /***/ }),
-/* 101 */
-/*!**************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/object/assign.js ***!
-  \**************************************************************/
+/* 118 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/object/assign.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 170), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 208), __esModule: true };
 
 /***/ }),
-/* 102 */
+/* 119 */
 /*!*************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/item.js ***!
   \*************************************************************/
@@ -3915,11 +4265,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Item = undefined;
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 20);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 9);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 21);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -3927,19 +4277,19 @@ var _isObject = __webpack_require__(/*! lodash/isObject */ 8);
 
 var _isObject2 = _interopRequireDefault(_isObject);
 
-var _isNumber = __webpack_require__(/*! lodash/isNumber */ 173);
+var _isNumber = __webpack_require__(/*! lodash/isNumber */ 213);
 
 var _isNumber2 = _interopRequireDefault(_isNumber);
 
-var _isFunction = __webpack_require__(/*! lodash/isFunction */ 38);
+var _isFunction = __webpack_require__(/*! lodash/isFunction */ 44);
 
 var _isFunction2 = _interopRequireDefault(_isFunction);
 
-var _merge = __webpack_require__(/*! lodash/merge */ 174);
+var _merge = __webpack_require__(/*! lodash/merge */ 214);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _utils = __webpack_require__(/*! ./utils */ 65);
+var _utils = __webpack_require__(/*! ./utils */ 72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4332,10 +4682,10 @@ var Item = exports.Item = function () {
 }();
 
 /***/ }),
-/* 103 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_toSource.js ***!
-  \*******************************************/
+/* 120 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_toSource.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4370,17 +4720,17 @@ module.exports = toSource;
 
 
 /***/ }),
-/* 104 */
-/*!***************************************************!*\
-  !*** ../node_modules/lodash/_assignMergeValue.js ***!
-  \***************************************************/
+/* 121 */
+/*!*************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_assignMergeValue.js ***!
+  \*************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 69),
-    eq = __webpack_require__(/*! ./eq */ 29);
+var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 75),
+    eq = __webpack_require__(/*! ./eq */ 33);
 
 /**
  * This function is like `assignValue` except that it doesn't assign
@@ -4402,16 +4752,16 @@ module.exports = assignMergeValue;
 
 
 /***/ }),
-/* 105 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_defineProperty.js ***!
-  \*************************************************/
+/* 122 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_defineProperty.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19);
+var getNative = __webpack_require__(/*! ./_getNative */ 13);
 
 var defineProperty = (function() {
   try {
@@ -4425,16 +4775,16 @@ module.exports = defineProperty;
 
 
 /***/ }),
-/* 106 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_baseFor.js ***!
-  \******************************************/
+/* 123 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseFor.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(/*! ./_createBaseFor */ 202);
+var createBaseFor = __webpack_require__(/*! ./_createBaseFor */ 242);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -4453,16 +4803,16 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 107 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_cloneBuffer.js ***!
-  \**********************************************/
+/* 124 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cloneBuffer.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 10);
+/* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(/*! ./_root */ 9);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -4498,19 +4848,19 @@ function cloneBuffer(buffer, isDeep) {
 
 module.exports = cloneBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../webpack/buildin/module.js */ 70)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! ./../../../webpack/buildin/module.js */ 76)(module)))
 
 /***/ }),
-/* 108 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_cloneTypedArray.js ***!
-  \**************************************************/
+/* 125 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cloneTypedArray.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 71);
+var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 77);
 
 /**
  * Creates a clone of `typedArray`.
@@ -4529,16 +4879,16 @@ module.exports = cloneTypedArray;
 
 
 /***/ }),
-/* 109 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_Uint8Array.js ***!
-  \*********************************************/
+/* 126 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Uint8Array.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(/*! ./_root */ 10);
+var root = __webpack_require__(/*! ./_root */ 9);
 
 /** Built-in value references. */
 var Uint8Array = root.Uint8Array;
@@ -4547,10 +4897,10 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 110 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_copyArray.js ***!
-  \********************************************/
+/* 127 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_copyArray.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4579,18 +4929,18 @@ module.exports = copyArray;
 
 
 /***/ }),
-/* 111 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_initCloneObject.js ***!
-  \**************************************************/
+/* 128 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_initCloneObject.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(/*! ./_baseCreate */ 204),
-    getPrototype = __webpack_require__(/*! ./_getPrototype */ 72),
-    isPrototype = __webpack_require__(/*! ./_isPrototype */ 73);
+var baseCreate = __webpack_require__(/*! ./_baseCreate */ 244),
+    getPrototype = __webpack_require__(/*! ./_getPrototype */ 78),
+    isPrototype = __webpack_require__(/*! ./_isPrototype */ 79);
 
 /**
  * Initializes an object clone.
@@ -4609,10 +4959,10 @@ module.exports = initCloneObject;
 
 
 /***/ }),
-/* 112 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_overArg.js ***!
-  \******************************************/
+/* 129 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_overArg.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4636,10 +4986,10 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 113 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_safeGet.js ***!
-  \******************************************/
+/* 130 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_safeGet.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4663,17 +5013,17 @@ module.exports = safeGet;
 
 
 /***/ }),
-/* 114 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_assignValue.js ***!
-  \**********************************************/
+/* 131 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_assignValue.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 69),
-    eq = __webpack_require__(/*! ./eq */ 29);
+var baseAssignValue = __webpack_require__(/*! ./_baseAssignValue */ 75),
+    eq = __webpack_require__(/*! ./eq */ 33);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -4703,21 +5053,21 @@ module.exports = assignValue;
 
 
 /***/ }),
-/* 115 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_arrayLikeKeys.js ***!
-  \************************************************/
+/* 132 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_arrayLikeKeys.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(/*! ./_baseTimes */ 211),
-    isArguments = __webpack_require__(/*! ./isArguments */ 74),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    isBuffer = __webpack_require__(/*! ./isBuffer */ 46),
-    isIndex = __webpack_require__(/*! ./_isIndex */ 39),
-    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 75);
+var baseTimes = __webpack_require__(/*! ./_baseTimes */ 251),
+    isArguments = __webpack_require__(/*! ./isArguments */ 80),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ 51),
+    isIndex = __webpack_require__(/*! ./_isIndex */ 45),
+    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 81);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -4764,7 +5114,7 @@ module.exports = arrayLikeKeys;
 
 
 /***/ }),
-/* 116 */
+/* 133 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/group.js ***!
   \**************************************************************/
@@ -4781,39 +5131,39 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Group = undefined;
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 52);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 62);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 20);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 9);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 21);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _cloneDeep = __webpack_require__(/*! lodash/cloneDeep */ 222);
+var _cloneDeep = __webpack_require__(/*! lodash/cloneDeep */ 262);
 
 var _cloneDeep2 = _interopRequireDefault(_cloneDeep);
 
-var _last = __webpack_require__(/*! lodash/last */ 123);
+var _last = __webpack_require__(/*! lodash/last */ 140);
 
 var _last2 = _interopRequireDefault(_last);
 
-var _remove = __webpack_require__(/*! lodash/remove */ 245);
+var _remove = __webpack_require__(/*! lodash/remove */ 285);
 
 var _remove2 = _interopRequireDefault(_remove);
 
-var _includes = __webpack_require__(/*! lodash/includes */ 276);
+var _includes = __webpack_require__(/*! lodash/includes */ 316);
 
 var _includes2 = _interopRequireDefault(_includes);
 
-var _filter = __webpack_require__(/*! lodash/filter */ 283);
+var _filter = __webpack_require__(/*! lodash/filter */ 323);
 
 var _filter2 = _interopRequireDefault(_filter);
 
-var _utils = __webpack_require__(/*! ./utils */ 65);
+var _utils = __webpack_require__(/*! ./utils */ 72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5645,9 +5995,6 @@ var Group = exports.Group = function () {
         }
       }
     }
-
-    //todo - move to the group class
-
   }, {
     key: 'calcVisibilities',
     value: function calcVisibilities(bounds) {
@@ -5763,10 +6110,10 @@ var Group = exports.Group = function () {
 }();
 
 /***/ }),
-/* 117 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_arrayFilter.js ***!
-  \**********************************************/
+/* 134 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_arrayFilter.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -5800,10 +6147,10 @@ module.exports = arrayFilter;
 
 
 /***/ }),
-/* 118 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/stubArray.js ***!
-  \*******************************************/
+/* 135 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/stubArray.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -5835,19 +6182,19 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 119 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_getSymbolsIn.js ***!
-  \***********************************************/
+/* 136 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getSymbolsIn.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(/*! ./_arrayPush */ 120),
-    getPrototype = __webpack_require__(/*! ./_getPrototype */ 72),
-    getSymbols = __webpack_require__(/*! ./_getSymbols */ 79),
-    stubArray = __webpack_require__(/*! ./stubArray */ 118);
+var arrayPush = __webpack_require__(/*! ./_arrayPush */ 137),
+    getPrototype = __webpack_require__(/*! ./_getPrototype */ 78),
+    getSymbols = __webpack_require__(/*! ./_getSymbols */ 85),
+    stubArray = __webpack_require__(/*! ./stubArray */ 135);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -5872,10 +6219,10 @@ module.exports = getSymbolsIn;
 
 
 /***/ }),
-/* 120 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_arrayPush.js ***!
-  \********************************************/
+/* 137 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_arrayPush.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -5904,18 +6251,18 @@ module.exports = arrayPush;
 
 
 /***/ }),
-/* 121 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_getAllKeys.js ***!
-  \*********************************************/
+/* 138 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getAllKeys.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 122),
-    getSymbols = __webpack_require__(/*! ./_getSymbols */ 79),
-    keys = __webpack_require__(/*! ./keys */ 26);
+var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 139),
+    getSymbols = __webpack_require__(/*! ./_getSymbols */ 85),
+    keys = __webpack_require__(/*! ./keys */ 23);
 
 /**
  * Creates an array of own enumerable property names and symbols of `object`.
@@ -5932,17 +6279,17 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 122 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_baseGetAllKeys.js ***!
-  \*************************************************/
+/* 139 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseGetAllKeys.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayPush = __webpack_require__(/*! ./_arrayPush */ 120),
-    isArray = __webpack_require__(/*! ./isArray */ 6);
+var arrayPush = __webpack_require__(/*! ./_arrayPush */ 137),
+    isArray = __webpack_require__(/*! ./isArray */ 5);
 
 /**
  * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
@@ -5964,10 +6311,10 @@ module.exports = baseGetAllKeys;
 
 
 /***/ }),
-/* 123 */
-/*!**************************************!*\
-  !*** ../node_modules/lodash/last.js ***!
-  \**************************************/
+/* 140 */
+/*!************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/last.js ***!
+  \************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -5996,20 +6343,20 @@ module.exports = last;
 
 
 /***/ }),
-/* 124 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_baseIteratee.js ***!
-  \***********************************************/
+/* 141 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIteratee.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(/*! ./_baseMatches */ 246),
-    baseMatchesProperty = __webpack_require__(/*! ./_baseMatchesProperty */ 259),
-    identity = __webpack_require__(/*! ./identity */ 78),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    property = __webpack_require__(/*! ./property */ 269);
+var baseMatches = __webpack_require__(/*! ./_baseMatches */ 286),
+    baseMatchesProperty = __webpack_require__(/*! ./_baseMatchesProperty */ 299),
+    identity = __webpack_require__(/*! ./identity */ 84),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    property = __webpack_require__(/*! ./property */ 309);
 
 /**
  * The base implementation of `_.iteratee`.
@@ -6039,16 +6386,16 @@ module.exports = baseIteratee;
 
 
 /***/ }),
-/* 125 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_baseIsEqual.js ***!
-  \**********************************************/
+/* 142 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsEqual.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(/*! ./_baseIsEqualDeep */ 248),
+var baseIsEqualDeep = __webpack_require__(/*! ./_baseIsEqualDeep */ 288),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /**
@@ -6079,18 +6426,18 @@ module.exports = baseIsEqual;
 
 
 /***/ }),
-/* 126 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_equalArrays.js ***!
-  \**********************************************/
+/* 143 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_equalArrays.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(/*! ./_SetCache */ 249),
-    arraySome = __webpack_require__(/*! ./_arraySome */ 252),
-    cacheHas = __webpack_require__(/*! ./_cacheHas */ 253);
+var SetCache = __webpack_require__(/*! ./_SetCache */ 289),
+    arraySome = __webpack_require__(/*! ./_arraySome */ 292),
+    cacheHas = __webpack_require__(/*! ./_cacheHas */ 293);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -6174,10 +6521,10 @@ module.exports = equalArrays;
 
 
 /***/ }),
-/* 127 */
-/*!*****************************************************!*\
-  !*** ../node_modules/lodash/_isStrictComparable.js ***!
-  \*****************************************************/
+/* 144 */
+/*!***************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isStrictComparable.js ***!
+  \***************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -6201,10 +6548,10 @@ module.exports = isStrictComparable;
 
 
 /***/ }),
-/* 128 */
-/*!**********************************************************!*\
-  !*** ../node_modules/lodash/_matchesStrictComparable.js ***!
-  \**********************************************************/
+/* 145 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_matchesStrictComparable.js ***!
+  \********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -6233,10 +6580,10 @@ module.exports = matchesStrictComparable;
 
 
 /***/ }),
-/* 129 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_arrayMap.js ***!
-  \*******************************************/
+/* 146 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_arrayMap.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -6266,7 +6613,249 @@ module.exports = arrayMap;
 
 
 /***/ }),
-/* 130 */
+/* 147 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_ctx.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(/*! ./_a-function */ 338);
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+/* 148 */
+/*!******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_ie8-dom-define.js ***!
+  \******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__(/*! ./_descriptors */ 16) && !__webpack_require__(/*! ./_fails */ 37)(function () {
+  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ 149)('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 149 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_dom-create.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ 26);
+var document = __webpack_require__(/*! ./_global */ 12).document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+/* 150 */
+/*!************************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-keys-internal.js ***!
+  \************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__(/*! ./_has */ 17);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 27);
+var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ 340)(false);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 92)('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+/* 151 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iobject.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__(/*! ./_cof */ 152);
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+/* 152 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_cof.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+/* 153 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-object.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__(/*! ./_defined */ 90);
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+/* 154 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iter-define.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var LIBRARY = __webpack_require__(/*! ./_library */ 96);
+var $export = __webpack_require__(/*! ./_export */ 24);
+var redefine = __webpack_require__(/*! ./_redefine */ 155);
+var hide = __webpack_require__(/*! ./_hide */ 25);
+var Iterators = __webpack_require__(/*! ./_iterators */ 97);
+var $iterCreate = __webpack_require__(/*! ./_iter-create */ 347);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 99);
+var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 350);
+var ITERATOR = __webpack_require__(/*! ./_wks */ 28)('iterator');
+var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+var FF_ITERATOR = '@@iterator';
+var KEYS = 'keys';
+var VALUES = 'values';
+
+var returnThis = function () { return this; };
+
+module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+  $iterCreate(Constructor, NAME, next);
+  var getMethod = function (kind) {
+    if (!BUGGY && kind in proto) return proto[kind];
+    switch (kind) {
+      case KEYS: return function keys() { return new Constructor(this, kind); };
+      case VALUES: return function values() { return new Constructor(this, kind); };
+    } return function entries() { return new Constructor(this, kind); };
+  };
+  var TAG = NAME + ' Iterator';
+  var DEF_VALUES = DEFAULT == VALUES;
+  var VALUES_BUG = false;
+  var proto = Base.prototype;
+  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
+  var $default = $native || getMethod(DEFAULT);
+  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
+  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
+  var methods, key, IteratorPrototype;
+  // Fix native
+  if ($anyNative) {
+    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
+    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+      // Set @@toStringTag to native iterators
+      setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if (DEF_VALUES && $native && $native.name !== VALUES) {
+    VALUES_BUG = true;
+    $default = function values() { return $native.call(this); };
+  }
+  // Define iterator
+  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+    hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  Iterators[NAME] = $default;
+  Iterators[TAG] = returnThis;
+  if (DEFAULT) {
+    methods = {
+      values: DEF_VALUES ? $default : getMethod(VALUES),
+      keys: IS_SET ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if (FORCED) for (key in methods) {
+      if (!(key in proto)) redefine(proto, key, methods[key]);
+    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+
+
+/***/ }),
+/* 155 */
+/*!************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_redefine.js ***!
+  \************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./_hide */ 25);
+
+
+/***/ }),
+/* 156 */
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gopn.js ***!
   \***************************************************************/
@@ -6276,8 +6865,8 @@ module.exports = arrayMap;
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 93);
-var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 61).concat('length', 'prototype');
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 150);
+var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 94).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -6285,7 +6874,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 131 */
+/* 157 */
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gopd.js ***!
   \***************************************************************/
@@ -6294,15 +6883,15 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var pIE = __webpack_require__(/*! ./_object-pie */ 40);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 34);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 20);
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 56);
-var has = __webpack_require__(/*! ./_has */ 18);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 90);
+var pIE = __webpack_require__(/*! ./_object-pie */ 57);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 54);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 27);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 89);
+var has = __webpack_require__(/*! ./_has */ 17);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 148);
 var gOPD = Object.getOwnPropertyDescriptor;
 
-exports.f = __webpack_require__(/*! ./_descriptors */ 17) ? gOPD : function getOwnPropertyDescriptor(O, P) {
+exports.f = __webpack_require__(/*! ./_descriptors */ 16) ? gOPD : function getOwnPropertyDescriptor(O, P) {
   O = toIObject(O);
   P = toPrimitive(P, true);
   if (IE8_DOM_DEFINE) try {
@@ -6313,7 +6902,7 @@ exports.f = __webpack_require__(/*! ./_descriptors */ 17) ? gOPD : function getO
 
 
 /***/ }),
-/* 132 */
+/* 158 */
 /*!*************************************************!*\
   !*** ../node_modules/fbjs/lib/emptyFunction.js ***!
   \*************************************************/
@@ -6361,7 +6950,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 133 */
+/* 159 */
 /*!*********************************************!*\
   !*** ../node_modules/fbjs/lib/invariant.js ***!
   \*********************************************/
@@ -6426,7 +7015,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 134 */
+/* 160 */
 /*!*******************************************!*\
   !*** ../node_modules/fbjs/lib/warning.js ***!
   \*******************************************/
@@ -6446,7 +7035,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(/*! ./emptyFunction */ 132);
+var emptyFunction = __webpack_require__(/*! ./emptyFunction */ 158);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -6500,7 +7089,7 @@ if (true) {
 module.exports = warning;
 
 /***/ }),
-/* 135 */
+/* 161 */
 /*!**********************************************!*\
   !*** ../node_modules/object-assign/index.js ***!
   \**********************************************/
@@ -6603,7 +7192,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 136 */
+/* 162 */
 /*!**************************************************************!*\
   !*** ../node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
   \**************************************************************/
@@ -6628,7 +7217,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 137 */
+/* 163 */
 /*!*********************************************!*\
   !*** ../node_modules/shallowequal/index.js ***!
   \*********************************************/
@@ -6690,7 +7279,19 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 
 /***/ }),
-/* 138 */
+/* 164 */
+/*!***********************************************************************!*\
+  !*** ../node_modules/babel-runtime/core-js/object/define-property.js ***!
+  \***********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/define-property */ 378), __esModule: true };
+
+/***/ }),
+/* 165 */
 /*!**************************************************!*\
   !*** ../node_modules/component-indexof/index.js ***!
   \**************************************************/
@@ -6708,7 +7309,7 @@ module.exports = function(arr, obj){
 };
 
 /***/ }),
-/* 139 */
+/* 166 */
 /*!*******************!*\
   !*** ./client.js ***!
   \*******************/
@@ -6724,11 +7325,11 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(/*! react-dom */ 11);
+var _reactDom = __webpack_require__(/*! react-dom */ 10);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(/*! ./components/App */ 140);
+var _App = __webpack_require__(/*! ./components/App */ 167);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -6737,7 +7338,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
 /***/ }),
-/* 140 */
+/* 167 */
 /*!*********************************!*\
   !*** ./components/App/index.js ***!
   \*********************************/
@@ -6753,7 +7354,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _App = __webpack_require__(/*! ./App */ 141);
+var _App = __webpack_require__(/*! ./App */ 168);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -6765,7 +7366,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 141 */
+/* 168 */
 /*!*******************************!*\
   !*** ./components/App/App.js ***!
   \*******************************/
@@ -6787,25 +7388,25 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _proGalleryLayouter = __webpack_require__(/*! pro-gallery-layouter */ 142);
+var _proGalleryLayouter = __webpack_require__(/*! pro-gallery-layouter */ 169);
 
-var _SideBar = __webpack_require__(/*! ../SideBar */ 291);
+var _SideBar = __webpack_require__(/*! ../SideBar */ 331);
 
 var _SideBar2 = _interopRequireDefault(_SideBar);
 
-var _Gallery = __webpack_require__(/*! ../Gallery */ 321);
+var _Gallery = __webpack_require__(/*! ../Gallery */ 381);
 
 var _Gallery2 = _interopRequireDefault(_Gallery);
 
-var _images = __webpack_require__(/*! ../../constants/images */ 324);
+var _images = __webpack_require__(/*! ../../constants/images */ 384);
 
 var _images2 = _interopRequireDefault(_images);
 
-var _getScrollbarSize = __webpack_require__(/*! ./get-scrollbar-size */ 325);
+var _getScrollbarSize = __webpack_require__(/*! ./get-scrollbar-size */ 385);
 
 var _getScrollbarSize2 = _interopRequireDefault(_getScrollbarSize);
 
-__webpack_require__(/*! ./App.scss */ 326);
+__webpack_require__(/*! ./App.scss */ 386);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6852,18 +7453,20 @@ var App = function (_React$Component) {
       floatingImages: 0,
       cubeRatio: 1,
       fixedColumns: 0,
+      groupsPerStrip: 0,
       oneRow: false
     };
 
     _this.state = {
       sampleSize: 100,
-      styles: Object.assign({}, _this.defaultStyles, _this.getUrlStyles),
+      styles: Object.assign({}, _this.defaultStyles, _this.getUrlStyles()),
       sidebarWidth: 500,
 
       // Needed for browsers with static scrollbars
       scrollbarSize: (0, _getScrollbarSize2.default)(),
       container: getContainerSize()
     };
+    _this.setUrlStyles(_this.state.styles);
 
     window.addEventListener('resize', _this.resize);
     return _this;
@@ -6872,13 +7475,37 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'getUrlStyles',
     value: function getUrlStyles() {
+      var strToVal = function strToVal(str) {
+        if (parseInt(str) === Number(str)) {
+          return Number(str);
+        } else if (str === 'true') {
+          return true;
+        } else if (str === 'false') {
+          return false;
+        } else {
+          return decodeURIComponent(str);
+        }
+      };
       var search = location.search.substring(1);
-      return JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"') + '"}');
+      var stylesArr = search.split('&').map(function (s) {
+        return s.split('=');
+      });
+      var styles = {};
+      stylesArr.forEach(function (style) {
+        return styles[style[0]] = strToVal(style[1]);
+      });
+      return styles;
+      // const styles = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
     }
   }, {
     key: 'setUrlStyles',
     value: function setUrlStyles(styles) {
-      history.pushState(styles, "Pro Gallery Playground");
+      var str = Object.entries(styles).map(function (style) {
+        return style.map(function (i) {
+          return encodeURIComponent(i);
+        }).join('=');
+      }).join('&');
+      history.pushState(styles, "", location.pathname + '?' + str);
     }
   }, {
     key: 'toggleSidebar',
@@ -6978,7 +7605,7 @@ var App = function (_React$Component) {
             return _react2.default.createElement(
               'li',
               null,
-              params,
+              param,
               ': ',
               layoutParams.styleParams[param]
             );
@@ -6994,7 +7621,7 @@ var App = function (_React$Component) {
 exports.default = App;
 
 /***/ }),
-/* 142 */
+/* 169 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/index.js ***!
   \**************************************************************/
@@ -7006,15 +7633,15 @@ exports.default = App;
 "use strict";
 
 
-var _layouter = __webpack_require__(/*! ./layouter */ 85);
+var _layouter = __webpack_require__(/*! ./layouter */ 102);
 
 var _layouter2 = _interopRequireDefault(_layouter);
 
-var _item = __webpack_require__(/*! ./item */ 102);
+var _item = __webpack_require__(/*! ./item */ 119);
 
-var _group = __webpack_require__(/*! ./group */ 116);
+var _group = __webpack_require__(/*! ./group */ 133);
 
-var _createLayout = __webpack_require__(/*! ./create-layout */ 290);
+var _createLayout = __webpack_require__(/*! ./create-layout */ 330);
 
 var _createLayout2 = _interopRequireDefault(_createLayout);
 
@@ -7028,25 +7655,56 @@ module.exports = {
 };
 
 /***/ }),
-/* 143 */
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/library/fn/get-iterator.js ***!
-  \**********************************************************/
+/* 170 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/get-iterator.js ***!
+  \********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../modules/web.dom.iterable */ 86);
-__webpack_require__(/*! ../modules/es6.string.iterator */ 95);
-module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 156);
+__webpack_require__(/*! ../modules/web.dom.iterable */ 171);
+__webpack_require__(/*! ../modules/es6.string.iterator */ 190);
+module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 192);
 
 
 /***/ }),
-/* 144 */
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.array.iterator.js ***!
-  \*********************************************************************/
+/* 171 */
+/*!*****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/web.dom.iterable.js ***!
+  \*****************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./es6.array.iterator */ 172);
+var global = __webpack_require__(/*! ./_global */ 18);
+var hide = __webpack_require__(/*! ./_hide */ 30);
+var Iterators = __webpack_require__(/*! ./_iterators */ 39);
+var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ 19)('toStringTag');
+
+var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
+  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
+  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
+  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
+  'TextTrackList,TouchList').split(',');
+
+for (var i = 0; i < DOMIterables.length; i++) {
+  var NAME = DOMIterables[i];
+  var Collection = global[NAME];
+  var proto = Collection && Collection.prototype;
+  if (proto && !proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
+  Iterators[NAME] = Iterators.Array;
+}
+
+
+/***/ }),
+/* 172 */
+/*!*******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.array.iterator.js ***!
+  \*******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7054,16 +7712,16 @@ module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 156);
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 145);
-var step = __webpack_require__(/*! ./_iter-step */ 146);
-var Iterators = __webpack_require__(/*! ./_iterators */ 33);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 20);
+var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 173);
+var step = __webpack_require__(/*! ./_iter-step */ 174);
+var Iterators = __webpack_require__(/*! ./_iterators */ 39);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 63);
 
 // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(/*! ./_iter-define */ 88)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(/*! ./_iter-define */ 105)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -7090,10 +7748,10 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 145 */
-/*!**********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_add-to-unscopables.js ***!
-  \**********************************************************************/
+/* 173 */
+/*!********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_add-to-unscopables.js ***!
+  \********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7103,10 +7761,10 @@ module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 146 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iter-step.js ***!
-  \*************************************************************/
+/* 174 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iter-step.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7118,10 +7776,55 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 147 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_a-function.js ***!
-  \**************************************************************/
+/* 175 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_library.js ***!
+  \*********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = true;
+
+
+/***/ }),
+/* 176 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_ctx.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(/*! ./_a-function */ 177);
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+/* 177 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_a-function.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7134,10 +7837,62 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 148 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iter-create.js ***!
-  \***************************************************************/
+/* 178 */
+/*!****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_ie8-dom-define.js ***!
+  \****************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__(/*! ./_descriptors */ 31) && !__webpack_require__(/*! ./_fails */ 67)(function () {
+  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ 106)('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 179 */
+/*!**************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-primitive.js ***!
+  \**************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__(/*! ./_is-object */ 66);
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+/* 180 */
+/*!**********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_redefine.js ***!
+  \**********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./_hide */ 30);
+
+
+/***/ }),
+/* 181 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iter-create.js ***!
+  \*************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7145,13 +7900,13 @@ module.exports = function (it) {
 
 "use strict";
 
-var create = __webpack_require__(/*! ./_object-create */ 57);
-var descriptor = __webpack_require__(/*! ./_property-desc */ 34);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 62);
+var create = __webpack_require__(/*! ./_object-create */ 182);
+var descriptor = __webpack_require__(/*! ./_property-desc */ 107);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 112);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(/*! ./_hide */ 22)(IteratorPrototype, __webpack_require__(/*! ./_wks */ 14)('iterator'), function () { return this; });
+__webpack_require__(/*! ./_hide */ 30)(IteratorPrototype, __webpack_require__(/*! ./_wks */ 19)('iterator'), function () { return this; });
 
 module.exports = function (Constructor, NAME, next) {
   Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
@@ -7160,20 +7915,73 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 149 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-dps.js ***!
-  \**************************************************************/
+/* 182 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-create.js ***!
+  \***************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(/*! ./_object-dp */ 16);
-var anObject = __webpack_require__(/*! ./_an-object */ 23);
-var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__(/*! ./_an-object */ 41);
+var dPs = __webpack_require__(/*! ./_object-dps */ 183);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 111);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 69)('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
 
-module.exports = __webpack_require__(/*! ./_descriptors */ 17) ? Object.defineProperties : function defineProperties(O, Properties) {
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__(/*! ./_dom-create */ 106)('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__(/*! ./_html */ 188).appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+/* 183 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-dps.js ***!
+  \************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ 40);
+var anObject = __webpack_require__(/*! ./_an-object */ 41);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 108);
+
+module.exports = __webpack_require__(/*! ./_descriptors */ 31) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
   var keys = getKeys(Properties);
   var length = keys.length;
@@ -7185,10 +7993,39 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 17) ? Object.definePr
 
 
 /***/ }),
-/* 150 */
-/*!******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_array-includes.js ***!
-  \******************************************************************/
+/* 184 */
+/*!**********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-keys-internal.js ***!
+  \**********************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__(/*! ./_has */ 42);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 63);
+var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ 185)(false);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 69)('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+/* 185 */
+/*!****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_array-includes.js ***!
+  \****************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7196,9 +8033,9 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 17) ? Object.definePr
 
 // false -> Array#indexOf
 // true  -> Array#includes
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 20);
-var toLength = __webpack_require__(/*! ./_to-length */ 151);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 152);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 63);
+var toLength = __webpack_require__(/*! ./_to-length */ 186);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 187);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -7220,17 +8057,17 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 151 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-length.js ***!
-  \*************************************************************/
+/* 186 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-length.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(/*! ./_to-integer */ 58);
+var toInteger = __webpack_require__(/*! ./_to-integer */ 68);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -7238,16 +8075,16 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 152 */
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-absolute-index.js ***!
-  \*********************************************************************/
+/* 187 */
+/*!*******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-absolute-index.js ***!
+  \*******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(/*! ./_to-integer */ 58);
+var toInteger = __webpack_require__(/*! ./_to-integer */ 68);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -7257,33 +8094,33 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 153 */
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_html.js ***!
-  \********************************************************/
+/* 188 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_html.js ***!
+  \******************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(/*! ./_global */ 13).document;
+var document = __webpack_require__(/*! ./_global */ 18).document;
 module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 154 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gpo.js ***!
-  \**************************************************************/
+/* 189 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gpo.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has = __webpack_require__(/*! ./_has */ 18);
-var toObject = __webpack_require__(/*! ./_to-object */ 94);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 59)('IE_PROTO');
+var has = __webpack_require__(/*! ./_has */ 42);
+var toObject = __webpack_require__(/*! ./_to-object */ 113);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 69)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -7296,17 +8133,47 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 155 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_string-at.js ***!
-  \*************************************************************/
+/* 190 */
+/*!********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.string.iterator.js ***!
+  \********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(/*! ./_to-integer */ 58);
-var defined = __webpack_require__(/*! ./_defined */ 54);
+"use strict";
+
+var $at = __webpack_require__(/*! ./_string-at */ 191)(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+__webpack_require__(/*! ./_iter-define */ 105)(String, 'String', function (iterated) {
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var index = this._i;
+  var point;
+  if (index >= O.length) return { value: undefined, done: true };
+  point = $at(O, index);
+  this._i += point.length;
+  return { value: point, done: false };
+});
+
+
+/***/ }),
+/* 191 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_string-at.js ***!
+  \***********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ 68);
+var defined = __webpack_require__(/*! ./_defined */ 64);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -7325,18 +8192,18 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 156 */
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/core.get-iterator.js ***!
-  \********************************************************************/
+/* 192 */
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/core.get-iterator.js ***!
+  \******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(/*! ./_an-object */ 23);
-var get = __webpack_require__(/*! ./core.get-iterator-method */ 157);
-module.exports = __webpack_require__(/*! ./_core */ 12).getIterator = function (it) {
+var anObject = __webpack_require__(/*! ./_an-object */ 41);
+var get = __webpack_require__(/*! ./core.get-iterator-method */ 193);
+module.exports = __webpack_require__(/*! ./_core */ 29).getIterator = function (it) {
   var iterFn = get(it);
   if (typeof iterFn != 'function') throw TypeError(it + ' is not iterable!');
   return anObject(iterFn.call(it));
@@ -7344,19 +8211,19 @@ module.exports = __webpack_require__(/*! ./_core */ 12).getIterator = function (
 
 
 /***/ }),
-/* 157 */
-/*!***************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/core.get-iterator-method.js ***!
-  \***************************************************************************/
+/* 193 */
+/*!*************************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/core.get-iterator-method.js ***!
+  \*************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(/*! ./_classof */ 158);
-var ITERATOR = __webpack_require__(/*! ./_wks */ 14)('iterator');
-var Iterators = __webpack_require__(/*! ./_iterators */ 33);
-module.exports = __webpack_require__(/*! ./_core */ 12).getIteratorMethod = function (it) {
+var classof = __webpack_require__(/*! ./_classof */ 194);
+var ITERATOR = __webpack_require__(/*! ./_wks */ 19)('iterator');
+var Iterators = __webpack_require__(/*! ./_iterators */ 39);
+module.exports = __webpack_require__(/*! ./_core */ 29).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
     || Iterators[classof(it)];
@@ -7364,18 +8231,18 @@ module.exports = __webpack_require__(/*! ./_core */ 12).getIteratorMethod = func
 
 
 /***/ }),
-/* 158 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_classof.js ***!
-  \***********************************************************/
+/* 194 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_classof.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(/*! ./_cof */ 53);
-var TAG = __webpack_require__(/*! ./_wks */ 14)('toStringTag');
+var cof = __webpack_require__(/*! ./_cof */ 104);
+var TAG = __webpack_require__(/*! ./_wks */ 19)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
 
@@ -7399,39 +8266,51 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 159 */
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/library/fn/object/define-property.js ***!
-  \********************************************************************/
+/* 195 */
+/*!*********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/object/define-property.js ***!
+  \*********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.define-property */ 160);
-var $Object = __webpack_require__(/*! ../../modules/_core */ 12).Object;
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/define-property */ 196), __esModule: true };
+
+/***/ }),
+/* 196 */
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/object/define-property.js ***!
+  \******************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.define-property */ 197);
+var $Object = __webpack_require__(/*! ../../modules/_core */ 29).Object;
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
 
 
 /***/ }),
-/* 160 */
-/*!*****************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.object.define-property.js ***!
-  \*****************************************************************************/
+/* 197 */
+/*!***************************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.object.define-property.js ***!
+  \***************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(/*! ./_export */ 21);
+var $export = __webpack_require__(/*! ./_export */ 65);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 17), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ 16).f });
+$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 31), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ 40).f });
 
 
 /***/ }),
-/* 161 */
+/* 198 */
 /*!*************************************************!*\
   !*** ../node_modules/webpack/buildin/global.js ***!
   \*************************************************/
@@ -7464,16 +8343,16 @@ module.exports = g;
 
 
 /***/ }),
-/* 162 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_getRawTag.js ***!
-  \********************************************/
+/* 199 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getRawTag.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 28);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 32);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -7522,10 +8401,10 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 163 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_objectToString.js ***!
-  \*************************************************/
+/* 200 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_objectToString.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7556,17 +8435,17 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 164 */
-/*!**************************************!*\
-  !*** ../node_modules/lodash/fill.js ***!
-  \**************************************/
+/* 201 */
+/*!************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/fill.js ***!
+  \************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFill = __webpack_require__(/*! ./_baseFill */ 165),
-    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ 100);
+var baseFill = __webpack_require__(/*! ./_baseFill */ 202),
+    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ 117);
 
 /**
  * Fills elements of `array` with `value` from `start` up to, but not
@@ -7613,17 +8492,17 @@ module.exports = fill;
 
 
 /***/ }),
-/* 165 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_baseFill.js ***!
-  \*******************************************/
+/* 202 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseFill.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(/*! ./toInteger */ 63),
-    toLength = __webpack_require__(/*! ./toLength */ 168);
+var toInteger = __webpack_require__(/*! ./toInteger */ 70),
+    toLength = __webpack_require__(/*! ./toLength */ 205);
 
 /**
  * The base implementation of `_.fill` without an iteratee call guard.
@@ -7657,16 +8536,16 @@ module.exports = baseFill;
 
 
 /***/ }),
-/* 166 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/toFinite.js ***!
-  \******************************************/
+/* 203 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/toFinite.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toNumber = __webpack_require__(/*! ./toNumber */ 167);
+var toNumber = __webpack_require__(/*! ./toNumber */ 204);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0,
@@ -7711,17 +8590,17 @@ module.exports = toFinite;
 
 
 /***/ }),
-/* 167 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/toNumber.js ***!
-  \******************************************/
+/* 204 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/toNumber.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(/*! ./isObject */ 8),
-    isSymbol = __webpack_require__(/*! ./isSymbol */ 37);
+    isSymbol = __webpack_require__(/*! ./isSymbol */ 43);
 
 /** Used as references for various `Number` constants. */
 var NAN = 0 / 0;
@@ -7789,17 +8668,17 @@ module.exports = toNumber;
 
 
 /***/ }),
-/* 168 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/toLength.js ***!
-  \******************************************/
+/* 205 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/toLength.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(/*! ./_baseClamp */ 169),
-    toInteger = __webpack_require__(/*! ./toInteger */ 63);
+var baseClamp = __webpack_require__(/*! ./_baseClamp */ 206),
+    toInteger = __webpack_require__(/*! ./toInteger */ 70);
 
 /** Used as references for the maximum length and index of an array. */
 var MAX_ARRAY_LENGTH = 4294967295;
@@ -7839,10 +8718,10 @@ module.exports = toLength;
 
 
 /***/ }),
-/* 169 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseClamp.js ***!
-  \********************************************/
+/* 206 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseClamp.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7873,40 +8752,75 @@ module.exports = baseClamp;
 
 
 /***/ }),
-/* 170 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/fn/object/assign.js ***!
-  \***********************************************************/
+/* 207 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/extends.js ***!
+  \******************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.assign */ 171);
-module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Object.assign;
+"use strict";
+
+
+exports.__esModule = true;
+
+var _assign = __webpack_require__(/*! ../core-js/object/assign */ 118);
+
+var _assign2 = _interopRequireDefault(_assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+/***/ }),
+/* 208 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/object/assign.js ***!
+  \*********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.assign */ 209);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 29).Object.assign;
 
 
 /***/ }),
-/* 171 */
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.object.assign.js ***!
-  \********************************************************************/
+/* 209 */
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.object.assign.js ***!
+  \******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(/*! ./_export */ 21);
+var $export = __webpack_require__(/*! ./_export */ 65);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 172) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 210) });
 
 
 /***/ }),
-/* 172 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-assign.js ***!
-  \*****************************************************************/
+/* 210 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-assign.js ***!
+  \***************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -7915,15 +8829,15 @@ $export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_ob
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
-var gOPS = __webpack_require__(/*! ./_object-gops */ 66);
-var pIE = __webpack_require__(/*! ./_object-pie */ 40);
-var toObject = __webpack_require__(/*! ./_to-object */ 94);
-var IObject = __webpack_require__(/*! ./_iobject */ 87);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 108);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 211);
+var pIE = __webpack_require__(/*! ./_object-pie */ 212);
+var toObject = __webpack_require__(/*! ./_to-object */ 113);
+var IObject = __webpack_require__(/*! ./_iobject */ 103);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(/*! ./_fails */ 27)(function () {
+module.exports = !$assign || __webpack_require__(/*! ./_fails */ 67)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -7950,16 +8864,42 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 27)(function ()
 
 
 /***/ }),
-/* 173 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/isNumber.js ***!
-  \******************************************/
+/* 211 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gops.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+/* 212 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-pie.js ***!
+  \************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+/* 213 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isNumber.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -8000,17 +8940,17 @@ module.exports = isNumber;
 
 
 /***/ }),
-/* 174 */
-/*!***************************************!*\
-  !*** ../node_modules/lodash/merge.js ***!
-  \***************************************/
+/* 214 */
+/*!*************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/merge.js ***!
+  \*************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMerge = __webpack_require__(/*! ./_baseMerge */ 175),
-    createAssigner = __webpack_require__(/*! ./_createAssigner */ 214);
+var baseMerge = __webpack_require__(/*! ./_baseMerge */ 215),
+    createAssigner = __webpack_require__(/*! ./_createAssigner */ 254);
 
 /**
  * This method is like `_.assign` except that it recursively merges own and
@@ -8051,22 +8991,22 @@ module.exports = merge;
 
 
 /***/ }),
-/* 175 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseMerge.js ***!
-  \********************************************/
+/* 215 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseMerge.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(/*! ./_Stack */ 41),
-    assignMergeValue = __webpack_require__(/*! ./_assignMergeValue */ 104),
-    baseFor = __webpack_require__(/*! ./_baseFor */ 106),
-    baseMergeDeep = __webpack_require__(/*! ./_baseMergeDeep */ 203),
+var Stack = __webpack_require__(/*! ./_Stack */ 46),
+    assignMergeValue = __webpack_require__(/*! ./_assignMergeValue */ 121),
+    baseFor = __webpack_require__(/*! ./_baseFor */ 123),
+    baseMergeDeep = __webpack_require__(/*! ./_baseMergeDeep */ 243),
     isObject = __webpack_require__(/*! ./isObject */ 8),
-    keysIn = __webpack_require__(/*! ./keysIn */ 47),
-    safeGet = __webpack_require__(/*! ./_safeGet */ 113);
+    keysIn = __webpack_require__(/*! ./keysIn */ 52),
+    safeGet = __webpack_require__(/*! ./_safeGet */ 130);
 
 /**
  * The base implementation of `_.merge` without support for multiple sources.
@@ -8105,10 +9045,10 @@ module.exports = baseMerge;
 
 
 /***/ }),
-/* 176 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_listCacheClear.js ***!
-  \*************************************************/
+/* 216 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_listCacheClear.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8130,16 +9070,16 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 177 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_listCacheDelete.js ***!
-  \**************************************************/
+/* 217 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_listCacheDelete.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 43);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 48);
 
 /** Used for built-in method references. */
 var arrayProto = Array.prototype;
@@ -8177,16 +9117,16 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 178 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_listCacheGet.js ***!
-  \***********************************************/
+/* 218 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_listCacheGet.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 43);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 48);
 
 /**
  * Gets the list cache value for `key`.
@@ -8208,16 +9148,16 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 179 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_listCacheHas.js ***!
-  \***********************************************/
+/* 219 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_listCacheHas.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 43);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 48);
 
 /**
  * Checks if a list cache value for `key` exists.
@@ -8236,16 +9176,16 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 180 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_listCacheSet.js ***!
-  \***********************************************/
+/* 220 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_listCacheSet.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 43);
+var assocIndexOf = __webpack_require__(/*! ./_assocIndexOf */ 48);
 
 /**
  * Sets the list cache `key` to `value`.
@@ -8274,16 +9214,16 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 181 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_stackClear.js ***!
-  \*********************************************/
+/* 221 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_stackClear.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(/*! ./_ListCache */ 42);
+var ListCache = __webpack_require__(/*! ./_ListCache */ 47);
 
 /**
  * Removes all key-value entries from the stack.
@@ -8301,10 +9241,10 @@ module.exports = stackClear;
 
 
 /***/ }),
-/* 182 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_stackDelete.js ***!
-  \**********************************************/
+/* 222 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_stackDelete.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8331,10 +9271,10 @@ module.exports = stackDelete;
 
 
 /***/ }),
-/* 183 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_stackGet.js ***!
-  \*******************************************/
+/* 223 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_stackGet.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8357,10 +9297,10 @@ module.exports = stackGet;
 
 
 /***/ }),
-/* 184 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_stackHas.js ***!
-  \*******************************************/
+/* 224 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_stackHas.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8383,18 +9323,18 @@ module.exports = stackHas;
 
 
 /***/ }),
-/* 185 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_stackSet.js ***!
-  \*******************************************/
+/* 225 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_stackSet.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var ListCache = __webpack_require__(/*! ./_ListCache */ 42),
-    Map = __webpack_require__(/*! ./_Map */ 67),
-    MapCache = __webpack_require__(/*! ./_MapCache */ 68);
+var ListCache = __webpack_require__(/*! ./_ListCache */ 47),
+    Map = __webpack_require__(/*! ./_Map */ 73),
+    MapCache = __webpack_require__(/*! ./_MapCache */ 74);
 
 /** Used as the size to enable large array optimizations. */
 var LARGE_ARRAY_SIZE = 200;
@@ -8429,19 +9369,19 @@ module.exports = stackSet;
 
 
 /***/ }),
-/* 186 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_baseIsNative.js ***!
-  \***********************************************/
+/* 226 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsNative.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(/*! ./isFunction */ 38),
-    isMasked = __webpack_require__(/*! ./_isMasked */ 187),
+var isFunction = __webpack_require__(/*! ./isFunction */ 44),
+    isMasked = __webpack_require__(/*! ./_isMasked */ 227),
     isObject = __webpack_require__(/*! ./isObject */ 8),
-    toSource = __webpack_require__(/*! ./_toSource */ 103);
+    toSource = __webpack_require__(/*! ./_toSource */ 120);
 
 /**
  * Used to match `RegExp`
@@ -8488,16 +9428,16 @@ module.exports = baseIsNative;
 
 
 /***/ }),
-/* 187 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_isMasked.js ***!
-  \*******************************************/
+/* 227 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isMasked.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(/*! ./_coreJsData */ 188);
+var coreJsData = __webpack_require__(/*! ./_coreJsData */ 228);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -8520,16 +9460,16 @@ module.exports = isMasked;
 
 
 /***/ }),
-/* 188 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_coreJsData.js ***!
-  \*********************************************/
+/* 228 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_coreJsData.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var root = __webpack_require__(/*! ./_root */ 10);
+var root = __webpack_require__(/*! ./_root */ 9);
 
 /** Used to detect overreaching core-js shims. */
 var coreJsData = root['__core-js_shared__'];
@@ -8538,10 +9478,10 @@ module.exports = coreJsData;
 
 
 /***/ }),
-/* 189 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_getValue.js ***!
-  \*******************************************/
+/* 229 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getValue.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8563,18 +9503,18 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 190 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_mapCacheClear.js ***!
-  \************************************************/
+/* 230 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_mapCacheClear.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(/*! ./_Hash */ 191),
-    ListCache = __webpack_require__(/*! ./_ListCache */ 42),
-    Map = __webpack_require__(/*! ./_Map */ 67);
+var Hash = __webpack_require__(/*! ./_Hash */ 231),
+    ListCache = __webpack_require__(/*! ./_ListCache */ 47),
+    Map = __webpack_require__(/*! ./_Map */ 73);
 
 /**
  * Removes all key-value entries from the map.
@@ -8596,20 +9536,20 @@ module.exports = mapCacheClear;
 
 
 /***/ }),
-/* 191 */
-/*!***************************************!*\
-  !*** ../node_modules/lodash/_Hash.js ***!
-  \***************************************/
+/* 231 */
+/*!*************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Hash.js ***!
+  \*************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(/*! ./_hashClear */ 192),
-    hashDelete = __webpack_require__(/*! ./_hashDelete */ 193),
-    hashGet = __webpack_require__(/*! ./_hashGet */ 194),
-    hashHas = __webpack_require__(/*! ./_hashHas */ 195),
-    hashSet = __webpack_require__(/*! ./_hashSet */ 196);
+var hashClear = __webpack_require__(/*! ./_hashClear */ 232),
+    hashDelete = __webpack_require__(/*! ./_hashDelete */ 233),
+    hashGet = __webpack_require__(/*! ./_hashGet */ 234),
+    hashHas = __webpack_require__(/*! ./_hashHas */ 235),
+    hashSet = __webpack_require__(/*! ./_hashSet */ 236);
 
 /**
  * Creates a hash object.
@@ -8640,16 +9580,16 @@ module.exports = Hash;
 
 
 /***/ }),
-/* 192 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_hashClear.js ***!
-  \********************************************/
+/* 232 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_hashClear.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 44);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 49);
 
 /**
  * Removes all key-value entries from the hash.
@@ -8667,10 +9607,10 @@ module.exports = hashClear;
 
 
 /***/ }),
-/* 193 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_hashDelete.js ***!
-  \*********************************************/
+/* 233 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_hashDelete.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8696,16 +9636,16 @@ module.exports = hashDelete;
 
 
 /***/ }),
-/* 194 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_hashGet.js ***!
-  \******************************************/
+/* 234 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_hashGet.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 44);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 49);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -8738,16 +9678,16 @@ module.exports = hashGet;
 
 
 /***/ }),
-/* 195 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_hashHas.js ***!
-  \******************************************/
+/* 235 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_hashHas.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 44);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 49);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -8773,16 +9713,16 @@ module.exports = hashHas;
 
 
 /***/ }),
-/* 196 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_hashSet.js ***!
-  \******************************************/
+/* 236 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_hashSet.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 44);
+var nativeCreate = __webpack_require__(/*! ./_nativeCreate */ 49);
 
 /** Used to stand-in for `undefined` hash values. */
 var HASH_UNDEFINED = '__lodash_hash_undefined__';
@@ -8808,16 +9748,16 @@ module.exports = hashSet;
 
 
 /***/ }),
-/* 197 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_mapCacheDelete.js ***!
-  \*************************************************/
+/* 237 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_mapCacheDelete.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 45);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 50);
 
 /**
  * Removes `key` and its value from the map.
@@ -8838,10 +9778,10 @@ module.exports = mapCacheDelete;
 
 
 /***/ }),
-/* 198 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_isKeyable.js ***!
-  \********************************************/
+/* 238 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_isKeyable.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8865,16 +9805,16 @@ module.exports = isKeyable;
 
 
 /***/ }),
-/* 199 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_mapCacheGet.js ***!
-  \**********************************************/
+/* 239 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_mapCacheGet.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 45);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 50);
 
 /**
  * Gets the map value for `key`.
@@ -8893,16 +9833,16 @@ module.exports = mapCacheGet;
 
 
 /***/ }),
-/* 200 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_mapCacheHas.js ***!
-  \**********************************************/
+/* 240 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_mapCacheHas.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 45);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 50);
 
 /**
  * Checks if a map value for `key` exists.
@@ -8921,16 +9861,16 @@ module.exports = mapCacheHas;
 
 
 /***/ }),
-/* 201 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_mapCacheSet.js ***!
-  \**********************************************/
+/* 241 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_mapCacheSet.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getMapData = __webpack_require__(/*! ./_getMapData */ 45);
+var getMapData = __webpack_require__(/*! ./_getMapData */ 50);
 
 /**
  * Sets the map `key` to `value`.
@@ -8955,10 +9895,10 @@ module.exports = mapCacheSet;
 
 
 /***/ }),
-/* 202 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_createBaseFor.js ***!
-  \************************************************/
+/* 242 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_createBaseFor.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -8992,30 +9932,30 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 203 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_baseMergeDeep.js ***!
-  \************************************************/
+/* 243 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseMergeDeep.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignMergeValue = __webpack_require__(/*! ./_assignMergeValue */ 104),
-    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ 107),
-    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ 108),
-    copyArray = __webpack_require__(/*! ./_copyArray */ 110),
-    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ 111),
-    isArguments = __webpack_require__(/*! ./isArguments */ 74),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    isArrayLikeObject = __webpack_require__(/*! ./isArrayLikeObject */ 206),
-    isBuffer = __webpack_require__(/*! ./isBuffer */ 46),
-    isFunction = __webpack_require__(/*! ./isFunction */ 38),
+var assignMergeValue = __webpack_require__(/*! ./_assignMergeValue */ 121),
+    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ 124),
+    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ 125),
+    copyArray = __webpack_require__(/*! ./_copyArray */ 127),
+    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ 128),
+    isArguments = __webpack_require__(/*! ./isArguments */ 80),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    isArrayLikeObject = __webpack_require__(/*! ./isArrayLikeObject */ 246),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ 51),
+    isFunction = __webpack_require__(/*! ./isFunction */ 44),
     isObject = __webpack_require__(/*! ./isObject */ 8),
-    isPlainObject = __webpack_require__(/*! ./isPlainObject */ 208),
-    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 75),
-    safeGet = __webpack_require__(/*! ./_safeGet */ 113),
-    toPlainObject = __webpack_require__(/*! ./toPlainObject */ 210);
+    isPlainObject = __webpack_require__(/*! ./isPlainObject */ 248),
+    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 81),
+    safeGet = __webpack_require__(/*! ./_safeGet */ 130),
+    toPlainObject = __webpack_require__(/*! ./toPlainObject */ 250);
 
 /**
  * A specialized version of `baseMerge` for arrays and objects which performs
@@ -9098,10 +10038,10 @@ module.exports = baseMergeDeep;
 
 
 /***/ }),
-/* 204 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseCreate.js ***!
-  \*********************************************/
+/* 244 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseCreate.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9140,16 +10080,16 @@ module.exports = baseCreate;
 
 
 /***/ }),
-/* 205 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_baseIsArguments.js ***!
-  \**************************************************/
+/* 245 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsArguments.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -9170,16 +10110,16 @@ module.exports = baseIsArguments;
 
 
 /***/ }),
-/* 206 */
-/*!***************************************************!*\
-  !*** ../node_modules/lodash/isArrayLikeObject.js ***!
-  \***************************************************/
+/* 246 */
+/*!*************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isArrayLikeObject.js ***!
+  \*************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLike = __webpack_require__(/*! ./isArrayLike */ 25),
+var isArrayLike = __webpack_require__(/*! ./isArrayLike */ 22),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /**
@@ -9215,10 +10155,10 @@ module.exports = isArrayLikeObject;
 
 
 /***/ }),
-/* 207 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/stubFalse.js ***!
-  \*******************************************/
+/* 247 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/stubFalse.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9245,17 +10185,17 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 208 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/isPlainObject.js ***!
-  \***********************************************/
+/* 248 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isPlainObject.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
-    getPrototype = __webpack_require__(/*! ./_getPrototype */ 72),
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
+    getPrototype = __webpack_require__(/*! ./_getPrototype */ 78),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -9319,17 +10259,17 @@ module.exports = isPlainObject;
 
 
 /***/ }),
-/* 209 */
-/*!***************************************************!*\
-  !*** ../node_modules/lodash/_baseIsTypedArray.js ***!
-  \***************************************************/
+/* 249 */
+/*!*************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsTypedArray.js ***!
+  \*************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 15),
-    isLength = __webpack_require__(/*! ./isLength */ 64),
+var baseGetTag = __webpack_require__(/*! ./_baseGetTag */ 11),
+    isLength = __webpack_require__(/*! ./isLength */ 71),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -9391,17 +10331,17 @@ module.exports = baseIsTypedArray;
 
 
 /***/ }),
-/* 210 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/toPlainObject.js ***!
-  \***********************************************/
+/* 250 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/toPlainObject.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 30),
-    keysIn = __webpack_require__(/*! ./keysIn */ 47);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 34),
+    keysIn = __webpack_require__(/*! ./keysIn */ 52);
 
 /**
  * Converts `value` to a plain object flattening inherited enumerable string
@@ -9435,10 +10375,10 @@ module.exports = toPlainObject;
 
 
 /***/ }),
-/* 211 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseTimes.js ***!
-  \********************************************/
+/* 251 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseTimes.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9467,18 +10407,18 @@ module.exports = baseTimes;
 
 
 /***/ }),
-/* 212 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseKeysIn.js ***!
-  \*********************************************/
+/* 252 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseKeysIn.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(/*! ./isObject */ 8),
-    isPrototype = __webpack_require__(/*! ./_isPrototype */ 73),
-    nativeKeysIn = __webpack_require__(/*! ./_nativeKeysIn */ 213);
+    isPrototype = __webpack_require__(/*! ./_isPrototype */ 79),
+    nativeKeysIn = __webpack_require__(/*! ./_nativeKeysIn */ 253);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -9512,10 +10452,10 @@ module.exports = baseKeysIn;
 
 
 /***/ }),
-/* 213 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_nativeKeysIn.js ***!
-  \***********************************************/
+/* 253 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_nativeKeysIn.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9544,17 +10484,17 @@ module.exports = nativeKeysIn;
 
 
 /***/ }),
-/* 214 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_createAssigner.js ***!
-  \*************************************************/
+/* 254 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_createAssigner.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseRest = __webpack_require__(/*! ./_baseRest */ 215),
-    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ 100);
+var baseRest = __webpack_require__(/*! ./_baseRest */ 255),
+    isIterateeCall = __webpack_require__(/*! ./_isIterateeCall */ 117);
 
 /**
  * Creates a function like `_.assign`.
@@ -9593,18 +10533,18 @@ module.exports = createAssigner;
 
 
 /***/ }),
-/* 215 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_baseRest.js ***!
-  \*******************************************/
+/* 255 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseRest.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var identity = __webpack_require__(/*! ./identity */ 78),
-    overRest = __webpack_require__(/*! ./_overRest */ 216),
-    setToString = __webpack_require__(/*! ./_setToString */ 218);
+var identity = __webpack_require__(/*! ./identity */ 84),
+    overRest = __webpack_require__(/*! ./_overRest */ 256),
+    setToString = __webpack_require__(/*! ./_setToString */ 258);
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -9622,16 +10562,16 @@ module.exports = baseRest;
 
 
 /***/ }),
-/* 216 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_overRest.js ***!
-  \*******************************************/
+/* 256 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_overRest.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(/*! ./_apply */ 217);
+var apply = __webpack_require__(/*! ./_apply */ 257);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -9670,10 +10610,10 @@ module.exports = overRest;
 
 
 /***/ }),
-/* 217 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/_apply.js ***!
-  \****************************************/
+/* 257 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_apply.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9703,17 +10643,17 @@ module.exports = apply;
 
 
 /***/ }),
-/* 218 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_setToString.js ***!
-  \**********************************************/
+/* 258 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_setToString.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetToString = __webpack_require__(/*! ./_baseSetToString */ 219),
-    shortOut = __webpack_require__(/*! ./_shortOut */ 221);
+var baseSetToString = __webpack_require__(/*! ./_baseSetToString */ 259),
+    shortOut = __webpack_require__(/*! ./_shortOut */ 261);
 
 /**
  * Sets the `toString` method of `func` to return `string`.
@@ -9729,18 +10669,18 @@ module.exports = setToString;
 
 
 /***/ }),
-/* 219 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_baseSetToString.js ***!
-  \**************************************************/
+/* 259 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseSetToString.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(/*! ./constant */ 220),
-    defineProperty = __webpack_require__(/*! ./_defineProperty */ 105),
-    identity = __webpack_require__(/*! ./identity */ 78);
+var constant = __webpack_require__(/*! ./constant */ 260),
+    defineProperty = __webpack_require__(/*! ./_defineProperty */ 122),
+    identity = __webpack_require__(/*! ./identity */ 84);
 
 /**
  * The base implementation of `setToString` without support for hot loop shorting.
@@ -9763,10 +10703,10 @@ module.exports = baseSetToString;
 
 
 /***/ }),
-/* 220 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/constant.js ***!
-  \******************************************/
+/* 260 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/constant.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9801,10 +10741,10 @@ module.exports = constant;
 
 
 /***/ }),
-/* 221 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_shortOut.js ***!
-  \*******************************************/
+/* 261 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_shortOut.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -9850,16 +10790,16 @@ module.exports = shortOut;
 
 
 /***/ }),
-/* 222 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/cloneDeep.js ***!
-  \*******************************************/
+/* 262 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/cloneDeep.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClone = __webpack_require__(/*! ./_baseClone */ 223);
+var baseClone = __webpack_require__(/*! ./_baseClone */ 263);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -9891,36 +10831,36 @@ module.exports = cloneDeep;
 
 
 /***/ }),
-/* 223 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseClone.js ***!
-  \********************************************/
+/* 263 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseClone.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(/*! ./_Stack */ 41),
-    arrayEach = __webpack_require__(/*! ./_arrayEach */ 224),
-    assignValue = __webpack_require__(/*! ./_assignValue */ 114),
-    baseAssign = __webpack_require__(/*! ./_baseAssign */ 225),
-    baseAssignIn = __webpack_require__(/*! ./_baseAssignIn */ 228),
-    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ 107),
-    copyArray = __webpack_require__(/*! ./_copyArray */ 110),
-    copySymbols = __webpack_require__(/*! ./_copySymbols */ 229),
-    copySymbolsIn = __webpack_require__(/*! ./_copySymbolsIn */ 230),
-    getAllKeys = __webpack_require__(/*! ./_getAllKeys */ 121),
-    getAllKeysIn = __webpack_require__(/*! ./_getAllKeysIn */ 231),
-    getTag = __webpack_require__(/*! ./_getTag */ 48),
-    initCloneArray = __webpack_require__(/*! ./_initCloneArray */ 236),
-    initCloneByTag = __webpack_require__(/*! ./_initCloneByTag */ 237),
-    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ 111),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    isBuffer = __webpack_require__(/*! ./isBuffer */ 46),
-    isMap = __webpack_require__(/*! ./isMap */ 241),
+var Stack = __webpack_require__(/*! ./_Stack */ 46),
+    arrayEach = __webpack_require__(/*! ./_arrayEach */ 264),
+    assignValue = __webpack_require__(/*! ./_assignValue */ 131),
+    baseAssign = __webpack_require__(/*! ./_baseAssign */ 265),
+    baseAssignIn = __webpack_require__(/*! ./_baseAssignIn */ 268),
+    cloneBuffer = __webpack_require__(/*! ./_cloneBuffer */ 124),
+    copyArray = __webpack_require__(/*! ./_copyArray */ 127),
+    copySymbols = __webpack_require__(/*! ./_copySymbols */ 269),
+    copySymbolsIn = __webpack_require__(/*! ./_copySymbolsIn */ 270),
+    getAllKeys = __webpack_require__(/*! ./_getAllKeys */ 138),
+    getAllKeysIn = __webpack_require__(/*! ./_getAllKeysIn */ 271),
+    getTag = __webpack_require__(/*! ./_getTag */ 53),
+    initCloneArray = __webpack_require__(/*! ./_initCloneArray */ 276),
+    initCloneByTag = __webpack_require__(/*! ./_initCloneByTag */ 277),
+    initCloneObject = __webpack_require__(/*! ./_initCloneObject */ 128),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ 51),
+    isMap = __webpack_require__(/*! ./isMap */ 281),
     isObject = __webpack_require__(/*! ./isObject */ 8),
-    isSet = __webpack_require__(/*! ./isSet */ 243),
-    keys = __webpack_require__(/*! ./keys */ 26);
+    isSet = __webpack_require__(/*! ./isSet */ 283),
+    keys = __webpack_require__(/*! ./keys */ 23);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -10074,10 +11014,10 @@ module.exports = baseClone;
 
 
 /***/ }),
-/* 224 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_arrayEach.js ***!
-  \********************************************/
+/* 264 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_arrayEach.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -10108,17 +11048,17 @@ module.exports = arrayEach;
 
 
 /***/ }),
-/* 225 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseAssign.js ***!
-  \*********************************************/
+/* 265 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseAssign.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 30),
-    keys = __webpack_require__(/*! ./keys */ 26);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 34),
+    keys = __webpack_require__(/*! ./keys */ 23);
 
 /**
  * The base implementation of `_.assign` without support for multiple sources
@@ -10137,17 +11077,17 @@ module.exports = baseAssign;
 
 
 /***/ }),
-/* 226 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_baseKeys.js ***!
-  \*******************************************/
+/* 266 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseKeys.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isPrototype = __webpack_require__(/*! ./_isPrototype */ 73),
-    nativeKeys = __webpack_require__(/*! ./_nativeKeys */ 227);
+var isPrototype = __webpack_require__(/*! ./_isPrototype */ 79),
+    nativeKeys = __webpack_require__(/*! ./_nativeKeys */ 267);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -10179,16 +11119,16 @@ module.exports = baseKeys;
 
 
 /***/ }),
-/* 227 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_nativeKeys.js ***!
-  \*********************************************/
+/* 267 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_nativeKeys.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(/*! ./_overArg */ 112);
+var overArg = __webpack_require__(/*! ./_overArg */ 129);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -10197,17 +11137,17 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 228 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_baseAssignIn.js ***!
-  \***********************************************/
+/* 268 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseAssignIn.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 30),
-    keysIn = __webpack_require__(/*! ./keysIn */ 47);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 34),
+    keysIn = __webpack_require__(/*! ./keysIn */ 52);
 
 /**
  * The base implementation of `_.assignIn` without support for multiple sources
@@ -10226,17 +11166,17 @@ module.exports = baseAssignIn;
 
 
 /***/ }),
-/* 229 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_copySymbols.js ***!
-  \**********************************************/
+/* 269 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_copySymbols.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 30),
-    getSymbols = __webpack_require__(/*! ./_getSymbols */ 79);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 34),
+    getSymbols = __webpack_require__(/*! ./_getSymbols */ 85);
 
 /**
  * Copies own symbols of `source` to `object`.
@@ -10254,17 +11194,17 @@ module.exports = copySymbols;
 
 
 /***/ }),
-/* 230 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_copySymbolsIn.js ***!
-  \************************************************/
+/* 270 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_copySymbolsIn.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var copyObject = __webpack_require__(/*! ./_copyObject */ 30),
-    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 119);
+var copyObject = __webpack_require__(/*! ./_copyObject */ 34),
+    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 136);
 
 /**
  * Copies own and inherited symbols of `source` to `object`.
@@ -10282,18 +11222,18 @@ module.exports = copySymbolsIn;
 
 
 /***/ }),
-/* 231 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_getAllKeysIn.js ***!
-  \***********************************************/
+/* 271 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getAllKeysIn.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 122),
-    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 119),
-    keysIn = __webpack_require__(/*! ./keysIn */ 47);
+var baseGetAllKeys = __webpack_require__(/*! ./_baseGetAllKeys */ 139),
+    getSymbolsIn = __webpack_require__(/*! ./_getSymbolsIn */ 136),
+    keysIn = __webpack_require__(/*! ./keysIn */ 52);
 
 /**
  * Creates an array of own and inherited enumerable property names and
@@ -10311,17 +11251,17 @@ module.exports = getAllKeysIn;
 
 
 /***/ }),
-/* 232 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_DataView.js ***!
-  \*******************************************/
+/* 272 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_DataView.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19),
-    root = __webpack_require__(/*! ./_root */ 10);
+var getNative = __webpack_require__(/*! ./_getNative */ 13),
+    root = __webpack_require__(/*! ./_root */ 9);
 
 /* Built-in method references that are verified to be native. */
 var DataView = getNative(root, 'DataView');
@@ -10330,17 +11270,17 @@ module.exports = DataView;
 
 
 /***/ }),
-/* 233 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_Promise.js ***!
-  \******************************************/
+/* 273 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Promise.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19),
-    root = __webpack_require__(/*! ./_root */ 10);
+var getNative = __webpack_require__(/*! ./_getNative */ 13),
+    root = __webpack_require__(/*! ./_root */ 9);
 
 /* Built-in method references that are verified to be native. */
 var Promise = getNative(root, 'Promise');
@@ -10349,17 +11289,17 @@ module.exports = Promise;
 
 
 /***/ }),
-/* 234 */
-/*!**************************************!*\
-  !*** ../node_modules/lodash/_Set.js ***!
-  \**************************************/
+/* 274 */
+/*!************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_Set.js ***!
+  \************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19),
-    root = __webpack_require__(/*! ./_root */ 10);
+var getNative = __webpack_require__(/*! ./_getNative */ 13),
+    root = __webpack_require__(/*! ./_root */ 9);
 
 /* Built-in method references that are verified to be native. */
 var Set = getNative(root, 'Set');
@@ -10368,17 +11308,17 @@ module.exports = Set;
 
 
 /***/ }),
-/* 235 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_WeakMap.js ***!
-  \******************************************/
+/* 275 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_WeakMap.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getNative = __webpack_require__(/*! ./_getNative */ 19),
-    root = __webpack_require__(/*! ./_root */ 10);
+var getNative = __webpack_require__(/*! ./_getNative */ 13),
+    root = __webpack_require__(/*! ./_root */ 9);
 
 /* Built-in method references that are verified to be native. */
 var WeakMap = getNative(root, 'WeakMap');
@@ -10387,10 +11327,10 @@ module.exports = WeakMap;
 
 
 /***/ }),
-/* 236 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_initCloneArray.js ***!
-  \*************************************************/
+/* 276 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_initCloneArray.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -10425,20 +11365,20 @@ module.exports = initCloneArray;
 
 
 /***/ }),
-/* 237 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_initCloneByTag.js ***!
-  \*************************************************/
+/* 277 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_initCloneByTag.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 71),
-    cloneDataView = __webpack_require__(/*! ./_cloneDataView */ 238),
-    cloneRegExp = __webpack_require__(/*! ./_cloneRegExp */ 239),
-    cloneSymbol = __webpack_require__(/*! ./_cloneSymbol */ 240),
-    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ 108);
+var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 77),
+    cloneDataView = __webpack_require__(/*! ./_cloneDataView */ 278),
+    cloneRegExp = __webpack_require__(/*! ./_cloneRegExp */ 279),
+    cloneSymbol = __webpack_require__(/*! ./_cloneSymbol */ 280),
+    cloneTypedArray = __webpack_require__(/*! ./_cloneTypedArray */ 125);
 
 /** `Object#toString` result references. */
 var boolTag = '[object Boolean]',
@@ -10514,16 +11454,16 @@ module.exports = initCloneByTag;
 
 
 /***/ }),
-/* 238 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_cloneDataView.js ***!
-  \************************************************/
+/* 278 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cloneDataView.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 71);
+var cloneArrayBuffer = __webpack_require__(/*! ./_cloneArrayBuffer */ 77);
 
 /**
  * Creates a clone of `dataView`.
@@ -10542,10 +11482,10 @@ module.exports = cloneDataView;
 
 
 /***/ }),
-/* 239 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_cloneRegExp.js ***!
-  \**********************************************/
+/* 279 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cloneRegExp.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -10571,16 +11511,16 @@ module.exports = cloneRegExp;
 
 
 /***/ }),
-/* 240 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_cloneSymbol.js ***!
-  \**********************************************/
+/* 280 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cloneSymbol.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 28);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 32);
 
 /** Used to convert symbols to primitives and strings. */
 var symbolProto = Symbol ? Symbol.prototype : undefined,
@@ -10601,18 +11541,18 @@ module.exports = cloneSymbol;
 
 
 /***/ }),
-/* 241 */
-/*!***************************************!*\
-  !*** ../node_modules/lodash/isMap.js ***!
-  \***************************************/
+/* 281 */
+/*!*************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isMap.js ***!
+  \*************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMap = __webpack_require__(/*! ./_baseIsMap */ 242),
-    baseUnary = __webpack_require__(/*! ./_baseUnary */ 76),
-    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 77);
+var baseIsMap = __webpack_require__(/*! ./_baseIsMap */ 282),
+    baseUnary = __webpack_require__(/*! ./_baseUnary */ 82),
+    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 83);
 
 /* Node.js helper references. */
 var nodeIsMap = nodeUtil && nodeUtil.isMap;
@@ -10640,16 +11580,16 @@ module.exports = isMap;
 
 
 /***/ }),
-/* 242 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseIsMap.js ***!
-  \********************************************/
+/* 282 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsMap.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getTag = __webpack_require__(/*! ./_getTag */ 48),
+var getTag = __webpack_require__(/*! ./_getTag */ 53),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -10670,18 +11610,18 @@ module.exports = baseIsMap;
 
 
 /***/ }),
-/* 243 */
-/*!***************************************!*\
-  !*** ../node_modules/lodash/isSet.js ***!
-  \***************************************/
+/* 283 */
+/*!*************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/isSet.js ***!
+  \*************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsSet = __webpack_require__(/*! ./_baseIsSet */ 244),
-    baseUnary = __webpack_require__(/*! ./_baseUnary */ 76),
-    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 77);
+var baseIsSet = __webpack_require__(/*! ./_baseIsSet */ 284),
+    baseUnary = __webpack_require__(/*! ./_baseUnary */ 82),
+    nodeUtil = __webpack_require__(/*! ./_nodeUtil */ 83);
 
 /* Node.js helper references. */
 var nodeIsSet = nodeUtil && nodeUtil.isSet;
@@ -10709,16 +11649,16 @@ module.exports = isSet;
 
 
 /***/ }),
-/* 244 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseIsSet.js ***!
-  \********************************************/
+/* 284 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsSet.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getTag = __webpack_require__(/*! ./_getTag */ 48),
+var getTag = __webpack_require__(/*! ./_getTag */ 53),
     isObjectLike = __webpack_require__(/*! ./isObjectLike */ 7);
 
 /** `Object#toString` result references. */
@@ -10739,17 +11679,17 @@ module.exports = baseIsSet;
 
 
 /***/ }),
-/* 245 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/remove.js ***!
-  \****************************************/
+/* 285 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/remove.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIteratee = __webpack_require__(/*! ./_baseIteratee */ 124),
-    basePullAt = __webpack_require__(/*! ./_basePullAt */ 272);
+var baseIteratee = __webpack_require__(/*! ./_baseIteratee */ 141),
+    basePullAt = __webpack_require__(/*! ./_basePullAt */ 312);
 
 /**
  * Removes all elements from `array` that `predicate` returns truthy for
@@ -10804,18 +11744,18 @@ module.exports = remove;
 
 
 /***/ }),
-/* 246 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_baseMatches.js ***!
-  \**********************************************/
+/* 286 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseMatches.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(/*! ./_baseIsMatch */ 247),
-    getMatchData = __webpack_require__(/*! ./_getMatchData */ 258),
-    matchesStrictComparable = __webpack_require__(/*! ./_matchesStrictComparable */ 128);
+var baseIsMatch = __webpack_require__(/*! ./_baseIsMatch */ 287),
+    getMatchData = __webpack_require__(/*! ./_getMatchData */ 298),
+    matchesStrictComparable = __webpack_require__(/*! ./_matchesStrictComparable */ 145);
 
 /**
  * The base implementation of `_.matches` which doesn't clone `source`.
@@ -10838,17 +11778,17 @@ module.exports = baseMatches;
 
 
 /***/ }),
-/* 247 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_baseIsMatch.js ***!
-  \**********************************************/
+/* 287 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsMatch.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(/*! ./_Stack */ 41),
-    baseIsEqual = __webpack_require__(/*! ./_baseIsEqual */ 125);
+var Stack = __webpack_require__(/*! ./_Stack */ 46),
+    baseIsEqual = __webpack_require__(/*! ./_baseIsEqual */ 142);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -10912,23 +11852,23 @@ module.exports = baseIsMatch;
 
 
 /***/ }),
-/* 248 */
-/*!**************************************************!*\
-  !*** ../node_modules/lodash/_baseIsEqualDeep.js ***!
-  \**************************************************/
+/* 288 */
+/*!************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsEqualDeep.js ***!
+  \************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Stack = __webpack_require__(/*! ./_Stack */ 41),
-    equalArrays = __webpack_require__(/*! ./_equalArrays */ 126),
-    equalByTag = __webpack_require__(/*! ./_equalByTag */ 254),
-    equalObjects = __webpack_require__(/*! ./_equalObjects */ 257),
-    getTag = __webpack_require__(/*! ./_getTag */ 48),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    isBuffer = __webpack_require__(/*! ./isBuffer */ 46),
-    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 75);
+var Stack = __webpack_require__(/*! ./_Stack */ 46),
+    equalArrays = __webpack_require__(/*! ./_equalArrays */ 143),
+    equalByTag = __webpack_require__(/*! ./_equalByTag */ 294),
+    equalObjects = __webpack_require__(/*! ./_equalObjects */ 297),
+    getTag = __webpack_require__(/*! ./_getTag */ 53),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    isBuffer = __webpack_require__(/*! ./isBuffer */ 51),
+    isTypedArray = __webpack_require__(/*! ./isTypedArray */ 81);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -11007,18 +11947,18 @@ module.exports = baseIsEqualDeep;
 
 
 /***/ }),
-/* 249 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_SetCache.js ***!
-  \*******************************************/
+/* 289 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_SetCache.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(/*! ./_MapCache */ 68),
-    setCacheAdd = __webpack_require__(/*! ./_setCacheAdd */ 250),
-    setCacheHas = __webpack_require__(/*! ./_setCacheHas */ 251);
+var MapCache = __webpack_require__(/*! ./_MapCache */ 74),
+    setCacheAdd = __webpack_require__(/*! ./_setCacheAdd */ 290),
+    setCacheHas = __webpack_require__(/*! ./_setCacheHas */ 291);
 
 /**
  *
@@ -11046,10 +11986,10 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 250 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_setCacheAdd.js ***!
-  \**********************************************/
+/* 290 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_setCacheAdd.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11077,10 +12017,10 @@ module.exports = setCacheAdd;
 
 
 /***/ }),
-/* 251 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_setCacheHas.js ***!
-  \**********************************************/
+/* 291 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_setCacheHas.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11103,10 +12043,10 @@ module.exports = setCacheHas;
 
 
 /***/ }),
-/* 252 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_arraySome.js ***!
-  \********************************************/
+/* 292 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_arraySome.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11138,10 +12078,10 @@ module.exports = arraySome;
 
 
 /***/ }),
-/* 253 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_cacheHas.js ***!
-  \*******************************************/
+/* 293 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_cacheHas.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11163,21 +12103,21 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 254 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_equalByTag.js ***!
-  \*********************************************/
+/* 294 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_equalByTag.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 28),
-    Uint8Array = __webpack_require__(/*! ./_Uint8Array */ 109),
-    eq = __webpack_require__(/*! ./eq */ 29),
-    equalArrays = __webpack_require__(/*! ./_equalArrays */ 126),
-    mapToArray = __webpack_require__(/*! ./_mapToArray */ 255),
-    setToArray = __webpack_require__(/*! ./_setToArray */ 256);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 32),
+    Uint8Array = __webpack_require__(/*! ./_Uint8Array */ 126),
+    eq = __webpack_require__(/*! ./eq */ 33),
+    equalArrays = __webpack_require__(/*! ./_equalArrays */ 143),
+    mapToArray = __webpack_require__(/*! ./_mapToArray */ 295),
+    setToArray = __webpack_require__(/*! ./_setToArray */ 296);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -11287,10 +12227,10 @@ module.exports = equalByTag;
 
 
 /***/ }),
-/* 255 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_mapToArray.js ***!
-  \*********************************************/
+/* 295 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_mapToArray.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11317,10 +12257,10 @@ module.exports = mapToArray;
 
 
 /***/ }),
-/* 256 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_setToArray.js ***!
-  \*********************************************/
+/* 296 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_setToArray.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11347,16 +12287,16 @@ module.exports = setToArray;
 
 
 /***/ }),
-/* 257 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_equalObjects.js ***!
-  \***********************************************/
+/* 297 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_equalObjects.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(/*! ./_getAllKeys */ 121);
+var getAllKeys = __webpack_require__(/*! ./_getAllKeys */ 138);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -11448,17 +12388,17 @@ module.exports = equalObjects;
 
 
 /***/ }),
-/* 258 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_getMatchData.js ***!
-  \***********************************************/
+/* 298 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_getMatchData.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isStrictComparable = __webpack_require__(/*! ./_isStrictComparable */ 127),
-    keys = __webpack_require__(/*! ./keys */ 26);
+var isStrictComparable = __webpack_require__(/*! ./_isStrictComparable */ 144),
+    keys = __webpack_require__(/*! ./keys */ 23);
 
 /**
  * Gets the property names, values, and compare flags of `object`.
@@ -11484,22 +12424,22 @@ module.exports = getMatchData;
 
 
 /***/ }),
-/* 259 */
-/*!******************************************************!*\
-  !*** ../node_modules/lodash/_baseMatchesProperty.js ***!
-  \******************************************************/
+/* 299 */
+/*!****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseMatchesProperty.js ***!
+  \****************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqual = __webpack_require__(/*! ./_baseIsEqual */ 125),
-    get = __webpack_require__(/*! ./get */ 260),
-    hasIn = __webpack_require__(/*! ./hasIn */ 266),
-    isKey = __webpack_require__(/*! ./_isKey */ 82),
-    isStrictComparable = __webpack_require__(/*! ./_isStrictComparable */ 127),
-    matchesStrictComparable = __webpack_require__(/*! ./_matchesStrictComparable */ 128),
-    toKey = __webpack_require__(/*! ./_toKey */ 31);
+var baseIsEqual = __webpack_require__(/*! ./_baseIsEqual */ 142),
+    get = __webpack_require__(/*! ./get */ 300),
+    hasIn = __webpack_require__(/*! ./hasIn */ 306),
+    isKey = __webpack_require__(/*! ./_isKey */ 88),
+    isStrictComparable = __webpack_require__(/*! ./_isStrictComparable */ 144),
+    matchesStrictComparable = __webpack_require__(/*! ./_matchesStrictComparable */ 145),
+    toKey = __webpack_require__(/*! ./_toKey */ 35);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -11529,16 +12469,16 @@ module.exports = baseMatchesProperty;
 
 
 /***/ }),
-/* 260 */
-/*!*************************************!*\
-  !*** ../node_modules/lodash/get.js ***!
-  \*************************************/
+/* 300 */
+/*!***********************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/get.js ***!
+  \***********************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(/*! ./_baseGet */ 80);
+var baseGet = __webpack_require__(/*! ./_baseGet */ 86);
 
 /**
  * Gets the value at `path` of `object`. If the resolved value is
@@ -11574,16 +12514,16 @@ module.exports = get;
 
 
 /***/ }),
-/* 261 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_stringToPath.js ***!
-  \***********************************************/
+/* 301 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_stringToPath.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(/*! ./_memoizeCapped */ 262);
+var memoizeCapped = __webpack_require__(/*! ./_memoizeCapped */ 302);
 
 /** Used to match property names within property paths. */
 var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
@@ -11613,16 +12553,16 @@ module.exports = stringToPath;
 
 
 /***/ }),
-/* 262 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_memoizeCapped.js ***!
-  \************************************************/
+/* 302 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_memoizeCapped.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(/*! ./memoize */ 263);
+var memoize = __webpack_require__(/*! ./memoize */ 303);
 
 /** Used as the maximum memoize cache size. */
 var MAX_MEMOIZE_SIZE = 500;
@@ -11651,16 +12591,16 @@ module.exports = memoizeCapped;
 
 
 /***/ }),
-/* 263 */
-/*!*****************************************!*\
-  !*** ../node_modules/lodash/memoize.js ***!
-  \*****************************************/
+/* 303 */
+/*!***************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/memoize.js ***!
+  \***************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var MapCache = __webpack_require__(/*! ./_MapCache */ 68);
+var MapCache = __webpack_require__(/*! ./_MapCache */ 74);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -11736,16 +12676,16 @@ module.exports = memoize;
 
 
 /***/ }),
-/* 264 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/toString.js ***!
-  \******************************************/
+/* 304 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/toString.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseToString = __webpack_require__(/*! ./_baseToString */ 265);
+var baseToString = __webpack_require__(/*! ./_baseToString */ 305);
 
 /**
  * Converts `value` to a string. An empty string is returned for `null`
@@ -11776,19 +12716,19 @@ module.exports = toString;
 
 
 /***/ }),
-/* 265 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_baseToString.js ***!
-  \***********************************************/
+/* 305 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseToString.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Symbol = __webpack_require__(/*! ./_Symbol */ 28),
-    arrayMap = __webpack_require__(/*! ./_arrayMap */ 129),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    isSymbol = __webpack_require__(/*! ./isSymbol */ 37);
+var Symbol = __webpack_require__(/*! ./_Symbol */ 32),
+    arrayMap = __webpack_require__(/*! ./_arrayMap */ 146),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    isSymbol = __webpack_require__(/*! ./isSymbol */ 43);
 
 /** Used as references for various `Number` constants. */
 var INFINITY = 1 / 0;
@@ -11825,17 +12765,17 @@ module.exports = baseToString;
 
 
 /***/ }),
-/* 266 */
-/*!***************************************!*\
-  !*** ../node_modules/lodash/hasIn.js ***!
-  \***************************************/
+/* 306 */
+/*!*************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/hasIn.js ***!
+  \*************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(/*! ./_baseHasIn */ 267),
-    hasPath = __webpack_require__(/*! ./_hasPath */ 268);
+var baseHasIn = __webpack_require__(/*! ./_baseHasIn */ 307),
+    hasPath = __webpack_require__(/*! ./_hasPath */ 308);
 
 /**
  * Checks if `path` is a direct or inherited property of `object`.
@@ -11871,10 +12811,10 @@ module.exports = hasIn;
 
 
 /***/ }),
-/* 267 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseHasIn.js ***!
-  \********************************************/
+/* 307 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseHasIn.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -11896,21 +12836,21 @@ module.exports = baseHasIn;
 
 
 /***/ }),
-/* 268 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/_hasPath.js ***!
-  \******************************************/
+/* 308 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_hasPath.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(/*! ./_castPath */ 81),
-    isArguments = __webpack_require__(/*! ./isArguments */ 74),
-    isArray = __webpack_require__(/*! ./isArray */ 6),
-    isIndex = __webpack_require__(/*! ./_isIndex */ 39),
-    isLength = __webpack_require__(/*! ./isLength */ 64),
-    toKey = __webpack_require__(/*! ./_toKey */ 31);
+var castPath = __webpack_require__(/*! ./_castPath */ 87),
+    isArguments = __webpack_require__(/*! ./isArguments */ 80),
+    isArray = __webpack_require__(/*! ./isArray */ 5),
+    isIndex = __webpack_require__(/*! ./_isIndex */ 45),
+    isLength = __webpack_require__(/*! ./isLength */ 71),
+    toKey = __webpack_require__(/*! ./_toKey */ 35);
 
 /**
  * Checks if `path` exists on `object`.
@@ -11947,19 +12887,19 @@ module.exports = hasPath;
 
 
 /***/ }),
-/* 269 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/property.js ***!
-  \******************************************/
+/* 309 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/property.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseProperty = __webpack_require__(/*! ./_baseProperty */ 270),
-    basePropertyDeep = __webpack_require__(/*! ./_basePropertyDeep */ 271),
-    isKey = __webpack_require__(/*! ./_isKey */ 82),
-    toKey = __webpack_require__(/*! ./_toKey */ 31);
+var baseProperty = __webpack_require__(/*! ./_baseProperty */ 310),
+    basePropertyDeep = __webpack_require__(/*! ./_basePropertyDeep */ 311),
+    isKey = __webpack_require__(/*! ./_isKey */ 88),
+    toKey = __webpack_require__(/*! ./_toKey */ 35);
 
 /**
  * Creates a function that returns the value at `path` of a given object.
@@ -11991,10 +12931,10 @@ module.exports = property;
 
 
 /***/ }),
-/* 270 */
-/*!***********************************************!*\
-  !*** ../node_modules/lodash/_baseProperty.js ***!
-  \***********************************************/
+/* 310 */
+/*!*********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseProperty.js ***!
+  \*********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -12017,16 +12957,16 @@ module.exports = baseProperty;
 
 
 /***/ }),
-/* 271 */
-/*!***************************************************!*\
-  !*** ../node_modules/lodash/_basePropertyDeep.js ***!
-  \***************************************************/
+/* 311 */
+/*!*************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_basePropertyDeep.js ***!
+  \*************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(/*! ./_baseGet */ 80);
+var baseGet = __webpack_require__(/*! ./_baseGet */ 86);
 
 /**
  * A specialized version of `baseProperty` which supports deep paths.
@@ -12045,17 +12985,17 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 272 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_basePullAt.js ***!
-  \*********************************************/
+/* 312 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_basePullAt.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseUnset = __webpack_require__(/*! ./_baseUnset */ 273),
-    isIndex = __webpack_require__(/*! ./_isIndex */ 39);
+var baseUnset = __webpack_require__(/*! ./_baseUnset */ 313),
+    isIndex = __webpack_require__(/*! ./_isIndex */ 45);
 
 /** Used for built-in method references. */
 var arrayProto = Array.prototype;
@@ -12094,19 +13034,19 @@ module.exports = basePullAt;
 
 
 /***/ }),
-/* 273 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseUnset.js ***!
-  \********************************************/
+/* 313 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseUnset.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var castPath = __webpack_require__(/*! ./_castPath */ 81),
-    last = __webpack_require__(/*! ./last */ 123),
-    parent = __webpack_require__(/*! ./_parent */ 274),
-    toKey = __webpack_require__(/*! ./_toKey */ 31);
+var castPath = __webpack_require__(/*! ./_castPath */ 87),
+    last = __webpack_require__(/*! ./last */ 140),
+    parent = __webpack_require__(/*! ./_parent */ 314),
+    toKey = __webpack_require__(/*! ./_toKey */ 35);
 
 /**
  * The base implementation of `_.unset`.
@@ -12126,17 +13066,17 @@ module.exports = baseUnset;
 
 
 /***/ }),
-/* 274 */
-/*!*****************************************!*\
-  !*** ../node_modules/lodash/_parent.js ***!
-  \*****************************************/
+/* 314 */
+/*!***************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_parent.js ***!
+  \***************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGet = __webpack_require__(/*! ./_baseGet */ 80),
-    baseSlice = __webpack_require__(/*! ./_baseSlice */ 275);
+var baseGet = __webpack_require__(/*! ./_baseGet */ 86),
+    baseSlice = __webpack_require__(/*! ./_baseSlice */ 315);
 
 /**
  * Gets the parent value at `path` of `object`.
@@ -12154,10 +13094,10 @@ module.exports = parent;
 
 
 /***/ }),
-/* 275 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseSlice.js ***!
-  \********************************************/
+/* 315 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseSlice.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -12197,20 +13137,20 @@ module.exports = baseSlice;
 
 
 /***/ }),
-/* 276 */
-/*!******************************************!*\
-  !*** ../node_modules/lodash/includes.js ***!
-  \******************************************/
+/* 316 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/includes.js ***!
+  \****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIndexOf = __webpack_require__(/*! ./_baseIndexOf */ 277),
-    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 25),
-    isString = __webpack_require__(/*! ./isString */ 98),
-    toInteger = __webpack_require__(/*! ./toInteger */ 63),
-    values = __webpack_require__(/*! ./values */ 281);
+var baseIndexOf = __webpack_require__(/*! ./_baseIndexOf */ 317),
+    isArrayLike = __webpack_require__(/*! ./isArrayLike */ 22),
+    isString = __webpack_require__(/*! ./isString */ 115),
+    toInteger = __webpack_require__(/*! ./toInteger */ 70),
+    values = __webpack_require__(/*! ./values */ 321);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -12262,18 +13202,18 @@ module.exports = includes;
 
 
 /***/ }),
-/* 277 */
-/*!**********************************************!*\
-  !*** ../node_modules/lodash/_baseIndexOf.js ***!
-  \**********************************************/
+/* 317 */
+/*!********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIndexOf.js ***!
+  \********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFindIndex = __webpack_require__(/*! ./_baseFindIndex */ 278),
-    baseIsNaN = __webpack_require__(/*! ./_baseIsNaN */ 279),
-    strictIndexOf = __webpack_require__(/*! ./_strictIndexOf */ 280);
+var baseFindIndex = __webpack_require__(/*! ./_baseFindIndex */ 318),
+    baseIsNaN = __webpack_require__(/*! ./_baseIsNaN */ 319),
+    strictIndexOf = __webpack_require__(/*! ./_strictIndexOf */ 320);
 
 /**
  * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
@@ -12294,10 +13234,10 @@ module.exports = baseIndexOf;
 
 
 /***/ }),
-/* 278 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_baseFindIndex.js ***!
-  \************************************************/
+/* 318 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseFindIndex.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -12330,10 +13270,10 @@ module.exports = baseFindIndex;
 
 
 /***/ }),
-/* 279 */
-/*!********************************************!*\
-  !*** ../node_modules/lodash/_baseIsNaN.js ***!
-  \********************************************/
+/* 319 */
+/*!******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseIsNaN.js ***!
+  \******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -12354,10 +13294,10 @@ module.exports = baseIsNaN;
 
 
 /***/ }),
-/* 280 */
-/*!************************************************!*\
-  !*** ../node_modules/lodash/_strictIndexOf.js ***!
-  \************************************************/
+/* 320 */
+/*!**********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_strictIndexOf.js ***!
+  \**********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -12389,17 +13329,17 @@ module.exports = strictIndexOf;
 
 
 /***/ }),
-/* 281 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/values.js ***!
-  \****************************************/
+/* 321 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/values.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseValues = __webpack_require__(/*! ./_baseValues */ 282),
-    keys = __webpack_require__(/*! ./keys */ 26);
+var baseValues = __webpack_require__(/*! ./_baseValues */ 322),
+    keys = __webpack_require__(/*! ./keys */ 23);
 
 /**
  * Creates an array of the own enumerable string keyed property values of `object`.
@@ -12435,16 +13375,16 @@ module.exports = values;
 
 
 /***/ }),
-/* 282 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseValues.js ***!
-  \*********************************************/
+/* 322 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseValues.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayMap = __webpack_require__(/*! ./_arrayMap */ 129);
+var arrayMap = __webpack_require__(/*! ./_arrayMap */ 146);
 
 /**
  * The base implementation of `_.values` and `_.valuesIn` which creates an
@@ -12466,19 +13406,19 @@ module.exports = baseValues;
 
 
 /***/ }),
-/* 283 */
-/*!****************************************!*\
-  !*** ../node_modules/lodash/filter.js ***!
-  \****************************************/
+/* 323 */
+/*!**************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/filter.js ***!
+  \**************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ 117),
-    baseFilter = __webpack_require__(/*! ./_baseFilter */ 284),
-    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ 124),
-    isArray = __webpack_require__(/*! ./isArray */ 6);
+var arrayFilter = __webpack_require__(/*! ./_arrayFilter */ 134),
+    baseFilter = __webpack_require__(/*! ./_baseFilter */ 324),
+    baseIteratee = __webpack_require__(/*! ./_baseIteratee */ 141),
+    isArray = __webpack_require__(/*! ./isArray */ 5);
 
 /**
  * Iterates over elements of `collection`, returning an array of all elements
@@ -12526,16 +13466,16 @@ module.exports = filter;
 
 
 /***/ }),
-/* 284 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseFilter.js ***!
-  \*********************************************/
+/* 324 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseFilter.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseEach = __webpack_require__(/*! ./_baseEach */ 285);
+var baseEach = __webpack_require__(/*! ./_baseEach */ 325);
 
 /**
  * The base implementation of `_.filter` without support for iteratee shorthands.
@@ -12559,17 +13499,17 @@ module.exports = baseFilter;
 
 
 /***/ }),
-/* 285 */
-/*!*******************************************!*\
-  !*** ../node_modules/lodash/_baseEach.js ***!
-  \*******************************************/
+/* 325 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseEach.js ***!
+  \*****************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwn = __webpack_require__(/*! ./_baseForOwn */ 286),
-    createBaseEach = __webpack_require__(/*! ./_createBaseEach */ 287);
+var baseForOwn = __webpack_require__(/*! ./_baseForOwn */ 326),
+    createBaseEach = __webpack_require__(/*! ./_createBaseEach */ 327);
 
 /**
  * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -12585,17 +13525,17 @@ module.exports = baseEach;
 
 
 /***/ }),
-/* 286 */
-/*!*********************************************!*\
-  !*** ../node_modules/lodash/_baseForOwn.js ***!
-  \*********************************************/
+/* 326 */
+/*!*******************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_baseForOwn.js ***!
+  \*******************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(/*! ./_baseFor */ 106),
-    keys = __webpack_require__(/*! ./keys */ 26);
+var baseFor = __webpack_require__(/*! ./_baseFor */ 123),
+    keys = __webpack_require__(/*! ./keys */ 23);
 
 /**
  * The base implementation of `_.forOwn` without support for iteratee shorthands.
@@ -12613,16 +13553,16 @@ module.exports = baseForOwn;
 
 
 /***/ }),
-/* 287 */
-/*!*************************************************!*\
-  !*** ../node_modules/lodash/_createBaseEach.js ***!
-  \*************************************************/
+/* 327 */
+/*!***********************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/lodash/_createBaseEach.js ***!
+  \***********************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isArrayLike = __webpack_require__(/*! ./isArrayLike */ 25);
+var isArrayLike = __webpack_require__(/*! ./isArrayLike */ 22);
 
 /**
  * Creates a `baseEach` or `baseEachRight` function.
@@ -12657,7 +13597,7 @@ module.exports = createBaseEach;
 
 
 /***/ }),
-/* 288 */
+/* 328 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/strip.js ***!
   \**************************************************************/
@@ -12674,15 +13614,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Strip = undefined;
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 52);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 62);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 20);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 9);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 21);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -12841,7 +13781,7 @@ var Strip = exports.Strip = function () {
 }();
 
 /***/ }),
-/* 289 */
+/* 329 */
 /*!***************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/column.js ***!
   \***************************************************************/
@@ -12858,11 +13798,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Column = undefined;
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 20);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 9);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 21);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -12906,7 +13846,7 @@ var Column = exports.Column = function () {
 }();
 
 /***/ }),
-/* 290 */
+/* 330 */
 /*!**********************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/create-layout.js ***!
   \**********************************************************************/
@@ -12923,7 +13863,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = createLayout;
 
-var _layouter = __webpack_require__(/*! ./layouter */ 85);
+var _layouter = __webpack_require__(/*! ./layouter */ 102);
 
 var _layouter2 = _interopRequireDefault(_layouter);
 
@@ -12938,7 +13878,7 @@ function createLayout() {
 }
 
 /***/ }),
-/* 291 */
+/* 331 */
 /*!*************************************!*\
   !*** ./components/SideBar/index.js ***!
   \*************************************/
@@ -12954,7 +13894,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _SideBar = __webpack_require__(/*! ./SideBar */ 292);
+var _SideBar = __webpack_require__(/*! ./SideBar */ 332);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -12966,7 +13906,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 292 */
+/* 332 */
 /*!***************************************!*\
   !*** ./components/SideBar/SideBar.js ***!
   \***************************************/
@@ -12988,9 +13928,9 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(/*! ./SideBar.scss */ 293);
+__webpack_require__(/*! ./SideBar.scss */ 333);
 
-var _rcSlider = __webpack_require__(/*! rc-slider */ 294);
+var _rcSlider = __webpack_require__(/*! rc-slider */ 334);
 
 var _rcSlider2 = _interopRequireDefault(_rcSlider);
 
@@ -13057,7 +13997,7 @@ var SideBar = function (_React$Component) {
       switch (field) {
         case 'groupTypes':
           var typesArr = styles[field].split(',');
-          var typePos = typesArr.indexOf(value);
+          var typePos = typesArr.indexOf(String(value));
           if (typePos >= 0) {
             typesArr.splice(typePos, 1);
           } else {
@@ -13103,7 +14043,7 @@ var SideBar = function (_React$Component) {
           { className: 'playground-settings' },
           _react2.default.createElement(
             'a',
-            { className: 'page-header', href: 'playground.html?' },
+            { className: 'page-header', href: '/' },
             _react2.default.createElement(
               'h1',
               null,
@@ -13202,6 +14142,19 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'The fixed number of groups per row in a Rows gallery'
+                },
+                'Groups per Row'
+              ),
+              this.createSlider('groupsPerStrip', styles.groupsPerStrip, 10)
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
                   title: 'Scroll gallery vertically or horizontally'
                 },
                 'Scroll Direction'
@@ -13237,7 +14190,19 @@ var SideBar = function (_React$Component) {
                 'Collage Settings'
               )
             ),
-            _react2.default.createElement('input', { name: 'groupSize', type: 'hidden', className: 'form-control', value: styles.groupSize }),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'Maximal allowed group size'
+                },
+                'Max Group Size'
+              ),
+              this.createSlider('groupSize', styles.groupSize, 3)
+            ),
             _react2.default.createElement(
               'div',
               { className: 'form-group' },
@@ -13536,19 +14501,6 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'Maximal allowed group size'
-                },
-                'Max Group Size'
-              ),
-              this.createSlider('groupSize', styles.groupSize, 3)
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
                   title: 'Choose the best group layouts according to the images proportions'
                 },
                 'Collage Grouping'
@@ -13574,6 +14526,19 @@ var SideBar = function (_React$Component) {
                   'Choose best group types for items'
                 )
               )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'A fixed order of forced group types (repeats circularly)'
+                },
+                'Rotating Group Types (advanced)'
+              ),
+              _react2.default.createElement('input', { name: 'rotatingGroupTypes', type: 'text', className: 'form-control', value: styles.rotatingGroupTypes })
             ),
             _react2.default.createElement(
               'div',
@@ -13622,24 +14587,10 @@ var SideBar = function (_React$Component) {
                 _react2.default.createElement(
                   'label',
                   null,
-                  _react2.default.createElement('input', { type: 'radio', name: 'cubeImages', value: true,
-                    checked: !styles.cubeImages }),
+                  _react2.default.createElement('input', { type: 'radio', name: 'cubeImages', value: true, checked: styles.cubeImages }),
                   'Crop'
                 )
               )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'The width/height ratio of the crop (e.g. 1, 0.25, 16/9)'
-                },
-                'Cropped Ratio'
-              ),
-              _react2.default.createElement('input', { name: 'cubeRatio', type: 'text', className: 'form-control', value: styles.cubeRatio })
             ),
             _react2.default.createElement(
               'div',
@@ -13681,32 +14632,24 @@ var SideBar = function (_React$Component) {
                 'label',
                 {
                   'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'In crop galleries the image can fill the entire space or fit into it'
+                  title: 'The width/height ratio of the crop (e.g. 1, 0.25, 16/9)'
                 },
-                'Crop Fill Method'
+                'Single Crop Ratio'
               ),
-              _react2.default.createElement('br', null),
+              _react2.default.createElement('input', { name: 'cubeRatio', type: 'text', className: 'form-control', value: styles.cubeRatio })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
               _react2.default.createElement(
-                'div',
-                { className: 'radio-inline' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  _react2.default.createElement('input', { type: 'radio', name: 'cubeType', value: 'fill', checked: styles.cubeType == 'fill' }),
-                  'Fill'
-                )
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'A fixed order of crop ratios (repeats circularly)'
+                },
+                'Rotating Crop Ratios (advanced)'
               ),
-              _react2.default.createElement(
-                'div',
-                { className: 'radio-inline' },
-                _react2.default.createElement(
-                  'label',
-                  null,
-                  _react2.default.createElement('input', { type: 'radio', name: 'cubeType', value: 'fit',
-                    checked: styles.cubeType == 'fit' }),
-                  'Fit'
-                )
-              )
+              _react2.default.createElement('input', { name: 'rotatingCropRatios', type: 'text', className: 'form-control', value: styles.rotatingCropRatios })
             ),
             _react2.default.createElement(
               'h3',
@@ -13746,41 +14689,6 @@ var SideBar = function (_React$Component) {
                 'Floating Images'
               ),
               this.createSlider('floatingImages', styles.floatingImages * 100)
-            ),
-            _react2.default.createElement(
-              'h3',
-              null,
-              _react2.default.createElement(
-                'small',
-                null,
-                'Advanced Settings'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'A fixed order of forced group types (repeats circularly)'
-                },
-                'Rotating Group Types'
-              ),
-              _react2.default.createElement('input', { name: 'rotatingGroupTypes', type: 'text', className: 'form-control', value: styles.rotatingGroupTypes })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'form-group' },
-              _react2.default.createElement(
-                'label',
-                {
-                  'data-toggle': 'tooltip', 'data-placement': 'right',
-                  title: 'A fixed order of crop ratios (repeats circularly)'
-                },
-                'Rotating Crop Ratios'
-              ),
-              _react2.default.createElement('input', { name: 'rotatingCropRatios', type: 'text', className: 'form-control', value: styles.rotatingCropRatios })
             )
           )
         )
@@ -13794,7 +14702,7 @@ var SideBar = function (_React$Component) {
 exports.default = SideBar;
 
 /***/ }),
-/* 293 */
+/* 333 */
 /*!*****************************************!*\
   !*** ./components/SideBar/SideBar.scss ***!
   \*****************************************/
@@ -13807,7 +14715,7 @@ exports.default = SideBar;
 module.exports = {"rcSliderTooltipZoomDownIn":"components-SideBar-SideBar__rcSliderTooltipZoomDownIn__1sMWw","rcSliderTooltipZoomDownOut":"components-SideBar-SideBar__rcSliderTooltipZoomDownOut__2RUVQ"};
 
 /***/ }),
-/* 294 */
+/* 334 */
 /*!**********************************************************!*\
   !*** ../node_modules/rc-slider/es/index.js + 42 modules ***!
   \**********************************************************/
@@ -13820,11 +14728,11 @@ module.exports = {"rcSliderTooltipZoomDownIn":"components-SideBar-SideBar__rcSli
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/extends.js
-var helpers_extends = __webpack_require__(5);
+var helpers_extends = __webpack_require__(6);
 var extends_default = /*#__PURE__*/__webpack_require__.n(helpers_extends);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(1);
+var classCallCheck = __webpack_require__(2);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/possibleConstructorReturn.js
@@ -13840,11 +14748,11 @@ var external__React_ = __webpack_require__(0);
 var external__React__default = /*#__PURE__*/__webpack_require__.n(external__React_);
 
 // EXTERNAL MODULE: ../node_modules/prop-types/index.js
-var prop_types = __webpack_require__(2);
+var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ../node_modules/warning/browser.js
-var browser = __webpack_require__(50);
+var browser = __webpack_require__(59);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // CONCATENATED MODULE: ../node_modules/rc-slider/es/common/Track.js
@@ -13875,15 +14783,15 @@ var Track_Track = function Track(props) {
 
 /* harmony default export */ var common_Track = (Track_Track);
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/objectWithoutProperties.js
-var objectWithoutProperties = __webpack_require__(32);
+var objectWithoutProperties = __webpack_require__(38);
 var objectWithoutProperties_default = /*#__PURE__*/__webpack_require__.n(objectWithoutProperties);
 
 // EXTERNAL MODULE: ../node_modules/add-dom-event-listener/lib/index.js
-var lib = __webpack_require__(316);
+var lib = __webpack_require__(374);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 // EXTERNAL MODULE: external "ReactDOM"
-var external__ReactDOM_ = __webpack_require__(11);
+var external__ReactDOM_ = __webpack_require__(10);
 var external__ReactDOM__default = /*#__PURE__*/__webpack_require__.n(external__ReactDOM_);
 
 // CONCATENATED MODULE: ../node_modules/rc-util/es/Dom/addEventListener.js
@@ -13898,7 +14806,7 @@ function addEventListenerWrap(target, eventType, cb) {
   return lib_default()(target, eventType, callback);
 }
 // EXTERNAL MODULE: ../node_modules/classnames/index.js
-var classnames = __webpack_require__(51);
+var classnames = __webpack_require__(60);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // CONCATENATED MODULE: ../node_modules/rc-slider/es/common/Steps.js
@@ -15295,7 +16203,7 @@ Slider_Slider.propTypes = {
 
 /* harmony default export */ var es_Slider = (createSlider(Slider_Slider));
 // EXTERNAL MODULE: ../node_modules/shallowequal/index.js
-var shallowequal = __webpack_require__(137);
+var shallowequal = __webpack_require__(163);
 var shallowequal_default = /*#__PURE__*/__webpack_require__.n(shallowequal);
 
 // CONCATENATED MODULE: ../node_modules/rc-slider/es/Range.js
@@ -17032,11 +17940,11 @@ Align_Align.defaultProps = {
 
 /* harmony default export */ var rc_align_es = (es_Align);
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/defineProperty.js
-var defineProperty = __webpack_require__(319);
+var defineProperty = __webpack_require__(377);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/createClass.js
-var createClass = __webpack_require__(9);
+var createClass = __webpack_require__(61);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // CONCATENATED MODULE: ../node_modules/rc-animate/es/ChildrenUtils.js
@@ -17142,7 +18050,7 @@ function mergeChildren(prev, next) {
   return ret;
 }
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/typeof.js
-var helpers_typeof = __webpack_require__(49);
+var helpers_typeof = __webpack_require__(58);
 var typeof_default = /*#__PURE__*/__webpack_require__.n(helpers_typeof);
 
 // CONCATENATED MODULE: ../node_modules/css-animation/es/Event.js
@@ -17229,7 +18137,7 @@ var TransitionEvents = {
 
 /* harmony default export */ var Event = (TransitionEvents);
 // EXTERNAL MODULE: ../node_modules/component-classes/index.js
-var component_classes = __webpack_require__(320);
+var component_classes = __webpack_require__(380);
 var component_classes_default = /*#__PURE__*/__webpack_require__.n(component_classes);
 
 // CONCATENATED MODULE: ../node_modules/css-animation/es/index.js
@@ -19433,7 +20341,184 @@ es_Slider.createSliderWithTooltip = createSliderWithTooltip;
 
 
 /***/ }),
-/* 295 */
+/* 335 */
+/*!**************************************************************!*\
+  !*** ../node_modules/babel-runtime/core-js/object/assign.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 336), __esModule: true };
+
+/***/ }),
+/* 336 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/fn/object/assign.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.assign */ 337);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 14).Object.assign;
+
+
+/***/ }),
+/* 337 */
+/*!********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.object.assign.js ***!
+  \********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(/*! ./_export */ 24);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 339) });
+
+
+/***/ }),
+/* 338 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_a-function.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+/* 339 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-assign.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.2.1 Object.assign(target, source, ...)
+var getKeys = __webpack_require__(/*! ./_object-keys */ 55);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 95);
+var pIE = __webpack_require__(/*! ./_object-pie */ 57);
+var toObject = __webpack_require__(/*! ./_to-object */ 153);
+var IObject = __webpack_require__(/*! ./_iobject */ 151);
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || __webpack_require__(/*! ./_fails */ 37)(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = gOPS.f;
+  var isEnum = pIE.f;
+  while (aLen > index) {
+    var S = IObject(arguments[index++]);
+    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
+  } return T;
+} : $assign;
+
+
+/***/ }),
+/* 340 */
+/*!******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_array-includes.js ***!
+  \******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 27);
+var toLength = __webpack_require__(/*! ./_to-length */ 341);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 342);
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+/* 341 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-length.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(/*! ./_to-integer */ 91);
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+/* 342 */
+/*!*********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-absolute-index.js ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ 91);
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+/* 343 */
 /*!****************************************************************!*\
   !*** ../node_modules/babel-runtime/core-js/symbol/iterator.js ***!
   \****************************************************************/
@@ -19442,10 +20527,10 @@ es_Slider.createSliderWithTooltip = createSliderWithTooltip;
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ 296), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ 344), __esModule: true };
 
 /***/ }),
-/* 296 */
+/* 344 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/fn/symbol/iterator.js ***!
   \*************************************************************/
@@ -19454,13 +20539,268 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.string.iterator */ 95);
-__webpack_require__(/*! ../../modules/web.dom.iterable */ 86);
-module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ 83).f('iterator');
+__webpack_require__(/*! ../../modules/es6.string.iterator */ 345);
+__webpack_require__(/*! ../../modules/web.dom.iterable */ 351);
+module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ 100).f('iterator');
 
 
 /***/ }),
-/* 297 */
+/* 345 */
+/*!**********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.string.iterator.js ***!
+  \**********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $at = __webpack_require__(/*! ./_string-at */ 346)(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+__webpack_require__(/*! ./_iter-define */ 154)(String, 'String', function (iterated) {
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var index = this._i;
+  var point;
+  if (index >= O.length) return { value: undefined, done: true };
+  point = $at(O, index);
+  this._i += point.length;
+  return { value: point, done: false };
+});
+
+
+/***/ }),
+/* 346 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_string-at.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ 91);
+var defined = __webpack_require__(/*! ./_defined */ 90);
+// true  -> String#at
+// false -> String#codePointAt
+module.exports = function (TO_STRING) {
+  return function (that, pos) {
+    var s = String(defined(that));
+    var i = toInteger(pos);
+    var l = s.length;
+    var a, b;
+    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
+    a = s.charCodeAt(i);
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+      ? TO_STRING ? s.charAt(i) : a
+      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  };
+};
+
+
+/***/ }),
+/* 347 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iter-create.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var create = __webpack_require__(/*! ./_object-create */ 98);
+var descriptor = __webpack_require__(/*! ./_property-desc */ 54);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 99);
+var IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+__webpack_require__(/*! ./_hide */ 25)(IteratorPrototype, __webpack_require__(/*! ./_wks */ 28)('iterator'), function () { return this; });
+
+module.exports = function (Constructor, NAME, next) {
+  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+
+/***/ }),
+/* 348 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-dps.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ 15);
+var anObject = __webpack_require__(/*! ./_an-object */ 36);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 55);
+
+module.exports = __webpack_require__(/*! ./_descriptors */ 16) ? Object.defineProperties : function defineProperties(O, Properties) {
+  anObject(O);
+  var keys = getKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+
+/***/ }),
+/* 349 */
+/*!********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_html.js ***!
+  \********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var document = __webpack_require__(/*! ./_global */ 12).document;
+module.exports = document && document.documentElement;
+
+
+/***/ }),
+/* 350 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gpo.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+var has = __webpack_require__(/*! ./_has */ 17);
+var toObject = __webpack_require__(/*! ./_to-object */ 153);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 92)('IE_PROTO');
+var ObjectProto = Object.prototype;
+
+module.exports = Object.getPrototypeOf || function (O) {
+  O = toObject(O);
+  if (has(O, IE_PROTO)) return O[IE_PROTO];
+  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+
+
+/***/ }),
+/* 351 */
+/*!*******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/web.dom.iterable.js ***!
+  \*******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./es6.array.iterator */ 352);
+var global = __webpack_require__(/*! ./_global */ 12);
+var hide = __webpack_require__(/*! ./_hide */ 25);
+var Iterators = __webpack_require__(/*! ./_iterators */ 97);
+var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ 28)('toStringTag');
+
+var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
+  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
+  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
+  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
+  'TextTrackList,TouchList').split(',');
+
+for (var i = 0; i < DOMIterables.length; i++) {
+  var NAME = DOMIterables[i];
+  var Collection = global[NAME];
+  var proto = Collection && Collection.prototype;
+  if (proto && !proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
+  Iterators[NAME] = Iterators.Array;
+}
+
+
+/***/ }),
+/* 352 */
+/*!*********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.array.iterator.js ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 353);
+var step = __webpack_require__(/*! ./_iter-step */ 354);
+var Iterators = __webpack_require__(/*! ./_iterators */ 97);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 27);
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = __webpack_require__(/*! ./_iter-define */ 154)(Array, 'Array', function (iterated, kind) {
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var kind = this._k;
+  var index = this._i++;
+  if (!O || index >= O.length) {
+    this._t = undefined;
+    return step(1);
+  }
+  if (kind == 'keys') return step(0, index);
+  if (kind == 'values') return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+
+
+/***/ }),
+/* 353 */
+/*!**********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_add-to-unscopables.js ***!
+  \**********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function () { /* empty */ };
+
+
+/***/ }),
+/* 354 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iter-step.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (done, value) {
+  return { value: value, done: !!done };
+};
+
+
+/***/ }),
+/* 355 */
 /*!*******************************************************!*\
   !*** ../node_modules/babel-runtime/core-js/symbol.js ***!
   \*******************************************************/
@@ -19469,10 +20809,10 @@ module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ 83).f('iterat
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol */ 298), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol */ 356), __esModule: true };
 
 /***/ }),
-/* 298 */
+/* 356 */
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/fn/symbol/index.js ***!
   \**********************************************************/
@@ -19481,15 +20821,15 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol 
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.symbol */ 299);
-__webpack_require__(/*! ../../modules/es6.object.to-string */ 304);
-__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ 305);
-__webpack_require__(/*! ../../modules/es7.symbol.observable */ 306);
-module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Symbol;
+__webpack_require__(/*! ../../modules/es6.symbol */ 357);
+__webpack_require__(/*! ../../modules/es6.object.to-string */ 362);
+__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ 363);
+__webpack_require__(/*! ../../modules/es7.symbol.observable */ 364);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 14).Symbol;
 
 
 /***/ }),
-/* 299 */
+/* 357 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.symbol.js ***!
   \*************************************************************/
@@ -19501,31 +20841,31 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Symbol;
 "use strict";
 
 // ECMAScript 6 symbols shim
-var global = __webpack_require__(/*! ./_global */ 13);
-var has = __webpack_require__(/*! ./_has */ 18);
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 17);
-var $export = __webpack_require__(/*! ./_export */ 21);
-var redefine = __webpack_require__(/*! ./_redefine */ 92);
-var META = __webpack_require__(/*! ./_meta */ 300).KEY;
-var $fails = __webpack_require__(/*! ./_fails */ 27);
-var shared = __webpack_require__(/*! ./_shared */ 60);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 62);
-var uid = __webpack_require__(/*! ./_uid */ 36);
-var wks = __webpack_require__(/*! ./_wks */ 14);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 83);
-var wksDefine = __webpack_require__(/*! ./_wks-define */ 84);
-var enumKeys = __webpack_require__(/*! ./_enum-keys */ 301);
-var isArray = __webpack_require__(/*! ./_is-array */ 302);
-var anObject = __webpack_require__(/*! ./_an-object */ 23);
-var isObject = __webpack_require__(/*! ./_is-object */ 24);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 20);
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 56);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 34);
-var _create = __webpack_require__(/*! ./_object-create */ 57);
-var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 303);
-var $GOPD = __webpack_require__(/*! ./_object-gopd */ 131);
-var $DP = __webpack_require__(/*! ./_object-dp */ 16);
-var $keys = __webpack_require__(/*! ./_object-keys */ 35);
+var global = __webpack_require__(/*! ./_global */ 12);
+var has = __webpack_require__(/*! ./_has */ 17);
+var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 16);
+var $export = __webpack_require__(/*! ./_export */ 24);
+var redefine = __webpack_require__(/*! ./_redefine */ 155);
+var META = __webpack_require__(/*! ./_meta */ 358).KEY;
+var $fails = __webpack_require__(/*! ./_fails */ 37);
+var shared = __webpack_require__(/*! ./_shared */ 93);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 99);
+var uid = __webpack_require__(/*! ./_uid */ 56);
+var wks = __webpack_require__(/*! ./_wks */ 28);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 100);
+var wksDefine = __webpack_require__(/*! ./_wks-define */ 101);
+var enumKeys = __webpack_require__(/*! ./_enum-keys */ 359);
+var isArray = __webpack_require__(/*! ./_is-array */ 360);
+var anObject = __webpack_require__(/*! ./_an-object */ 36);
+var isObject = __webpack_require__(/*! ./_is-object */ 26);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 27);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 89);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 54);
+var _create = __webpack_require__(/*! ./_object-create */ 98);
+var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 361);
+var $GOPD = __webpack_require__(/*! ./_object-gopd */ 157);
+var $DP = __webpack_require__(/*! ./_object-dp */ 15);
+var $keys = __webpack_require__(/*! ./_object-keys */ 55);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -19648,11 +20988,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(/*! ./_object-gopn */ 130).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(/*! ./_object-pie */ 40).f = $propertyIsEnumerable;
-  __webpack_require__(/*! ./_object-gops */ 66).f = $getOwnPropertySymbols;
+  __webpack_require__(/*! ./_object-gopn */ 156).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(/*! ./_object-pie */ 57).f = $propertyIsEnumerable;
+  __webpack_require__(/*! ./_object-gops */ 95).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 55)) {
+  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 96)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -19726,7 +21066,7 @@ $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
 });
 
 // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ 22)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ 25)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 // 19.4.3.5 Symbol.prototype[@@toStringTag]
 setToStringTag($Symbol, 'Symbol');
 // 20.2.1.9 Math[@@toStringTag]
@@ -19736,7 +21076,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 300 */
+/* 358 */
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_meta.js ***!
   \********************************************************/
@@ -19745,15 +21085,15 @@ setToStringTag(global.JSON, 'JSON', true);
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META = __webpack_require__(/*! ./_uid */ 36)('meta');
-var isObject = __webpack_require__(/*! ./_is-object */ 24);
-var has = __webpack_require__(/*! ./_has */ 18);
-var setDesc = __webpack_require__(/*! ./_object-dp */ 16).f;
+var META = __webpack_require__(/*! ./_uid */ 56)('meta');
+var isObject = __webpack_require__(/*! ./_is-object */ 26);
+var has = __webpack_require__(/*! ./_has */ 17);
+var setDesc = __webpack_require__(/*! ./_object-dp */ 15).f;
 var id = 0;
 var isExtensible = Object.isExtensible || function () {
   return true;
 };
-var FREEZE = !__webpack_require__(/*! ./_fails */ 27)(function () {
+var FREEZE = !__webpack_require__(/*! ./_fails */ 37)(function () {
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function (it) {
@@ -19801,7 +21141,7 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 301 */
+/* 359 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_enum-keys.js ***!
   \*************************************************************/
@@ -19811,9 +21151,9 @@ var meta = module.exports = {
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(/*! ./_object-keys */ 35);
-var gOPS = __webpack_require__(/*! ./_object-gops */ 66);
-var pIE = __webpack_require__(/*! ./_object-pie */ 40);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 55);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 95);
+var pIE = __webpack_require__(/*! ./_object-pie */ 57);
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
@@ -19828,7 +21168,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 302 */
+/* 360 */
 /*!************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_is-array.js ***!
   \************************************************************/
@@ -19838,14 +21178,14 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(/*! ./_cof */ 53);
+var cof = __webpack_require__(/*! ./_cof */ 152);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 /***/ }),
-/* 303 */
+/* 361 */
 /*!*******************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-gopn-ext.js ***!
   \*******************************************************************/
@@ -19855,8 +21195,8 @@ module.exports = Array.isArray || function isArray(arg) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 20);
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 130).f;
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 27);
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 156).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -19876,7 +21216,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 304 */
+/* 362 */
 /*!***********************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.object.to-string.js ***!
   \***********************************************************************/
@@ -19888,7 +21228,7 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 305 */
+/* 363 */
 /*!****************************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es7.symbol.async-iterator.js ***!
   \****************************************************************************/
@@ -19897,11 +21237,11 @@ module.exports.f = function getOwnPropertyNames(it) {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./_wks-define */ 84)('asyncIterator');
+__webpack_require__(/*! ./_wks-define */ 101)('asyncIterator');
 
 
 /***/ }),
-/* 306 */
+/* 364 */
 /*!************************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es7.symbol.observable.js ***!
   \************************************************************************/
@@ -19910,11 +21250,11 @@ __webpack_require__(/*! ./_wks-define */ 84)('asyncIterator');
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./_wks-define */ 84)('observable');
+__webpack_require__(/*! ./_wks-define */ 101)('observable');
 
 
 /***/ }),
-/* 307 */
+/* 365 */
 /*!************************************************************************!*\
   !*** ../node_modules/babel-runtime/core-js/object/set-prototype-of.js ***!
   \************************************************************************/
@@ -19923,10 +21263,10 @@ __webpack_require__(/*! ./_wks-define */ 84)('observable');
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ 308), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ 366), __esModule: true };
 
 /***/ }),
-/* 308 */
+/* 366 */
 /*!*********************************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/set-prototype-of.js ***!
   \*********************************************************************/
@@ -19935,12 +21275,12 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ 309);
-module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Object.setPrototypeOf;
+__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ 367);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 14).Object.setPrototypeOf;
 
 
 /***/ }),
-/* 309 */
+/* 367 */
 /*!******************************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.object.set-prototype-of.js ***!
   \******************************************************************************/
@@ -19950,12 +21290,12 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Object.setPr
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(/*! ./_export */ 21);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-proto */ 310).set });
+var $export = __webpack_require__(/*! ./_export */ 24);
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-proto */ 368).set });
 
 
 /***/ }),
-/* 310 */
+/* 368 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_set-proto.js ***!
   \*************************************************************/
@@ -19966,8 +21306,8 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-pr
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(/*! ./_is-object */ 24);
-var anObject = __webpack_require__(/*! ./_an-object */ 23);
+var isObject = __webpack_require__(/*! ./_is-object */ 26);
+var anObject = __webpack_require__(/*! ./_an-object */ 36);
 var check = function (O, proto) {
   anObject(O);
   if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
@@ -19976,7 +21316,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function (test, buggy, set) {
       try {
-        set = __webpack_require__(/*! ./_ctx */ 89)(Function.call, __webpack_require__(/*! ./_object-gopd */ 131).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(/*! ./_ctx */ 147)(Function.call, __webpack_require__(/*! ./_object-gopd */ 157).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch (e) { buggy = true; }
@@ -19992,7 +21332,7 @@ module.exports = {
 
 
 /***/ }),
-/* 311 */
+/* 369 */
 /*!**************************************************************!*\
   !*** ../node_modules/babel-runtime/core-js/object/create.js ***!
   \**************************************************************/
@@ -20001,10 +21341,10 @@ module.exports = {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/create */ 312), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/create */ 370), __esModule: true };
 
 /***/ }),
-/* 312 */
+/* 370 */
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/create.js ***!
   \***********************************************************/
@@ -20013,15 +21353,15 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.create */ 313);
-var $Object = __webpack_require__(/*! ../../modules/_core */ 12).Object;
+__webpack_require__(/*! ../../modules/es6.object.create */ 371);
+var $Object = __webpack_require__(/*! ../../modules/_core */ 14).Object;
 module.exports = function create(P, D) {
   return $Object.create(P, D);
 };
 
 
 /***/ }),
-/* 313 */
+/* 371 */
 /*!********************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.object.create.js ***!
   \********************************************************************/
@@ -20030,13 +21370,13 @@ module.exports = function create(P, D) {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(/*! ./_export */ 21);
+var $export = __webpack_require__(/*! ./_export */ 24);
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ 57) });
+$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ 98) });
 
 
 /***/ }),
-/* 314 */
+/* 372 */
 /*!*************************************************************!*\
   !*** ../node_modules/prop-types/factoryWithTypeCheckers.js ***!
   \*************************************************************/
@@ -20055,13 +21395,13 @@ $export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create 
 
 
 
-var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 132);
-var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 133);
-var warning = __webpack_require__(/*! fbjs/lib/warning */ 134);
-var assign = __webpack_require__(/*! object-assign */ 135);
+var emptyFunction = __webpack_require__(/*! fbjs/lib/emptyFunction */ 158);
+var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 159);
+var warning = __webpack_require__(/*! fbjs/lib/warning */ 160);
+var assign = __webpack_require__(/*! object-assign */ 161);
 
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 136);
-var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ 315);
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 162);
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ 373);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -20591,7 +21931,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 /***/ }),
-/* 315 */
+/* 373 */
 /*!****************************************************!*\
   !*** ../node_modules/prop-types/checkPropTypes.js ***!
   \****************************************************/
@@ -20611,9 +21951,9 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 if (true) {
-  var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 133);
-  var warning = __webpack_require__(/*! fbjs/lib/warning */ 134);
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 136);
+  var invariant = __webpack_require__(/*! fbjs/lib/invariant */ 159);
+  var warning = __webpack_require__(/*! fbjs/lib/warning */ 160);
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 162);
   var loggedTypeFailures = {};
 }
 
@@ -20663,7 +22003,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 316 */
+/* 374 */
 /*!***********************************************************!*\
   !*** ../node_modules/add-dom-event-listener/lib/index.js ***!
   \***********************************************************/
@@ -20680,7 +22020,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = addEventListener;
 
-var _EventObject = __webpack_require__(/*! ./EventObject */ 317);
+var _EventObject = __webpack_require__(/*! ./EventObject */ 375);
 
 var _EventObject2 = _interopRequireDefault(_EventObject);
 
@@ -20711,7 +22051,7 @@ function addEventListener(target, eventType, callback) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 317 */
+/* 375 */
 /*!*****************************************************************!*\
   !*** ../node_modules/add-dom-event-listener/lib/EventObject.js ***!
   \*****************************************************************/
@@ -20727,11 +22067,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _EventBaseObject = __webpack_require__(/*! ./EventBaseObject */ 318);
+var _EventBaseObject = __webpack_require__(/*! ./EventBaseObject */ 376);
 
 var _EventBaseObject2 = _interopRequireDefault(_EventBaseObject);
 
-var _objectAssign = __webpack_require__(/*! object-assign */ 135);
+var _objectAssign = __webpack_require__(/*! object-assign */ 161);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -21000,7 +22340,7 @@ exports["default"] = DomEventObject;
 module.exports = exports['default'];
 
 /***/ }),
-/* 318 */
+/* 376 */
 /*!*********************************************************************!*\
   !*** ../node_modules/add-dom-event-listener/lib/EventBaseObject.js ***!
   \*********************************************************************/
@@ -21072,7 +22412,7 @@ exports["default"] = EventBaseObject;
 module.exports = exports['default'];
 
 /***/ }),
-/* 319 */
+/* 377 */
 /*!***************************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/defineProperty.js ***!
   \***************************************************************/
@@ -21086,7 +22426,7 @@ module.exports = exports['default'];
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 96);
+var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 164);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -21108,7 +22448,39 @@ exports.default = function (obj, key, value) {
 };
 
 /***/ }),
-/* 320 */
+/* 378 */
+/*!********************************************************************!*\
+  !*** ../node_modules/core-js/library/fn/object/define-property.js ***!
+  \********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.define-property */ 379);
+var $Object = __webpack_require__(/*! ../../modules/_core */ 14).Object;
+module.exports = function defineProperty(it, key, desc) {
+  return $Object.defineProperty(it, key, desc);
+};
+
+
+/***/ }),
+/* 379 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.object.define-property.js ***!
+  \*****************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(/*! ./_export */ 24);
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 16), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ 15).f });
+
+
+/***/ }),
+/* 380 */
 /*!**************************************************!*\
   !*** ../node_modules/component-classes/index.js ***!
   \**************************************************/
@@ -21122,9 +22494,9 @@ exports.default = function (obj, key, value) {
  */
 
 try {
-  var index = __webpack_require__(/*! indexof */ 138);
+  var index = __webpack_require__(/*! indexof */ 165);
 } catch (err) {
-  var index = __webpack_require__(/*! component-indexof */ 138);
+  var index = __webpack_require__(/*! component-indexof */ 165);
 }
 
 /**
@@ -21311,7 +22683,7 @@ ClassList.prototype.contains = function(name){
 
 
 /***/ }),
-/* 321 */
+/* 381 */
 /*!*************************************!*\
   !*** ./components/Gallery/index.js ***!
   \*************************************/
@@ -21327,7 +22699,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Gallery = __webpack_require__(/*! ./Gallery */ 322);
+var _Gallery = __webpack_require__(/*! ./Gallery */ 382);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -21339,7 +22711,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 322 */
+/* 382 */
 /*!***************************************!*\
   !*** ./components/Gallery/Gallery.js ***!
   \***************************************/
@@ -21359,11 +22731,11 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(/*! prop-types */ 2);
+var _propTypes = __webpack_require__(/*! prop-types */ 1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Gallery = __webpack_require__(/*! ./Gallery.scss */ 323);
+var _Gallery = __webpack_require__(/*! ./Gallery.scss */ 383);
 
 var _Gallery2 = _interopRequireDefault(_Gallery);
 
@@ -21387,7 +22759,8 @@ var getImageStyle = function getImageStyle(item) {
     top: item.offset.top,
     left: item.offset.left,
     width: item.width,
-    height: item.height
+    height: item.height,
+    backgroundImage: 'url(' + getImageSrc(item) + ')'
   };
 };
 
@@ -21397,7 +22770,7 @@ var Gallery = function Gallery(_ref) {
     'div',
     { className: _Gallery2.default.root, style: { height: layout.height } },
     layout.items.map(function (item) {
-      return _react2.default.createElement('img', { className: _Gallery2.default.item, src: getImageSrc(item), style: getImageStyle(item), alt: item.idx });
+      return _react2.default.createElement('div', { className: _Gallery2.default.item, style: getImageStyle(item), alt: item.idx });
     })
   );
 };
@@ -21409,7 +22782,7 @@ Gallery.propTypes = {
 exports.default = Gallery;
 
 /***/ }),
-/* 323 */
+/* 383 */
 /*!*****************************************!*\
   !*** ./components/Gallery/Gallery.scss ***!
   \*****************************************/
@@ -21422,7 +22795,7 @@ exports.default = Gallery;
 module.exports = {"root":"components-Gallery-Gallery__root__1JS6n","item":"components-Gallery-Gallery__item__3qSoF"};
 
 /***/ }),
-/* 324 */
+/* 384 */
 /*!*****************************!*\
   !*** ./constants/images.js ***!
   \*****************************/
@@ -21940,7 +23313,7 @@ exports.default = [{
 }];
 
 /***/ }),
-/* 325 */
+/* 385 */
 /*!**********************************************!*\
   !*** ./components/App/get-scrollbar-size.js ***!
   \**********************************************/
@@ -21973,7 +23346,7 @@ function getScrollbarSize() {
 };
 
 /***/ }),
-/* 326 */
+/* 386 */
 /*!*********************************!*\
   !*** ./components/App/App.scss ***!
   \*********************************/

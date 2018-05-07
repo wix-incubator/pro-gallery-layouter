@@ -369,7 +369,9 @@ body {
   position: relative; }
 
 .components-Gallery-Gallery__item__3qSoF {
-  position: absolute; }
+  position: absolute;
+  background-size: cover;
+  background-position: center; }
 html, body, #root {
   height: 100%; }
 
