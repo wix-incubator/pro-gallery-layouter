@@ -17,6 +17,7 @@ class SideBar extends React.Component {
     super();
 
     this.handleStyleChange = this.handleStyleChange.bind(this);
+    this.toggleSample = this.toggleSample.bind(this);
 
   }
 
@@ -53,6 +54,10 @@ class SideBar extends React.Component {
         value /= 100;
     }
     return value;
+  }
+
+  toggleSample() {
+    this.props.toggleSample();
   }
 
   handleStyleChange(e) {
@@ -453,6 +458,10 @@ class SideBar extends React.Component {
             </div>
 
           </form>
+            <h3>
+              <small>All Done?</small>
+            </h3>
+            <button className="btn btn-success btn-block" onClick={this.toggleSample}>Get Code Sample</button>
         </div>
       </div>
     );

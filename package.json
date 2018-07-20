@@ -27,7 +27,8 @@
     "rc-slider": "^8.5.0",
     "react": "15.6.1",
     "react-dom": "15.6.1",
-    "react-slider": "^0.9.0"
+    "react-slider": "^0.9.0",
+    "react-tabs": "^2.2.2"
   },
   "yoshi": {
     "externals": {

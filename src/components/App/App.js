@@ -2,6 +2,7 @@ import React from 'react';
 import {createLayout} from 'pro-gallery-layouter';
 import SideBar from '../SideBar';
 import Gallery from '../Gallery';
+import Sample from '../Sample';
 import images from '../../constants/images';
 import getScrollbarSize from './get-scrollbar-size';
 import './App.scss';
@@ -46,7 +47,7 @@ class App extends React.Component {
       sampleSize: 100,
       styles: Object.assign({}, this.defaultStyles, this.getUrlStyles()),
       sidebarWidth: 500,
-
+      showSample: false,
       // Needed for browsers with static scrollbars
       scrollbarSize: getScrollbarSize(),
       container: getContainerSize(),
@@ -128,6 +129,11 @@ class App extends React.Component {
 
     return layout ? (
       <div ref={ref => { this.root = ref; }} className="playground-container">
+        <Sample
+          styleParams={this.state.styles}
+          visible={this.state.showSample}
+          toggleSample={() => this.setState({showSample: !this.state.showSample})}
+        />
         { sidebarWidth ? <SideBar
           container={{
             width: sidebarWidth,
@@ -135,6 +141,7 @@ class App extends React.Component {
           }}
           styles={styles}
           handleStylesChange={this.handleStylesChange}
+          toggleSample={() => this.setState({showSample: !this.state.showSample})}
           /> : null }
         <i className={'toggle-settings glyphicon glyphicon-menu-right ' + (sidebarWidth ? '' : ' closed ')} onClick={this.toggleSidebar}/>
 
