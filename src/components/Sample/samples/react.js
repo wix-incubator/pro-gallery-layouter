@@ -1,9 +1,8 @@
 export default `
-
 const getImageStyle = item => ({
-  position: absolute,
-  backgroundSize: cover,
-  backgroundPosition: center,
+  position: 'absolute',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
   top: item.offset.top,
   left: item.offset.left,
   width: item.width,

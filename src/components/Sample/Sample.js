@@ -24,28 +24,28 @@ const Sample = ({visible, styleParams, toggleSample}) => {
 
       <TabPanel>
         <pre>
-          <code>
-            {base(styleParams)}
-            {absolute}
-          </code>
+          <textarea onClick={e => e.target.select()} value={
+`${base(styleParams)}
+${absolute}`
+            }/>
         </pre>
       </TabPanel>
       <TabPanel>
       <pre>
-          <code>
-            {base(styleParams)}
-            {relative}
-          </code>
+          <textarea onClick={e => e.target.select()} value={
+`${base(styleParams)}
+${relative}`
+            }/>
         </pre>
       </TabPanel>
       <TabPanel>
       <pre>
-          <code>
-            import React from 'react';
-            import ReactDOM from 'react-dom';
-            {base(styleParams)}
-            {react}
-          </code>
+          <textarea onClick={e => e.target.select()} value={
+`import React from 'react';
+import ReactDOM from 'react-dom';
+${base(styleParams)}
+${react}`
+            }/>
         </pre>
       </TabPanel>
     </Tabs>

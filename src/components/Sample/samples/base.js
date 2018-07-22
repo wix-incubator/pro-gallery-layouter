@@ -1,9 +1,19 @@
 export default (styleParams) => {
+  const formatValue = val => {
+    switch (typeof val) {
+      case 'string':
+        return "'" + val + "'";
+      case 'number':
+        if (val < 0.01) return 0;
+        return val;
+      default:
+        return String(val);
+    }
+  }
   const formattedStyles = Object.entries(styleParams).map(entry => {
-    return entry[0] ? `  ${entry[0]}: ${entry[1]}` : '';
+    return entry[0] ? `  ${entry[0]}: ${formatValue(entry[1])}` : '';
   }).join(',\n');
-  return `
-import {createLayout} from 'pro-gallery-layouter';
+  return `import {createLayout} from 'pro-gallery-layouter';
 
 //change to your own images here
 const items = [

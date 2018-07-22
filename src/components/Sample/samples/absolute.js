@@ -4,7 +4,7 @@ parent.id = 'root';
 document.body.prepend(parent);
 
 for (let i = 0; i < layout.items.length; i++) {
-  const item = layout.items[i].scheme;
+  const item = layout.items[i];
   const iDom = document.createElement('div');
   iDom.innerHTML = i;
   iDom.style.width = item.width + 'px';
