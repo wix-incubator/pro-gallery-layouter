@@ -3905,7 +3905,8 @@ var App = function (_React$Component) {
       cubeRatio: 1,
       fixedColumns: 0,
       groupsPerStrip: 0,
-      oneRow: false
+      oneRow: false,
+      placeGroupsLtr: false
     };
 
     _this.state = {
