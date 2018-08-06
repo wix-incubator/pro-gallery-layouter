@@ -151,6 +151,25 @@ class SideBar extends React.Component {
             <div className="form-group">
               <label
                 data-toggle="tooltip" data-placement="right"
+                title="place groups in columns from left to right instead of finding the shortest column"
+                >Place Groups in Columns</label>
+              <br/>
+              <div className="radio-inline">
+                <label>
+                  <input type="radio" name="placeGroupsLtr" value={false} checked={!styles.placeGroupsLtr} />
+                  In the Shortest Column
+                </label>
+              </div>
+              <div className="radio-inline">
+                <label>
+                <input type="radio" name="placeGroupsLtr" value={true} checked={styles.placeGroupsLtr} />
+                  Left to Right
+                </label>
+              </div>
+            </div>
+            <div className="form-group">
+              <label
+                data-toggle="tooltip" data-placement="right"
                 title="Scroll gallery vertically or horizontally"
                 >Scroll Direction</label>
               <br/>
