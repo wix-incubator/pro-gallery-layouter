@@ -41,6 +41,7 @@ class App extends React.Component {
       fixedColumns: 0,
       groupsPerStrip: 0,
       oneRow: false,
+      placeGroupsLtr: false
     };
 
     this.state = {
