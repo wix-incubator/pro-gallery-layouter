@@ -1415,7 +1415,7 @@ var Layouter = function () {
     key: 'findShortestColumn',
     value: function findShortestColumn(columns, groupIdx) {
       var minCol = columns[0];
-      if (this.styleParams.cubeImages) {
+      if (this.styleParams.placeGroupsLtr) {
         minCol = columns[groupIdx % columns.length];
       } else {
         var minColH = -1;
@@ -7461,6 +7461,39 @@ var SideBar = function (_React$Component) {
                 'Groups per Row'
               ),
               this.createSlider('groupsPerStrip', styles.groupsPerStrip, 10)
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(
+                'label',
+                {
+                  'data-toggle': 'tooltip', 'data-placement': 'right',
+                  title: 'place groups in columns from left to right instead of finding the shortest column'
+                },
+                'Place Groups in Columns'
+              ),
+              _react2.default.createElement('br', null),
+              _react2.default.createElement(
+                'div',
+                { className: 'radio-inline' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  _react2.default.createElement('input', { type: 'radio', name: 'placeGroupsLtr', value: false, checked: !styles.placeGroupsLtr }),
+                  'In the Shortest Column'
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'radio-inline' },
+                _react2.default.createElement(
+                  'label',
+                  null,
+                  _react2.default.createElement('input', { type: 'radio', name: 'placeGroupsLtr', value: true, checked: styles.placeGroupsLtr }),
+                  'Left to Right'
+                )
+              )
             ),
             _react2.default.createElement(
               'div',
@@ -16658,6 +16691,7 @@ TabPanel_TabPanel.tabsRole = 'TabPanel';
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+module.exports = {"react-tabs__tab-list":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-list__1MFfE","reactTabsTabList":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-list__1MFfE","react-tabs__tab":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7","reactTabsTab":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7","react-tabs__tab--selected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--selected__1ex4Q","reactTabsTabSelected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--selected__1ex4Q","react-tabs__tab--disabled":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--disabled__7mMmY","reactTabsTabDisabled":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--disabled__7mMmY","react-tabs__tab-panel":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel__2EDg3","reactTabsTabPanel":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel__2EDg3","react-tabs__tab-panel--selected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel--selected__24Xiz","reactTabsTabPanelSelected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel--selected__24Xiz"};
 
 /***/ }),
 /* 134 */
