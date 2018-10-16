@@ -4015,11 +4015,10 @@ var App = function (_React$Component) {
           sidebarWidth = _state2.sidebarWidth;
 
       var layoutParams = this.getLayoutParams();
+      console.time('Create layout time: ');
       var layout = (0, _proGalleryLayouter.createLayout)(layoutParams);
-
-      console.time('Creating a layout...');
       console.log("Created a layout!", layout, layoutParams);
-      console.timeEnd('Creating a layout...');
+      console.timeEnd('Create layout time: ');
 
       return layout ? _react2.default.createElement(
         'div',
