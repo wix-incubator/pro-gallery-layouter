@@ -122,11 +122,10 @@ class App extends React.Component {
   render() {
     const {styles, container, sidebarWidth} = this.state;
     const layoutParams = this.getLayoutParams();
+    console.time('Create layout time: ');
     const layout = createLayout(layoutParams);
-
-    console.time('Creating a layout...');
     console.log("Created a layout!", layout, layoutParams);
-    console.timeEnd('Creating a layout...');
+    console.timeEnd('Create layout time: ');
 
     return layout ? (
       <div ref={ref => { this.root = ref; }} className="playground-container">
