@@ -127,7 +127,6 @@ export class Group {
         height: this.height
       };
     }
-    console.log('this is in the layouter', this.type);
     const m = this.imageMargin * 2;
 
     switch (this.type) {
@@ -508,8 +507,6 @@ export class Group {
   resizeToHeight(height) {
     this.height = height;
     this.width = this.getWidthByHeight(height);
-    console.log('&&&&&&&&&&&&&&&the height used: ', height);
-    console.log('the new width: ', this.width);
     this.resizeItems();
   }
 
@@ -545,7 +542,6 @@ export class Group {
       case '2v':
       case '3v': {
         const w = this.width - m;
-        console.log('calculated width for type 1:', w);
         return {
           width: w,
         };
