@@ -111,7 +111,8 @@ class Utils {
       bounds: {},
       ...container,
     };
-
+		// galleryWidth is a value calculated prior to the layouter. if it exists it is stronger than width. if galleryWidth doesnt exist width(the total container width) is used instead but it then requieres adding margin calculations. Same is true for the height.
+		// this is mostly true for "galleries" containing more than one "gallery" such as thumbnails where teh thumbnails are also a gallery and both are contained within container.width/height and have their own galleryWidth/Height
     if (container.width >= 0 && !(container.galleryWidth >= 0)) {
       convertedContainer.galleryWidth = container.width + ((styleParams.imageMargin || 0) - (styleParams.galleryMargin || 0)) * 2;
       delete convertedContainer.width;
