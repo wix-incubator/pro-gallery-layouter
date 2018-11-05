@@ -21,8 +21,10 @@
     "yoshi": "^1.2.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "jquery": "^3.2.1",
     "pro-gallery-layouter": "^2.0.17",
+    "pro-gallery-renderer": "^1.0.251",
     "prop-types": "~15.6.0",
     "rc-slider": "^8.5.0",
     "react": "15.6.1",

@@ -7,6 +7,8 @@ import images from '../../constants/images';
 import getScrollbarSize from './get-scrollbar-size';
 import './App.scss';
 
+import {ProGallery} from 'pro-gallery-renderer';
+
 const getContainerSize = (forcedWidth, forcedHeight) => ({
   width: forcedWidth || window.innerWidth,
   height: forcedHeight || window.innerHeight,
@@ -29,6 +31,8 @@ class App extends React.Component {
     this.items = images.slice(0, maxNumOfItems);
 
     this.defaultStyles = {
+      galleryLayout: -1,
+      layoutsVersion: 2,
       sampleSize: 100,
       isVertical: false,
       gallerySize: 400,
@@ -56,6 +60,7 @@ class App extends React.Component {
       styles: Object.assign({}, this.defaultStyles, this.getUrlStyles()),
       sidebarWidth: 0,
       showSample: false,
+      renderType: 'layout',
       // Needed for browsers with static scrollbars
       scrollbarSize: getScrollbarSize(),
       container: getContainerSize(),
@@ -153,7 +158,38 @@ class App extends React.Component {
 
   }
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        renderType: 'gallery'
+      })
+    }, 5000);
+  }
+
   render() {
+    return this.state.renderType === 'gallery' ? this.renderProGallery() : this.renderLayout();
+  }
+
+  renderProGallery() {
+    const {styles, container} = this.state;
+    return (
+      <ProGallery
+        at={Date.now()}
+        useRefactoredProGallery={false}
+        items={this.items}
+        styles={{
+          ...styles,
+          imageMargin: ((styles.imageMargin) * 2),
+          gallerySize: ((styles.gallerySize - 100) / 9)
+        }}
+        container={container}
+        scrollingElement={() => document.getElementById('playground-gallery')}
+
+      />
+    );
+  }
+
+  renderLayout() {
     const {styles, container, sidebarWidth} = this.state;
     const layoutParams = this.getLayoutParams();
     // console.time('Create layout time: ');
