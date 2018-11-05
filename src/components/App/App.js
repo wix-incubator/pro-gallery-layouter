@@ -8,6 +8,7 @@ import getScrollbarSize from './get-scrollbar-size';
 import './App.scss';
 
 import {ProGallery} from 'pro-gallery-renderer';
+import absolute from '../Sample/samples/absolute';
 
 const getContainerSize = (forcedWidth, forcedHeight) => ({
   width: forcedWidth || window.innerWidth,
@@ -60,6 +61,7 @@ class App extends React.Component {
       styles: Object.assign({}, this.defaultStyles, this.getUrlStyles()),
       sidebarWidth: 0,
       showSample: false,
+      renderStage: 0,
       renderType: 'layout',
       // Needed for browsers with static scrollbars
       scrollbarSize: getScrollbarSize(),
@@ -158,20 +160,40 @@ class App extends React.Component {
 
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        renderType: 'gallery'
-      })
-    }, 5000);
+  setRenderStage(renderStage) {
+    this.setState({
+      renderStage
+    });
   }
 
   render() {
-    return this.state.renderType === 'gallery' ? this.renderProGallery() : this.renderLayout();
+    return (
+      <div>
+        {this.state.renderStage === 0 && (<button onClick={() => this.setRenderStage(1)} className='btn btn-danger load-gallery-button'>Load CSS Layouts</button>)}
+        {this.state.renderStage === 1  && (<button onClick={() => this.setRenderStage(2)} className='btn btn-danger load-gallery-button'>Load Real Pro Gallery</button>)}
+        {this.state.renderStage === 2  && (<button onClick={() => this.setRenderStage(3)} className='btn btn-danger load-gallery-button'>Start Transition</button>)}
+        {this.state.renderStage === 3  && (<button onClick={() => this.setRenderStage(4)} className='btn btn-danger load-gallery-button'>Remove CSS Layouts</button>)}
+        <div style={{
+        }}>
+          {this.state.renderStage < 4 && this.state.renderStage > 0 && this.renderLayout()}
+        </div>
+        <div style={{
+            position: this.state.renderStage > 3 ? 'relative' : 'absolute',
+            top: 0,
+            left: 0,
+            zIndex: 99,
+            transition: 'opacity 1s linear',
+            opacity: this.state.renderStage > 2 ? 1 : 0
+        }}>
+          {this.state.renderStage > 1 && this.renderProGallery()}
+        </div>
+      </div>
+    )
   }
 
   renderProGallery() {
-    const {styles, container} = this.state;
+    const {styles} = this.state;
+    const container = getContainerSize();
     return (
       <ProGallery
         at={Date.now()}
