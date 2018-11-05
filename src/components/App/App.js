@@ -7,10 +7,15 @@ import images from '../../constants/images';
 import getScrollbarSize from './get-scrollbar-size';
 import './App.scss';
 
-const getContainerSize = () => ({
-  width: window.innerWidth,
-  height: window.innerHeight,
+const getContainerSize = (forcedWidth, forcedHeight) => ({
+  width: forcedWidth || window.innerWidth,
+  height: forcedHeight || window.innerHeight,
 });
+
+const maxNumOfItems = 50;
+const minWidth = 100;
+const maxWidth = 10000;
+const int = 10;
 
 class App extends React.Component {
 
@@ -20,6 +25,8 @@ class App extends React.Component {
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.resize = this.resize.bind(this);
     this.handleStylesChange = this.handleStylesChange.bind(this);
+
+    this.items = images.slice(0, maxNumOfItems);
 
     this.defaultStyles = {
       sampleSize: 100,
@@ -55,7 +62,7 @@ class App extends React.Component {
     };
     this.setUrlStyles(this.state.styles);
 
-    window.addEventListener('resize', this.resize);
+    // window.addEventListener('resize', this.resize);
   }
 
   getUrlStyles() {
@@ -106,28 +113,56 @@ class App extends React.Component {
     this.setState({styles});
   }
 
-  getLayoutParams() {
+  getLayoutParams(forcedContainer) {
     const {styles, container, sidebarWidth, scrollbarSize} = this.state;
 
+    const _container = forcedContainer || container;
+
     return {
-      items: images,
+      items: this.items,
       container: {
-        height: container.height - scrollbarSize,
-        width: container.width - sidebarWidth - scrollbarSize,
+        height: _container.height - scrollbarSize,
+        width: _container.width - sidebarWidth - scrollbarSize,
       },
       styleParams: styles,
     };
   }
 
+  createLayouts() {
+    const n = Math.ceil((maxWidth - minWidth) / int);
+
+    this.widths = Array(n).fill(0).map((val, idx) => (idx + 1) * int);
+    this.layouts = {};
+
+
+    console.log(`Creating ${n} layouts...`);
+    console.time('Create layouts time: ');
+    this.widths.forEach(width => {
+      console.time('Create layout time: ');
+      const container = getContainerSize(width);
+      const layoutParams = this.getLayoutParams(container);
+      const layout = createLayout(layoutParams);
+      console.timeEnd('Create layout time: ');
+      console.log("Created a layout", width, layout);
+      this.layouts[width] = layout;
+    });
+    // console.log("Created the layouts!", this.widths, this.layouts);
+    console.timeEnd('Create layouts time: ');
+
+    return this.layouts;
+
+  }
+
   render() {
     const {styles, container, sidebarWidth} = this.state;
     const layoutParams = this.getLayoutParams();
-    console.time('Create layout time: ');
-    const layout = createLayout(layoutParams);
-    console.log("Created a layout!", layout, layoutParams);
-    console.timeEnd('Create layout time: ');
+    // console.time('Create layout time: ');
+    // const layout = createLayout(layoutParams);
+    // console.log("Created a layout!", layout, layoutParams);
+    // console.timeEnd('Create layout time: ');
+    const layouts = this.createLayouts();
 
-    return layout ? (
+    return layouts ? (
       <div ref={ref => { this.root = ref; }} className="playground-container">
         <Sample
           styleParams={this.state.styles}
@@ -147,9 +182,9 @@ class App extends React.Component {
 
         <div
           className="playground-gallery"
-          style={{ width: `${container.width - sidebarWidth}px` }}
+          style={{ width: `calc(100% - ${sidebarWidth}px)` }}
         >
-          <Gallery layout={layout}/>
+          <Gallery layouts={layouts} container={container} items={this.items}/>
         </div>
       </div>
     ) : (
