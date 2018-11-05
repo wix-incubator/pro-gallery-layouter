@@ -136,18 +136,18 @@ class App extends React.Component {
 
 
     console.log(`Creating ${n} layouts (from ${minWidth})px to ${maxWidth}px for ${maxNumOfItems} items)`);
-    console.time(`Create ${n} layouts time: `);
+    console.time(`Create ${n} layouts time`);
     this.widths.forEach(width => {
-      console.time('Create layout time: ');
+      // console.time('Create layout time');
       const container = getContainerSize(width);
       const layoutParams = this.getLayoutParams(container);
       const layout = createLayout(layoutParams);
-      console.timeEnd('Create layout time: ');
+      // console.timeEnd('Create layout time');
       // console.log("Created a layout", width, layout);
       this.layouts[width] = layout;
     });
     // console.log("Created the layouts!", this.widths, this.layouts);
-    console.timeEnd(`Create ${n} layouts time: `);
+    console.timeEnd(`Create ${n} layouts time`);
 
     return this.layouts;
 
