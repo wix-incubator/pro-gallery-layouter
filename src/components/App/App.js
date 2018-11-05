@@ -13,9 +13,9 @@ const getContainerSize = (forcedWidth, forcedHeight) => ({
 });
 
 const maxNumOfItems = 50;
-const minWidth = 100;
-const maxWidth = 10000;
-const int = 10;
+const minWidth = 500;
+const maxWidth = 5000;
+const int = 20;
 
 class App extends React.Component {
 
@@ -54,7 +54,7 @@ class App extends React.Component {
     this.state = {
       sampleSize: 100,
       styles: Object.assign({}, this.defaultStyles, this.getUrlStyles()),
-      sidebarWidth: 500,
+      sidebarWidth: 0,
       showSample: false,
       // Needed for browsers with static scrollbars
       scrollbarSize: getScrollbarSize(),
@@ -138,12 +138,12 @@ class App extends React.Component {
     console.log(`Creating ${n} layouts (from ${minWidth}px to ${maxWidth}px for ${maxNumOfItems} items)`);
     console.time(`Create ${n} layouts time`);
     this.widths.forEach(width => {
-      // console.time('Create layout time');
+    //  console.time('Create layout time');
       const container = getContainerSize(width);
       const layoutParams = this.getLayoutParams(container);
       const layout = createLayout(layoutParams);
-      // console.timeEnd('Create layout time');
-      // console.log("Created a layout", width, layout);
+      //console.timeEnd('Create layout time');
+      //console.log("Created a layout", width, layout);
       this.layouts[width] = layout;
     });
     // console.log("Created the layouts!", this.widths, this.layouts);
@@ -184,7 +184,7 @@ class App extends React.Component {
           className="playground-gallery"
           style={{ width: `calc(100% - ${sidebarWidth}px)` }}
         >
-          <Gallery layouts={layouts} container={container} items={this.items}/>
+          <Gallery layouts={layouts} container={container} items={this.items} styleParams={styles}/>
         </div>
       </div>
     ) : (

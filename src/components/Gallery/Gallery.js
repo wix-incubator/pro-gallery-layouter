@@ -32,7 +32,7 @@ const getImageStyle = item => ({
   backgroundImage: `url(${getImageSrc(item)})`
 });
 
-const css = layouts => {
+const css = (layouts, styleParams) => {
   let cssStrs = [];
   Object.entries(layouts).forEach(entry => {
     let cssStr = '';
@@ -41,16 +41,17 @@ const css = layouts => {
     const isFirstMediaQuery = cssStrs.length === 0;
     if (layout) {
       cssStr += isFirstMediaQuery ? '' : `@media only screen and (min-width: ${width}px) {`;
-      cssStr += `\n.pro-gallery-root-style {
-        width: ${width}px;
-      }`;
-    layout.items.forEach(item => {
+      // cssStr += `\n.pro-gallery-root-style {
+      //   width: ${width}px;
+      // }`;
+      const layoutWidth = layout.columns.reduce((sum, col) => (sum + col.width), 0) - styleParams.imageMargin * 2;
+      layout.items.forEach(item => {
         const style = getImageStyle(item);
         cssStr += `\n.pro-gallery-item-${item.id}-style {
-          top: ${style.top}px;
-          left: ${style.left}px;
-          width: ${style.width}px;
-          height: ${style.height}px;
+          top: ${100 * (style.top / layoutWidth)}vw;
+          left: ${100 * (style.left / layoutWidth)}vw;
+          width: ${100 * (style.width / layoutWidth)}vw;
+          height: ${100 * (style.height / layoutWidth)}vw;
         }`;
       });
 
@@ -62,11 +63,11 @@ const css = layouts => {
   return cssStrs;
 }
 
-const Gallery = ({ layouts, container, items }) => {
+const Gallery = ({ layouts, container, items, styleParams }) => {
   return (
     <div>
       <style>
-        {css(layouts)}
+        {css(layouts, styleParams)}
       </style>
       <div className={[styles.root, `pro-gallery-root-style`].join(' ')} style={{ height: container.height }}>
         {items.map(item => (
