@@ -82,35 +82,23 @@ export default class Layouter {
   saveExistingLayout() {
     layoutsStore.layout = ({
       pointer: this.pointer,
-      firstGroup: this.firstGroup,
       layoutItems: this.layoutItems,
       groups: this.groups,
       strips: this.strips,
-      gallerySize: this.gallerySize,
-      galleryWidth: this.galleryWidth,
-      maxGroupSize: this.maxGroupSize,
       groupIdx: this.groupIdx,
-      item: this.item,
       groupItems: this.groupItems,
       group: this.group,
-      bounds: this.bounds,
       strip: this.strip,
       galleryHeight: this.galleryHeight,
-      numOfCols: this.numOfCols,
       columns: this.columns,
-      maxLoops: this.maxLoops,
     });
   }
 
   prepareLayoutParams() {
 
     if (this.useExistingLayout) {
-      this.logLayoutItems('before set layout');
-      console.log('[Layouter] BEFORE', this.galleryHeight, layoutsStore.layout.galleryHeight);
       Object.assign(this, layoutsStore.layout);
-      console.log('[Layouter] AFTER', this.galleryHeight);
-      this.logLayoutItems('after set layout');
-
+      this.item = {};
       this.maxLoops = this.srcItems.length * 10;
 
       // //remove items from the last 3 groups;
@@ -352,20 +340,7 @@ export default class Layouter {
 
     this.ready = true;
 
-    this.logLayoutItems('layout created');
-
     return this.scheme;
-
-  }
-
-  logLayoutItems(name) {
-    const items = {
-      layoutItems: this.layoutItems.map(item => item.id.slice(-3)).join(','),
-      groupItems: this.groups.map(group => group.items.map(item => item.id.slice(-3)).join(',')).join(','),
-      columnsItems: this.columns.map(column => column.groups.map(group => group.items.map(item => item.id.slice(-3)).join(',')).join(',')).join(','),
-    };
-
-    console.log(`[Layouter] Layout Items Ready! [${name}]`, items);
 
   }
 
