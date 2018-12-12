@@ -89,6 +89,7 @@ export default class Layouter {
       groupItems: this.groupItems,
       group: this.group,
       strip: this.strip,
+      gallerySize: this.gallerySize,
       galleryHeight: this.galleryHeight,
       columns: this.columns,
     });
