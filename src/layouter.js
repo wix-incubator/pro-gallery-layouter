@@ -257,6 +257,7 @@ export default class Layouter {
 
       this.group = new Group({
         idx: this.groupIdx,
+        stripIdx: this.strip.idx,
         inStripIdx: (this.strip.groups.length + 1),
         top: this.galleryHeight,
         items: this.groupItems,
