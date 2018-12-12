@@ -80,60 +80,81 @@ export default class Layouter {
   }
 
   saveExistingLayout() {
-    layoutsStore.layout = ({
-      pointer: this.pointer,
-      layoutItems: this.layoutItems,
-      groups: this.groups,
-      strips: this.strips,
-      groupIdx: this.groupIdx,
-      groupItems: this.groupItems,
-      group: this.group,
-      strip: this.strip,
-      gallerySize: this.gallerySize,
-      galleryHeight: this.galleryHeight,
-      columns: this.columns,
-    });
+    if (this.useLayoutStore) {
+      layoutsStore.layout = ({
+        pointer: this.pointer,
+        layoutItems: this.layoutItems,
+        groups: this.groups,
+        strips: this.strips,
+        groupIdx: this.groupIdx,
+        groupItems: this.groupItems,
+        group: this.group,
+        strip: this.strip,
+        gallerySize: this.gallerySize,
+        galleryHeight: this.galleryHeight,
+        columns: this.columns,
+      });
+    }
   }
 
   prepareLayoutParams() {
 
-    if (this.useExistingLayout) {
-      Object.assign(this, layoutsStore.layout);
+    if (this.useExistingLayout && this.pointer > 0) {
+
+      if (this.useLayoutStore) {
+        Object.assign(this, layoutsStore.layout);
+      } else {
+
+        if (this.styleParams.isVertical) {
+
+      //---------------------| COLUMNS GALLERY |----------------------//
+      //remove items from the last 3 groups;
+          const lastGroups = this.groups.slice(-3);
+          lastGroups.forEach(group => {
+            const column = this.columns[group.columnIdx];
+            if (column) {
+              column.height -= group.totalHeight;
+              column.groups.splice(-1, 1);
+            }
+            this.groups.splice(-1, 1);
+            group.items.forEach(() => {
+              this.layoutItems.splice(-1, 1);
+              this.pointer--;
+            });
+            this.groupIdx--;
+          });
+
+        } else {
+
+        //---------------------| STRIPS GALLERY |----------------------//
+          const lastStrip = this.strips[this.strips.length - 1];
+          if (lastStrip) {
+            this.strips.splice(-1, 1);
+            const groups = lastStrip.groups;
+            groups.forEach(group => {
+              this.groups.splice(-1, 1);
+              group.items.forEach(() => {
+                this.layoutItems.splice(-1, 1);
+                this.pointer--;
+              });
+              this.groupIdx--;
+            });
+            this.galleryHeight = this.strips.reduce((totalHeight, strip) => totalHeight += strip.height, 0);
+          // this.strip = this.strips[this.strips.length - 1];
+            this.strip = new Strip({
+              idx: this.strips.length,
+              container: this.container,
+              styleParams: this.styleParams
+            });
+          }
+        }
+
+        this.groupItems = [];
+      }
+
       this.item = {};
       this.maxLoops = this.srcItems.length * 10;
 
-      // //remove items from the last 3 groups;
-      // const lastGroups = this.groups.slice(-3);
-      // lastGroups.forEach(group => {
-      //   this.groups.splice(-1, 1);
-      //   const column = this.columns[group.columnIdx];
-      //   if (column) {
-      //     column.height -= group.totalHeight;
-      //     column.groups.splice(-1, 1);
-      //   }
-      //   const strip = this.strips[group.stripIdx - 1];
-      //   if (strip) {
-      //     strip.groups.splice(-1, 1);
-      //     if (!strip.hasGroups) {
-      //       this.strips.splice(-1, 1);
-      //     } else {
-      //       strip.ratio -= group.ratio;
-      //       strip.height = this.galleryWidth / strip.ratio;
-      //       strip.setWidth(this.galleryWidth);
-      //     }
-      //     this.strip = this.strips[this.strips.length - 1];
-      //   }
-      //   group.items.forEach(item => {
-      //     this.layoutItems.splice(-1, 1);
-      //     this.pointer--;
-      //   });
-      //   this.groupIdx--;
-      // });
-      // this.galleryHeight = this.strips.reduce((totalHeight, strip) => totalHeight += strip.height, 0);
-
-      // this.groupItems = [];
-      // this.item = {};
-      // this.maxLoops = this.srcItems.length * 10;
 
     } else {
 
