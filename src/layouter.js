@@ -79,22 +79,6 @@ export default class Layouter {
     return minCol;
   }
 
-  logExistingLayout() {
-    console.log('Existing Layout', {
-      pointer: this.pointer,
-      layoutItems: this.layoutItems,
-      groups: this.groups,
-      strips: this.strips,
-      groupIdx: this.groupIdx,
-      groupItems: this.groupItems,
-      group: this.group,
-      strip: this.strip,
-      gallerySize: this.gallerySize,
-      galleryHeight: this.galleryHeight,
-      columns: this.columns,
-    });
-  }
-
   saveExistingLayout() {
     if (this.useLayoutStore) {
       layoutsStore.layout = ({
@@ -222,8 +206,6 @@ export default class Layouter {
     }
 
     this.prepareLayoutParams();
-
-    this.logExistingLayout();
 
     while (this.srcItems[this.pointer]) {
 
