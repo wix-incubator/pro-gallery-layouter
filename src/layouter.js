@@ -17,7 +17,7 @@ export default class Layouter {
 
     this.updateParams(layoutParams);
     if (layoutParams.createLayout !== false) {
-      this.createLayout();
+      this.createLayout(layoutParams);
     }
   }
 
@@ -183,12 +183,9 @@ export default class Layouter {
       return false;
     }
 
-    console.log('[Layouter] Creating layout with existing layout', this.existingLayout);
-
     this.prepareLayoutParams();
 
     while (this.srcItems[this.pointer]) {
-
 
       if (this.imagesLeft === 6) {
         this.saveExistingLayout();
