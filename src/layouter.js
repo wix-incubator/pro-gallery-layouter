@@ -346,7 +346,9 @@ export default class Layouter {
     this.colWidth = Math.floor(this.galleryWidth / this.numOfCols);
     this.height = this.galleryHeight - (this.styleParams.imageMargin - this.styleParams.galleryMargin) * 2;
 
-    this.calcVisibilities(this.bounds);
+    if (!this.skipVisibilitiesCalc) {
+      this.calcVisibilities(this.bounds);
+    }
 
     this.ready = true;
 
