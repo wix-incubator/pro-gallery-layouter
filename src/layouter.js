@@ -16,7 +16,8 @@ export default class Layouter {
     this.findNeighborItem = this.findNeighborItem.bind(this);
 
     this.updateParams(layoutParams);
-    if (layoutParams.createLayout !== false) {
+
+    if (this.createLayoutOnInit !== false) {
       this.createLayout(layoutParams);
     }
   }
@@ -27,9 +28,11 @@ export default class Layouter {
     this.container = utils.convertContainer(layoutParams.container, this.styleParams);
 
     const options = layoutParams.options || {};
-    this.useExistingLayout = options.useExistingLayout;
-    this.showAllItems = options.showAllItems || layoutParams.showAllItems;
-    this.skipVisibilitiesCalc = options.skipVisibilitiesCalc;
+    this.useExistingLayout = !!options.useExistingLayout;
+    this.createLayoutOnInit = !!options.createLayoutOnInit;
+    this.showAllItems = !!options.showAllItems || !!layoutParams.showAllItems;
+    this.skipVisibilitiesCalc = !!options.skipVisibilitiesCalc;
+    this.useLayoutStore = !!options.useLayoutStore;
   }
 
   verifyGalleryState() {
