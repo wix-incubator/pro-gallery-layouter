@@ -277,9 +277,45 @@ export class Item {
     if (!ratio && this.cropOnlyFill && this.cubeType === 'fit') {
       ratio = this.ratio;
     }
+
     if (!ratio) {
       ratio = this._cubeRatio || this.ratio;
     }
+
+    if (this.dynamicCropRatios !== null && typeof ratio === 'string') {
+      if (!this.dynamicCropRatios) {
+        const dynamicCropRegex = /^\d*(%|px)\/\d*(%|px)$/;
+        const match = dynamicCropRegex.exec(ratio);
+        if (match) {
+          this.dynamicCropRatios = this._cubeRatio.split('/').map((val, idx) => {
+            if (val.indexOf('%') > 0) {
+              return {
+                type: '%',
+                val: (parseFloat(val.replace('%', ''))) / 100,
+                dim: (idx === 0) ? 'galleryWidth' : 'galleryHeight'
+              };
+            } else {
+              return {
+                type: 'px',
+                val: parseInt(val.replace('px', ''))
+              };
+            }
+          });
+        } else {
+          this.dynamicCropRatios = null;
+        }
+      }
+      const dynamicCropRatio = this.dynamicCropRatios.map(r => {
+        if (r.type === '%') {
+          const dim = this.container[r.dim];
+          return r.val * dim;
+        } else {
+          return r.val;
+        }
+      });
+      ratio = dynamicCropRatio[0] / dynamicCropRatio[1];
+    }
+
     ratio = Number(ratio);
 
     if (this.smartCrop === true) {
@@ -294,8 +330,10 @@ export class Item {
   }
 
   set cubeRatio(ratio) {
-    this._cubeRatio = ratio;
-    this.style.cubedHeight = this.style.cubedWidth = 0;
+    if (typeof this._cubeRatio === 'number') {
+      this._cubeRatio = ratio;
+      this.style.cubedHeight = this.style.cubedWidth = 0;
+    }
   }
 
   get orientation() {
