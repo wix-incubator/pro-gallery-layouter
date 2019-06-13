@@ -287,7 +287,8 @@ export class Item {
         const dynamicCropRegex = /^\d*(%|px)\/\d*(%|px)$/;
         const match = dynamicCropRegex.exec(ratio);
         if (match) {
-          this.dynamicCropRatios = this._cubeRatio.split('/').map((val, idx) => {
+          console.error(match);
+          this.dynamicCropRatios = ratio.split('/').map((val, idx) => {
             if (val.indexOf('%') > 0) {
               return {
                 type: '%',
@@ -305,15 +306,17 @@ export class Item {
           this.dynamicCropRatios = null;
         }
       }
-      const dynamicCropRatio = this.dynamicCropRatios.map(r => {
-        if (r.type === '%') {
-          const dim = this.container[r.dim];
-          return r.val * dim;
-        } else {
-          return r.val;
-        }
-      });
-      ratio = dynamicCropRatio[0] / dynamicCropRatio[1];
+      if (this.dynamicCropRatios) {
+        const dynamicCropRatio = this.dynamicCropRatios.map(r => {
+          if (r.type === '%') {
+            const dim = this.container[r.dim];
+            return r.val * dim;
+          } else {
+            return r.val;
+          }
+        });
+        ratio = dynamicCropRatio[0] / dynamicCropRatio[1];
+      }
     }
 
     ratio = Number(ratio);
