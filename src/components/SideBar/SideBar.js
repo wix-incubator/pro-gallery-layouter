@@ -457,6 +457,22 @@ class SideBar extends React.Component {
                 >Rotating Crop Ratios (advanced)</label>
               <input name="rotatingCropRatios" type="text" className="form-control" value={styles.rotatingCropRatios}/>
             </div>
+            <label data-toggle="tooltip" data-placement="right" title="Stretch/shrink images to the container height">Stretch
+                Images to Full Height</label>
+              <br/>
+
+              <div className="radio-inline">
+                <label>
+                  <input type="radio" name="forceFullHeight" value={false} checked={!styles.forceFullHeight}/>
+                  Do Not Stretch
+                </label>
+              </div>
+              <div className="radio-inline">
+                <label>
+                  <input type="radio" name="forceFullHeight" value={true} checked={styles.forceFullHeight}/>
+                  Stretch
+                </label>
+              </div>
 
             <h3>
               <small>Design Settings</small>
