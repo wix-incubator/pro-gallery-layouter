@@ -1644,7 +1644,7 @@ var Item = exports.Item = function () {
 
       if (this.dynamicCropRatios !== null && typeof ratio === 'string') {
         if (!this.dynamicCropRatios) {
-          var dynamicCropRegex = /^\d*(%|px)\/\d*(%|px)$/;
+          var dynamicCropRegex = /^\d*\.?\d*(%|px)\/\d*\.?\d*(%|px)$/;
           var match = dynamicCropRegex.exec(ratio);
           if (match) {
             console.error(match);
