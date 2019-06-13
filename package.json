@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "jquery": "^3.2.1",
-    "pro-gallery-layouter": "^2.0.31",
+    "pro-gallery-layouter": "^2.0.32",
     "prop-types": "~15.6.0",
     "rc-slider": "^8.5.0",
     "react": "15.6.1",
