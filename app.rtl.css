@@ -457,46 +457,46 @@ pre {
 
 .react-tabs__tab-panel--selected {
   display: block; }
-._-node_modules-react-tabs-style-react-tabs__react-tabs__tab-list__1MFfE {
-  border-bottom: 1px solid #aaa;
-  margin: 0 0 10px;
-  padding: 0; }
-
-._-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7 {
-  display: inline-block;
-  border: 1px solid transparent;
-  border-bottom: none;
-  bottom: -1px;
-  position: relative;
-  list-style: none;
-  padding: 6px 12px;
-  cursor: pointer; }
-  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab--selected__1ex4Q {
-    background: #fff;
-    border-color: #aaa;
-    color: black;
-    border-radius: 5px 5px 0 0; }
-  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab--disabled__7mMmY {
-    color: GrayText;
-    cursor: default; }
-  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7:focus {
-    -webkit-box-shadow: 0 0 5px #0188fe;
-            box-shadow: 0 0 5px #0188fe;
-    border-color: #0188fe;
-    outline: none; }
-    ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7:focus:after {
-      content: "";
-      position: absolute;
-      height: 5px;
-      right: -4px;
-      left: -4px;
-      bottom: -5px;
-      background: #fff; }
-
-._-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel__2EDg3 {
-  display: none; }
-  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel--selected__24Xiz {
-    display: block; }
+._-node_modules-react-tabs-style-react-tabs__react-tabs__2g11F {
+  -webkit-tap-highlight-color: transparent; }
+  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab-list__1MFfE {
+    border-bottom: 1px solid #aaa;
+    margin: 0 0 10px;
+    padding: 0; }
+  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7 {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer; }
+    ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab--selected__1ex4Q {
+      background: #fff;
+      border-color: #aaa;
+      color: black;
+      border-radius: 5px 5px 0 0; }
+    ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab--disabled__7mMmY {
+      color: GrayText;
+      cursor: default; }
+    ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7:focus {
+      -webkit-box-shadow: 0 0 5px #0188fe;
+              box-shadow: 0 0 5px #0188fe;
+      border-color: #0188fe;
+      outline: none; }
+      ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7:focus:after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        right: -4px;
+        left: -4px;
+        bottom: -5px;
+        background: #fff; }
+  ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel__2EDg3 {
+    display: none; }
+    ._-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel--selected__24Xiz {
+      display: block; }
 html, body, #root {
   height: 100%; }
 
