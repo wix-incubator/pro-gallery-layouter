@@ -2032,9 +2032,8 @@ var Item = exports.Item = function () {
         if (this.dynamicCropRatios) {
           var dynamicCropRatio = this.dynamicCropRatios.map(function (r) {
             if (r.type === '%') {
-              var dim = _this2.container[r.dim];
-              var marginFactor = r.dim === 'galleryWidth' ? 2 : 1;
-              var relativeDim = r.val * dim - Math.ceil(marginFactor * _this2.imageMargin);
+              var dim = _this2.container[r.dim] + (r.dim === 'galleryHeight' ? _this2.imageMargin : 0);
+              var relativeDim = r.val * dim - 2 * _this2.imageMargin;
               return relativeDim;
             } else {
               return r.val;
