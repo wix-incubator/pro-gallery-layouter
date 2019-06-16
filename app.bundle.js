@@ -61,7 +61,7 @@
 /******/
 /******/ 	__webpack_require__.p = typeof window !== 'undefined' && window.__STATICS_BASE_URL__ || __webpack_require__.p;
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 64);
+/******/ 	return __webpack_require__(__webpack_require__.s = 105);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -78,27 +78,6 @@ module.exports = React;
 
 /***/ }),
 /* 1 */
-/*!***************************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-exports.default = function (instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-};
-
-/***/ }),
-/* 2 */
 /*!*******************************************!*\
   !*** ../node_modules/prop-types/index.js ***!
   \*******************************************/
@@ -129,7 +108,7 @@ if (true) {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ 116)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ 191)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
@@ -138,12 +117,12 @@ if (true) {
 
 
 /***/ }),
-/* 3 */
-/*!********************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/extends.js ***!
-  \********************************************************/
+/* 2 */
+/*!***************************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/classCallCheck.js ***!
+  \***************************************************************/
 /*! dynamic exports provided */
-/*! all exports used */
+/*! exports used: default */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -152,28 +131,14 @@ if (true) {
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(/*! ../core-js/object/assign */ 23);
-
-var _assign2 = _interopRequireDefault(_assign);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = _assign2.default || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-
-    for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
+exports.default = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
   }
-
-  return target;
 };
 
 /***/ }),
-/* 4 */
+/* 3 */
 /*!**************************************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/possibleConstructorReturn.js ***!
   \**************************************************************************/
@@ -187,7 +152,7 @@ exports.default = _assign2.default || function (target) {
 
 exports.__esModule = true;
 
-var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 21);
+var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 47);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -202,7 +167,7 @@ exports.default = function (self, call) {
 };
 
 /***/ }),
-/* 5 */
+/* 4 */
 /*!*********************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/inherits.js ***!
   \*********************************************************/
@@ -216,15 +181,15 @@ exports.default = function (self, call) {
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(/*! ../core-js/object/set-prototype-of */ 109);
+var _setPrototypeOf = __webpack_require__(/*! ../core-js/object/set-prototype-of */ 184);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(/*! ../core-js/object/create */ 113);
+var _create = __webpack_require__(/*! ../core-js/object/create */ 188);
 
 var _create2 = _interopRequireDefault(_create);
 
-var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 21);
+var _typeof2 = __webpack_require__(/*! ../helpers/typeof */ 47);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -247,12 +212,12 @@ exports.default = function (subClass, superClass) {
 };
 
 /***/ }),
-/* 6 */
-/*!************************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/createClass.js ***!
-  \************************************************************/
+/* 5 */
+/*!********************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/extends.js ***!
+  \********************************************************/
 /*! dynamic exports provided */
-/*! all exports used */
+/*! exports used: default */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -261,46 +226,28 @@ exports.default = function (subClass, superClass) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 57);
+var _assign = __webpack_require__(/*! ../core-js/object/assign */ 154);
 
-var _defineProperty2 = _interopRequireDefault(_defineProperty);
+var _assign2 = _interopRequireDefault(_assign);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
-      descriptor.configurable = true;
-      if ("value" in descriptor) descriptor.writable = true;
-      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
     }
   }
 
-  return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) defineProperties(Constructor, staticProps);
-    return Constructor;
-  };
-}();
+  return target;
+};
 
 /***/ }),
-/* 7 */
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_core.js ***!
-  \********************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
-
-var core = module.exports = { version: '2.5.7' };
-if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
-
-
-/***/ }),
-/* 8 */
+/* 6 */
 /*!***************************!*\
   !*** external "ReactDOM" ***!
   \***************************/
@@ -312,7 +259,7 @@ if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 module.exports = ReactDOM;
 
 /***/ }),
-/* 9 */
+/* 7 */
 /*!*******************************************!*\
   !*** ../node_modules/classnames/index.js ***!
   \*******************************************/
@@ -377,7 +324,62 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
+/* 8 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_global.js ***!
+  \********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+var global = module.exports = typeof window != 'undefined' && window.Math == Math
+  ? window : typeof self != 'undefined' && self.Math == Math ? self
+  // eslint-disable-next-line no-new-func
+  : Function('return this')();
+if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
+
+
+/***/ }),
+/* 9 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_core.js ***!
+  \******************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var core = module.exports = { version: '2.5.7' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
+
+
+/***/ }),
 /* 10 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_wks.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(/*! ./_shared */ 55)('wks');
+var uid = __webpack_require__(/*! ./_uid */ 39);
+var Symbol = __webpack_require__(/*! ./_global */ 8).Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+/* 11 */
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_global.js ***!
   \**********************************************************/
@@ -395,44 +397,35 @@ if (typeof __g == 'number') __g = global; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 11 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_wks.js ***!
-  \*******************************************************/
+/* 12 */
+/*!********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_core.js ***!
+  \********************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var store = __webpack_require__(/*! ./_shared */ 36)('wks');
-var uid = __webpack_require__(/*! ./_uid */ 27);
-var Symbol = __webpack_require__(/*! ./_global */ 10).Symbol;
-var USE_SYMBOL = typeof Symbol == 'function';
-
-var $exports = module.exports = function (name) {
-  return store[name] || (store[name] =
-    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
-};
-
-$exports.store = store;
+var core = module.exports = { version: '2.5.7' };
+if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
 /***/ }),
-/* 12 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-dp.js ***!
-  \*************************************************************/
+/* 13 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-dp.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(/*! ./_an-object */ 17);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 48);
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 31);
+var anObject = __webpack_require__(/*! ./_an-object */ 28);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 78);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 50);
 var dP = Object.defineProperty;
 
-exports.f = __webpack_require__(/*! ./_descriptors */ 13) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+exports.f = __webpack_require__(/*! ./_descriptors */ 14) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
   anObject(O);
   P = toPrimitive(P, true);
   anObject(Attributes);
@@ -446,7 +439,127 @@ exports.f = __webpack_require__(/*! ./_descriptors */ 13) ? Object.definePropert
 
 
 /***/ }),
-/* 13 */
+/* 14 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_descriptors.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Thank's IE8 for his funny defineProperty
+module.exports = !__webpack_require__(/*! ./_fails */ 30)(function () {
+  return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 15 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_has.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var hasOwnProperty = {}.hasOwnProperty;
+module.exports = function (it, key) {
+  return hasOwnProperty.call(it, key);
+};
+
+
+/***/ }),
+/* 16 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/classCallCheck.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+exports.default = function (instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+};
+
+/***/ }),
+/* 17 */
+/*!**********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/createClass.js ***!
+  \**********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 129);
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+/***/ }),
+/* 18 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-dp.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var anObject = __webpack_require__(/*! ./_an-object */ 31);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 91);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 65);
+var dP = Object.defineProperty;
+
+exports.f = __webpack_require__(/*! ./_descriptors */ 19) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
+  anObject(O);
+  P = toPrimitive(P, true);
+  anObject(Attributes);
+  if (IE8_DOM_DEFINE) try {
+    return dP(O, P, Attributes);
+  } catch (e) { /* empty */ }
+  if ('get' in Attributes || 'set' in Attributes) throw TypeError('Accessors not supported!');
+  if ('value' in Attributes) O[P] = Attributes.value;
+  return O;
+};
+
+
+/***/ }),
+/* 19 */
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_descriptors.js ***!
   \***************************************************************/
@@ -456,13 +569,13 @@ exports.f = __webpack_require__(/*! ./_descriptors */ 13) ? Object.definePropert
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(/*! ./_fails */ 20)(function () {
+module.exports = !__webpack_require__(/*! ./_fails */ 32)(function () {
   return Object.defineProperty({}, 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 14 */
+/* 20 */
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/library/modules/_has.js ***!
   \*******************************************************/
@@ -478,7 +591,45 @@ module.exports = function (it, key) {
 
 
 /***/ }),
-/* 15 */
+/* 21 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_hide.js ***!
+  \******************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ 13);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 36);
+module.exports = __webpack_require__(/*! ./_descriptors */ 14) ? function (object, key, value) {
+  return dP.f(object, key, createDesc(1, value));
+} : function (object, key, value) {
+  object[key] = value;
+  return object;
+};
+
+
+/***/ }),
+/* 22 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-iobject.js ***!
+  \************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// to indexed object, toObject with fallback for non-array-like ES3 strings
+var IObject = __webpack_require__(/*! ./_iobject */ 81);
+var defined = __webpack_require__(/*! ./_defined */ 52);
+module.exports = function (it) {
+  return IObject(defined(it));
+};
+
+
+/***/ }),
+/* 23 */
 /*!**********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_export.js ***!
   \**********************************************************/
@@ -487,11 +638,11 @@ module.exports = function (it, key) {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(/*! ./_global */ 10);
-var core = __webpack_require__(/*! ./_core */ 7);
-var ctx = __webpack_require__(/*! ./_ctx */ 47);
-var hide = __webpack_require__(/*! ./_hide */ 16);
-var has = __webpack_require__(/*! ./_has */ 14);
+var global = __webpack_require__(/*! ./_global */ 11);
+var core = __webpack_require__(/*! ./_core */ 12);
+var ctx = __webpack_require__(/*! ./_ctx */ 90);
+var hide = __webpack_require__(/*! ./_hide */ 24);
+var has = __webpack_require__(/*! ./_has */ 20);
 var PROTOTYPE = 'prototype';
 
 var $export = function (type, name, source) {
@@ -552,7 +703,7 @@ module.exports = $export;
 
 
 /***/ }),
-/* 16 */
+/* 24 */
 /*!********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_hide.js ***!
   \********************************************************/
@@ -561,9 +712,9 @@ module.exports = $export;
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(/*! ./_object-dp */ 12);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 24);
-module.exports = __webpack_require__(/*! ./_descriptors */ 13) ? function (object, key, value) {
+var dP = __webpack_require__(/*! ./_object-dp */ 18);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 42);
+module.exports = __webpack_require__(/*! ./_descriptors */ 19) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
   object[key] = value;
@@ -572,24 +723,7 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 13) ? function (objec
 
 
 /***/ }),
-/* 17 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_an-object.js ***!
-  \*************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var isObject = __webpack_require__(/*! ./_is-object */ 18);
-module.exports = function (it) {
-  if (!isObject(it)) throw TypeError(it + ' is not an object!');
-  return it;
-};
-
-
-/***/ }),
-/* 18 */
+/* 25 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_is-object.js ***!
   \*************************************************************/
@@ -604,7 +738,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 19 */
+/* 26 */
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_to-iobject.js ***!
   \**************************************************************/
@@ -614,15 +748,106 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(/*! ./_iobject */ 51);
-var defined = __webpack_require__(/*! ./_defined */ 33);
+var IObject = __webpack_require__(/*! ./_iobject */ 94);
+var defined = __webpack_require__(/*! ./_defined */ 66);
 module.exports = function (it) {
   return IObject(defined(it));
 };
 
 
 /***/ }),
-/* 20 */
+/* 27 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_wks.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var store = __webpack_require__(/*! ./_shared */ 69)('wks');
+var uid = __webpack_require__(/*! ./_uid */ 45);
+var Symbol = __webpack_require__(/*! ./_global */ 11).Symbol;
+var USE_SYMBOL = typeof Symbol == 'function';
+
+var $exports = module.exports = function (name) {
+  return store[name] || (store[name] =
+    USE_SYMBOL && Symbol[name] || (USE_SYMBOL ? Symbol : uid)('Symbol.' + name));
+};
+
+$exports.store = store;
+
+
+/***/ }),
+/* 28 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_an-object.js ***!
+  \***********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ 29);
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+/* 29 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_is-object.js ***!
+  \***********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  return typeof it === 'object' ? it !== null : typeof it === 'function';
+};
+
+
+/***/ }),
+/* 30 */
+/*!*******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_fails.js ***!
+  \*******************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (exec) {
+  try {
+    return !!exec();
+  } catch (e) {
+    return true;
+  }
+};
+
+
+/***/ }),
+/* 31 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_an-object.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ 25);
+module.exports = function (it) {
+  if (!isObject(it)) throw TypeError(it + ' is not an object!');
+  return it;
+};
+
+
+/***/ }),
+/* 32 */
 /*!*********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_fails.js ***!
   \*********************************************************/
@@ -641,40 +866,7 @@ module.exports = function (exec) {
 
 
 /***/ }),
-/* 21 */
-/*!*******************************************************!*\
-  !*** ../node_modules/babel-runtime/helpers/typeof.js ***!
-  \*******************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ 89);
-
-var _iterator2 = _interopRequireDefault(_iterator);
-
-var _symbol = __webpack_require__(/*! ../core-js/symbol */ 91);
-
-var _symbol2 = _interopRequireDefault(_symbol);
-
-var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
-  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
-} : function (obj) {
-  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
-};
-
-/***/ }),
-/* 22 */
+/* 33 */
 /*!************************************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/objectWithoutProperties.js ***!
   \************************************************************************/
@@ -701,19 +893,188 @@ exports.default = function (obj, keys) {
 };
 
 /***/ }),
-/* 23 */
-/*!**************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/object/assign.js ***!
-  \**************************************************************/
+/* 34 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/object/assign.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 68), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 109), __esModule: true };
 
 /***/ }),
-/* 24 */
+/* 35 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_export.js ***!
+  \********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ 8);
+var core = __webpack_require__(/*! ./_core */ 9);
+var ctx = __webpack_require__(/*! ./_ctx */ 111);
+var hide = __webpack_require__(/*! ./_hide */ 21);
+var has = __webpack_require__(/*! ./_has */ 15);
+var PROTOTYPE = 'prototype';
+
+var $export = function (type, name, source) {
+  var IS_FORCED = type & $export.F;
+  var IS_GLOBAL = type & $export.G;
+  var IS_STATIC = type & $export.S;
+  var IS_PROTO = type & $export.P;
+  var IS_BIND = type & $export.B;
+  var IS_WRAP = type & $export.W;
+  var exports = IS_GLOBAL ? core : core[name] || (core[name] = {});
+  var expProto = exports[PROTOTYPE];
+  var target = IS_GLOBAL ? global : IS_STATIC ? global[name] : (global[name] || {})[PROTOTYPE];
+  var key, own, out;
+  if (IS_GLOBAL) source = name;
+  for (key in source) {
+    // contains in native
+    own = !IS_FORCED && target && target[key] !== undefined;
+    if (own && has(exports, key)) continue;
+    // export native or passed
+    out = own ? target[key] : source[key];
+    // prevent global pollution for namespaces
+    exports[key] = IS_GLOBAL && typeof target[key] != 'function' ? source[key]
+    // bind timers to global for call from export context
+    : IS_BIND && own ? ctx(out, global)
+    // wrap global constructors for prevent change them in library
+    : IS_WRAP && target[key] == out ? (function (C) {
+      var F = function (a, b, c) {
+        if (this instanceof C) {
+          switch (arguments.length) {
+            case 0: return new C();
+            case 1: return new C(a);
+            case 2: return new C(a, b);
+          } return new C(a, b, c);
+        } return C.apply(this, arguments);
+      };
+      F[PROTOTYPE] = C[PROTOTYPE];
+      return F;
+    // make static versions for prototype methods
+    })(out) : IS_PROTO && typeof out == 'function' ? ctx(Function.call, out) : out;
+    // export proto methods to core.%CONSTRUCTOR%.methods.%NAME%
+    if (IS_PROTO) {
+      (exports.virtual || (exports.virtual = {}))[key] = out;
+      // export proto methods to core.%CONSTRUCTOR%.prototype.%NAME%
+      if (type & $export.R && expProto && !expProto[key]) hide(expProto, key, out);
+    }
+  }
+};
+// type bitmap
+$export.F = 1;   // forced
+$export.G = 2;   // global
+$export.S = 4;   // static
+$export.P = 8;   // proto
+$export.B = 16;  // bind
+$export.W = 32;  // wrap
+$export.U = 64;  // safe
+$export.R = 128; // real proto method for `library`
+module.exports = $export;
+
+
+/***/ }),
+/* 36 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_property-desc.js ***!
+  \***************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (bitmap, value) {
+  return {
+    enumerable: !(bitmap & 1),
+    configurable: !(bitmap & 2),
+    writable: !(bitmap & 4),
+    value: value
+  };
+};
+
+
+/***/ }),
+/* 37 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-keys.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.14 / 15.2.3.14 Object.keys(O)
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 80);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 56);
+
+module.exports = Object.keys || function keys(O) {
+  return $keys(O, enumBugKeys);
+};
+
+
+/***/ }),
+/* 38 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_library.js ***!
+  \*********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = true;
+
+
+/***/ }),
+/* 39 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_uid.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var id = 0;
+var px = Math.random();
+module.exports = function (key) {
+  return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
+};
+
+
+/***/ }),
+/* 40 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-pie.js ***!
+  \************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+exports.f = {}.propertyIsEnumerable;
+
+
+/***/ }),
+/* 41 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iterators.js ***!
+  \***********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = {};
+
+
+/***/ }),
+/* 42 */
 /*!*****************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_property-desc.js ***!
   \*****************************************************************/
@@ -733,7 +1094,7 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 25 */
+/* 43 */
 /*!***************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-keys.js ***!
   \***************************************************************/
@@ -743,8 +1104,8 @@ module.exports = function (bitmap, value) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 50);
-var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 37);
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 93);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 70);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -752,7 +1113,7 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 26 */
+/* 44 */
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_library.js ***!
   \***********************************************************/
@@ -765,7 +1126,7 @@ module.exports = true;
 
 
 /***/ }),
-/* 27 */
+/* 45 */
 /*!*******************************************************!*\
   !*** ../node_modules/core-js/library/modules/_uid.js ***!
   \*******************************************************/
@@ -782,7 +1143,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 28 */
+/* 46 */
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_object-pie.js ***!
   \**************************************************************/
@@ -795,20 +1156,40 @@ exports.f = {}.propertyIsEnumerable;
 
 
 /***/ }),
-/* 29 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iterators.js ***!
-  \*************************************************************/
+/* 47 */
+/*!*******************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/typeof.js ***!
+  \*******************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = {};
+"use strict";
 
+
+exports.__esModule = true;
+
+var _iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ 162);
+
+var _iterator2 = _interopRequireDefault(_iterator);
+
+var _symbol = __webpack_require__(/*! ../core-js/symbol */ 174);
+
+var _symbol2 = _interopRequireDefault(_symbol);
+
+var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
+  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
+} : function (obj) {
+  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+};
 
 /***/ }),
-/* 30 */
+/* 48 */
 /*!******************************************!*\
   !*** ../node_modules/warning/browser.js ***!
   \******************************************/
@@ -881,17 +1262,56 @@ module.exports = warning;
 
 
 /***/ }),
-/* 31 */
-/*!****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-primitive.js ***!
-  \****************************************************************/
+/* 49 */
+/*!************************************************************!*\
+  !*** ../node_modules/babel-runtime/helpers/createClass.js ***!
+  \************************************************************/
+/*! dynamic exports provided */
+/*! exports used: default */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 103);
+
+var _defineProperty2 = _interopRequireDefault(_defineProperty);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      (0, _defineProperty2.default)(target, descriptor.key, descriptor);
+    }
+  }
+
+  return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) defineProperties(Constructor, staticProps);
+    return Constructor;
+  };
+}();
+
+/***/ }),
+/* 50 */
+/*!**************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-primitive.js ***!
+  \**************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
-var isObject = __webpack_require__(/*! ./_is-object */ 18);
+var isObject = __webpack_require__(/*! ./_is-object */ 29);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
 // and the second argument - flag - preferred type is a string
 module.exports = function (it, S) {
@@ -905,10 +1325,10 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 32 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_cof.js ***!
-  \*******************************************************/
+/* 51 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_cof.js ***!
+  \*****************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -922,10 +1342,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 33 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_defined.js ***!
-  \***********************************************************/
+/* 52 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_defined.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -939,10 +1359,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 34 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-integer.js ***!
-  \**************************************************************/
+/* 53 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-integer.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -957,34 +1377,34 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 35 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_shared-key.js ***!
-  \**************************************************************/
+/* 54 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_shared-key.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(/*! ./_shared */ 36)('keys');
-var uid = __webpack_require__(/*! ./_uid */ 27);
+var shared = __webpack_require__(/*! ./_shared */ 55)('keys');
+var uid = __webpack_require__(/*! ./_uid */ 39);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 
 /***/ }),
-/* 36 */
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_shared.js ***!
-  \**********************************************************/
+/* 55 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_shared.js ***!
+  \********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var core = __webpack_require__(/*! ./_core */ 7);
-var global = __webpack_require__(/*! ./_global */ 10);
+var core = __webpack_require__(/*! ./_core */ 9);
+var global = __webpack_require__(/*! ./_global */ 8);
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
 
@@ -992,16 +1412,16 @@ var store = global[SHARED] || (global[SHARED] = {});
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
   version: core.version,
-  mode: __webpack_require__(/*! ./_library */ 26) ? 'pure' : 'global',
+  mode: __webpack_require__(/*! ./_library */ 38) ? 'pure' : 'global',
   copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
 });
 
 
 /***/ }),
-/* 37 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_enum-bug-keys.js ***!
-  \*****************************************************************/
+/* 56 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_enum-bug-keys.js ***!
+  \***************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -1014,10 +1434,10 @@ module.exports = (
 
 
 /***/ }),
-/* 38 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gops.js ***!
-  \***************************************************************/
+/* 57 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gops.js ***!
+  \*************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -1027,83 +1447,30 @@ exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
-/* 39 */
-/*!*************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/get-iterator.js ***!
-  \*************************************************************/
+/* 58 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/get-iterator.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/get-iterator */ 75), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/get-iterator */ 117), __esModule: true };
 
 /***/ }),
-/* 40 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-create.js ***!
-  \*****************************************************************/
+/* 59 */
+/*!*******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_set-to-string-tag.js ***!
+  \*******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-var anObject = __webpack_require__(/*! ./_an-object */ 17);
-var dPs = __webpack_require__(/*! ./_object-dps */ 80);
-var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 37);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 35)('IE_PROTO');
-var Empty = function () { /* empty */ };
-var PROTOTYPE = 'prototype';
-
-// Create object with fake `null` prototype: use iframe Object with cleared prototype
-var createDict = function () {
-  // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(/*! ./_dom-create */ 49)('iframe');
-  var i = enumBugKeys.length;
-  var lt = '<';
-  var gt = '>';
-  var iframeDocument;
-  iframe.style.display = 'none';
-  __webpack_require__(/*! ./_html */ 81).appendChild(iframe);
-  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
-  // createDict = iframe.contentWindow.Object;
-  // html.removeChild(iframe);
-  iframeDocument = iframe.contentWindow.document;
-  iframeDocument.open();
-  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
-  iframeDocument.close();
-  createDict = iframeDocument.F;
-  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
-  return createDict();
-};
-
-module.exports = Object.create || function create(O, Properties) {
-  var result;
-  if (O !== null) {
-    Empty[PROTOTYPE] = anObject(O);
-    result = new Empty();
-    Empty[PROTOTYPE] = null;
-    // add "__proto__" for Object.getPrototypeOf polyfill
-    result[IE_PROTO] = O;
-  } else result = createDict();
-  return Properties === undefined ? result : dPs(result, Properties);
-};
-
-
-/***/ }),
-/* 41 */
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_set-to-string-tag.js ***!
-  \*********************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var def = __webpack_require__(/*! ./_object-dp */ 12).f;
-var has = __webpack_require__(/*! ./_has */ 14);
-var TAG = __webpack_require__(/*! ./_wks */ 11)('toStringTag');
+var def = __webpack_require__(/*! ./_object-dp */ 13).f;
+var has = __webpack_require__(/*! ./_has */ 15);
+var TAG = __webpack_require__(/*! ./_wks */ 10)('toStringTag');
 
 module.exports = function (it, tag, stat) {
   if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
@@ -1111,7 +1478,7 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 42 */
+/* 60 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/utils.js ***!
   \**************************************************************/
@@ -1128,19 +1495,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.utils = undefined;
 
-var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 3);
+var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 61);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 23);
+var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 34);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -1286,9 +1653,45 @@ var Utils = function () {
 }();
 
 var utils = exports.utils = new Utils();
+//# sourceMappingURL=utils.js.map
 
 /***/ }),
-/* 43 */
+/* 61 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/extends.js ***!
+  \******************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _assign = __webpack_require__(/*! ../core-js/object/assign */ 34);
+
+var _assign2 = _interopRequireDefault(_assign);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = _assign2.default || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];
+
+    for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }
+
+  return target;
+};
+
+/***/ }),
+/* 62 */
 /*!*************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/item.js ***!
   \*************************************************************/
@@ -1305,23 +1708,23 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Item = undefined;
 
-var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 23);
+var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 34);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _typeof2 = __webpack_require__(/*! babel-runtime/helpers/typeof */ 21);
+var _typeof2 = __webpack_require__(/*! babel-runtime/helpers/typeof */ 132);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _utils = __webpack_require__(/*! ./utils */ 42);
+var _utils = __webpack_require__(/*! ./utils */ 60);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1669,8 +2072,8 @@ var Item = exports.Item = function () {
         if (this.dynamicCropRatios) {
           var dynamicCropRatio = this.dynamicCropRatios.map(function (r) {
             if (r.type === '%') {
-              var dim = _this2.container[r.dim];
-              return r.val * dim;
+              var dim = _this2.container[r.dim] - 2 * _this2.galleryMargin;
+              return r.val * dim - Math.ceil(2 * _this2.imageMargin);
             } else {
               return r.val;
             }
@@ -1757,9 +2160,258 @@ var Item = exports.Item = function () {
   }]);
   return Item;
 }();
+//# sourceMappingURL=item.js.map
 
 /***/ }),
-/* 44 */
+/* 63 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_wks-ext.js ***!
+  \*********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports.f = __webpack_require__(/*! ./_wks */ 10);
+
+
+/***/ }),
+/* 64 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_wks-define.js ***!
+  \************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var global = __webpack_require__(/*! ./_global */ 8);
+var core = __webpack_require__(/*! ./_core */ 9);
+var LIBRARY = __webpack_require__(/*! ./_library */ 38);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 63);
+var defineProperty = __webpack_require__(/*! ./_object-dp */ 13).f;
+module.exports = function (name) {
+  var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
+  if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
+};
+
+
+/***/ }),
+/* 65 */
+/*!****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-primitive.js ***!
+  \****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.1 ToPrimitive(input [, PreferredType])
+var isObject = __webpack_require__(/*! ./_is-object */ 25);
+// instead of the ES6 spec version, we didn't implement @@toPrimitive case
+// and the second argument - flag - preferred type is a string
+module.exports = function (it, S) {
+  if (!isObject(it)) return it;
+  var fn, val;
+  if (S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (typeof (fn = it.valueOf) == 'function' && !isObject(val = fn.call(it))) return val;
+  if (!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it))) return val;
+  throw TypeError("Can't convert object to primitive value");
+};
+
+
+/***/ }),
+/* 66 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_defined.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// 7.2.1 RequireObjectCoercible(argument)
+module.exports = function (it) {
+  if (it == undefined) throw TypeError("Can't call method on  " + it);
+  return it;
+};
+
+
+/***/ }),
+/* 67 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-integer.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// 7.1.4 ToInteger
+var ceil = Math.ceil;
+var floor = Math.floor;
+module.exports = function (it) {
+  return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
+};
+
+
+/***/ }),
+/* 68 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_shared-key.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var shared = __webpack_require__(/*! ./_shared */ 69)('keys');
+var uid = __webpack_require__(/*! ./_uid */ 45);
+module.exports = function (key) {
+  return shared[key] || (shared[key] = uid(key));
+};
+
+
+/***/ }),
+/* 69 */
+/*!**********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_shared.js ***!
+  \**********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var core = __webpack_require__(/*! ./_core */ 12);
+var global = __webpack_require__(/*! ./_global */ 11);
+var SHARED = '__core-js_shared__';
+var store = global[SHARED] || (global[SHARED] = {});
+
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__(/*! ./_library */ 44) ? 'pure' : 'global',
+  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
+});
+
+
+/***/ }),
+/* 70 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_enum-bug-keys.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+// IE 8- don't enum bug keys
+module.exports = (
+  'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
+).split(',');
+
+
+/***/ }),
+/* 71 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gops.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+exports.f = Object.getOwnPropertySymbols;
+
+
+/***/ }),
+/* 72 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iterators.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = {};
+
+
+/***/ }),
+/* 73 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-create.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__(/*! ./_an-object */ 31);
+var dPs = __webpack_require__(/*! ./_object-dps */ 167);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 70);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 68)('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__(/*! ./_dom-create */ 92)('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__(/*! ./_html */ 168).appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+/* 74 */
+/*!*********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_set-to-string-tag.js ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var def = __webpack_require__(/*! ./_object-dp */ 18).f;
+var has = __webpack_require__(/*! ./_has */ 20);
+var TAG = __webpack_require__(/*! ./_wks */ 27)('toStringTag');
+
+module.exports = function (it, tag, stat) {
+  if (it && !has(it = stat ? it : it.prototype, TAG)) def(it, TAG, { configurable: true, value: tag });
+};
+
+
+/***/ }),
+/* 75 */
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/modules/_wks-ext.js ***!
   \***********************************************************/
@@ -1768,11 +2420,11 @@ var Item = exports.Item = function () {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports.f = __webpack_require__(/*! ./_wks */ 11);
+exports.f = __webpack_require__(/*! ./_wks */ 27);
 
 
 /***/ }),
-/* 45 */
+/* 76 */
 /*!**************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_wks-define.js ***!
   \**************************************************************/
@@ -1781,11 +2433,11 @@ exports.f = __webpack_require__(/*! ./_wks */ 11);
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var global = __webpack_require__(/*! ./_global */ 10);
-var core = __webpack_require__(/*! ./_core */ 7);
-var LIBRARY = __webpack_require__(/*! ./_library */ 26);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 44);
-var defineProperty = __webpack_require__(/*! ./_object-dp */ 12).f;
+var global = __webpack_require__(/*! ./_global */ 11);
+var core = __webpack_require__(/*! ./_core */ 12);
+var LIBRARY = __webpack_require__(/*! ./_library */ 44);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 75);
+var defineProperty = __webpack_require__(/*! ./_object-dp */ 18).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
   if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty($Symbol, name, { value: wksExt.f(name) });
@@ -1793,7 +2445,7 @@ module.exports = function (name) {
 
 
 /***/ }),
-/* 46 */
+/* 77 */
 /*!*****************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/layouter.js ***!
   \*****************************************************************/
@@ -1809,33 +2461,33 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 23);
+var _assign = __webpack_require__(/*! babel-runtime/core-js/object/assign */ 34);
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 39);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 58);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _utils = __webpack_require__(/*! ./utils */ 42);
+var _utils = __webpack_require__(/*! ./utils */ 60);
 
-var _item = __webpack_require__(/*! ./item.js */ 43);
+var _item = __webpack_require__(/*! ./item.js */ 62);
 
-var _group = __webpack_require__(/*! ./group.js */ 60);
+var _group = __webpack_require__(/*! ./group.js */ 89);
 
-var _strip = __webpack_require__(/*! ./strip.js */ 101);
+var _strip = __webpack_require__(/*! ./strip.js */ 146);
 
-var _column = __webpack_require__(/*! ./column.js */ 102);
+var _column = __webpack_require__(/*! ./column.js */ 147);
 
-var _layoutsStore = __webpack_require__(/*! ./layoutsStore.js */ 103);
+var _layoutsStore = __webpack_require__(/*! ./layoutsStore.js */ 148);
 
 var _layoutsStore2 = _interopRequireDefault(_layoutsStore);
 
@@ -2481,66 +3133,35 @@ var Layouter = function () {
 }();
 
 exports.default = Layouter;
+//# sourceMappingURL=layouter.js.map
 
 /***/ }),
-/* 47 */
-/*!*******************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_ctx.js ***!
-  \*******************************************************/
+/* 78 */
+/*!****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_ie8-dom-define.js ***!
+  \****************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-// optional / simple context binding
-var aFunction = __webpack_require__(/*! ./_a-function */ 70);
-module.exports = function (fn, that, length) {
-  aFunction(fn);
-  if (that === undefined) return fn;
-  switch (length) {
-    case 1: return function (a) {
-      return fn.call(that, a);
-    };
-    case 2: return function (a, b) {
-      return fn.call(that, a, b);
-    };
-    case 3: return function (a, b, c) {
-      return fn.call(that, a, b, c);
-    };
-  }
-  return function (/* ...args */) {
-    return fn.apply(that, arguments);
-  };
-};
-
-
-/***/ }),
-/* 48 */
-/*!******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_ie8-dom-define.js ***!
-  \******************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = !__webpack_require__(/*! ./_descriptors */ 13) && !__webpack_require__(/*! ./_fails */ 20)(function () {
-  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ 49)('div'), 'a', { get: function () { return 7; } }).a != 7;
+module.exports = !__webpack_require__(/*! ./_descriptors */ 14) && !__webpack_require__(/*! ./_fails */ 30)(function () {
+  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ 79)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 49 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_dom-create.js ***!
-  \**************************************************************/
+/* 79 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_dom-create.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isObject = __webpack_require__(/*! ./_is-object */ 18);
-var document = __webpack_require__(/*! ./_global */ 10).document;
+var isObject = __webpack_require__(/*! ./_is-object */ 29);
+var document = __webpack_require__(/*! ./_global */ 8).document;
 // typeof document.createElement is 'object' in old IE
 var is = isObject(document) && isObject(document.createElement);
 module.exports = function (it) {
@@ -2549,19 +3170,19 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 50 */
-/*!************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-keys-internal.js ***!
-  \************************************************************************/
+/* 80 */
+/*!**********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-keys-internal.js ***!
+  \**********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var has = __webpack_require__(/*! ./_has */ 14);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 19);
-var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ 72)(false);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 35)('IE_PROTO');
+var has = __webpack_require__(/*! ./_has */ 15);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 22);
+var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ 114)(false);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 54)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object);
@@ -2578,17 +3199,17 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 51 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iobject.js ***!
-  \***********************************************************/
+/* 81 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iobject.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(/*! ./_cof */ 32);
+var cof = __webpack_require__(/*! ./_cof */ 51);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -2596,37 +3217,37 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 52 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-object.js ***!
-  \*************************************************************/
+/* 82 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-object.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(/*! ./_defined */ 33);
+var defined = __webpack_require__(/*! ./_defined */ 52);
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 /***/ }),
-/* 53 */
-/*!*******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/web.dom.iterable.js ***!
-  \*******************************************************************/
+/* 83 */
+/*!*****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/web.dom.iterable.js ***!
+  \*****************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./es6.array.iterator */ 76);
-var global = __webpack_require__(/*! ./_global */ 10);
-var hide = __webpack_require__(/*! ./_hide */ 16);
-var Iterators = __webpack_require__(/*! ./_iterators */ 29);
-var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ 11)('toStringTag');
+__webpack_require__(/*! ./es6.array.iterator */ 118);
+var global = __webpack_require__(/*! ./_global */ 8);
+var hide = __webpack_require__(/*! ./_hide */ 21);
+var Iterators = __webpack_require__(/*! ./_iterators */ 41);
+var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ 10)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
   'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
@@ -2644,10 +3265,10 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 
 /***/ }),
-/* 54 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iter-define.js ***!
-  \***************************************************************/
+/* 84 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iter-define.js ***!
+  \*************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -2655,15 +3276,15 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(/*! ./_library */ 26);
-var $export = __webpack_require__(/*! ./_export */ 15);
-var redefine = __webpack_require__(/*! ./_redefine */ 55);
-var hide = __webpack_require__(/*! ./_hide */ 16);
-var Iterators = __webpack_require__(/*! ./_iterators */ 29);
-var $iterCreate = __webpack_require__(/*! ./_iter-create */ 79);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 41);
-var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 82);
-var ITERATOR = __webpack_require__(/*! ./_wks */ 11)('iterator');
+var LIBRARY = __webpack_require__(/*! ./_library */ 38);
+var $export = __webpack_require__(/*! ./_export */ 35);
+var redefine = __webpack_require__(/*! ./_redefine */ 85);
+var hide = __webpack_require__(/*! ./_hide */ 21);
+var Iterators = __webpack_require__(/*! ./_iterators */ 41);
+var $iterCreate = __webpack_require__(/*! ./_iter-create */ 121);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 59);
+var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 124);
+var ITERATOR = __webpack_require__(/*! ./_wks */ 10)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
 var KEYS = 'keys';
@@ -2726,23 +3347,76 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 55 */
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_redefine.js ***!
-  \************************************************************/
+/* 85 */
+/*!**********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_redefine.js ***!
+  \**********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./_hide */ 16);
+module.exports = __webpack_require__(/*! ./_hide */ 21);
 
 
 /***/ }),
-/* 56 */
-/*!**********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.string.iterator.js ***!
-  \**********************************************************************/
+/* 86 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-create.js ***!
+  \***************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
+var anObject = __webpack_require__(/*! ./_an-object */ 28);
+var dPs = __webpack_require__(/*! ./_object-dps */ 122);
+var enumBugKeys = __webpack_require__(/*! ./_enum-bug-keys */ 56);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 54)('IE_PROTO');
+var Empty = function () { /* empty */ };
+var PROTOTYPE = 'prototype';
+
+// Create object with fake `null` prototype: use iframe Object with cleared prototype
+var createDict = function () {
+  // Thrash, waste and sodomy: IE GC bug
+  var iframe = __webpack_require__(/*! ./_dom-create */ 79)('iframe');
+  var i = enumBugKeys.length;
+  var lt = '<';
+  var gt = '>';
+  var iframeDocument;
+  iframe.style.display = 'none';
+  __webpack_require__(/*! ./_html */ 123).appendChild(iframe);
+  iframe.src = 'javascript:'; // eslint-disable-line no-script-url
+  // createDict = iframe.contentWindow.Object;
+  // html.removeChild(iframe);
+  iframeDocument = iframe.contentWindow.document;
+  iframeDocument.open();
+  iframeDocument.write(lt + 'script' + gt + 'document.F=Object' + lt + '/script' + gt);
+  iframeDocument.close();
+  createDict = iframeDocument.F;
+  while (i--) delete createDict[PROTOTYPE][enumBugKeys[i]];
+  return createDict();
+};
+
+module.exports = Object.create || function create(O, Properties) {
+  var result;
+  if (O !== null) {
+    Empty[PROTOTYPE] = anObject(O);
+    result = new Empty();
+    Empty[PROTOTYPE] = null;
+    // add "__proto__" for Object.getPrototypeOf polyfill
+    result[IE_PROTO] = O;
+  } else result = createDict();
+  return Properties === undefined ? result : dPs(result, Properties);
+};
+
+
+/***/ }),
+/* 87 */
+/*!********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.string.iterator.js ***!
+  \********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -2750,10 +3424,10 @@ module.exports = __webpack_require__(/*! ./_hide */ 16);
 
 "use strict";
 
-var $at = __webpack_require__(/*! ./_string-at */ 83)(true);
+var $at = __webpack_require__(/*! ./_string-at */ 125)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(/*! ./_iter-define */ 54)(String, 'String', function (iterated) {
+__webpack_require__(/*! ./_iter-define */ 84)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -2769,30 +3443,18 @@ __webpack_require__(/*! ./_iter-define */ 54)(String, 'String', function (iterat
 
 
 /***/ }),
-/* 57 */
-/*!***********************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/object/define-property.js ***!
-  \***********************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/define-property */ 87), __esModule: true };
-
-/***/ }),
-/* 58 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gopn.js ***!
-  \***************************************************************/
+/* 88 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gopn.js ***!
+  \*************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(/*! ./_object-keys-internal */ 50);
-var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 37).concat('length', 'prototype');
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 80);
+var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 56).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -2800,35 +3462,7 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 59 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gopd.js ***!
-  \***************************************************************/
-/*! dynamic exports provided */
-/*! all exports used */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
-/***/ (function(module, exports, __webpack_require__) {
-
-var pIE = __webpack_require__(/*! ./_object-pie */ 28);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 24);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 19);
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 31);
-var has = __webpack_require__(/*! ./_has */ 14);
-var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 48);
-var gOPD = Object.getOwnPropertyDescriptor;
-
-exports.f = __webpack_require__(/*! ./_descriptors */ 13) ? gOPD : function getOwnPropertyDescriptor(O, P) {
-  O = toIObject(O);
-  P = toPrimitive(P, true);
-  if (IE8_DOM_DEFINE) try {
-    return gOPD(O, P);
-  } catch (e) { /* empty */ }
-  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
-};
-
-
-/***/ }),
-/* 60 */
+/* 89 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/group.js ***!
   \**************************************************************/
@@ -2845,25 +3479,25 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Group = undefined;
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 39);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 58);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 3);
+var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 61);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _item = __webpack_require__(/*! ./item.js */ 43);
+var _item = __webpack_require__(/*! ./item.js */ 62);
 
-var _utils = __webpack_require__(/*! ./utils */ 42);
+var _utils = __webpack_require__(/*! ./utils */ 60);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3814,9 +4448,299 @@ var Group = exports.Group = function () {
   }]);
   return Group;
 }();
+//# sourceMappingURL=group.js.map
 
 /***/ }),
-/* 61 */
+/* 90 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_ctx.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(/*! ./_a-function */ 157);
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+/* 91 */
+/*!******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_ie8-dom-define.js ***!
+  \******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = !__webpack_require__(/*! ./_descriptors */ 19) && !__webpack_require__(/*! ./_fails */ 32)(function () {
+  return Object.defineProperty(__webpack_require__(/*! ./_dom-create */ 92)('div'), 'a', { get: function () { return 7; } }).a != 7;
+});
+
+
+/***/ }),
+/* 92 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_dom-create.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var isObject = __webpack_require__(/*! ./_is-object */ 25);
+var document = __webpack_require__(/*! ./_global */ 11).document;
+// typeof document.createElement is 'object' in old IE
+var is = isObject(document) && isObject(document.createElement);
+module.exports = function (it) {
+  return is ? document.createElement(it) : {};
+};
+
+
+/***/ }),
+/* 93 */
+/*!************************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-keys-internal.js ***!
+  \************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var has = __webpack_require__(/*! ./_has */ 20);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 26);
+var arrayIndexOf = __webpack_require__(/*! ./_array-includes */ 159)(false);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 68)('IE_PROTO');
+
+module.exports = function (object, names) {
+  var O = toIObject(object);
+  var i = 0;
+  var result = [];
+  var key;
+  for (key in O) if (key != IE_PROTO) has(O, key) && result.push(key);
+  // Don't enum bug & hidden keys
+  while (names.length > i) if (has(O, key = names[i++])) {
+    ~arrayIndexOf(result, key) || result.push(key);
+  }
+  return result;
+};
+
+
+/***/ }),
+/* 94 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iobject.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for non-array-like ES3 and non-enumerable old V8 strings
+var cof = __webpack_require__(/*! ./_cof */ 95);
+// eslint-disable-next-line no-prototype-builtins
+module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
+  return cof(it) == 'String' ? it.split('') : Object(it);
+};
+
+
+/***/ }),
+/* 95 */
+/*!*******************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_cof.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = function (it) {
+  return toString.call(it).slice(8, -1);
+};
+
+
+/***/ }),
+/* 96 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-object.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.13 ToObject(argument)
+var defined = __webpack_require__(/*! ./_defined */ 66);
+module.exports = function (it) {
+  return Object(defined(it));
+};
+
+
+/***/ }),
+/* 97 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iter-define.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var LIBRARY = __webpack_require__(/*! ./_library */ 44);
+var $export = __webpack_require__(/*! ./_export */ 23);
+var redefine = __webpack_require__(/*! ./_redefine */ 98);
+var hide = __webpack_require__(/*! ./_hide */ 24);
+var Iterators = __webpack_require__(/*! ./_iterators */ 72);
+var $iterCreate = __webpack_require__(/*! ./_iter-create */ 166);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 74);
+var getPrototypeOf = __webpack_require__(/*! ./_object-gpo */ 169);
+var ITERATOR = __webpack_require__(/*! ./_wks */ 27)('iterator');
+var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
+var FF_ITERATOR = '@@iterator';
+var KEYS = 'keys';
+var VALUES = 'values';
+
+var returnThis = function () { return this; };
+
+module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCED) {
+  $iterCreate(Constructor, NAME, next);
+  var getMethod = function (kind) {
+    if (!BUGGY && kind in proto) return proto[kind];
+    switch (kind) {
+      case KEYS: return function keys() { return new Constructor(this, kind); };
+      case VALUES: return function values() { return new Constructor(this, kind); };
+    } return function entries() { return new Constructor(this, kind); };
+  };
+  var TAG = NAME + ' Iterator';
+  var DEF_VALUES = DEFAULT == VALUES;
+  var VALUES_BUG = false;
+  var proto = Base.prototype;
+  var $native = proto[ITERATOR] || proto[FF_ITERATOR] || DEFAULT && proto[DEFAULT];
+  var $default = $native || getMethod(DEFAULT);
+  var $entries = DEFAULT ? !DEF_VALUES ? $default : getMethod('entries') : undefined;
+  var $anyNative = NAME == 'Array' ? proto.entries || $native : $native;
+  var methods, key, IteratorPrototype;
+  // Fix native
+  if ($anyNative) {
+    IteratorPrototype = getPrototypeOf($anyNative.call(new Base()));
+    if (IteratorPrototype !== Object.prototype && IteratorPrototype.next) {
+      // Set @@toStringTag to native iterators
+      setToStringTag(IteratorPrototype, TAG, true);
+      // fix for some old engines
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+    }
+  }
+  // fix Array#{values, @@iterator}.name in V8 / FF
+  if (DEF_VALUES && $native && $native.name !== VALUES) {
+    VALUES_BUG = true;
+    $default = function values() { return $native.call(this); };
+  }
+  // Define iterator
+  if ((!LIBRARY || FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+    hide(proto, ITERATOR, $default);
+  }
+  // Plug for library
+  Iterators[NAME] = $default;
+  Iterators[TAG] = returnThis;
+  if (DEFAULT) {
+    methods = {
+      values: DEF_VALUES ? $default : getMethod(VALUES),
+      keys: IS_SET ? $default : getMethod(KEYS),
+      entries: $entries
+    };
+    if (FORCED) for (key in methods) {
+      if (!(key in proto)) redefine(proto, key, methods[key]);
+    } else $export($export.P + $export.F * (BUGGY || VALUES_BUG), NAME, methods);
+  }
+  return methods;
+};
+
+
+/***/ }),
+/* 98 */
+/*!************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_redefine.js ***!
+  \************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./_hide */ 24);
+
+
+/***/ }),
+/* 99 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gopn.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
+var $keys = __webpack_require__(/*! ./_object-keys-internal */ 93);
+var hiddenKeys = __webpack_require__(/*! ./_enum-bug-keys */ 70).concat('length', 'prototype');
+
+exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
+  return $keys(O, hiddenKeys);
+};
+
+
+/***/ }),
+/* 100 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gopd.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var pIE = __webpack_require__(/*! ./_object-pie */ 46);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 42);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 26);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 65);
+var has = __webpack_require__(/*! ./_has */ 20);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 91);
+var gOPD = Object.getOwnPropertyDescriptor;
+
+exports.f = __webpack_require__(/*! ./_descriptors */ 19) ? gOPD : function getOwnPropertyDescriptor(O, P) {
+  O = toIObject(O);
+  P = toPrimitive(P, true);
+  if (IE8_DOM_DEFINE) try {
+    return gOPD(O, P);
+  } catch (e) { /* empty */ }
+  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
+};
+
+
+/***/ }),
+/* 101 */
 /*!**********************************************!*\
   !*** ../node_modules/object-assign/index.js ***!
   \**********************************************/
@@ -3919,7 +4843,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 62 */
+/* 102 */
 /*!**************************************************************!*\
   !*** ../node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
   \**************************************************************/
@@ -3944,7 +4868,19 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 63 */
+/* 103 */
+/*!***********************************************************************!*\
+  !*** ../node_modules/babel-runtime/core-js/object/define-property.js ***!
+  \***********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/define-property */ 198), __esModule: true };
+
+/***/ }),
+/* 104 */
 /*!**************************************************!*\
   !*** ../node_modules/component-indexof/index.js ***!
   \**************************************************/
@@ -3962,7 +4898,7 @@ module.exports = function(arr, obj){
 };
 
 /***/ }),
-/* 64 */
+/* 105 */
 /*!*******************!*\
   !*** ./client.js ***!
   \*******************/
@@ -3978,11 +4914,11 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(/*! react-dom */ 8);
+var _reactDom = __webpack_require__(/*! react-dom */ 6);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _App = __webpack_require__(/*! ./components/App */ 65);
+var _App = __webpack_require__(/*! ./components/App */ 106);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -3991,7 +4927,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 _reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById('root'));
 
 /***/ }),
-/* 65 */
+/* 106 */
 /*!*********************************!*\
   !*** ./components/App/index.js ***!
   \*********************************/
@@ -4007,7 +4943,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _App = __webpack_require__(/*! ./App */ 66);
+var _App = __webpack_require__(/*! ./App */ 107);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -4019,7 +4955,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 66 */
+/* 107 */
 /*!*******************************!*\
   !*** ./components/App/App.js ***!
   \*******************************/
@@ -4041,29 +4977,29 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _proGalleryLayouter = __webpack_require__(/*! pro-gallery-layouter */ 67);
+var _proGalleryLayouter = __webpack_require__(/*! pro-gallery-layouter */ 108);
 
-var _SideBar = __webpack_require__(/*! ../SideBar */ 105);
+var _SideBar = __webpack_require__(/*! ../SideBar */ 150);
 
 var _SideBar2 = _interopRequireDefault(_SideBar);
 
-var _Gallery = __webpack_require__(/*! ../Gallery */ 124);
+var _Gallery = __webpack_require__(/*! ../Gallery */ 201);
 
 var _Gallery2 = _interopRequireDefault(_Gallery);
 
-var _Sample = __webpack_require__(/*! ../Sample */ 127);
+var _Sample = __webpack_require__(/*! ../Sample */ 204);
 
 var _Sample2 = _interopRequireDefault(_Sample);
 
-var _images = __webpack_require__(/*! ../../constants/images */ 136);
+var _images = __webpack_require__(/*! ../../constants/images */ 213);
 
 var _images2 = _interopRequireDefault(_images);
 
-var _getScrollbarSize = __webpack_require__(/*! ./get-scrollbar-size */ 137);
+var _getScrollbarSize = __webpack_require__(/*! ./get-scrollbar-size */ 214);
 
 var _getScrollbarSize2 = _interopRequireDefault(_getScrollbarSize);
 
-__webpack_require__(/*! ./App.scss */ 138);
+__webpack_require__(/*! ./App.scss */ 215);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4288,7 +5224,7 @@ var App = function (_React$Component) {
 exports.default = App;
 
 /***/ }),
-/* 67 */
+/* 108 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/index.js ***!
   \**************************************************************/
@@ -4300,15 +5236,15 @@ exports.default = App;
 "use strict";
 
 
-var _layouter = __webpack_require__(/*! ./layouter */ 46);
+var _layouter = __webpack_require__(/*! ./layouter */ 77);
 
 var _layouter2 = _interopRequireDefault(_layouter);
 
-var _item = __webpack_require__(/*! ./item */ 43);
+var _item = __webpack_require__(/*! ./item */ 62);
 
-var _group = __webpack_require__(/*! ./group */ 60);
+var _group = __webpack_require__(/*! ./group */ 89);
 
-var _createLayout = __webpack_require__(/*! ./create-layout */ 104);
+var _createLayout = __webpack_require__(/*! ./create-layout */ 149);
 
 var _createLayout2 = _interopRequireDefault(_createLayout);
 
@@ -4320,42 +5256,75 @@ module.exports = {
   Item: _item.Item,
   createLayout: _createLayout2.default
 };
+//# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 68 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/fn/object/assign.js ***!
-  \***********************************************************/
+/* 109 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/object/assign.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.assign */ 69);
-module.exports = __webpack_require__(/*! ../../modules/_core */ 7).Object.assign;
+__webpack_require__(/*! ../../modules/es6.object.assign */ 110);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 9).Object.assign;
 
 
 /***/ }),
-/* 69 */
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.object.assign.js ***!
-  \********************************************************************/
+/* 110 */
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.object.assign.js ***!
+  \******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(/*! ./_export */ 15);
+var $export = __webpack_require__(/*! ./_export */ 35);
 
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 71) });
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 113) });
 
 
 /***/ }),
-/* 70 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_a-function.js ***!
-  \**************************************************************/
+/* 111 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_ctx.js ***!
+  \*****************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// optional / simple context binding
+var aFunction = __webpack_require__(/*! ./_a-function */ 112);
+module.exports = function (fn, that, length) {
+  aFunction(fn);
+  if (that === undefined) return fn;
+  switch (length) {
+    case 1: return function (a) {
+      return fn.call(that, a);
+    };
+    case 2: return function (a, b) {
+      return fn.call(that, a, b);
+    };
+    case 3: return function (a, b, c) {
+      return fn.call(that, a, b, c);
+    };
+  }
+  return function (/* ...args */) {
+    return fn.apply(that, arguments);
+  };
+};
+
+
+/***/ }),
+/* 112 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_a-function.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4368,10 +5337,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 71 */
-/*!*****************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-assign.js ***!
-  \*****************************************************************/
+/* 113 */
+/*!***************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-assign.js ***!
+  \***************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4380,15 +5349,15 @@ module.exports = function (it) {
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys = __webpack_require__(/*! ./_object-keys */ 25);
-var gOPS = __webpack_require__(/*! ./_object-gops */ 38);
-var pIE = __webpack_require__(/*! ./_object-pie */ 28);
-var toObject = __webpack_require__(/*! ./_to-object */ 52);
-var IObject = __webpack_require__(/*! ./_iobject */ 51);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 37);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 57);
+var pIE = __webpack_require__(/*! ./_object-pie */ 40);
+var toObject = __webpack_require__(/*! ./_to-object */ 82);
+var IObject = __webpack_require__(/*! ./_iobject */ 81);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(/*! ./_fails */ 20)(function () {
+module.exports = !$assign || __webpack_require__(/*! ./_fails */ 30)(function () {
   var A = {};
   var B = {};
   // eslint-disable-next-line no-undef
@@ -4415,10 +5384,10 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 20)(function ()
 
 
 /***/ }),
-/* 72 */
-/*!******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_array-includes.js ***!
-  \******************************************************************/
+/* 114 */
+/*!****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_array-includes.js ***!
+  \****************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4426,9 +5395,9 @@ module.exports = !$assign || __webpack_require__(/*! ./_fails */ 20)(function ()
 
 // false -> Array#indexOf
 // true  -> Array#includes
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 19);
-var toLength = __webpack_require__(/*! ./_to-length */ 73);
-var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 74);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 22);
+var toLength = __webpack_require__(/*! ./_to-length */ 115);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 116);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -4450,17 +5419,17 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 73 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-length.js ***!
-  \*************************************************************/
+/* 115 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-length.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
-var toInteger = __webpack_require__(/*! ./_to-integer */ 34);
+var toInteger = __webpack_require__(/*! ./_to-integer */ 53);
 var min = Math.min;
 module.exports = function (it) {
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
@@ -4468,16 +5437,16 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 74 */
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_to-absolute-index.js ***!
-  \*********************************************************************/
+/* 116 */
+/*!*******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_to-absolute-index.js ***!
+  \*******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(/*! ./_to-integer */ 34);
+var toInteger = __webpack_require__(/*! ./_to-integer */ 53);
 var max = Math.max;
 var min = Math.min;
 module.exports = function (index, length) {
@@ -4487,25 +5456,25 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 75 */
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/library/fn/get-iterator.js ***!
-  \**********************************************************/
+/* 117 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/get-iterator.js ***!
+  \********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../modules/web.dom.iterable */ 53);
-__webpack_require__(/*! ../modules/es6.string.iterator */ 56);
-module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 84);
+__webpack_require__(/*! ../modules/web.dom.iterable */ 83);
+__webpack_require__(/*! ../modules/es6.string.iterator */ 87);
+module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 126);
 
 
 /***/ }),
-/* 76 */
-/*!*********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.array.iterator.js ***!
-  \*********************************************************************/
+/* 118 */
+/*!*******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.array.iterator.js ***!
+  \*******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4513,16 +5482,16 @@ module.exports = __webpack_require__(/*! ../modules/core.get-iterator */ 84);
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 77);
-var step = __webpack_require__(/*! ./_iter-step */ 78);
-var Iterators = __webpack_require__(/*! ./_iterators */ 29);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 19);
+var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 119);
+var step = __webpack_require__(/*! ./_iter-step */ 120);
+var Iterators = __webpack_require__(/*! ./_iterators */ 41);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 22);
 
 // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(/*! ./_iter-define */ 54)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(/*! ./_iter-define */ 84)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -4549,10 +5518,10 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 77 */
-/*!**********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_add-to-unscopables.js ***!
-  \**********************************************************************/
+/* 119 */
+/*!********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_add-to-unscopables.js ***!
+  \********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4562,10 +5531,10 @@ module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 78 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iter-step.js ***!
-  \*************************************************************/
+/* 120 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iter-step.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4577,10 +5546,10 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 79 */
-/*!***************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_iter-create.js ***!
-  \***************************************************************/
+/* 121 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_iter-create.js ***!
+  \*************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4588,13 +5557,13 @@ module.exports = function (done, value) {
 
 "use strict";
 
-var create = __webpack_require__(/*! ./_object-create */ 40);
-var descriptor = __webpack_require__(/*! ./_property-desc */ 24);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 41);
+var create = __webpack_require__(/*! ./_object-create */ 86);
+var descriptor = __webpack_require__(/*! ./_property-desc */ 36);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 59);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(/*! ./_hide */ 16)(IteratorPrototype, __webpack_require__(/*! ./_wks */ 11)('iterator'), function () { return this; });
+__webpack_require__(/*! ./_hide */ 21)(IteratorPrototype, __webpack_require__(/*! ./_wks */ 10)('iterator'), function () { return this; });
 
 module.exports = function (Constructor, NAME, next) {
   Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
@@ -4603,20 +5572,20 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 80 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-dps.js ***!
-  \**************************************************************/
+/* 122 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-dps.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(/*! ./_object-dp */ 12);
-var anObject = __webpack_require__(/*! ./_an-object */ 17);
-var getKeys = __webpack_require__(/*! ./_object-keys */ 25);
+var dP = __webpack_require__(/*! ./_object-dp */ 13);
+var anObject = __webpack_require__(/*! ./_an-object */ 28);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 37);
 
-module.exports = __webpack_require__(/*! ./_descriptors */ 13) ? Object.defineProperties : function defineProperties(O, Properties) {
+module.exports = __webpack_require__(/*! ./_descriptors */ 14) ? Object.defineProperties : function defineProperties(O, Properties) {
   anObject(O);
   var keys = getKeys(Properties);
   var length = keys.length;
@@ -4628,33 +5597,33 @@ module.exports = __webpack_require__(/*! ./_descriptors */ 13) ? Object.definePr
 
 
 /***/ }),
-/* 81 */
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_html.js ***!
-  \********************************************************/
+/* 123 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_html.js ***!
+  \******************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var document = __webpack_require__(/*! ./_global */ 10).document;
+var document = __webpack_require__(/*! ./_global */ 8).document;
 module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 82 */
-/*!**************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gpo.js ***!
-  \**************************************************************/
+/* 124 */
+/*!************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gpo.js ***!
+  \************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
-var has = __webpack_require__(/*! ./_has */ 14);
-var toObject = __webpack_require__(/*! ./_to-object */ 52);
-var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 35)('IE_PROTO');
+var has = __webpack_require__(/*! ./_has */ 15);
+var toObject = __webpack_require__(/*! ./_to-object */ 82);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 54)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -4667,17 +5636,17 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 83 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_string-at.js ***!
-  \*************************************************************/
+/* 125 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_string-at.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(/*! ./_to-integer */ 34);
-var defined = __webpack_require__(/*! ./_defined */ 33);
+var toInteger = __webpack_require__(/*! ./_to-integer */ 53);
+var defined = __webpack_require__(/*! ./_defined */ 52);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -4696,18 +5665,18 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 84 */
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/core.get-iterator.js ***!
-  \********************************************************************/
+/* 126 */
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/core.get-iterator.js ***!
+  \******************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(/*! ./_an-object */ 17);
-var get = __webpack_require__(/*! ./core.get-iterator-method */ 85);
-module.exports = __webpack_require__(/*! ./_core */ 7).getIterator = function (it) {
+var anObject = __webpack_require__(/*! ./_an-object */ 28);
+var get = __webpack_require__(/*! ./core.get-iterator-method */ 127);
+module.exports = __webpack_require__(/*! ./_core */ 9).getIterator = function (it) {
   var iterFn = get(it);
   if (typeof iterFn != 'function') throw TypeError(it + ' is not iterable!');
   return anObject(iterFn.call(it));
@@ -4715,19 +5684,19 @@ module.exports = __webpack_require__(/*! ./_core */ 7).getIterator = function (i
 
 
 /***/ }),
-/* 85 */
-/*!***************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/core.get-iterator-method.js ***!
-  \***************************************************************************/
+/* 127 */
+/*!*************************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/core.get-iterator-method.js ***!
+  \*************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var classof = __webpack_require__(/*! ./_classof */ 86);
-var ITERATOR = __webpack_require__(/*! ./_wks */ 11)('iterator');
-var Iterators = __webpack_require__(/*! ./_iterators */ 29);
-module.exports = __webpack_require__(/*! ./_core */ 7).getIteratorMethod = function (it) {
+var classof = __webpack_require__(/*! ./_classof */ 128);
+var ITERATOR = __webpack_require__(/*! ./_wks */ 10)('iterator');
+var Iterators = __webpack_require__(/*! ./_iterators */ 41);
+module.exports = __webpack_require__(/*! ./_core */ 9).getIteratorMethod = function (it) {
   if (it != undefined) return it[ITERATOR]
     || it['@@iterator']
     || Iterators[classof(it)];
@@ -4735,18 +5704,18 @@ module.exports = __webpack_require__(/*! ./_core */ 7).getIteratorMethod = funct
 
 
 /***/ }),
-/* 86 */
-/*!***********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_classof.js ***!
-  \***********************************************************/
+/* 128 */
+/*!*********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_classof.js ***!
+  \*********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // getting tag from 19.1.3.6 Object.prototype.toString()
-var cof = __webpack_require__(/*! ./_cof */ 32);
-var TAG = __webpack_require__(/*! ./_wks */ 11)('toStringTag');
+var cof = __webpack_require__(/*! ./_cof */ 51);
+var TAG = __webpack_require__(/*! ./_wks */ 10)('toStringTag');
 // ES3 wrong here
 var ARG = cof(function () { return arguments; }()) == 'Arguments';
 
@@ -4770,98 +5739,143 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 87 */
-/*!********************************************************************!*\
-  !*** ../node_modules/core-js/library/fn/object/define-property.js ***!
-  \********************************************************************/
+/* 129 */
+/*!*********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/object/define-property.js ***!
+  \*********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.define-property */ 88);
-var $Object = __webpack_require__(/*! ../../modules/_core */ 7).Object;
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/define-property */ 130), __esModule: true };
+
+/***/ }),
+/* 130 */
+/*!******************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/object/define-property.js ***!
+  \******************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.define-property */ 131);
+var $Object = __webpack_require__(/*! ../../modules/_core */ 9).Object;
 module.exports = function defineProperty(it, key, desc) {
   return $Object.defineProperty(it, key, desc);
 };
 
 
 /***/ }),
-/* 88 */
-/*!*****************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.object.define-property.js ***!
-  \*****************************************************************************/
+/* 131 */
+/*!***************************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.object.define-property.js ***!
+  \***************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(/*! ./_export */ 15);
+var $export = __webpack_require__(/*! ./_export */ 35);
 // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
-$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 13), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ 12).f });
+$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 14), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ 13).f });
 
 
 /***/ }),
-/* 89 */
-/*!****************************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/symbol/iterator.js ***!
-  \****************************************************************/
+/* 132 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/helpers/typeof.js ***!
+  \*****************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ 90), __esModule: true };
+"use strict";
+
+
+exports.__esModule = true;
+
+var _iterator = __webpack_require__(/*! ../core-js/symbol/iterator */ 133);
+
+var _iterator2 = _interopRequireDefault(_iterator);
+
+var _symbol = __webpack_require__(/*! ../core-js/symbol */ 135);
+
+var _symbol2 = _interopRequireDefault(_symbol);
+
+var _typeof = typeof _symbol2.default === "function" && typeof _iterator2.default === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj; };
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.default) === "symbol" ? function (obj) {
+  return typeof obj === "undefined" ? "undefined" : _typeof(obj);
+} : function (obj) {
+  return obj && typeof _symbol2.default === "function" && obj.constructor === _symbol2.default && obj !== _symbol2.default.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof(obj);
+};
 
 /***/ }),
-/* 90 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/fn/symbol/iterator.js ***!
-  \*************************************************************/
+/* 133 */
+/*!**************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/symbol/iterator.js ***!
+  \**************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.string.iterator */ 56);
-__webpack_require__(/*! ../../modules/web.dom.iterable */ 53);
-module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ 44).f('iterator');
-
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ 134), __esModule: true };
 
 /***/ }),
-/* 91 */
-/*!*******************************************************!*\
-  !*** ../node_modules/babel-runtime/core-js/symbol.js ***!
-  \*******************************************************/
+/* 134 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/symbol/iterator.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol */ 92), __esModule: true };
+__webpack_require__(/*! ../../modules/es6.string.iterator */ 87);
+__webpack_require__(/*! ../../modules/web.dom.iterable */ 83);
+module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ 63).f('iterator');
+
 
 /***/ }),
-/* 92 */
-/*!**********************************************************!*\
-  !*** ../node_modules/core-js/library/fn/symbol/index.js ***!
-  \**********************************************************/
+/* 135 */
+/*!*****************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/babel-runtime/core-js/symbol.js ***!
+  \*****************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.symbol */ 93);
-__webpack_require__(/*! ../../modules/es6.object.to-string */ 98);
-__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ 99);
-__webpack_require__(/*! ../../modules/es7.symbol.observable */ 100);
-module.exports = __webpack_require__(/*! ../../modules/_core */ 7).Symbol;
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol */ 136), __esModule: true };
+
+/***/ }),
+/* 136 */
+/*!********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/fn/symbol/index.js ***!
+  \********************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.symbol */ 137);
+__webpack_require__(/*! ../../modules/es6.object.to-string */ 143);
+__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ 144);
+__webpack_require__(/*! ../../modules/es7.symbol.observable */ 145);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 9).Symbol;
 
 
 /***/ }),
-/* 93 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.symbol.js ***!
-  \*************************************************************/
+/* 137 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.symbol.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -4870,31 +5884,31 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ 7).Symbol;
 "use strict";
 
 // ECMAScript 6 symbols shim
-var global = __webpack_require__(/*! ./_global */ 10);
-var has = __webpack_require__(/*! ./_has */ 14);
-var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 13);
-var $export = __webpack_require__(/*! ./_export */ 15);
-var redefine = __webpack_require__(/*! ./_redefine */ 55);
-var META = __webpack_require__(/*! ./_meta */ 94).KEY;
-var $fails = __webpack_require__(/*! ./_fails */ 20);
-var shared = __webpack_require__(/*! ./_shared */ 36);
-var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 41);
-var uid = __webpack_require__(/*! ./_uid */ 27);
-var wks = __webpack_require__(/*! ./_wks */ 11);
-var wksExt = __webpack_require__(/*! ./_wks-ext */ 44);
-var wksDefine = __webpack_require__(/*! ./_wks-define */ 45);
-var enumKeys = __webpack_require__(/*! ./_enum-keys */ 95);
-var isArray = __webpack_require__(/*! ./_is-array */ 96);
-var anObject = __webpack_require__(/*! ./_an-object */ 17);
-var isObject = __webpack_require__(/*! ./_is-object */ 18);
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 19);
-var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 31);
-var createDesc = __webpack_require__(/*! ./_property-desc */ 24);
-var _create = __webpack_require__(/*! ./_object-create */ 40);
-var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 97);
-var $GOPD = __webpack_require__(/*! ./_object-gopd */ 59);
-var $DP = __webpack_require__(/*! ./_object-dp */ 12);
-var $keys = __webpack_require__(/*! ./_object-keys */ 25);
+var global = __webpack_require__(/*! ./_global */ 8);
+var has = __webpack_require__(/*! ./_has */ 15);
+var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 14);
+var $export = __webpack_require__(/*! ./_export */ 35);
+var redefine = __webpack_require__(/*! ./_redefine */ 85);
+var META = __webpack_require__(/*! ./_meta */ 138).KEY;
+var $fails = __webpack_require__(/*! ./_fails */ 30);
+var shared = __webpack_require__(/*! ./_shared */ 55);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 59);
+var uid = __webpack_require__(/*! ./_uid */ 39);
+var wks = __webpack_require__(/*! ./_wks */ 10);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 63);
+var wksDefine = __webpack_require__(/*! ./_wks-define */ 64);
+var enumKeys = __webpack_require__(/*! ./_enum-keys */ 139);
+var isArray = __webpack_require__(/*! ./_is-array */ 140);
+var anObject = __webpack_require__(/*! ./_an-object */ 28);
+var isObject = __webpack_require__(/*! ./_is-object */ 29);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 22);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 50);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 36);
+var _create = __webpack_require__(/*! ./_object-create */ 86);
+var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 141);
+var $GOPD = __webpack_require__(/*! ./_object-gopd */ 142);
+var $DP = __webpack_require__(/*! ./_object-dp */ 13);
+var $keys = __webpack_require__(/*! ./_object-keys */ 37);
 var gOPD = $GOPD.f;
 var dP = $DP.f;
 var gOPN = gOPNExt.f;
@@ -5017,11 +6031,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(/*! ./_object-gopn */ 58).f = gOPNExt.f = $getOwnPropertyNames;
-  __webpack_require__(/*! ./_object-pie */ 28).f = $propertyIsEnumerable;
-  __webpack_require__(/*! ./_object-gops */ 38).f = $getOwnPropertySymbols;
+  __webpack_require__(/*! ./_object-gopn */ 88).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(/*! ./_object-pie */ 40).f = $propertyIsEnumerable;
+  __webpack_require__(/*! ./_object-gops */ 57).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 26)) {
+  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 38)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -5095,7 +6109,7 @@ $JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
 });
 
 // 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
-$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ 16)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ 21)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
 // 19.4.3.5 Symbol.prototype[@@toStringTag]
 setToStringTag($Symbol, 'Symbol');
 // 20.2.1.9 Math[@@toStringTag]
@@ -5105,24 +6119,24 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 94 */
-/*!********************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_meta.js ***!
-  \********************************************************/
+/* 138 */
+/*!******************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_meta.js ***!
+  \******************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var META = __webpack_require__(/*! ./_uid */ 27)('meta');
-var isObject = __webpack_require__(/*! ./_is-object */ 18);
-var has = __webpack_require__(/*! ./_has */ 14);
-var setDesc = __webpack_require__(/*! ./_object-dp */ 12).f;
+var META = __webpack_require__(/*! ./_uid */ 39)('meta');
+var isObject = __webpack_require__(/*! ./_is-object */ 29);
+var has = __webpack_require__(/*! ./_has */ 15);
+var setDesc = __webpack_require__(/*! ./_object-dp */ 13).f;
 var id = 0;
 var isExtensible = Object.isExtensible || function () {
   return true;
 };
-var FREEZE = !__webpack_require__(/*! ./_fails */ 20)(function () {
+var FREEZE = !__webpack_require__(/*! ./_fails */ 30)(function () {
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function (it) {
@@ -5170,19 +6184,19 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 95 */
-/*!*************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_enum-keys.js ***!
-  \*************************************************************/
+/* 139 */
+/*!***********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_enum-keys.js ***!
+  \***********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
-var getKeys = __webpack_require__(/*! ./_object-keys */ 25);
-var gOPS = __webpack_require__(/*! ./_object-gops */ 38);
-var pIE = __webpack_require__(/*! ./_object-pie */ 28);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 37);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 57);
+var pIE = __webpack_require__(/*! ./_object-pie */ 40);
 module.exports = function (it) {
   var result = getKeys(it);
   var getSymbols = gOPS.f;
@@ -5197,35 +6211,35 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 96 */
-/*!************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_is-array.js ***!
-  \************************************************************/
+/* 140 */
+/*!**********************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_is-array.js ***!
+  \**********************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(/*! ./_cof */ 32);
+var cof = __webpack_require__(/*! ./_cof */ 51);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 /***/ }),
-/* 97 */
-/*!*******************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/_object-gopn-ext.js ***!
-  \*******************************************************************/
+/* 141 */
+/*!*****************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gopn-ext.js ***!
+  \*****************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
-var toIObject = __webpack_require__(/*! ./_to-iobject */ 19);
-var gOPN = __webpack_require__(/*! ./_object-gopn */ 58).f;
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 22);
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 88).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -5245,10 +6259,38 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 98 */
-/*!***********************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es6.object.to-string.js ***!
-  \***********************************************************************/
+/* 142 */
+/*!*************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/_object-gopd.js ***!
+  \*************************************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var pIE = __webpack_require__(/*! ./_object-pie */ 40);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 36);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 22);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 50);
+var has = __webpack_require__(/*! ./_has */ 15);
+var IE8_DOM_DEFINE = __webpack_require__(/*! ./_ie8-dom-define */ 78);
+var gOPD = Object.getOwnPropertyDescriptor;
+
+exports.f = __webpack_require__(/*! ./_descriptors */ 14) ? gOPD : function getOwnPropertyDescriptor(O, P) {
+  O = toIObject(O);
+  P = toPrimitive(P, true);
+  if (IE8_DOM_DEFINE) try {
+    return gOPD(O, P);
+  } catch (e) { /* empty */ }
+  if (has(O, P)) return createDesc(!pIE.f.call(O, P), O[P]);
+};
+
+
+/***/ }),
+/* 143 */
+/*!*********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es6.object.to-string.js ***!
+  \*********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
@@ -5257,33 +6299,33 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 99 */
-/*!****************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es7.symbol.async-iterator.js ***!
-  \****************************************************************************/
+/* 144 */
+/*!**************************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es7.symbol.async-iterator.js ***!
+  \**************************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./_wks-define */ 45)('asyncIterator');
+__webpack_require__(/*! ./_wks-define */ 64)('asyncIterator');
 
 
 /***/ }),
-/* 100 */
-/*!************************************************************************!*\
-  !*** ../node_modules/core-js/library/modules/es7.symbol.observable.js ***!
-  \************************************************************************/
+/* 145 */
+/*!**********************************************************************************************************!*\
+  !*** ../node_modules/pro-gallery-layouter/node_modules/core-js/library/modules/es7.symbol.observable.js ***!
+  \**********************************************************************************************************/
 /*! dynamic exports provided */
 /*! all exports used */
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ./_wks-define */ 45)('observable');
+__webpack_require__(/*! ./_wks-define */ 64)('observable');
 
 
 /***/ }),
-/* 101 */
+/* 146 */
 /*!**************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/strip.js ***!
   \**************************************************************/
@@ -5300,15 +6342,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Strip = undefined;
 
-var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 39);
+var _getIterator2 = __webpack_require__(/*! babel-runtime/core-js/get-iterator */ 58);
 
 var _getIterator3 = _interopRequireDefault(_getIterator2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -5470,9 +6512,10 @@ var Strip = exports.Strip = function () {
   }]);
   return Strip;
 }();
+//# sourceMappingURL=strip.js.map
 
 /***/ }),
-/* 102 */
+/* 147 */
 /*!***************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/column.js ***!
   \***************************************************************/
@@ -5489,11 +6532,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Column = undefined;
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -5540,9 +6583,10 @@ var Column = exports.Column = function () {
   }]);
   return Column;
 }();
+//# sourceMappingURL=column.js.map
 
 /***/ }),
-/* 103 */
+/* 148 */
 /*!*********************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/layoutsStore.js ***!
   \*********************************************************************/
@@ -5558,15 +6602,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 3);
+var _extends2 = __webpack_require__(/*! babel-runtime/helpers/extends */ 61);
 
 var _extends3 = _interopRequireDefault(_extends2);
 
-var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 1);
+var _classCallCheck2 = __webpack_require__(/*! babel-runtime/helpers/classCallCheck */ 16);
 
 var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
 
-var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 6);
+var _createClass2 = __webpack_require__(/*! babel-runtime/helpers/createClass */ 17);
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
@@ -5590,9 +6634,10 @@ var LayoutsStore = function () {
 }();
 
 exports.default = new LayoutsStore();
+//# sourceMappingURL=layoutsStore.js.map
 
 /***/ }),
-/* 104 */
+/* 149 */
 /*!**********************************************************************!*\
   !*** ../node_modules/pro-gallery-layouter/dist/src/create-layout.js ***!
   \**********************************************************************/
@@ -5609,7 +6654,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = createLayout;
 
-var _layouter = __webpack_require__(/*! ./layouter */ 46);
+var _layouter = __webpack_require__(/*! ./layouter */ 77);
 
 var _layouter2 = _interopRequireDefault(_layouter);
 
@@ -5622,9 +6667,10 @@ function createLayout() {
 
   return new (Function.prototype.bind.apply(_layouter2.default, [null].concat(args)))().createLayout();
 }
+//# sourceMappingURL=create-layout.js.map
 
 /***/ }),
-/* 105 */
+/* 150 */
 /*!*************************************!*\
   !*** ./components/SideBar/index.js ***!
   \*************************************/
@@ -5640,7 +6686,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _SideBar = __webpack_require__(/*! ./SideBar */ 106);
+var _SideBar = __webpack_require__(/*! ./SideBar */ 151);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -5652,7 +6698,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 106 */
+/* 151 */
 /*!***************************************!*\
   !*** ./components/SideBar/SideBar.js ***!
   \***************************************/
@@ -5674,9 +6720,9 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(/*! ./SideBar.scss */ 107);
+__webpack_require__(/*! ./SideBar.scss */ 152);
 
-var _rcSlider = __webpack_require__(/*! rc-slider */ 108);
+var _rcSlider = __webpack_require__(/*! rc-slider */ 153);
 
 var _rcSlider2 = _interopRequireDefault(_rcSlider);
 
@@ -6527,7 +7573,7 @@ var SideBar = function (_React$Component) {
 exports.default = SideBar;
 
 /***/ }),
-/* 107 */
+/* 152 */
 /*!*****************************************!*\
   !*** ./components/SideBar/SideBar.scss ***!
   \*****************************************/
@@ -6540,7 +7586,7 @@ exports.default = SideBar;
 module.exports = {"rcSliderTooltipZoomDownIn":"components-SideBar-SideBar__rcSliderTooltipZoomDownIn__1sMWw","rcSliderTooltipZoomDownOut":"components-SideBar-SideBar__rcSliderTooltipZoomDownOut__2RUVQ"};
 
 /***/ }),
-/* 108 */
+/* 153 */
 /*!**********************************************************!*\
   !*** ../node_modules/rc-slider/es/index.js + 45 modules ***!
   \**********************************************************/
@@ -6553,19 +7599,19 @@ module.exports = {"rcSliderTooltipZoomDownIn":"components-SideBar-SideBar__rcSli
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/extends.js
-var helpers_extends = __webpack_require__(3);
+var helpers_extends = __webpack_require__(5);
 var extends_default = /*#__PURE__*/__webpack_require__.n(helpers_extends);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/classCallCheck.js
-var classCallCheck = __webpack_require__(1);
+var classCallCheck = __webpack_require__(2);
 var classCallCheck_default = /*#__PURE__*/__webpack_require__.n(classCallCheck);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/possibleConstructorReturn.js
-var possibleConstructorReturn = __webpack_require__(4);
+var possibleConstructorReturn = __webpack_require__(3);
 var possibleConstructorReturn_default = /*#__PURE__*/__webpack_require__.n(possibleConstructorReturn);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/inherits.js
-var inherits = __webpack_require__(5);
+var inherits = __webpack_require__(4);
 var inherits_default = /*#__PURE__*/__webpack_require__.n(inherits);
 
 // EXTERNAL MODULE: external "React"
@@ -6573,11 +7619,11 @@ var external__React_ = __webpack_require__(0);
 var external__React__default = /*#__PURE__*/__webpack_require__.n(external__React_);
 
 // EXTERNAL MODULE: ../node_modules/prop-types/index.js
-var prop_types = __webpack_require__(2);
+var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: ../node_modules/warning/browser.js
-var browser = __webpack_require__(30);
+var browser = __webpack_require__(48);
 var browser_default = /*#__PURE__*/__webpack_require__.n(browser);
 
 // CONCATENATED MODULE: ../node_modules/rc-slider/es/common/Track.js
@@ -6608,15 +7654,15 @@ var Track_Track = function Track(props) {
 
 /* harmony default export */ var common_Track = (Track_Track);
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/objectWithoutProperties.js
-var objectWithoutProperties = __webpack_require__(22);
+var objectWithoutProperties = __webpack_require__(33);
 var objectWithoutProperties_default = /*#__PURE__*/__webpack_require__.n(objectWithoutProperties);
 
 // EXTERNAL MODULE: ../node_modules/add-dom-event-listener/lib/index.js
-var lib = __webpack_require__(118);
+var lib = __webpack_require__(193);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
 // EXTERNAL MODULE: external "ReactDOM"
-var external__ReactDOM_ = __webpack_require__(8);
+var external__ReactDOM_ = __webpack_require__(6);
 var external__ReactDOM__default = /*#__PURE__*/__webpack_require__.n(external__ReactDOM_);
 
 // CONCATENATED MODULE: ../node_modules/rc-util/es/Dom/addEventListener.js
@@ -6631,7 +7677,7 @@ function addEventListenerWrap(target, eventType, cb) {
   return lib_default()(target, eventType, callback);
 }
 // EXTERNAL MODULE: ../node_modules/classnames/index.js
-var classnames = __webpack_require__(9);
+var classnames = __webpack_require__(7);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // CONCATENATED MODULE: ../node_modules/rc-slider/es/common/Steps.js
@@ -8028,7 +9074,7 @@ Slider_Slider.propTypes = {
 
 /* harmony default export */ var es_Slider = (createSlider(Slider_Slider));
 // EXTERNAL MODULE: ../node_modules/shallowequal/index.js
-var shallowequal = __webpack_require__(121);
+var shallowequal = __webpack_require__(196);
 var shallowequal_default = /*#__PURE__*/__webpack_require__.n(shallowequal);
 
 // CONCATENATED MODULE: ../node_modules/rc-slider/es/Range.js
@@ -9918,11 +10964,11 @@ Align_Align.defaultProps = {
 
 /* harmony default export */ var rc_align_es = (es_Align);
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/defineProperty.js
-var defineProperty = __webpack_require__(122);
+var defineProperty = __webpack_require__(197);
 var defineProperty_default = /*#__PURE__*/__webpack_require__.n(defineProperty);
 
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/createClass.js
-var createClass = __webpack_require__(6);
+var createClass = __webpack_require__(49);
 var createClass_default = /*#__PURE__*/__webpack_require__.n(createClass);
 
 // CONCATENATED MODULE: ../node_modules/rc-animate/es/ChildrenUtils.js
@@ -10028,7 +11074,7 @@ function mergeChildren(prev, next) {
   return ret;
 }
 // EXTERNAL MODULE: ../node_modules/babel-runtime/helpers/typeof.js
-var helpers_typeof = __webpack_require__(21);
+var helpers_typeof = __webpack_require__(47);
 var typeof_default = /*#__PURE__*/__webpack_require__.n(helpers_typeof);
 
 // CONCATENATED MODULE: ../node_modules/css-animation/es/Event.js
@@ -10115,7 +11161,7 @@ var TransitionEvents = {
 
 /* harmony default export */ var Event = (TransitionEvents);
 // EXTERNAL MODULE: ../node_modules/component-classes/index.js
-var component_classes = __webpack_require__(123);
+var component_classes = __webpack_require__(200);
 var component_classes_default = /*#__PURE__*/__webpack_require__.n(component_classes);
 
 // CONCATENATED MODULE: ../node_modules/css-animation/es/index.js
@@ -12502,7 +13548,920 @@ es_Slider.createSliderWithTooltip = createSliderWithTooltip;
 
 
 /***/ }),
-/* 109 */
+/* 154 */
+/*!**************************************************************!*\
+  !*** ../node_modules/babel-runtime/core-js/object/assign.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/assign */ 155), __esModule: true };
+
+/***/ }),
+/* 155 */
+/*!***********************************************************!*\
+  !*** ../node_modules/core-js/library/fn/object/assign.js ***!
+  \***********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.assign */ 156);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Object.assign;
+
+
+/***/ }),
+/* 156 */
+/*!********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.object.assign.js ***!
+  \********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(/*! ./_export */ 23);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(/*! ./_object-assign */ 158) });
+
+
+/***/ }),
+/* 157 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_a-function.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (it) {
+  if (typeof it != 'function') throw TypeError(it + ' is not a function!');
+  return it;
+};
+
+
+/***/ }),
+/* 158 */
+/*!*****************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-assign.js ***!
+  \*****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// 19.1.2.1 Object.assign(target, source, ...)
+var getKeys = __webpack_require__(/*! ./_object-keys */ 43);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 71);
+var pIE = __webpack_require__(/*! ./_object-pie */ 46);
+var toObject = __webpack_require__(/*! ./_to-object */ 96);
+var IObject = __webpack_require__(/*! ./_iobject */ 94);
+var $assign = Object.assign;
+
+// should work with symbols and should have deterministic property order (V8 bug)
+module.exports = !$assign || __webpack_require__(/*! ./_fails */ 32)(function () {
+  var A = {};
+  var B = {};
+  // eslint-disable-next-line no-undef
+  var S = Symbol();
+  var K = 'abcdefghijklmnopqrst';
+  A[S] = 7;
+  K.split('').forEach(function (k) { B[k] = k; });
+  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+}) ? function assign(target, source) { // eslint-disable-line no-unused-vars
+  var T = toObject(target);
+  var aLen = arguments.length;
+  var index = 1;
+  var getSymbols = gOPS.f;
+  var isEnum = pIE.f;
+  while (aLen > index) {
+    var S = IObject(arguments[index++]);
+    var keys = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S);
+    var length = keys.length;
+    var j = 0;
+    var key;
+    while (length > j) if (isEnum.call(S, key = keys[j++])) T[key] = S[key];
+  } return T;
+} : $assign;
+
+
+/***/ }),
+/* 159 */
+/*!******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_array-includes.js ***!
+  \******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 26);
+var toLength = __webpack_require__(/*! ./_to-length */ 160);
+var toAbsoluteIndex = __webpack_require__(/*! ./_to-absolute-index */ 161);
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
+
+/***/ }),
+/* 160 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-length.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(/*! ./_to-integer */ 67);
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
+
+
+/***/ }),
+/* 161 */
+/*!*********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_to-absolute-index.js ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ 67);
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+/* 162 */
+/*!****************************************************************!*\
+  !*** ../node_modules/babel-runtime/core-js/symbol/iterator.js ***!
+  \****************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol/iterator */ 163), __esModule: true };
+
+/***/ }),
+/* 163 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/fn/symbol/iterator.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.string.iterator */ 164);
+__webpack_require__(/*! ../../modules/web.dom.iterable */ 170);
+module.exports = __webpack_require__(/*! ../../modules/_wks-ext */ 75).f('iterator');
+
+
+/***/ }),
+/* 164 */
+/*!**********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.string.iterator.js ***!
+  \**********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $at = __webpack_require__(/*! ./_string-at */ 165)(true);
+
+// 21.1.3.27 String.prototype[@@iterator]()
+__webpack_require__(/*! ./_iter-define */ 97)(String, 'String', function (iterated) {
+  this._t = String(iterated); // target
+  this._i = 0;                // next index
+// 21.1.5.2.1 %StringIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var index = this._i;
+  var point;
+  if (index >= O.length) return { value: undefined, done: true };
+  point = $at(O, index);
+  this._i += point.length;
+  return { value: point, done: false };
+});
+
+
+/***/ }),
+/* 165 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_string-at.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(/*! ./_to-integer */ 67);
+var defined = __webpack_require__(/*! ./_defined */ 66);
+// true  -> String#at
+// false -> String#codePointAt
+module.exports = function (TO_STRING) {
+  return function (that, pos) {
+    var s = String(defined(that));
+    var i = toInteger(pos);
+    var l = s.length;
+    var a, b;
+    if (i < 0 || i >= l) return TO_STRING ? '' : undefined;
+    a = s.charCodeAt(i);
+    return a < 0xd800 || a > 0xdbff || i + 1 === l || (b = s.charCodeAt(i + 1)) < 0xdc00 || b > 0xdfff
+      ? TO_STRING ? s.charAt(i) : a
+      : TO_STRING ? s.slice(i, i + 2) : (a - 0xd800 << 10) + (b - 0xdc00) + 0x10000;
+  };
+};
+
+
+/***/ }),
+/* 166 */
+/*!***************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iter-create.js ***!
+  \***************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var create = __webpack_require__(/*! ./_object-create */ 73);
+var descriptor = __webpack_require__(/*! ./_property-desc */ 42);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 74);
+var IteratorPrototype = {};
+
+// 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
+__webpack_require__(/*! ./_hide */ 24)(IteratorPrototype, __webpack_require__(/*! ./_wks */ 27)('iterator'), function () { return this; });
+
+module.exports = function (Constructor, NAME, next) {
+  Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
+  setToStringTag(Constructor, NAME + ' Iterator');
+};
+
+
+/***/ }),
+/* 167 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-dps.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var dP = __webpack_require__(/*! ./_object-dp */ 18);
+var anObject = __webpack_require__(/*! ./_an-object */ 31);
+var getKeys = __webpack_require__(/*! ./_object-keys */ 43);
+
+module.exports = __webpack_require__(/*! ./_descriptors */ 19) ? Object.defineProperties : function defineProperties(O, Properties) {
+  anObject(O);
+  var keys = getKeys(Properties);
+  var length = keys.length;
+  var i = 0;
+  var P;
+  while (length > i) dP.f(O, P = keys[i++], Properties[P]);
+  return O;
+};
+
+
+/***/ }),
+/* 168 */
+/*!********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_html.js ***!
+  \********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var document = __webpack_require__(/*! ./_global */ 11).document;
+module.exports = document && document.documentElement;
+
+
+/***/ }),
+/* 169 */
+/*!**************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gpo.js ***!
+  \**************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
+var has = __webpack_require__(/*! ./_has */ 20);
+var toObject = __webpack_require__(/*! ./_to-object */ 96);
+var IE_PROTO = __webpack_require__(/*! ./_shared-key */ 68)('IE_PROTO');
+var ObjectProto = Object.prototype;
+
+module.exports = Object.getPrototypeOf || function (O) {
+  O = toObject(O);
+  if (has(O, IE_PROTO)) return O[IE_PROTO];
+  if (typeof O.constructor == 'function' && O instanceof O.constructor) {
+    return O.constructor.prototype;
+  } return O instanceof Object ? ObjectProto : null;
+};
+
+
+/***/ }),
+/* 170 */
+/*!*******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/web.dom.iterable.js ***!
+  \*******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./es6.array.iterator */ 171);
+var global = __webpack_require__(/*! ./_global */ 11);
+var hide = __webpack_require__(/*! ./_hide */ 24);
+var Iterators = __webpack_require__(/*! ./_iterators */ 72);
+var TO_STRING_TAG = __webpack_require__(/*! ./_wks */ 27)('toStringTag');
+
+var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
+  'DOMTokenList,DataTransferItemList,FileList,HTMLAllCollection,HTMLCollection,HTMLFormElement,HTMLSelectElement,' +
+  'MediaList,MimeTypeArray,NamedNodeMap,NodeList,PaintRequestList,Plugin,PluginArray,SVGLengthList,SVGNumberList,' +
+  'SVGPathSegList,SVGPointList,SVGStringList,SVGTransformList,SourceBufferList,StyleSheetList,TextTrackCueList,' +
+  'TextTrackList,TouchList').split(',');
+
+for (var i = 0; i < DOMIterables.length; i++) {
+  var NAME = DOMIterables[i];
+  var Collection = global[NAME];
+  var proto = Collection && Collection.prototype;
+  if (proto && !proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);
+  Iterators[NAME] = Iterators.Array;
+}
+
+
+/***/ }),
+/* 171 */
+/*!*********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.array.iterator.js ***!
+  \*********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables */ 172);
+var step = __webpack_require__(/*! ./_iter-step */ 173);
+var Iterators = __webpack_require__(/*! ./_iterators */ 72);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 26);
+
+// 22.1.3.4 Array.prototype.entries()
+// 22.1.3.13 Array.prototype.keys()
+// 22.1.3.29 Array.prototype.values()
+// 22.1.3.30 Array.prototype[@@iterator]()
+module.exports = __webpack_require__(/*! ./_iter-define */ 97)(Array, 'Array', function (iterated, kind) {
+  this._t = toIObject(iterated); // target
+  this._i = 0;                   // next index
+  this._k = kind;                // kind
+// 22.1.5.2.1 %ArrayIteratorPrototype%.next()
+}, function () {
+  var O = this._t;
+  var kind = this._k;
+  var index = this._i++;
+  if (!O || index >= O.length) {
+    this._t = undefined;
+    return step(1);
+  }
+  if (kind == 'keys') return step(0, index);
+  if (kind == 'values') return step(0, O[index]);
+  return step(0, [index, O[index]]);
+}, 'values');
+
+// argumentsList[@@iterator] is %ArrayProto_values% (9.4.4.6, 9.4.4.7)
+Iterators.Arguments = Iterators.Array;
+
+addToUnscopables('keys');
+addToUnscopables('values');
+addToUnscopables('entries');
+
+
+/***/ }),
+/* 172 */
+/*!**********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_add-to-unscopables.js ***!
+  \**********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function () { /* empty */ };
+
+
+/***/ }),
+/* 173 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_iter-step.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+module.exports = function (done, value) {
+  return { value: value, done: !!done };
+};
+
+
+/***/ }),
+/* 174 */
+/*!*******************************************************!*\
+  !*** ../node_modules/babel-runtime/core-js/symbol.js ***!
+  \*******************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/symbol */ 175), __esModule: true };
+
+/***/ }),
+/* 175 */
+/*!**********************************************************!*\
+  !*** ../node_modules/core-js/library/fn/symbol/index.js ***!
+  \**********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.symbol */ 176);
+__webpack_require__(/*! ../../modules/es6.object.to-string */ 181);
+__webpack_require__(/*! ../../modules/es7.symbol.async-iterator */ 182);
+__webpack_require__(/*! ../../modules/es7.symbol.observable */ 183);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Symbol;
+
+
+/***/ }),
+/* 176 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.symbol.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+// ECMAScript 6 symbols shim
+var global = __webpack_require__(/*! ./_global */ 11);
+var has = __webpack_require__(/*! ./_has */ 20);
+var DESCRIPTORS = __webpack_require__(/*! ./_descriptors */ 19);
+var $export = __webpack_require__(/*! ./_export */ 23);
+var redefine = __webpack_require__(/*! ./_redefine */ 98);
+var META = __webpack_require__(/*! ./_meta */ 177).KEY;
+var $fails = __webpack_require__(/*! ./_fails */ 32);
+var shared = __webpack_require__(/*! ./_shared */ 69);
+var setToStringTag = __webpack_require__(/*! ./_set-to-string-tag */ 74);
+var uid = __webpack_require__(/*! ./_uid */ 45);
+var wks = __webpack_require__(/*! ./_wks */ 27);
+var wksExt = __webpack_require__(/*! ./_wks-ext */ 75);
+var wksDefine = __webpack_require__(/*! ./_wks-define */ 76);
+var enumKeys = __webpack_require__(/*! ./_enum-keys */ 178);
+var isArray = __webpack_require__(/*! ./_is-array */ 179);
+var anObject = __webpack_require__(/*! ./_an-object */ 31);
+var isObject = __webpack_require__(/*! ./_is-object */ 25);
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 26);
+var toPrimitive = __webpack_require__(/*! ./_to-primitive */ 65);
+var createDesc = __webpack_require__(/*! ./_property-desc */ 42);
+var _create = __webpack_require__(/*! ./_object-create */ 73);
+var gOPNExt = __webpack_require__(/*! ./_object-gopn-ext */ 180);
+var $GOPD = __webpack_require__(/*! ./_object-gopd */ 100);
+var $DP = __webpack_require__(/*! ./_object-dp */ 18);
+var $keys = __webpack_require__(/*! ./_object-keys */ 43);
+var gOPD = $GOPD.f;
+var dP = $DP.f;
+var gOPN = gOPNExt.f;
+var $Symbol = global.Symbol;
+var $JSON = global.JSON;
+var _stringify = $JSON && $JSON.stringify;
+var PROTOTYPE = 'prototype';
+var HIDDEN = wks('_hidden');
+var TO_PRIMITIVE = wks('toPrimitive');
+var isEnum = {}.propertyIsEnumerable;
+var SymbolRegistry = shared('symbol-registry');
+var AllSymbols = shared('symbols');
+var OPSymbols = shared('op-symbols');
+var ObjectProto = Object[PROTOTYPE];
+var USE_NATIVE = typeof $Symbol == 'function';
+var QObject = global.QObject;
+// Don't use setters in Qt Script, https://github.com/zloirock/core-js/issues/173
+var setter = !QObject || !QObject[PROTOTYPE] || !QObject[PROTOTYPE].findChild;
+
+// fallback for old Android, https://code.google.com/p/v8/issues/detail?id=687
+var setSymbolDesc = DESCRIPTORS && $fails(function () {
+  return _create(dP({}, 'a', {
+    get: function () { return dP(this, 'a', { value: 7 }).a; }
+  })).a != 7;
+}) ? function (it, key, D) {
+  var protoDesc = gOPD(ObjectProto, key);
+  if (protoDesc) delete ObjectProto[key];
+  dP(it, key, D);
+  if (protoDesc && it !== ObjectProto) dP(ObjectProto, key, protoDesc);
+} : dP;
+
+var wrap = function (tag) {
+  var sym = AllSymbols[tag] = _create($Symbol[PROTOTYPE]);
+  sym._k = tag;
+  return sym;
+};
+
+var isSymbol = USE_NATIVE && typeof $Symbol.iterator == 'symbol' ? function (it) {
+  return typeof it == 'symbol';
+} : function (it) {
+  return it instanceof $Symbol;
+};
+
+var $defineProperty = function defineProperty(it, key, D) {
+  if (it === ObjectProto) $defineProperty(OPSymbols, key, D);
+  anObject(it);
+  key = toPrimitive(key, true);
+  anObject(D);
+  if (has(AllSymbols, key)) {
+    if (!D.enumerable) {
+      if (!has(it, HIDDEN)) dP(it, HIDDEN, createDesc(1, {}));
+      it[HIDDEN][key] = true;
+    } else {
+      if (has(it, HIDDEN) && it[HIDDEN][key]) it[HIDDEN][key] = false;
+      D = _create(D, { enumerable: createDesc(0, false) });
+    } return setSymbolDesc(it, key, D);
+  } return dP(it, key, D);
+};
+var $defineProperties = function defineProperties(it, P) {
+  anObject(it);
+  var keys = enumKeys(P = toIObject(P));
+  var i = 0;
+  var l = keys.length;
+  var key;
+  while (l > i) $defineProperty(it, key = keys[i++], P[key]);
+  return it;
+};
+var $create = function create(it, P) {
+  return P === undefined ? _create(it) : $defineProperties(_create(it), P);
+};
+var $propertyIsEnumerable = function propertyIsEnumerable(key) {
+  var E = isEnum.call(this, key = toPrimitive(key, true));
+  if (this === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return false;
+  return E || !has(this, key) || !has(AllSymbols, key) || has(this, HIDDEN) && this[HIDDEN][key] ? E : true;
+};
+var $getOwnPropertyDescriptor = function getOwnPropertyDescriptor(it, key) {
+  it = toIObject(it);
+  key = toPrimitive(key, true);
+  if (it === ObjectProto && has(AllSymbols, key) && !has(OPSymbols, key)) return;
+  var D = gOPD(it, key);
+  if (D && has(AllSymbols, key) && !(has(it, HIDDEN) && it[HIDDEN][key])) D.enumerable = true;
+  return D;
+};
+var $getOwnPropertyNames = function getOwnPropertyNames(it) {
+  var names = gOPN(toIObject(it));
+  var result = [];
+  var i = 0;
+  var key;
+  while (names.length > i) {
+    if (!has(AllSymbols, key = names[i++]) && key != HIDDEN && key != META) result.push(key);
+  } return result;
+};
+var $getOwnPropertySymbols = function getOwnPropertySymbols(it) {
+  var IS_OP = it === ObjectProto;
+  var names = gOPN(IS_OP ? OPSymbols : toIObject(it));
+  var result = [];
+  var i = 0;
+  var key;
+  while (names.length > i) {
+    if (has(AllSymbols, key = names[i++]) && (IS_OP ? has(ObjectProto, key) : true)) result.push(AllSymbols[key]);
+  } return result;
+};
+
+// 19.4.1.1 Symbol([description])
+if (!USE_NATIVE) {
+  $Symbol = function Symbol() {
+    if (this instanceof $Symbol) throw TypeError('Symbol is not a constructor!');
+    var tag = uid(arguments.length > 0 ? arguments[0] : undefined);
+    var $set = function (value) {
+      if (this === ObjectProto) $set.call(OPSymbols, value);
+      if (has(this, HIDDEN) && has(this[HIDDEN], tag)) this[HIDDEN][tag] = false;
+      setSymbolDesc(this, tag, createDesc(1, value));
+    };
+    if (DESCRIPTORS && setter) setSymbolDesc(ObjectProto, tag, { configurable: true, set: $set });
+    return wrap(tag);
+  };
+  redefine($Symbol[PROTOTYPE], 'toString', function toString() {
+    return this._k;
+  });
+
+  $GOPD.f = $getOwnPropertyDescriptor;
+  $DP.f = $defineProperty;
+  __webpack_require__(/*! ./_object-gopn */ 99).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(/*! ./_object-pie */ 46).f = $propertyIsEnumerable;
+  __webpack_require__(/*! ./_object-gops */ 71).f = $getOwnPropertySymbols;
+
+  if (DESCRIPTORS && !__webpack_require__(/*! ./_library */ 44)) {
+    redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
+  }
+
+  wksExt.f = function (name) {
+    return wrap(wks(name));
+  };
+}
+
+$export($export.G + $export.W + $export.F * !USE_NATIVE, { Symbol: $Symbol });
+
+for (var es6Symbols = (
+  // 19.4.2.2, 19.4.2.3, 19.4.2.4, 19.4.2.6, 19.4.2.8, 19.4.2.9, 19.4.2.10, 19.4.2.11, 19.4.2.12, 19.4.2.13, 19.4.2.14
+  'hasInstance,isConcatSpreadable,iterator,match,replace,search,species,split,toPrimitive,toStringTag,unscopables'
+).split(','), j = 0; es6Symbols.length > j;)wks(es6Symbols[j++]);
+
+for (var wellKnownSymbols = $keys(wks.store), k = 0; wellKnownSymbols.length > k;) wksDefine(wellKnownSymbols[k++]);
+
+$export($export.S + $export.F * !USE_NATIVE, 'Symbol', {
+  // 19.4.2.1 Symbol.for(key)
+  'for': function (key) {
+    return has(SymbolRegistry, key += '')
+      ? SymbolRegistry[key]
+      : SymbolRegistry[key] = $Symbol(key);
+  },
+  // 19.4.2.5 Symbol.keyFor(sym)
+  keyFor: function keyFor(sym) {
+    if (!isSymbol(sym)) throw TypeError(sym + ' is not a symbol!');
+    for (var key in SymbolRegistry) if (SymbolRegistry[key] === sym) return key;
+  },
+  useSetter: function () { setter = true; },
+  useSimple: function () { setter = false; }
+});
+
+$export($export.S + $export.F * !USE_NATIVE, 'Object', {
+  // 19.1.2.2 Object.create(O [, Properties])
+  create: $create,
+  // 19.1.2.4 Object.defineProperty(O, P, Attributes)
+  defineProperty: $defineProperty,
+  // 19.1.2.3 Object.defineProperties(O, Properties)
+  defineProperties: $defineProperties,
+  // 19.1.2.6 Object.getOwnPropertyDescriptor(O, P)
+  getOwnPropertyDescriptor: $getOwnPropertyDescriptor,
+  // 19.1.2.7 Object.getOwnPropertyNames(O)
+  getOwnPropertyNames: $getOwnPropertyNames,
+  // 19.1.2.8 Object.getOwnPropertySymbols(O)
+  getOwnPropertySymbols: $getOwnPropertySymbols
+});
+
+// 24.3.2 JSON.stringify(value [, replacer [, space]])
+$JSON && $export($export.S + $export.F * (!USE_NATIVE || $fails(function () {
+  var S = $Symbol();
+  // MS Edge converts symbol values to JSON as {}
+  // WebKit converts symbol values to JSON as null
+  // V8 throws on boxed symbols
+  return _stringify([S]) != '[null]' || _stringify({ a: S }) != '{}' || _stringify(Object(S)) != '{}';
+})), 'JSON', {
+  stringify: function stringify(it) {
+    var args = [it];
+    var i = 1;
+    var replacer, $replacer;
+    while (arguments.length > i) args.push(arguments[i++]);
+    $replacer = replacer = args[1];
+    if (!isObject(replacer) && it === undefined || isSymbol(it)) return; // IE8 returns string on undefined
+    if (!isArray(replacer)) replacer = function (key, value) {
+      if (typeof $replacer == 'function') value = $replacer.call(this, key, value);
+      if (!isSymbol(value)) return value;
+    };
+    args[1] = replacer;
+    return _stringify.apply($JSON, args);
+  }
+});
+
+// 19.4.3.4 Symbol.prototype[@@toPrimitive](hint)
+$Symbol[PROTOTYPE][TO_PRIMITIVE] || __webpack_require__(/*! ./_hide */ 24)($Symbol[PROTOTYPE], TO_PRIMITIVE, $Symbol[PROTOTYPE].valueOf);
+// 19.4.3.5 Symbol.prototype[@@toStringTag]
+setToStringTag($Symbol, 'Symbol');
+// 20.2.1.9 Math[@@toStringTag]
+setToStringTag(Math, 'Math', true);
+// 24.3.3 JSON[@@toStringTag]
+setToStringTag(global.JSON, 'JSON', true);
+
+
+/***/ }),
+/* 177 */
+/*!********************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_meta.js ***!
+  \********************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var META = __webpack_require__(/*! ./_uid */ 45)('meta');
+var isObject = __webpack_require__(/*! ./_is-object */ 25);
+var has = __webpack_require__(/*! ./_has */ 20);
+var setDesc = __webpack_require__(/*! ./_object-dp */ 18).f;
+var id = 0;
+var isExtensible = Object.isExtensible || function () {
+  return true;
+};
+var FREEZE = !__webpack_require__(/*! ./_fails */ 32)(function () {
+  return isExtensible(Object.preventExtensions({}));
+});
+var setMeta = function (it) {
+  setDesc(it, META, { value: {
+    i: 'O' + ++id, // object ID
+    w: {}          // weak collections IDs
+  } });
+};
+var fastKey = function (it, create) {
+  // return primitive with prefix
+  if (!isObject(it)) return typeof it == 'symbol' ? it : (typeof it == 'string' ? 'S' : 'P') + it;
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return 'F';
+    // not necessary to add metadata
+    if (!create) return 'E';
+    // add missing metadata
+    setMeta(it);
+  // return object ID
+  } return it[META].i;
+};
+var getWeak = function (it, create) {
+  if (!has(it, META)) {
+    // can't set metadata to uncaught frozen object
+    if (!isExtensible(it)) return true;
+    // not necessary to add metadata
+    if (!create) return false;
+    // add missing metadata
+    setMeta(it);
+  // return hash weak collections IDs
+  } return it[META].w;
+};
+// add metadata on freeze-family methods calling
+var onFreeze = function (it) {
+  if (FREEZE && meta.NEED && isExtensible(it) && !has(it, META)) setMeta(it);
+  return it;
+};
+var meta = module.exports = {
+  KEY: META,
+  NEED: false,
+  fastKey: fastKey,
+  getWeak: getWeak,
+  onFreeze: onFreeze
+};
+
+
+/***/ }),
+/* 178 */
+/*!*************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_enum-keys.js ***!
+  \*************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// all enumerable object keys, includes symbols
+var getKeys = __webpack_require__(/*! ./_object-keys */ 43);
+var gOPS = __webpack_require__(/*! ./_object-gops */ 71);
+var pIE = __webpack_require__(/*! ./_object-pie */ 46);
+module.exports = function (it) {
+  var result = getKeys(it);
+  var getSymbols = gOPS.f;
+  if (getSymbols) {
+    var symbols = getSymbols(it);
+    var isEnum = pIE.f;
+    var i = 0;
+    var key;
+    while (symbols.length > i) if (isEnum.call(it, key = symbols[i++])) result.push(key);
+  } return result;
+};
+
+
+/***/ }),
+/* 179 */
+/*!************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_is-array.js ***!
+  \************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// 7.2.2 IsArray(argument)
+var cof = __webpack_require__(/*! ./_cof */ 95);
+module.exports = Array.isArray || function isArray(arg) {
+  return cof(arg) == 'Array';
+};
+
+
+/***/ }),
+/* 180 */
+/*!*******************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/_object-gopn-ext.js ***!
+  \*******************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+// fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
+var toIObject = __webpack_require__(/*! ./_to-iobject */ 26);
+var gOPN = __webpack_require__(/*! ./_object-gopn */ 99).f;
+var toString = {}.toString;
+
+var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
+  ? Object.getOwnPropertyNames(window) : [];
+
+var getWindowNames = function (it) {
+  try {
+    return gOPN(it);
+  } catch (e) {
+    return windowNames.slice();
+  }
+};
+
+module.exports.f = function getOwnPropertyNames(it) {
+  return windowNames && toString.call(it) == '[object Window]' ? getWindowNames(it) : gOPN(toIObject(it));
+};
+
+
+/***/ }),
+/* 181 */
+/*!***********************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.object.to-string.js ***!
+  \***********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+/* 182 */
+/*!****************************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es7.symbol.async-iterator.js ***!
+  \****************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./_wks-define */ 76)('asyncIterator');
+
+
+/***/ }),
+/* 183 */
+/*!************************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es7.symbol.observable.js ***!
+  \************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ./_wks-define */ 76)('observable');
+
+
+/***/ }),
+/* 184 */
 /*!************************************************************************!*\
   !*** ../node_modules/babel-runtime/core-js/object/set-prototype-of.js ***!
   \************************************************************************/
@@ -12511,10 +14470,10 @@ es_Slider.createSliderWithTooltip = createSliderWithTooltip;
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ 110), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ 185), __esModule: true };
 
 /***/ }),
-/* 110 */
+/* 185 */
 /*!*********************************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/set-prototype-of.js ***!
   \*********************************************************************/
@@ -12523,12 +14482,12 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ 111);
-module.exports = __webpack_require__(/*! ../../modules/_core */ 7).Object.setPrototypeOf;
+__webpack_require__(/*! ../../modules/es6.object.set-prototype-of */ 186);
+module.exports = __webpack_require__(/*! ../../modules/_core */ 12).Object.setPrototypeOf;
 
 
 /***/ }),
-/* 111 */
+/* 186 */
 /*!******************************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.object.set-prototype-of.js ***!
   \******************************************************************************/
@@ -12538,12 +14497,12 @@ module.exports = __webpack_require__(/*! ../../modules/_core */ 7).Object.setPro
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
-var $export = __webpack_require__(/*! ./_export */ 15);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-proto */ 112).set });
+var $export = __webpack_require__(/*! ./_export */ 23);
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-proto */ 187).set });
 
 
 /***/ }),
-/* 112 */
+/* 187 */
 /*!*************************************************************!*\
   !*** ../node_modules/core-js/library/modules/_set-proto.js ***!
   \*************************************************************/
@@ -12554,8 +14513,8 @@ $export($export.S, 'Object', { setPrototypeOf: __webpack_require__(/*! ./_set-pr
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
 /* eslint-disable no-proto */
-var isObject = __webpack_require__(/*! ./_is-object */ 18);
-var anObject = __webpack_require__(/*! ./_an-object */ 17);
+var isObject = __webpack_require__(/*! ./_is-object */ 25);
+var anObject = __webpack_require__(/*! ./_an-object */ 31);
 var check = function (O, proto) {
   anObject(O);
   if (!isObject(proto) && proto !== null) throw TypeError(proto + ": can't set as prototype!");
@@ -12564,7 +14523,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function (test, buggy, set) {
       try {
-        set = __webpack_require__(/*! ./_ctx */ 47)(Function.call, __webpack_require__(/*! ./_object-gopd */ 59).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(/*! ./_ctx */ 90)(Function.call, __webpack_require__(/*! ./_object-gopd */ 100).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch (e) { buggy = true; }
@@ -12580,7 +14539,7 @@ module.exports = {
 
 
 /***/ }),
-/* 113 */
+/* 188 */
 /*!**************************************************************!*\
   !*** ../node_modules/babel-runtime/core-js/object/create.js ***!
   \**************************************************************/
@@ -12589,10 +14548,10 @@ module.exports = {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/create */ 114), __esModule: true };
+module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/create */ 189), __esModule: true };
 
 /***/ }),
-/* 114 */
+/* 189 */
 /*!***********************************************************!*\
   !*** ../node_modules/core-js/library/fn/object/create.js ***!
   \***********************************************************/
@@ -12601,15 +14560,15 @@ module.exports = { "default": __webpack_require__(/*! core-js/library/fn/object/
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! ../../modules/es6.object.create */ 115);
-var $Object = __webpack_require__(/*! ../../modules/_core */ 7).Object;
+__webpack_require__(/*! ../../modules/es6.object.create */ 190);
+var $Object = __webpack_require__(/*! ../../modules/_core */ 12).Object;
 module.exports = function create(P, D) {
   return $Object.create(P, D);
 };
 
 
 /***/ }),
-/* 115 */
+/* 190 */
 /*!********************************************************************!*\
   !*** ../node_modules/core-js/library/modules/es6.object.create.js ***!
   \********************************************************************/
@@ -12618,13 +14577,13 @@ module.exports = function create(P, D) {
 /*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(/*! ./_export */ 15);
+var $export = __webpack_require__(/*! ./_export */ 23);
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ 40) });
+$export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create */ 73) });
 
 
 /***/ }),
-/* 116 */
+/* 191 */
 /*!*************************************************************!*\
   !*** ../node_modules/prop-types/factoryWithTypeCheckers.js ***!
   \*************************************************************/
@@ -12643,10 +14602,10 @@ $export($export.S, 'Object', { create: __webpack_require__(/*! ./_object-create 
 
 
 
-var assign = __webpack_require__(/*! object-assign */ 61);
+var assign = __webpack_require__(/*! object-assign */ 101);
 
-var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 62);
-var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ 117);
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 102);
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ 192);
 
 var printWarning = function() {};
 
@@ -13192,7 +15151,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 
 /***/ }),
-/* 117 */
+/* 192 */
 /*!****************************************************!*\
   !*** ../node_modules/prop-types/checkPropTypes.js ***!
   \****************************************************/
@@ -13214,7 +15173,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 var printWarning = function() {};
 
 if (true) {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 62);
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ 102);
   var loggedTypeFailures = {};
 
   printWarning = function(text) {
@@ -13296,7 +15255,7 @@ module.exports = checkPropTypes;
 
 
 /***/ }),
-/* 118 */
+/* 193 */
 /*!***********************************************************!*\
   !*** ../node_modules/add-dom-event-listener/lib/index.js ***!
   \***********************************************************/
@@ -13313,7 +15272,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = addEventListener;
 
-var _EventObject = __webpack_require__(/*! ./EventObject */ 119);
+var _EventObject = __webpack_require__(/*! ./EventObject */ 194);
 
 var _EventObject2 = _interopRequireDefault(_EventObject);
 
@@ -13344,7 +15303,7 @@ function addEventListener(target, eventType, callback) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 119 */
+/* 194 */
 /*!*****************************************************************!*\
   !*** ../node_modules/add-dom-event-listener/lib/EventObject.js ***!
   \*****************************************************************/
@@ -13360,11 +15319,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _EventBaseObject = __webpack_require__(/*! ./EventBaseObject */ 120);
+var _EventBaseObject = __webpack_require__(/*! ./EventBaseObject */ 195);
 
 var _EventBaseObject2 = _interopRequireDefault(_EventBaseObject);
 
-var _objectAssign = __webpack_require__(/*! object-assign */ 61);
+var _objectAssign = __webpack_require__(/*! object-assign */ 101);
 
 var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -13633,7 +15592,7 @@ exports["default"] = DomEventObject;
 module.exports = exports['default'];
 
 /***/ }),
-/* 120 */
+/* 195 */
 /*!*********************************************************************!*\
   !*** ../node_modules/add-dom-event-listener/lib/EventBaseObject.js ***!
   \*********************************************************************/
@@ -13705,7 +15664,7 @@ exports["default"] = EventBaseObject;
 module.exports = exports['default'];
 
 /***/ }),
-/* 121 */
+/* 196 */
 /*!*********************************************!*\
   !*** ../node_modules/shallowequal/index.js ***!
   \*********************************************/
@@ -13763,7 +15722,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 
 /***/ }),
-/* 122 */
+/* 197 */
 /*!***************************************************************!*\
   !*** ../node_modules/babel-runtime/helpers/defineProperty.js ***!
   \***************************************************************/
@@ -13777,7 +15736,7 @@ module.exports = function shallowEqual(objA, objB, compare, compareContext) {
 
 exports.__esModule = true;
 
-var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 57);
+var _defineProperty = __webpack_require__(/*! ../core-js/object/define-property */ 103);
 
 var _defineProperty2 = _interopRequireDefault(_defineProperty);
 
@@ -13799,7 +15758,39 @@ exports.default = function (obj, key, value) {
 };
 
 /***/ }),
-/* 123 */
+/* 198 */
+/*!********************************************************************!*\
+  !*** ../node_modules/core-js/library/fn/object/define-property.js ***!
+  \********************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! ../../modules/es6.object.define-property */ 199);
+var $Object = __webpack_require__(/*! ../../modules/_core */ 12).Object;
+module.exports = function defineProperty(it, key, desc) {
+  return $Object.defineProperty(it, key, desc);
+};
+
+
+/***/ }),
+/* 199 */
+/*!*****************************************************************************!*\
+  !*** ../node_modules/core-js/library/modules/es6.object.define-property.js ***!
+  \*****************************************************************************/
+/*! dynamic exports provided */
+/*! all exports used */
+/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
+/***/ (function(module, exports, __webpack_require__) {
+
+var $export = __webpack_require__(/*! ./_export */ 23);
+// 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)
+$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ 19), 'Object', { defineProperty: __webpack_require__(/*! ./_object-dp */ 18).f });
+
+
+/***/ }),
+/* 200 */
 /*!**************************************************!*\
   !*** ../node_modules/component-classes/index.js ***!
   \**************************************************/
@@ -13813,9 +15804,9 @@ exports.default = function (obj, key, value) {
  */
 
 try {
-  var index = __webpack_require__(/*! indexof */ 63);
+  var index = __webpack_require__(/*! indexof */ 104);
 } catch (err) {
-  var index = __webpack_require__(/*! component-indexof */ 63);
+  var index = __webpack_require__(/*! component-indexof */ 104);
 }
 
 /**
@@ -14002,7 +15993,7 @@ ClassList.prototype.contains = function(name){
 
 
 /***/ }),
-/* 124 */
+/* 201 */
 /*!*************************************!*\
   !*** ./components/Gallery/index.js ***!
   \*************************************/
@@ -14018,7 +16009,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Gallery = __webpack_require__(/*! ./Gallery */ 125);
+var _Gallery = __webpack_require__(/*! ./Gallery */ 202);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -14030,7 +16021,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 125 */
+/* 202 */
 /*!***************************************!*\
   !*** ./components/Gallery/Gallery.js ***!
   \***************************************/
@@ -14050,11 +16041,11 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(/*! prop-types */ 2);
+var _propTypes = __webpack_require__(/*! prop-types */ 1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Gallery = __webpack_require__(/*! ./Gallery.scss */ 126);
+var _Gallery = __webpack_require__(/*! ./Gallery.scss */ 203);
 
 var _Gallery2 = _interopRequireDefault(_Gallery);
 
@@ -14101,7 +16092,7 @@ Gallery.propTypes = {
 exports.default = Gallery;
 
 /***/ }),
-/* 126 */
+/* 203 */
 /*!*****************************************!*\
   !*** ./components/Gallery/Gallery.scss ***!
   \*****************************************/
@@ -14114,7 +16105,7 @@ exports.default = Gallery;
 module.exports = {"root":"components-Gallery-Gallery__root__1JS6n","item":"components-Gallery-Gallery__item__3qSoF"};
 
 /***/ }),
-/* 127 */
+/* 204 */
 /*!************************************!*\
   !*** ./components/Sample/index.js ***!
   \************************************/
@@ -14130,7 +16121,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Sample = __webpack_require__(/*! ./Sample */ 128);
+var _Sample = __webpack_require__(/*! ./Sample */ 205);
 
 Object.defineProperty(exports, 'default', {
   enumerable: true,
@@ -14142,7 +16133,7 @@ Object.defineProperty(exports, 'default', {
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 128 */
+/* 205 */
 /*!*************************************!*\
   !*** ./components/Sample/Sample.js ***!
   \*************************************/
@@ -14162,31 +16153,31 @@ var _react = __webpack_require__(/*! react */ 0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _propTypes = __webpack_require__(/*! prop-types */ 2);
+var _propTypes = __webpack_require__(/*! prop-types */ 1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Sample = __webpack_require__(/*! ./Sample.scss */ 129);
+var _Sample = __webpack_require__(/*! ./Sample.scss */ 206);
 
 var _Sample2 = _interopRequireDefault(_Sample);
 
-var _reactTabs = __webpack_require__(/*! react-tabs */ 130);
+var _reactTabs = __webpack_require__(/*! react-tabs */ 207);
 
-__webpack_require__(/*! react-tabs/style/react-tabs.scss */ 131);
+__webpack_require__(/*! react-tabs/style/react-tabs.scss */ 208);
 
-var _base = __webpack_require__(/*! ./samples/base */ 132);
+var _base = __webpack_require__(/*! ./samples/base */ 209);
 
 var _base2 = _interopRequireDefault(_base);
 
-var _absolute = __webpack_require__(/*! ./samples/absolute */ 133);
+var _absolute = __webpack_require__(/*! ./samples/absolute */ 210);
 
 var _absolute2 = _interopRequireDefault(_absolute);
 
-var _relative = __webpack_require__(/*! ./samples/relative */ 134);
+var _relative = __webpack_require__(/*! ./samples/relative */ 211);
 
 var _relative2 = _interopRequireDefault(_relative);
 
-var _react3 = __webpack_require__(/*! ./samples/react */ 135);
+var _react3 = __webpack_require__(/*! ./samples/react */ 212);
 
 var _react4 = _interopRequireDefault(_react3);
 
@@ -14286,7 +16277,7 @@ var Sample = function Sample(_ref) {
 exports.default = Sample;
 
 /***/ }),
-/* 129 */
+/* 206 */
 /*!***************************************!*\
   !*** ./components/Sample/Sample.scss ***!
   \***************************************/
@@ -14299,7 +16290,7 @@ exports.default = Sample;
 module.exports = {"root":"components-Sample-Sample__root__2MPO6","modal":"components-Sample-Sample__modal__YdmVo"};
 
 /***/ }),
-/* 130 */
+/* 207 */
 /*!************************************************************!*\
   !*** ../node_modules/react-tabs/esm/index.js + 10 modules ***!
   \************************************************************/
@@ -14312,7 +16303,7 @@ module.exports = {"root":"components-Sample-Sample__root__2MPO6","modal":"compon
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // EXTERNAL MODULE: ../node_modules/prop-types/index.js
-var prop_types = __webpack_require__(2);
+var prop_types = __webpack_require__(1);
 var prop_types_default = /*#__PURE__*/__webpack_require__.n(prop_types);
 
 // EXTERNAL MODULE: external "React"
@@ -14444,7 +16435,7 @@ function selectedIndexPropType(props, propName, componentName, location, propFul
   return error;
 }
 // EXTERNAL MODULE: ../node_modules/classnames/index.js
-var classnames = __webpack_require__(9);
+var classnames = __webpack_require__(7);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // CONCATENATED MODULE: ../node_modules/react-tabs/esm/helpers/uuid.js
@@ -15145,7 +17136,7 @@ TabPanel_TabPanel.tabsRole = 'TabPanel';
 
 
 /***/ }),
-/* 131 */
+/* 208 */
 /*!********************************************************!*\
   !*** ../node_modules/react-tabs/style/react-tabs.scss ***!
   \********************************************************/
@@ -15158,7 +17149,7 @@ TabPanel_TabPanel.tabsRole = 'TabPanel';
 module.exports = {"react-tabs__tab-list":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-list__1MFfE","reactTabsTabList":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-list__1MFfE","react-tabs__tab":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7","reactTabsTab":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab__190M7","react-tabs__tab--selected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--selected__1ex4Q","reactTabsTabSelected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--selected__1ex4Q","react-tabs__tab--disabled":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--disabled__7mMmY","reactTabsTabDisabled":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab--disabled__7mMmY","react-tabs__tab-panel":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel__2EDg3","reactTabsTabPanel":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel__2EDg3","react-tabs__tab-panel--selected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel--selected__24Xiz","reactTabsTabPanelSelected":"_-node_modules-react-tabs-style-react-tabs__react-tabs__tab-panel--selected__24Xiz"};
 
 /***/ }),
-/* 132 */
+/* 209 */
 /*!*******************************************!*\
   !*** ./components/Sample/samples/base.js ***!
   \*******************************************/
@@ -15195,7 +17186,7 @@ exports.default = function (styleParams) {
 };
 
 /***/ }),
-/* 133 */
+/* 210 */
 /*!***********************************************!*\
   !*** ./components/Sample/samples/absolute.js ***!
   \***********************************************/
@@ -15213,7 +17204,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = "\nconst parent = document.createElement('div');\nparent.id = 'root';\ndocument.body.prepend(parent);\n\nfor (let i = 0; i < layout.items.length; i++) {\n  const item = layout.items[i];\n  const iDom = document.createElement('div');\n  iDom.innerHTML = i;\n  iDom.style.width = item.width + 'px';\n  iDom.style.height = item.height + 'px';\n  iDom.style.position = 'absolute';\n  iDom.style.top = item.offset.top + 'px';\n  iDom.style.left = item.offset.left + 'px';\n  iDom.style.backgroundColor = items[i].bgColor;\n  parent.prepend(iDom);\n}\n";
 
 /***/ }),
-/* 134 */
+/* 211 */
 /*!***********************************************!*\
   !*** ./components/Sample/samples/relative.js ***!
   \***********************************************/
@@ -15231,7 +17222,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = "\nconst parent = document.createElement('div');\nparent.id = 'root';\ndocument.body.prepend(parent);\ndocument.body.style.margin = '-' + styleParams.itemSpacing + 'px';\ndocument.body.style.padding = 0;\n\nfor (let column, c = 0; column = layout.columns[c]; c++) {\n  const cDom = document.createElement('div');\n  cDom.id = 'column';\n  cDom.style.width = layout.colWidth + 'px';\n  cDom.style.float = 'left';\n  cDom.style.position = 'relative';\n  parent.prepend(cDom);\n\n  for (let group, g = 0; group = column[g]; g++) {\n    const gDom = document.createElement('div');\n    gDom.style.width = group.width + 'px';\n    gDom.style.height = group.height + 'px';\n    gDom.style.display = 'inline-block';\n    gDom.style.position = 'relative';\n    gDom.style.float = 'left';\n    cDom.prepend(gDom);\n\n    for (let item, i = 0; item = group.items[i]; i++) {\n      const iDom = document.createElement('div');\n      iDom.style.width = item.width + 'px';\n      iDom.style.height = item.height + 'px';\n      iDom.style.margin = styleParams.itemSpacing + 'px';\n      iDom.style.position = item.style.position || 'absolute';\n      iDom.style.top = item.style.top + 'px';\n      iDom.style.left = item.style.left + 'px';\n      iDom.style.right = item.style.right + 'px';\n      iDom.style.bottom = item.style.bottom + 'px';\n      iDom.style.float = 'left';\n      iDom.style.backgroundColor = items[item.idx].bgColor;\n      gDom.prepend(iDom);\n    }\n  }\n}\n";
 
 /***/ }),
-/* 135 */
+/* 212 */
 /*!********************************************!*\
   !*** ./components/Sample/samples/react.js ***!
   \********************************************/
@@ -15249,7 +17240,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = "\nconst getImageStyle = item => ({\n  position: 'absolute',\n  backgroundSize: 'cover',\n  backgroundPosition: 'center',\n  top: item.offset.top,\n  left: item.offset.left,\n  width: item.width,\n  height: item.height,\n  backgroundImage: \"url(\" + item.dto.url + \")\"\n});\n\nconst Gallery = ({ layout }) => (\n  <div style={{ height: layout.height }}>\n    {layout.items.map(item => (\n      <div style={getImageStyle(item)} alt={item.idx}/>\n    ))}\n  </div>\n);\n\nconst parent = document.createElement('div');\nparent.id = 'root';\ndocument.body.prepend(parent);\n\nReactDOM.render(\n  <Gallery layout={layout}/>,\n  document.getElementById('root')\n);\n";
 
 /***/ }),
-/* 136 */
+/* 213 */
 /*!*****************************!*\
   !*** ./constants/images.js ***!
   \*****************************/
@@ -15767,7 +17758,7 @@ exports.default = [{
 }];
 
 /***/ }),
-/* 137 */
+/* 214 */
 /*!**********************************************!*\
   !*** ./components/App/get-scrollbar-size.js ***!
   \**********************************************/
@@ -15800,7 +17791,7 @@ function getScrollbarSize() {
 };
 
 /***/ }),
-/* 138 */
+/* 215 */
 /*!*********************************!*\
   !*** ./components/App/App.scss ***!
   \*********************************/
