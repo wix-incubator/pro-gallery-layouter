@@ -13,8 +13,8 @@ const getImgSize = (item, dimension) => {
 };
 
 const getImageSrc = item => {
-  const w = getImgSize(item, 'height');
-  const h = getImgSize(item, 'width');
+  const h = getImgSize(item, 'height');
+  const w = getImgSize(item, 'width');
   return `${CDN_URL}${item.dto.url}/v1/fill/w_${w},h_${h},al_c,q_80/file.jpg`;
 };
 
