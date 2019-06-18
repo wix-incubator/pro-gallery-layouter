@@ -15,7 +15,7 @@ const getImgSize = (item, dimension) => {
 const getImageSrc = item => {
   const w = getImgSize(item, 'height');
   const h = getImgSize(item, 'width');
-  return `${CDN_URL}${item.dto.url}/v1/fit/w_${w},h_${h},al_c,q_80/file.jpg`;
+  return `${CDN_URL}${item.dto.url}/v1/fill/w_${w},h_${h},al_c,q_80/file.jpg`;
 };
 
 const getImageStyle = item => ({
