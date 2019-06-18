@@ -16977,8 +16977,8 @@ var getImgSize = function getImgSize(item, dimension) {
 };
 
 var getImageSrc = function getImageSrc(item) {
-  var w = getImgSize(item, 'height');
-  var h = getImgSize(item, 'width');
+  var h = getImgSize(item, 'height');
+  var w = getImgSize(item, 'width');
   return '' + CDN_URL + item.dto.url + '/v1/fill/w_' + w + ',h_' + h + ',al_c,q_80/file.jpg';
 };
 
